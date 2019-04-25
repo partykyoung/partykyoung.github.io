@@ -1,93 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>http://dev.kyoungah.com/tags/JavaScript/</loc>
-        <lastmod>2019-04-25T05:59:19.477Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/tags/Node-js/</loc>
-        <lastmod>2019-04-25T05:59:19.478Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Data-structure/</loc>
-        <lastmod>2019-04-25T05:59:19.480Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Computer-Architecture/</loc>
-        <lastmod>2019-04-25T05:59:19.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Compiler/</loc>
-        <lastmod>2019-04-25T05:59:19.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/HTML/</loc>
-        <lastmod>2019-04-25T05:59:19.482Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/CSS/</loc>
-        <lastmod>2019-04-25T05:59:19.482Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/TypeScript/</loc>
-        <lastmod>2019-04-25T05:59:19.484Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/React-js/</loc>
-        <lastmod>2019-04-25T05:59:19.485Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Operating-systems/</loc>
-        <lastmod>2019-04-25T05:59:19.487Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Algorithms/</loc>
-        <lastmod>2019-04-25T05:59:19.489Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Software-engineering/</loc>
-        <lastmod>2019-04-25T05:59:19.489Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Information-network/</loc>
-        <lastmod>2019-04-25T05:59:19.490Z</lastmod>
+        <loc>http://dev.kyoungah.com/tags/etc/</loc>
+        <lastmod>2019-04-25T15:05:12.628Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -100,8 +17,92 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/tags/etc/</loc>
-        <lastmod>2019-04-25T15:05:12.628Z</lastmod>
+        <loc>http://dev.kyoungah.com/tags/Information-network/</loc>
+        <lastmod>2019-04-25T05:59:19.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/Software-engineering/</loc>
+        <lastmod>2019-04-25T05:59:19.489Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/Algorithms/</loc>
+        <lastmod>2019-04-25T05:59:19.489Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/Operating-systems/</loc>
+        <lastmod>2019-04-25T05:59:19.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/React-js/</loc>
+        <lastmod>2019-04-25T05:59:19.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/TypeScript/</loc>
+        <lastmod>2019-04-25T05:59:19.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/CSS/</loc>
+        <lastmod>2019-04-25T05:59:19.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/HTML/</loc>
+        <lastmod>2019-04-25T05:59:19.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/Compiler/</loc>
+        <lastmod>2019-04-25T05:59:19.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/Computer-Architecture/</loc>
+        <lastmod>2019-04-25T05:59:19.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/Data-structure/</loc>
+        <lastmod>2019-04-25T05:59:19.480Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/Node-js/</loc>
+        <lastmod>2019-04-25T05:59:19.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/tags/JavaScript/</loc>
+        <lastmod>2019-04-25T05:59:19.477Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

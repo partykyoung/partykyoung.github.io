@@ -109,8 +109,12 @@ img.thumbnail {
   padding: 1.25rem 0.75rem;
 }
 .navbar-main .navbar-item.is-active {
-  color: #3273dc;
+  color: #3da8f4;
   background-color: transparent;
+}
+.navbar-main .navbar-item:hover {
+  color: #3da8f4;
+  background-color: #fff;
 }
 @media screen and (max-width: 1087px) {
   .navbar-main .navbar-menu {
@@ -126,6 +130,9 @@ img.thumbnail {
 }
 .footer {
   background: #fff;
+}
+.footer a {
+  color: #3da8f4;
 }
 .footer .field .button {
   background: transparent;
@@ -328,7 +335,7 @@ img.thumbnail {
 }
 .has-link-grey:hover,
 .has-link-black-ter:hover {
-  color: #3273dc !important;
+  color: #58cbff !important;
 }
 .has-link-grey {
   color: #7a7a7a !important;
@@ -395,6 +402,29 @@ img.thumbnail {
 }
 .content blockquote footer strong + cite {
   margin-left: 0.5em;
+}
+.content a,
+.content .is-link {
+  color: #3da8f4;
+}
+/* ---------------------------------
+ *        custom css
+ * --------------------------------- */
+.tags a {
+  color: #3da8f4;
+}
+.tag:not(body).is-link {
+  background-color: #3da8f4 !important;
+}
+.button.is-link,
+.button.follow-link {
+  background-color: #3da8f4;
+  border-color: transparent;
+  color: #fff;
+}
+.pagination-link.is-current {
+  background-color: #3da8f4;
+  border-color: transparent;
 }
 /* ---------------------------------
  *        Fix code highlight
