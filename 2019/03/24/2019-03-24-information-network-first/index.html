@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>컴퓨터 통신망 - 경아&#39;s 개발일기</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="컴퓨터 통신망의 출현지역적으로 떨어진 컴퓨터와 컴퓨터를 서로 통신망으로 연결시켜 컴퓨터 자원을 공유하려는 이유에서 컴퓨터 통신망이 출현하게 되었다. 데이터 통신 기술데이터 처리에 있어서 데이터 통신은 매우 중요한 역할을 한다. 통신망으로 서로 연결되어 있지 않은 컴퓨터, stand-alone 컴퓨터에서도 데이터 통신은 없어서는 안될 중요한 기능이다.  A컴">
+<meta name="keywords" content="Information network">
+<meta property="og:type" content="article">
+<meta property="og:title" content="컴퓨터 통신망">
+<meta property="og:url" content="http://dev.kyoungah.com/2019/03/24/2019-03-24-information-network-first/index.html">
+<meta property="og:site_name" content="경아&#39;s 개발일기">
+<meta property="og:description" content="컴퓨터 통신망의 출현지역적으로 떨어진 컴퓨터와 컴퓨터를 서로 통신망으로 연결시켜 컴퓨터 자원을 공유하려는 이유에서 컴퓨터 통신망이 출현하게 되었다. 데이터 통신 기술데이터 처리에 있어서 데이터 통신은 매우 중요한 역할을 한다. 통신망으로 서로 연결되어 있지 않은 컴퓨터, stand-alone 컴퓨터에서도 데이터 통신은 없어서는 안될 중요한 기능이다.  A컴">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="http://dev.kyoungah.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-04-25T05:59:19.490Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="컴퓨터 통신망">
+<meta name="twitter:description" content="컴퓨터 통신망의 출현지역적으로 떨어진 컴퓨터와 컴퓨터를 서로 통신망으로 연결시켜 컴퓨터 자원을 공유하려는 이유에서 컴퓨터 통신망이 출현하게 되었다. 데이터 통신 기술데이터 처리에 있어서 데이터 통신은 매우 중요한 역할을 한다. 통신망으로 서로 연결되어 있지 않은 컴퓨터, stand-alone 컴퓨터에서도 데이터 통신은 없어서는 안될 중요한 기능이다.  A컴">
+<meta name="twitter:image" content="http://dev.kyoungah.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="컴퓨터 통신망" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-24T09:18:29.000Z">2019-03-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Information-network/">Information network</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11분 읽기 (나에 대하여 1598 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                컴퓨터 통신망
+            
+        </h1>
+        <div class="content">
+            <h2 id="컴퓨터-통신망의-출현"><a href="#컴퓨터-통신망의-출현" class="headerlink" title="컴퓨터 통신망의 출현"></a>컴퓨터 통신망의 출현</h2><p>지역적으로 떨어진 컴퓨터와 컴퓨터를 서로 통신망으로 연결시켜 컴퓨터 자원을 공유하려는 이유에서 컴퓨터 통신망이 출현하게 되었다.</p>
+<h3 id="데이터-통신-기술"><a href="#데이터-통신-기술" class="headerlink" title="데이터 통신 기술"></a>데이터 통신 기술</h3><p>데이터 처리에 있어서 데이터 통신은 매우 중요한 역할을 한다. 통신망으로 서로 연결되어 있지 않은 컴퓨터, stand-alone 컴퓨터에서도 데이터 통신은 없어서는 안될 중요한 기능이다. </p>
+<p>A컴퓨터와 B컴퓨터가 송•수신을 할 때 통신 시스템을 거쳐서 원하는 데이터의 송 • 수신이 가능하다. </p>
+<h3 id="데이터-처리-기술"><a href="#데이터-처리-기술" class="headerlink" title="데이터 처리 기술"></a>데이터 처리 기술</h3><p>컴퓨터를 이용하는 데이터 처리 기술이 데이터 통신 분야에도 큰 영향을 미치고 있다.<br>현재의 디지털 신호 전송 방식은 컴퓨터를 활용함으로써 음성뿐만 아니라 문자 데이터, 화상 데이터 등도 모두 디지털화 하여 고품질의 데이터 전송이 가능하게 만들었다.</p>
+<p>즉, 통신 기술이 아날로그 방식에서 디지털 방식으로 전이됨으로써 얻게 되는 많은 장점은 컴퓨터 시스템의 데이터 처리 기술 덕분이다. </p>
+<h3 id="분산-시스템"><a href="#분산-시스템" class="headerlink" title="분산 시스템"></a>분산 시스템</h3><p>컴퓨터 자원을 공유하고 그들의 확장과 축소를 용이하도록 하며 오류에 대한 신뢰도를 높일 수 있도록 컴퓨터 자원을 분산시켜 작업을 처리하는 시스템.</p>
+<ul>
+<li>여러군데다가 자원을 분산시켜 놓음으로써 한쪽에서 고장이 나도 다른쪽에서 데이터를 가져올 수 있기 때문에 오류에 대한 신뢰도가 높아짐. </li>
+</ul>
+<h4 id="강연결-분산-시스템"><a href="#강연결-분산-시스템" class="headerlink" title="강연결 분산 시스템"></a>강연결 분산 시스템</h4><p>분산된 거리가 짧고 처리기 사이의 상호 작용이 많은 분산 시스템.</p>
+<p>ex) 자료흐름기계, 멀티프로세서</p>
+<h4 id="약연결-분산-시스템"><a href="#약연결-분산-시스템" class="headerlink" title="약연결 분산 시스템"></a>약연결 분산 시스템</h4><p>분산된 거리가 비교적 길고 처리기 사이의 상호 작용이 비교적 적은 분산 시스템.</p>
+<p>ex) 근거리 통신망(LAN), 원거리 통신망(WAN), 도시권 통신망(MAN).</p>
+<h2 id="컴퓨터-통신망의-정의-및-구성-요소"><a href="#컴퓨터-통신망의-정의-및-구성-요소" class="headerlink" title="컴퓨터 통신망의 정의 및 구성 요소"></a>컴퓨터 통신망의 정의 및 구성 요소</h2><ul>
+<li><strong>통신</strong> 넓은 의미로는 ‘거리상 서로 떨어진 사람 또는 장치들 사이에 여러 종류의 매개체를 이용하여 정보를 전달하는 활동’을 뜻하며 좁은 의미로는 ‘원격통신’을 뜻한다.<ul>
+<li><strong>원격통신</strong>: 전자적 신호나 전자기적 파장을 이용하여 정보를 전송하는 것.</li>
+</ul>
+</li>
+<li><strong>데이터 통신</strong>: 컴퓨터 시스템에 의한 데이터를 처리하는 기술과 데이터를 전송하는 기술이 결합된 것.</li>
+<li><strong>데이터 통신망</strong>: 데이터 통신 기술과 망 기술이 융합된 개념.</li>
+<li><strong>컴퓨터 통신망(컴퓨터 망)</strong>: 자원과 정보를 공유할 수 있게 해 주기 위해 통신 채널들로 상호 연결된 컴퓨터들과 기타 하드웨어 및 소프트웨어 구성 요소들의 집합체. 서버, 클라이언트, 전송 매체, 네트워킹 장치, 프로토콜, 애플리케이션 등의 구성 요소로 이루어진다.<ul>
+<li><strong>서버</strong>: 컴퓨터 서비스에서 특정 서비스를 제공해 주는 컴퓨터.</li>
+<li><strong>클라이언트</strong>: 서비스를 받고자 하는 컴퓨터 또는 단말.</li>
+<li><strong>전송 매체</strong>: 컴퓨터 통신망에서 서버 및 클라이언트를 상호연결 시키고 데이터 전송이 가능하도로고 하기 위해 사용되는 장비.</li>
+<li><strong>네트워킹 장치</strong>: 서버와 클라이언트를 컴퓨터 통신망에 연결시키기 위해 필요한 연결 장치.</li>
+<li><strong>프로토콜</strong>: 서버와 클라이언트가 통신하기 위해 미리 정해 놓은 규칙.</li>
+<li><strong>애플리케이션</strong>: 컴퓨터 통신망을 통해 서버가 클라이언트에게 제공하는 서비스 또는 그것을 위한 프로그램.</li>
+</ul>
+</li>
+</ul>
+<h2 id="컴퓨터-통신망의-서비스"><a href="#컴퓨터-통신망의-서비스" class="headerlink" title="컴퓨터 통신망의 서비스"></a>컴퓨터 통신망의 서비스</h2><ul>
+<li>e-mail</li>
+<li>파일 전송</li>
+<li>원격 처리 </li>
+<li>원격 회의</li>
+<li>분산 데이터베이스 시스템</li>
+<li>Web Service </li>
+<li>Social Network Service</li>
+</ul>
+<p>그외 등등…</p>
+<h2 id="컴퓨터-통신망의-역사"><a href="#컴퓨터-통신망의-역사" class="headerlink" title="컴퓨터 통신망의 역사"></a>컴퓨터 통신망의 역사</h2><ul>
+<li><strong>SAGE(Semi-Automatic Ground Environment) 시스템</strong>: 1958년 미국에서 군사 목적으로 개발된 컴퓨터와 통신을 결합시킨 최초의 컴퓨터 통신 시스템.</li>
+<li><strong>SABRE(Semi-Automatic Business Research Environment) 시스템</strong>: 1961년에 발표된 여객기의 좌석 예약과 회사 업무를 종합적으로 처리하기 위한 상업적인 컴퓨터 통신 시스템.</li>
+<li><strong>CTSS(Compatible Time Sharing System)</strong>: 다수 사용자의 공동 이용을 위해 미국의MIT 대학에서 개발한 시분할 시스템(time sharing system).</li>
+<li><strong>ARPANET</strong>: 1969년 이후 가동되어 1990년까지 운영되었으며 인터넷의 전신이 된 컴퓨터 네트워크 시스템.</li>
+<li><strong>ALOHA(Additive Links Online Hawaii Area) 시스템</strong>: 1968년 하와이 대학에서 실험적으로 시작한 무선 패킷 교환방식의 통신 시스템.</li>
+<li><strong>SNA(System Network Architecture)</strong> : 1974년에 IBM에서 발표한 컴퓨터 간의 접속을 용이하게 하고, 이용 형태의 다양화·복잡화를 대체하기 위한 체계화된 네트워크 구조.</li>
+</ul>
+<h2 id="컴퓨터-통신망의-활용-목적"><a href="#컴퓨터-통신망의-활용-목적" class="headerlink" title="컴퓨터 통신망의 활용 목적"></a>컴퓨터 통신망의 활용 목적</h2><h3 id="자원의-공유"><a href="#자원의-공유" class="headerlink" title="자원의 공유"></a>자원의 공유</h3><p>컴퓨터 통신망이 구축되면 사용자 또는 컴퓨터의 지리적 위치에 관계 없이 컴퓨터 통신망에 연결된 사람이면 누구든지 컴퓨터 자원을 자유롭게 이용할 수 있다.</p>
+<h3 id="신뢰도의-향상-및-안정성-보장"><a href="#신뢰도의-향상-및-안정성-보장" class="headerlink" title="신뢰도의 향상 및 안정성 보장"></a>신뢰도의 향상 및 안정성 보장</h3><p>컴퓨터 통신망이 구축되면 한대의 컴퓨터가 고장나더라도 복구될 때까지 다른 컴퓨터를 사용할 수 있으므로 신뢰도및 안정성이 향상된다. </p>
+<h3 id="처리-기능의-분산"><a href="#처리-기능의-분산" class="headerlink" title="처리 기능의 분산"></a>처리 기능의 분산</h3><p>컴퓨터 통신망이 구축되면 처리 기능을 지역적으로 분산시킴으로써 전체 시스템의 처리 능력을 향상시킬 수 있다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920014864&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 정보통신망 1강</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Information-network/">Information network</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/24/2019-03-24-information-network-data-communication-system/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">데이터 통신 시스템</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/23/2019-03-23-software-engineering-crisis-engineering/">
+                <span class="level-item">소프트웨어 위기 현상 및 소프트웨어 공학</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Your name
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Your title
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Your location</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        42
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        17
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        15
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice" target="_blank">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/ppoffice">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Back-end/">
+            <span class="level-start">
+                <span class="level-item">Back-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Back-end/Node-js/">
+            <span class="level-start">
+                <span class="level-item">Node.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Base/">
+            <span class="level-start">
+                <span class="level-item">Base</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">22</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Base/Algorithms/">
+            <span class="level-start">
+                <span class="level-item">Algorithms</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Compiler/">
+            <span class="level-start">
+                <span class="level-item">Compiler</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-Architecture/">
+            <span class="level-start">
+                <span class="level-item">Computer Architecture</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-security/">
+            <span class="level-start">
+                <span class="level-item">Computer security</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Data-Structure/">
+            <span class="level-start">
+                <span class="level-item">Data Structure</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Information-network/">
+            <span class="level-start">
+                <span class="level-item">Information network</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Operating-systems/">
+            <span class="level-start">
+                <span class="level-item">Operating systems</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Software-engineering/">
+            <span class="level-start">
+                <span class="level-item">Software engineering</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/">
+            <span class="level-start">
+                <span class="level-item">Front-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">14</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Front-end/Css/">
+            <span class="level-start">
+                <span class="level-item">Css</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/React-js/">
+            <span class="level-start">
+                <span class="level-item">React.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/TypeScript/">
+            <span class="level-start">
+                <span class="level-item">TypeScript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/memo/">
+            <span class="level-start">
+                <span class="level-item">memo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/etc/">
+            <span class="level-start">
+                <span class="level-item">etc</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="컴퓨터 통신망" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 경아&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

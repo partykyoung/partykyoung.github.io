@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>카테고리: React.js - 경아&#39;s 개발일기</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="경아&#39;s 개발일기">
+<meta property="og:url" content="http://dev.kyoungah.com/categories/Front-end/React-js/index.html">
+<meta property="og:site_name" content="경아&#39;s 개발일기">
+<meta property="og:description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="http://dev.kyoungah.com/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="경아&#39;s 개발일기">
+<meta name="twitter:description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta name="twitter:image" content="http://dev.kyoungah.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="경아&#39;s 개발일기" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">카테고리</a></li>
+            
+            <li><a href="/categories/Front-end/">Front-end</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">React.js</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 878 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/04/25/2018-09-28-reactjs-props/">props</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p>props는 Component 속성을 설정할 때 사용하는 요소이다. Component는 props를 받고 props의 값에 따라 다르게 렌더링 하거나 작동할 수 있다.<br>PropTypes 속성의 종류는 <a href="https://reactjs.org/docs/typechecking-with-proptypes.html" target="_blank" rel="noopener">React 공식 문서</a>에서 확인할 수 있다.</p>
+<h4 id="부모-컴포넌트"><a href="#부모-컴포넌트" class="headerlink" title="부모 컴포넌트"></a>부모 컴포넌트</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Child <span class="keyword">from</span> <span class="string">'./Child'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Child singer=<span class="string">"Nell"</span> song=<span class="string">"Home"</span>/&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Parent;</span><br></pre></td></tr></table></figure>
+<p>props값은 해당 컴포넌트를 불러와 사용하는 부모 컴포넌트에서만 설정할 수 있다. </p>
+<h4 id="자식-컴포넌트"><a href="#자식-컴포넌트" class="headerlink" title="자식 컴포넌트"></a>자식 컴포넌트</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 자식 컴포넌트</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; singer, song &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        지금 듣고 있는 노래는 &#123;singer&#125;의 &#123;song&#125;입니다.</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default Child;</span></span><br></pre></td></tr></table></figure>
+<p>props에 접근할 때는 this 키워드를 사용하여 접근한다. </p>
+<p><img src="/images/frontend/reactjs-props-1.png" alt="실행결과"></p>
+<p>부모 Component에서 자식 Component로 전달되며 받아온 props는 수정할 수 없다. </p>
+<p><img src="/images/frontend/reactjs-props-2.png" alt="Object.isFrozen 메소드로 동결되어 있는것을 확인할 수 있다. props값을 바꾸려고 하면 에러가 난다."></p>
+<h3 id="propTypes"><a href="#propTypes" class="headerlink" title="propTypes"></a>propTypes</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">"prop-types"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ... 생략</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Child.propTypes = &#123;</span><br><span class="line">  singer: PropTypes.string,</span><br><span class="line">  song: PropTypes.string.isRequired <span class="comment">// 필수적으로 존재해야 한다. </span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Child;</span><br></pre></td></tr></table></figure>
+<p>컴포넌트의 필수 props를 지정하거나 props 타입을 지정할 때는 propTypes를 사용한다. propTypes를 지정하려면 <strong>prop-types</strong> 모듈이 필요하다.<br>필수 props를 지정하고 싶을 땐 propTypes를 설정할 때 isRequired를 사용하면 된다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Parent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;Child singer=&#123;123&#125; song="Home" /&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-props-3.png" alt="잘못된 타입으로 props를 넘겨줘 보았다."><br>props의 타입을 propTypes에서 설정한 타입과 다른 타입으로 넘겨주면 렌더링은 되나 개발자 도구에 오류 메시지가 출력된다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Parent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;Child singer="Nell" /&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-props-4.png" alt="필수 props를 제외해 보았다."><br>필수 props가 빠졌을 때도 렌더링은 되나 개발자 도구에 오류 메시지가 출력된다. </p>
+<h3 id="defaultProps"><a href="#defaultProps" class="headerlink" title="defaultProps"></a>defaultProps</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">"prop-types"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ... 생략</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Child.propTypes = &#123;</span><br><span class="line">  singer: PropTypes.string,</span><br><span class="line">  song: PropTypes.string.isRequired</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Child.defaultProps = &#123;</span><br><span class="line">  singer: <span class="string">"Hoobastank"</span>,</span><br><span class="line">  song: <span class="string">"Without A Fight"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Child;</span><br></pre></td></tr></table></figure>
+<p>defaultProps를 사용해서 prop의 기본 값을 설정할 수 있다. defaultProps는 prop-types 모듈이 필요 없다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Parent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;Child /&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-props-5.png" alt="defaultProps 적용"><br>props를 지정해주지 않으면 defaultProps에 있는 기본 값이 적용된다. </p>
+<h3 id="transform-class-properties"><a href="#transform-class-properties" class="headerlink" title="transform-class-properties"></a>transform-class-properties</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">"prop-types"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> propTypes = &#123;</span><br><span class="line">    singer: PropTypes.string,</span><br><span class="line">    song: PropTypes.string.isRequired</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;</span><br><span class="line">    singer: <span class="string">"Hoobastank"</span>,</span><br><span class="line">    song: <span class="string">"Without A Fight"</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; singer, song &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        지금 듣고 있는 노래는 &#123;singer&#125;의 &#123;song&#125;입니다.</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default Child;</span></span><br></pre></td></tr></table></figure>
+<p>propTypes, defaulProps를 클래스 내부에서 정의할 수도 있다. 이 문법을 사용하려면 transform-class-properties babel 플러그인이 필요한데 create-react-app으로 생성한 프로젝트는 기본적으로 적용되어 있기 때문에 따로 설정할 필요가 없다. </p>
+<h3 id="typescript"><a href="#typescript" class="headerlink" title="typescript"></a>typescript</h3><p>typeScript를 사용하여 props에 타입을 줘보자. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line">interface ChildProps &#123;</span><br><span class="line">  singer: string;</span><br><span class="line">  song: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface ChildState &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">ChildProps</span>, <span class="title">ChildState</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;</span><br><span class="line">    singer: <span class="string">"Hoobastank"</span>,</span><br><span class="line">    song: <span class="string">"Without A Fight"</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; singer, song &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        지금 듣고 있는 노래는 &#123;singer&#125;의 &#123;song&#125;입니다.</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default Child;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-props-6.png" alt="잘못된 타입을 지정했더니 렌더링 조차 되지 않고 오류를 출력한다."></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-25T14:19:04.000Z">2019-02-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 903 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/02/25/2019-02-24-reactjs-map/">Component 반복</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="arr-map-callback-currentValue-index-array-thisArg"><a href="#arr-map-callback-currentValue-index-array-thisArg" class="headerlink" title="arr.map(callback(currentValue[, index[, array]])[, thisArg])"></a>arr.map(callback(currentValue[, index[, array]])[, thisArg])</h2><p>JavaScript 배열 객체의 내장 함수 중 하나이다. 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환한다. 원본 배열은 건드리지 않고 그 값들만을 사용해서 혹은 약간 변형해서 새로운 배열을 만들어야 할 때 유용하다. </p>
+<ul>
+<li><strong>callback</strong>: 새로운 배열의 요소를 생성하는 콜백 함수.<ul>
+<li><strong>currentValue</strong>: 현재 처리하고 있는 요소 </li>
+<li><strong>index</strong>: 현재 처리하고 있는 요소의 index 값 </li>
+<li><strong>array</strong>: 현재 처리하고 있는 배열의 원본</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/frontend/reactjs-map-1.png" alt="arr.map 실행 결과">;</p>
+<h2 id="Component-map"><a href="#Component-map" class="headerlink" title="Component map"></a>Component map</h2><p>array.map 메소드를 사용하여 기존 배열을 사용하여 컴포넌트로 구성된 배열을 생성할 수 있다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Map</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.fruitsList = [<span class="string">"사과"</span>, <span class="string">"바나나"</span>, <span class="string">"오렌지"</span>, <span class="string">"체리"</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">        &#123;<span class="keyword">this</span>.fruitsList.map(<span class="function"><span class="params">fruits</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="comment">// DOM을 사용해도 되고 컴포넌트를 사용해도 된다.</span></span><br><span class="line">          <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;fruits&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>;</span><br><span class="line">        &#125;)&#125;</span><br><span class="line">      &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="oVvvga" src="//codepen.io/partykyoung/embed/oVvvga/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/oVvvga/" target="_blank" rel="noopener">oVvvga</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><p>리액트에서 key는 컴포넌트 배열을 렌더링 했을 때 어떤 원소에 변동이 있었는지 알아내려고 사용한다. key가 없으면 가상 DOM을 비교하는 과정에서 리스트를 순차적으로 비교하면서 변화를 감지하지만 key가 있으면 key 값을 사용하여 리스트에 어던 변화가 일어났는지 더욱 빠르게 알 수 있다. </p>
+<p><img src="/images/frontend/reactjs-map-2.png" alt="key를 정해주지 않으면 실행 시 경고 메시지가 뜬다.">;</p>
+<p>key 값을 설정할 때는 mpa 함수의 인자로 전달되는 함수 내부에서 컴포넌트 props를 설정하듯이 설정하면 된다. key 값은 언제나 유일해야 한다. key값이 중복된다면 렌더링 과정에서 오류가 발생한다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ... 생략 </span></span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">        &#123;<span class="keyword">this</span>.fruitsList.map(<span class="function">(<span class="params">fruits, index</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;index&#125;</span>&gt;</span>&#123;fruits&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>;</span><br><span class="line">        &#125;)&#125;</span><br><span class="line">      &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ ... 생략</span></span><br></pre></td></tr></table></figure>
+<p>데이터가 가진 고윳값이 없으면 콜백함수의 인수인 index를 사용해도 괜찮으나 리액트 공식문서에서는 성능에 부정적인 영향을 줄 수 있으며 컴포넌트의 상태이슈를 유발하기 때문에 index를 key 값으로 쓰는것을 추천하지 않는다. 만약 key값을 명시하지 않은 경우에 리액트는 index값을 기본 값으로 할당하게 된다고 한다.</p>
+<h3 id="state-활용"><a href="#state-활용" class="headerlink" title="state 활용"></a>state 활용</h3><p>state를 활용하면 유동적인 데이터를 렌더링 할 수 있다.</p>
+<p>상태 안에서 배열을 변형할 때 배열을 직접 접근하여 수정하면 자동으로 리렌더링을 트리거 하지 않는다. 다라서  concat, slice 같이 새로운 배열을 반환하는 함수들을 사용하여 새로운 배열을 만든 후 setState 메서드로 적용해야 한다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line">interface Props &#123;&#125;</span><br><span class="line">interface State &#123;</span><br><span class="line">  fruitsList: string[];</span><br><span class="line">  value: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MapState</span> <span class="keyword">extends</span> <span class="title">Component</span>&lt;<span class="title">Props</span>, <span class="title">State</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props: Props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      fruitsList: [],</span><br><span class="line">      value: <span class="string">""</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleChange = (e: any): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      value: e.target.value</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleInsert = (e: any): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; fruitsList, value &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (e.keyCode !== <span class="number">13</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      fruitsList: fruitsList.concat(value),</span><br><span class="line">      value: <span class="string">""</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleDelete = (index: number): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; fruitsList &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      fruitsList: [</span><br><span class="line">        ...fruitsList.slice(<span class="number">0</span>, index),</span><br><span class="line">        ...fruitsList.slice(index + <span class="number">1</span>, fruitsList.length)</span><br><span class="line">      ]</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; fruitsList, value &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">          &#123;fruitsList.map(<span class="function">(<span class="params">fruits, index</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> (</span><br><span class="line">              &lt;li</span><br><span class="line">                key=&#123;index&#125;</span><br><span class="line">                onClick=&#123;() =&gt; &#123;</span><br><span class="line">                  <span class="keyword">this</span>.handleDelete(index);</span><br><span class="line">                &#125;&#125;</span><br><span class="line">              &gt;</span><br><span class="line">                &#123;fruits&#125;</span><br><span class="line">              &lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">            );</span></span><br><span class="line"><span class="regexp">          &#125;)&#125;</span></span><br><span class="line"><span class="regexp">        &lt;/u</span>l&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type=<span class="string">"text"</span></span><br><span class="line">          value=&#123;value&#125;</span><br><span class="line">          onChange=&#123;<span class="keyword">this</span>.handleChange&#125;</span><br><span class="line">          onKeyDown=&#123;<span class="keyword">this</span>.handleInsert&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="react typescript map" src="//codepen.io/partykyoung/embed/ZPzGdM/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/ZPzGdM/" target="_blank" rel="noopener">react typescript map</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a><br><a href="https://reactjs.org/docs/lists-and-keys.html" target="_blank" rel="noopener">Lists and Keys</a><br><a href="https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318" target="_blank" rel="noopener">Index as a key is an anti-pattern</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-17T12:31:49.000Z">2019-02-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (나에 대하여 976 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/02/17/2019-02-16-reactjs-ref/">ref</a>
+            
+        </h1>
+        <div class="content">
+            <p>일반 HTML에서 DOM 요소에 이름을 달고 접근할 때 id를 사용한다. </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>DOM ID<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"./angry-heavy-rain.css"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"me"</span>&gt;</span>DOM ID<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"clickDOM()"</span>&gt;</span>클릭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">clickDOM</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> me = <span class="built_in">document</span>.getElementById(<span class="string">'me'</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    me.style.backgroundColor = <span class="string">"red"</span>;  </span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="DOM Id" src="//codepen.io/partykyoung/embed/YBRmYx/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/YBRmYx/" target="_blank" rel="noopener">DOM Id</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><p>HTML에서 id를 사용하여 DOM에 이름을 다는 것 처럼 리액트에서는 ref를 사용하여 DOM에 이름을 달 수 있다. </p>
+<p>리액트에서도 id를 사용할 수 있지만 특수한 경우가 아니면 사용을 권장하지 않는다. DOM의 id는 유일해야 하는데 컴포넌트를 여러번 사용하면 중복 id를 가진 DOM이 여러개 생기게 되는 경우가 있기 때문이다. 이런 상황에서는 컴포넌트를 만들 때 마다 중복 id가 발생하는 것을 방지해야 한다. </p>
+<p>ref는 전역적으로 작동하지 않고 컴포넌트 내부에서만 작동하기 때문에 이런 문제가 생기지 않는다. </p>
+<h3 id="ref를-사용해야-할-때"><a href="#ref를-사용해야-할-때" class="headerlink" title="ref를 사용해야 할 때"></a>ref를 사용해야 할 때</h3><p>ref는 state나 props로 해결할 수 없고 DOM을 꼭 직접적으로 건드려야 할 때 사용한다. </p>
+<ul>
+<li>특정 input에 포커스 주기 </li>
+<li>스크롤 박스 조작하기 </li>
+<li>Canvas 요소에 그림 그리기 등</li>
+</ul>
+<h3 id="ref-사용법"><a href="#ref-사용법" class="headerlink" title="ref 사용법"></a>ref 사용법</h3><p>ref를 달아야 하는 DOM에 props를 설정하듯이 ref를 설정햐면 된다. ref 값으로는 콜백 함수를 전달한다. 콜백 함수는 ref를 파라미터로 가지며 콜백 함수 내부에서 컴포넌트의 맴버 변수에 ref를 담는 코드를 작성한다.<br>ref 이름은 자유롭게 지정할 수 있다.  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Ref</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.input = <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleFocus = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.input.focus();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;input</span><br><span class="line">          type=<span class="string">"text"</span></span><br><span class="line">          ref=&#123;input =&gt; &#123;</span><br><span class="line">            <span class="comment">// this.input은 input 요소의 DOM을 가리킨다.</span></span><br><span class="line">            <span class="keyword">this</span>.input = input;</span><br><span class="line">          &#125;&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">        &lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.handleFocus&#125;&gt;</span><br><span class="line">          클릭</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="react ref" src="//codepen.io/partykyoung/embed/OdaKZw/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/OdaKZw/" target="_blank" rel="noopener">react ref</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="컴포넌트에-Ref-달기"><a href="#컴포넌트에-Ref-달기" class="headerlink" title="컴포넌트에 Ref 달기"></a>컴포넌트에 Ref 달기</h3><p>리액트에서는 컴포넌트에도 ref를 달 수 있다. 이 방법은 주로 컴포넌트 내부에 있는 DOM을 컴포넌트 외부에서 사용할 때 쓴다. 컴포넌트에 ref를 다는 방법은 DOM에 ref를 다는 방법과 똑같다. </p>
+<h4 id="ChildRef-js"><a href="#ChildRef-js" class="headerlink" title="ChildRef.js"></a>ChildRef.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">ChildRef</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.box = <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleScroll = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; scrollHeight, clientHeight &#125; = <span class="keyword">this</span>.box;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.box.scrollTop = scrollHeight - clientHeight;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> style = &#123;</span><br><span class="line">      border: <span class="string">"1px solid #000000"</span>,</span><br><span class="line">      height: <span class="string">"300px"</span>,</span><br><span class="line">      width: <span class="string">"300px"</span>,</span><br><span class="line">      overflow: <span class="string">"scroll"</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> innerStyle = &#123;</span><br><span class="line">      height: <span class="string">"600px"</span>,</span><br><span class="line">      width: <span class="string">"100%"</span>,</span><br><span class="line">      background: <span class="string">"linear-gradient(white, black)"</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div</span><br><span class="line">        style=&#123;style&#125;</span><br><span class="line">        ref=&#123;ref =&gt; &#123;</span><br><span class="line">          <span class="keyword">this</span>.box = ref;</span><br><span class="line">        &#125;&#125;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;div style=&#123;innerStyle&#125; /&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="ParentRef-js"><a href="#ParentRef-js" class="headerlink" title="ParentRef.js"></a>ParentRef.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ChildRef <span class="keyword">from</span> <span class="string">"./ChildRef"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">ParentRef</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.scroll = <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">      컴포넌트가 처음 랜더링 될 때는 this.scroll 값이 undefined 이므로 메서드를 호출 할 때 오류가 발생한다. </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">      화살표 함수 문법을 사용하여 아예 새로운 함수를 만들고 그 내부에서 메서드를 실행하면 이미 한번 랜더링한 시점이므로 메서드 값을 읽어와서 실행하기 때문에 오류가 발생하지 않는다. </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.scroll.handleScroll();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;ChildRef</span><br><span class="line">          ref=&#123;ref =&gt; &#123;</span><br><span class="line">            <span class="keyword">this</span>.scroll = ref;</span><br><span class="line">          &#125;&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">        &lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;</span><br><span class="line">          맨 밑으로</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="react component ref" src="//codepen.io/partykyoung/embed/yZGBjV/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/yZGBjV/" target="_blank" rel="noopener">react component ref</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h3><p>컴포넌트 내부에서 DOM에 직접 접근해야 할 때는 ref를 사용한다. 먼저 ref를 사용하지 않고도 원하는 기능을 구현할 수 있는지 꼭 고려한 후 사용해야 한다. </p>
+<p>서로 다른 컴포넌트끼리 데이터를 교류할 때 ref를 사용하는 것을 잘못된 방법이다. 할 수는 있지만 리액트 사상에 어긋난 설계이다. 앱 규모가 커지면 구조가 꼬여버려 유지보수가 불가능하기 때문이다. 컴포넌트끼리 데이터를 교류할 때는 언제나 부모 <-> 자식 흐름으로 교류해야 한다. </-></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a><br><a href="https://reactjs.org/docs/refs-and-the-dom.html" target="_blank" rel="noopener">Refs and the DOM</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-09T14:48:14.000Z">2019-02-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 894 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/02/09/2019-01-30-reactjs-event/">이벤트 핸들링</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="이벤트"><a href="#이벤트" class="headerlink" title="이벤트"></a>이벤트</h2><p>유저가 웹 브라우저에서 DOM 요소들과 상호 작용하는 것을 이벤트(event)라고 한다. </p>
+<h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>이벤트<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"number"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">'changeNumber()'</span>&gt;</span>클릭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">changeNumber</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> div = <span class="built_in">document</span>.getElementById(<span class="string">'number'</span>);</span></span><br><span class="line"><span class="undefined">      </span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> number = <span class="built_in">parseInt</span>(div.innerText);</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="undefined">      number += 1;</span></span><br><span class="line"><span class="undefined">      </span></span><br><span class="line"><span class="undefined">      div.innerHTML = number;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="javascript event" src="//codepen.io/partykyoung/embed/bzwKgJ/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/bzwKgJ/" target="_blank" rel="noopener">javascript event</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="react"><a href="#react" class="headerlink" title="react"></a>react</h3><p>React의 이벤트 시스템은 웹 브라우저의 HTML 이벤트와 인터페이스가 동일하기 때문에 사용법이 꽤 비슷하다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 초기값 설정</span></span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      number: <span class="number">0</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleUpdate = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123;<span class="string">`Number: <span class="subst">$&#123;number&#125;</span>`</span>&#125;</span><br><span class="line">        &lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.handleUpdate&#125;&gt;</span><br><span class="line">          업데이트</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="react state" src="//codepen.io/partykyoung/embed/PVNOjm/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/PVNOjm/" target="_blank" rel="noopener">react state</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="이벤트-사용시-주의-사항"><a href="#이벤트-사용시-주의-사항" class="headerlink" title="이벤트 사용시 주의 사항"></a>이벤트 사용시 주의 사항</h3><ul>
+<li><p>이벤틑 이름은 camelCase로 작성하기<br>onclick이나 onchagne등의 이벤트 이름을 React에서는 onClick, onChagne … 이런 식으로 작성해야 한다.</p>
+</li>
+<li><p>이벤트에 함수 형태의 객체를 전달하기<br>HTML에서는 이벤트를 설정할 때 큰 따옴표 안에 실행할 코드를 넣지만 리액트에서는 함수 형태의 객체를 전달한다. 화살표 함수로 바로 전달해도 되고 렌더링 부분 외부에 함수를 작성해서 전달해도 된다.</p>
+</li>
+<li><p>DOM 요소에만 이벤트 설정 가능<br>DOM 요소에는 이벤트를 설정할 수 있지만 직접 만든 컴포넌트에는 이벤트를 설정시 props로 전달되기 때문에 자체적으로 이벤트를 사용할 순 없다. 대신 전달받은 props를 컴포넌트 내부의 DOM에서 이벤트로 설정 가능하다. </p>
+</li>
+</ul>
+<h3 id="이벤트-바인딩"><a href="#이벤트-바인딩" class="headerlink" title="이벤트 바인딩"></a>이벤트 바인딩</h3><p><img src="/images/frontend/reactjs-event-1.png" alt="함수가 가리키는 this"><br>JavaScript 에서 함수를 선언하면 함수는 자기 자신을 가리키는 this 를 생성하며, 함수 호출 시, this 는 전역 객체를 바인딩 하게 된다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    number: <span class="number">0</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleUpdate() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ... 생략</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-event-2.png" alt="함수 바인딩이 되어있지 않기 때문에 함수 실행 시 오류가 발생한다."><br>리액트도 JavaScript이기 때문에 위의 코드 처럼 컴포넌트에 임의 메서드를 만들면 기본적으로 this에 접근할 수 없다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ... 생략</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.handleUpdate = <span class="keyword">this</span>.handleUpdate.bind(<span class="keyword">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleUpdate() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ... 생략</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>컴포넌트의 생성자 메서드인 constructor에서 각 메서드를 this와 바인딩 해주어야 한다. 메서드에서 this를 사용할 수 있도록 메서드에 this를 묶어주는 것이다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    number: <span class="number">0</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleUpdate = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ... 생략</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>바벨의 transform-class-properties 문법을 사용하여 화살표 함수 형태로 메서드를 정의할 수 있다.<br>화살표 함수는 함수를 둘러싸고 있는 영역의 this를 함수 내부에서 this로 그대로 사용한다.</p>
+<h3 id="typescript"><a href="#typescript" class="headerlink" title="typescript"></a>typescript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line">interface Props &#123;&#125;</span><br><span class="line">interface State &#123;</span><br><span class="line">  number: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span>&lt;<span class="title">Props</span>, <span class="title">State</span>&gt; </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    number: <span class="number">0</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleUpdate: any = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render(): JSX.Element &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123;<span class="string">`Number: <span class="subst">$&#123;number&#125;</span>`</span>&#125;</span><br><span class="line">        &lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.handleUpdate&#125;&gt;</span><br><span class="line">          업데이트</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a><br><a href="https://2dubbing.tistory.com/66" target="_blank" rel="noopener">react 컴포넌트에서 constructor 내부에 이벤트 함수를 바인딩 해줘야 하는 이유</a><br><a href="https://www.zerocho.com/category/React/post/578232e7a479306028f43393" target="_blank" rel="noopener">컴포넌트 이벤트 연결(바인딩)</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-27T13:03:42.000Z">2019-01-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (나에 대하여 730 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/01/27/2019-01-27-reactjs-state/">state</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="state"><a href="#state" class="headerlink" title="state"></a>state</h2><p>Component 내부에서 읽고 업데이트도 가능한 값을 사용하려면 state를 써야 한다. state는 기본 값이 미리 설정되어 있어야 하고 this.setState 메소드로 값을 업데이트 할 수 있다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 초기값 설정</span></span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      number: <span class="number">0</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleUpdate = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123;<span class="string">`Number: <span class="subst">$&#123;number&#125;</span>`</span>&#125;</span><br><span class="line">        &lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.handleUpdate&#125;&gt;</span><br><span class="line">          업데이트</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<iframe height="265" style="width: 100%;" scrolling="no" title="react state" src="//codepen.io/partykyoung/embed/PVNOjm/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/partykyoung/pen/PVNOjm/" target="_blank" rel="noopener">react state</a> by partyKyoung<br>  (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><p>constructor는 클래스 인스턴스를 생성하고 클래스 프로퍼티를 초기화를 해주는 특수한 메소드이다. state의 초기값도 constructor에서 지정한다. constructor는 부모 클래스의 constructor를 호출하기 위해 super 키워드를 사용할 수 있다. constructor을 만들면 super 키워드를 필수로 사용해야 한다.</p>
+<p>super 키워드에 props를 인자로 넘겨줘야 constructor 안에서 this.props에 접근할 수 있다.<br>만약 constructor 안이 아닌 다른 곳에서 this.props에 접근하고 싶으면 super 키워드에 props를 인자로 넘겨줄 필요가 없다. </p>
+<h3 id="setState"><a href="#setState" class="headerlink" title="setState"></a>setState</h3><p>state 값을 업데이트 할 때는 this.setState 메서드를 사용한다. state값을 업데이트 할 때는 무조건 setState로만 업데이트를 해야한다. </p>
+<p>setState 메서드는 인자로 전달받은 state 필드를 업데이트 한 후 컴포넌트가 리렌더링하도록 트리거 하는 것 이다. 만약 직접 state에 접근하여(this.state.number = 1) 값을 수정하면 컴포넌트는 리렌더링 되지 않는다. this.forceUpdate 메소드로 강제 리렌더링을 시킬 수 있지만 이 방식은 매우 비효율적이므로 웬만하면 사용을 피해야 한다.</p>
+<h3 id="transform-class-properties"><a href="#transform-class-properties" class="headerlink" title="transform-class-properties"></a>transform-class-properties</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    number: <span class="number">0</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleUpdate = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123;<span class="string">`Number: <span class="subst">$&#123;number&#125;</span>`</span>&#125;</span><br><span class="line">        &lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.handleUpdate&#125;&gt;</span><br><span class="line">          업데이트</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>transform-class-properties 문법으로 constructor 바깥에서 state를 정의할 수도 있다. </p>
+<h3 id="typescript"><a href="#typescript" class="headerlink" title="typescript"></a>typescript</h3><p>typescript를 사용하면 state에도 타입을 지정해줄 수 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line">interface Props &#123;&#125;</span><br><span class="line">interface State &#123;</span><br><span class="line">  number: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span>&lt;<span class="title">Props</span>, <span class="title">State</span>&gt; </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    number: <span class="number">0</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleUpdate: any = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// state 업데이트</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      number: number + <span class="number">1</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render(): JSX.Element &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; number &#125; = <span class="keyword">this</span>.state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123;<span class="string">`Number: <span class="subst">$&#123;number&#125;</span>`</span>&#125;</span><br><span class="line">        &lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.handleUpdate&#125;&gt;</span><br><span class="line">          업데이트</span><br><span class="line">        &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>타입스크립트를 공부하고 있어서 타입스크립로 함수를 작성해봤다. render 함수는 JSX 객체를 리턴하기 때문에 리턴 타입에 JSX.Element를 적어주었고 나머지 이벤트 함수는 state 값만 바꿀 뿐 리턴 값이 없어서 리턴 타입으로 any를 적어 주었다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a><br><a href="https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9" target="_blank" rel="noopener">React ES6 — Class constructor에서의 super()</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-02T14:29:09.000Z">2018-09-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 읽기 (나에 대하여 273 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/02/2018-08-30-reactjs-component/">Component</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><p>Component는 JavaScript function과 같다. props라고 불리는 임의의 input을 받아들이고 화면에 어떻게 나타낼지를 설명하는 React Element를 반환한다.<br>Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주고 LifeCycle API를 이용하여 Component가 화면에서 나타날 때, 사라질 때, 변화가 일어날 때 주어진 작업들을 처리할 수 있으며 method를 만들어 특별한 기능을 붙일 수 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">        first component!</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+<p>컴포넌트의 초기 코드이다. es6에 추가된 export 명령어로 컴포넌트를 모듈화 시켜 내보낼 수 있다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppContainer</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;App /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> AppContainer;</span><br></pre></td></tr></table></figure>
+<p>import 명령어로 원하는 컴포넌트를 불러와 사용할 수 있다. import 역시 es6에서 추가된 명령어 이다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://reactjs.org/docs/components-and-props.html" target="_blank" rel="noopener">Components and Props</a><br><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-04T21:06:13.000Z">2018-08-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 597 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/08/05/2018-08-05-reactjs-jsx-fragment/">Fragment</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;React.js&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;JSX &lt;br/</span>&gt; :)&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+<p>JSX는 JavaScript XML의 약자이다. render 함수를 보면 HTML 태그 처럼 생긴 것들이 보이는데 저 부분이 JSX 이다. JSX로 컴포넌트가 화면에 어떻게 보일지 나타낼 수 있다. JSX는 HTML과 비슷해 보이지만 용도도 사용법도 다르다. </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">/* &#123;</span></span><br><span class="line"><span class="comment">        error</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        &lt;div&gt;안녕하세요&lt;/div&gt;</span></span><br><span class="line"><span class="comment">        &lt;div&gt;반갑습니다&lt;/div&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">      &#125; */</span></span><br><span class="line"></span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;div&gt;안녕하세요&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;반갑습니다&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-fragment-1.png" alt="실행결과"><br>JSX는 컴포넌트에 여러 요소가 있다면 부모 요소 하나로 꼭 감싸야 한다. Virtual DOM에서 컴포넌트 변화를 감지해 낼 때 효율적으로 비교할 수 있도록 컴포넌트 내부는 DOM 트리 구조 하나여야 한다는 규칙이 있기 때문이다.<br>하지만 이렇게 요소들을 감싸기 위한 용도로 DOM 요소들을 추가하다보면 쓸모없는 요소들이 늘어나게 된다. </p>
+<h2 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component, Fragment &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Fragment&gt;</span><br><span class="line">        &lt;div&gt;안녕하세요&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;반갑습니다&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="regexp">/Fragment&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-fragment-2.png" alt="실행결과"></p>
+<p>Fragment는 React v16 이상의 버전에서 도입되었다. Fragment로 부모 DOM 요소를 추가하지 않고도 자식 요소들을 그룹화 할 수 있다.<br>Fragment를 사용하면 단지 부모 요소로만 쓰이는 불필요한 DOM을 줄일 수 있어 조금 더 빨라지고 메모리 사용량도 조금 더 적어진다. 개발자 도구로 DOM 요소를 확인 할 때도 조금 더 편리하게 확인할 수 있다. </p>
+<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>실무에서 React.js를 사용하면서 왜 JSX에 부모요소로 꼭 자식요소들을 감싸야 하는지 이유도 모른체 매번 써왔는데 이번에 처음부터 React.js를 공부하면서 드디어 그 이유를 알게 되었다 ㅠ…<br>개인적으로 부모요소 규칙때문에 짜증난적이 한두번이 아니었는데 Fragment 덕분에 많이 편해졌다. 필요한걸 쏙쏙 골라서 업데이트 해주는 React.js가 너무 좋다 :).</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a><br><a href="https://reactjs.org/docs/fragments.html" target="_blank" rel="noopener">Fragments</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-01T17:49:46.000Z">2018-08-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 889 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/08/02/2018-08-02-reactjs-first-reactjs/">React.js</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="React-js"><a href="#React-js" class="headerlink" title="React.js?"></a>React.js?</h2><p>페이스북에서 개발한 오픈소스 JavaScript Library.</p>
+<h2 id="React-js-특징"><a href="#React-js-특징" class="headerlink" title="React.js 특징"></a>React.js 특징</h2><h3 id="Only-View"><a href="#Only-View" class="headerlink" title="Only View"></a>Only View</h3><p>React는 오직 View만 신경쓰고 담당하는 Library 이다. </p>
+<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p>React.js는 컴포넌트를 화면에 어떻게 보일지를 정의할 때 JSX를 사용한다. JSX는 JavaScript XML의 약자이다.<br>JSX를 사용하지 않아도 되지만 사용하는게 훨씬 편하다.</p>
+<h3 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h3><p>Virtual DOM 을 사용하여 상태의 변함에 따라 선택적으로 유저 인터페이스를 렌더링 한다. 따라서, 최소한의 DOM 처리로 컴포넌트들을 업데이트 할 수 있게 해준다.</p>
+<p>DOM은 문서 객체 모델(Document Object Model)의 약자이다. HTML과 XML 문서를 위한 API 이며 문서의 구조화된 표현을 제공한다.</p>
+<p>Virtual DOM은 실제 DOM의 빠른 인 메모리의 형태이며 JavaScript와 DOM이 반응을 하는것 처럼 다룰 수 있게 하는 추상적 개념이다. 동작과정은 아래의 순서와 같다.</p>
+<ol>
+<li>데이터 모델 상태가 변경될 때 마다 Virtual DOM과 React는 Virtual DOM 표현에 맞게 UI를 다시 렌더링한다.<ul>
+<li>컴포넌트가 초기 렌더링을 할 때 render 함수를 사용하는데 이 함수는 View의 생김새, 작동하는 방법 같은 정보를 지닌 객체를 반환한다.<br>렌더링이 끝나면 지니고 있는 정보들을 사용하여 HTML 마크업을 만들고 지정해놓은 DOM 요소 안에 주입한다.<br>컴포넌트가 데이터를 업데이트 했을 때 새로운 데이터를 가지고 render 함수를 또 호출한다. </li>
+</ul>
+</li>
+<li>React는 두 개의 Virtual DOM 사이의 차이점, 즉 실제 DOM이 변경되어야 하는 부분을 연산한다. <ul>
+<li>render 함수가 반환한 결과와 이전 render 함수가 만들었던 정보를 최소한의 연산으로 비교한다. </li>
+</ul>
+</li>
+<li>React는 실제 DOM에서 변경 되어야 하는 부분만 새로 실제 DOM에 적용한다.</li>
+</ol>
+<p>두 Virtual DOM 표현의 차이점을 찾고 실제 DOM에 업데이트 된 패치만 다시 랜더링하는 과정은 빠르며 실제로 다시 그려져야 하는 부분이 무엇인지 고민할 필요가 없다. UI를 업데이트하는 과정에서 생기는 복잡함을 모두 해소하고 더욱 쉽게 업데이트에 접근할 수 있다. </p>
+<h3 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h3><p>Component는 UI를 재사용할 수 있는 독립적인 단위 라고 볼 수있다.<br>UI는 컴포넌트를 이용해 제작하며 원하는 방법으로 이러한 컴포넌트를 조합할 수 있다. 실제로 애플리케이션을 개발할 때는 커스텀 컴포넌트를 제작하게 된다. </p>
+<h3 id="단방향-데이터-흐름"><a href="#단방향-데이터-흐름" class="headerlink" title="단방향 데이터 흐름"></a>단방향 데이터 흐름</h3><p>부모 컴포넌트에서 자식 컴포넌트로 흐르는 단방향 데이터 흐름을 지향한다.</p>
+<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>회사에서 이때까지 혼자서 프론트앤드를 담당하다가 신입이 들어오면서 모르는게 있으면 가르쳐 주고 같이 협업하게 되었다. 과연 내가 누구에게 가르쳐주고 도와줄만큼 React.js를 잘알고 있나 싶어서 리마인드 하는식으로 다시 한번 되짚고 넘어가보고자 한다.<br>열심히 공부해야지. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Your name
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Your title
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Your location</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        42
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        17
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        15
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice" target="_blank">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/ppoffice">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Back-end/">
+            <span class="level-start">
+                <span class="level-item">Back-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Back-end/Node-js/">
+            <span class="level-start">
+                <span class="level-item">Node.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Base/">
+            <span class="level-start">
+                <span class="level-item">Base</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">22</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Base/Algorithms/">
+            <span class="level-start">
+                <span class="level-item">Algorithms</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Compiler/">
+            <span class="level-start">
+                <span class="level-item">Compiler</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-Architecture/">
+            <span class="level-start">
+                <span class="level-item">Computer Architecture</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-security/">
+            <span class="level-start">
+                <span class="level-item">Computer security</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Data-Structure/">
+            <span class="level-start">
+                <span class="level-item">Data Structure</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Information-network/">
+            <span class="level-start">
+                <span class="level-item">Information network</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Operating-systems/">
+            <span class="level-start">
+                <span class="level-item">Operating systems</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Software-engineering/">
+            <span class="level-start">
+                <span class="level-item">Software engineering</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/">
+            <span class="level-start">
+                <span class="level-item">Front-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">14</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Front-end/Css/">
+            <span class="level-start">
+                <span class="level-item">Css</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/React-js/">
+            <span class="level-start">
+                <span class="level-item">React.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/TypeScript/">
+            <span class="level-start">
+                <span class="level-item">TypeScript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/memo/">
+            <span class="level-start">
+                <span class="level-item">memo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/etc/">
+            <span class="level-start">
+                <span class="level-item">etc</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="경아&#39;s 개발일기" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 경아&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

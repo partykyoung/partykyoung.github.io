@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>경아&#39;s 개발일기</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="경아&#39;s 개발일기">
+<meta property="og:url" content="http://dev.kyoungah.com/page/4/index.html">
+<meta property="og:site_name" content="경아&#39;s 개발일기">
+<meta property="og:description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="http://dev.kyoungah.com/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="경아&#39;s 개발일기">
+<meta name="twitter:description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta name="twitter:image" content="http://dev.kyoungah.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="경아&#39;s 개발일기" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-10-28T14:49:54.000Z">2018-10-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Compiler/">Compiler</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12분 읽기 (나에 대하여 1776 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/10/28/2018-10-13-compiler-structure/">컴파일러 구조</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="컴파일러의-논리적-구조"><a href="#컴파일러의-논리적-구조" class="headerlink" title="컴파일러의 논리적 구조"></a>컴파일러의 논리적 구조</h2><p>컴파일러의 논리적 구조를 살펴보면 6단계로 나누어 볼 수 있다. 각 단계들은 한 프로그램을 어떤 다른 형태로 변형시키지만 이 중 일부 단계는 하나로 합칠 수 있다. </p>
+<h3 id="어휘본석-단계"><a href="#어휘본석-단계" class="headerlink" title="어휘본석 단계"></a>어휘본석 단계</h3><p>어휘분석 단계에서는 원시 프로그램을 읽어 들여서 프로그램 문장을 구성하고 있는 최소 단위인 어휘들을 떼어내어 이 어휘들이 올바른지 분석하는 일을 한다. 어휘들은 이들을 정의한 해당 문법에 의하여 분석되는데 어휘가 올바르지 않으면 오류메시지가 출력되고, 올바른 경우에는 토큰(token)형태로 출력된다. 이와 같은 일을 하는 것을 어휘분석기 또는 스캐너 라고 한다. 토큰은 예약어나 상수, 연산자와 프로그래머가 정의한 식별자, 구분자 등이 있다. </p>
+<p>ABC:= E <em> 3.14 + ABC / E; 라는 문장을 읽었다고 가정하자.<br>어휘분석 단계에서는 ABC, :=, E, </em>, 3.14, +, ABC, /, E, ; 같이 10개의 토큰으로 분리하며 이러한 토큰들은 토큰번호와 토큰 값으로 구성되며 다음 단계인 구문분석 단계의 입력이 된다. 프로그래머가 작성한 주석은 이 과정에서 모두 처리된다.</p>
+<h3 id="구문분석-단계"><a href="#구문분석-단계" class="headerlink" title="구문분석 단계"></a>구문분석 단계</h3><p>구문분석 또는 파싱(parsing)이라고도 하며 어휘분석 단계의 결과인 토큰들을 입력으로 받아 이 토큰들의 열이 올바른 문장구조를 갖고 있는지를 검사한다. 올바른 문장에 대해서는 그 문장에 대한 구문구조를 만들어 출력하고 올바르지 않은 문장에 대해서는 오류메시지를 출력한다. 이처럼 구문분석을 담당하는 것을 구문분석기(syntax analyzer) 또는 파서(parse)라고 한다. </p>
+<p><img src="/images/base/compiler-structure-01.png" alt="파스트리"><br>구문구조는 토큰들을 단말노드로 하는 트리(tree)형태로 치환되는데 이 트리를 파스트리(parse tree)라고 한다. 파스트리는 중간코드 생성 단계에서 이용된다.</p>
+<p><img src="/images/base/compiler-structure-02.png" alt="구문트리"><br> 파스트리는 불필요한 정보인 식별자, 숫자, 식 등이 있어서 기억공간을 낭비하고 컴파일러의 속도를 떨어뜨린다. 따라서 불필요한 정보를 제거하고 다음 단계에 꼭 필요한 정보만으로 구성된 트리를 만들 수 있는데 이것을 구문트리(syntax tree, abstract syntax tree)라 한다. </p>
+<h3 id="의미분석-단계"><a href="#의미분석-단계" class="headerlink" title="의미분석 단계"></a>의미분석 단계</h3><p>구문분석 단계의 결과인 구문트리가 어떠한 의미가 있고 어떠한 기능을 하는지 분석하고 이러한 기능이 올바르게 수행될 수 있도록 환경을 조성하는 일을 한다. 이와 같은 일을 담당하는 것을 의미분석기(semantic analyzer)라고 한다.<br>여기서는 구문트리를 보며 산술식과 각 문장의 연산자 및 피연산자를 인식하고 유형검사 등을 한다. 유형검사란 각 연산자들이 원시 프로그램 규칙에 의해 허용된 피연산자를 가졌는지를 검사하는 것을 뜻한다. </p>
+<h3 id="중간코드-생성-단계"><a href="#중간코드-생성-단계" class="headerlink" title="중간코드 생성 단계"></a>중간코드 생성 단계</h3><p>이 단계는 최적화를 위한 중간단계이다. 구문분석 단계에서 만들어진 구문트리를 이용하여 코드를 생성하거나 한 문법규칙이 reduce될 때마다 구문지시적 변환으로 이루어진다. 구문지시적 변환은 문법규칙이 reduce될 때 그 규칙에 알맞은 코드생성 루틴을 부름으로써 최적화를 위한 코드, 중간코드를 생성한다. 중간코드 생성을 담당하는 도구를 중간코드 생성기 라고 한다. </p>
+<p>ex) </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">중간코드</th>
+<th style="text-align:center">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">(*, E, 3.14, T0)</td>
+<td style="text-align:center">T0 = E * 3.14</td>
+</tr>
+<tr>
+<td style="text-align:center">(/, ABC, E, T1)</td>
+<td style="text-align:center">/ T1 = ABC / E</td>
+</tr>
+<tr>
+<td style="text-align:center">(+, T0, T1, T2)</td>
+<td style="text-align:center">T2 = T0 + T1</td>
+</tr>
+<tr>
+<td style="text-align:center">(:=, T2, ⏀, ABC)</td>
+<td style="text-align:center">ABC := T2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="코드-최적화-단계"><a href="#코드-최적화-단계" class="headerlink" title="코드 최적화 단계"></a>코드 최적화 단계</h3><p>여기서는 코드를 좀더 효율적으로 만들어 코드 실행 시 기억공간이나 실행시간을 절약하기 위한 단계이다. 이 단계는 선택적 단계로 생략되는 경우도 있지만 요즘은 RISC(Reduced Instruction Set Computer)와 같은 컴퓨터 구조의 특성을 활용하기 위하여 최적화 단계를 많이 사용하고 있다.<br>최적화는 지역최적화와 전역최적화, 단일문에서의 최적화와 루프 문장에서의 최적화, 실행 속도 면에서의 최적화, 기억장소 절약 면에서의 최적화로 나눌 수 있다. </p>
+<h3 id="목적코드-생성-단계"><a href="#목적코드-생성-단계" class="headerlink" title="목적코드 생성 단계"></a>목적코드 생성 단계</h3><p>컴파일 단계의 마지막 단계로 연산을 수행할 레지스터를 선택하거나 자료에 기억장소의 위치를 정해주며, 실제로 목적기계어에 대한 코드를 생성하는 단계이다. 이 과정에서는 중간코드 생성 단계에서 만들어진 중간코드들을 기계명령어로 바꾸어 주는 역할을 한다. </p>
+<h2 id="컴파일러의-물리적-구조"><a href="#컴파일러의-물리적-구조" class="headerlink" title="컴파일러의 물리적 구조"></a>컴파일러의 물리적 구조</h2><p>컴파일러의 구현에서는 여러 단계를 모아서 하나의 모듈로 묶을 수 있는데 이를 패스(pass)라고 한다.<br>현재 많이 사용하는 컴파일러 구현방법으로는 1-패스 컴파일러, 2-패스 컴파일러가 있다. </p>
+<ul>
+<li><p>1-패스 컴파일러<br>초창기에 컴파일러를 만들 때 사용하였던 방법으로 컴파일러의 전 과정을 하나의 패스로 구현하는 방법이다. 전진분기의 처리를 위해 빈칸으로 남겨두었다가 그 정보를 얻었을 때 채워 넣는 백패칭(backpatching)이 필요하나 직접 그 기계에 맞는 코드로 변환시킬 수 있기 때문에 효율성이 좋고 실생속도가 빠르다.</p>
+</li>
+<li><p>2-패스 컴파일러<br>컴파일러의 구성을 중간코드를 기점으로 하여 앞 단계를 전반부, 뒷 단계를 후반부로 구성하는 방법이다. 코드로 직접 번역하지 못하기 때문에 기계코드 표현에 제약을 받고 실생속도가 느리지만 컴파일러를 기능적으로 독립된 여러 모듈로 구성할 수 있기 떄문에 이식성이 좋고 중간코드를 이용한 최적화에 따라 기계와 독립적인 최적화가 가능하며 하나의 패스가 사용했던 공간을 다시 사용할 수 있으므로 기억장소를 절약할 수 있다.<br>일반적으로는 2-패스 컴팡일러를 사용하고 있다. </p>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920024863&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴파일러 구성 1강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-10-24T02:28:25.000Z">2018-10-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/Css/">Css</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 898 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/10/24/2018-10-24-css-drawing-tutorial/">css drawing 튜토리얼 - 호무새 그리기</a>
+            
+        </h1>
+        <div class="content">
+            <p>요즘 css drawing 에 맛들려 시간날 때마다 조금씩 css drawing을 작업하다가 튜토리얼을 간단하게 작성해보기로 했다. </p>
+<p><img src="/images/frontend/css-drawing-tutorial-01.png" alt="출처: 치킨쿤 유튜브 썸네일"><br>위의 이미지는 호무새 방송시 구독 메시지와 같이 출력되는 이미지인데 튜토리얼용으로도 괜찮을것 같아서 캡쳐해왔다. css로 이 이미지를 한번 작업해보자. </p>
+<p><img src="/images/frontend/css-drawing-tutorial-02.png" alt><br>먼저 어떻게 영역을 나눠볼지 정해보자. </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>호무새<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"./angry-heavy-rain.css"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"heavy-rain"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"heavy-rain-eyes left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"heavy-rain-eyes right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"heavy-rain-mouse-line"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"heavy-rain-mouse"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>얼굴안에 눈, 부리가 있으니 얼굴이 될 div안에 눈, 부리 영역을 div로 잡아 넣어주었다. 이제 css를 작성해보자.</p>
+<h2 id="얼굴"><a href="#얼굴" class="headerlink" title="얼굴"></a>얼굴</h2><p><img src="/images/frontend/css-drawing-tutorial-03.png" alt="호무새 얼굴"><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 얼굴 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">380px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">380px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">70px</span> auto <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#54bc89</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 머리 위의 꽁지들 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.heavy-rain</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span> <span class="number">50%</span> <span class="number">50%</span> <span class="number">50%</span> / <span class="number">40%</span> <span class="number">40%</span> <span class="number">60%</span> <span class="number">60%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#54bc89</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">90px</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(20deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">65px</span>;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>div 하나를 호무새 얼굴로 잡고 가상 선택자(before, after)로 호무새의 꽁지를 표현했다.<br>가상 선택자는 존재하지 않는 요소를 존재하는 것처럼 부여하여 문서의 특정 부분 선택이 가능하다.</p>
+<h2 id="호무새-눈"><a href="#호무새-눈" class="headerlink" title="호무새 눈"></a>호무새 눈</h2><p><img src="/images/frontend/css-drawing-tutorial-04.png" alt="호무새 눈"><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 눈 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">4px</span> solid <span class="number">#000000</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">120px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-class">.left</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">70px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 눈썹 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">35px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#000000</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-class">.left</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(20deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-class">.right</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-20deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 눈동자 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain-eyes</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="number">13px</span> <span class="number">#000000</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>역시 가상선택자로 눈알을 표현했다. before는 눈썹, after로는 그림자를 사용하여 눈동자를 나타내었다. </p>
+<h2 id="호무새-부리"><a href="#호무새-부리" class="headerlink" title="호무새 부리"></a>호무새 부리</h2><p><img src="/images/frontend/css-drawing-tutorial-05.png" alt="호무새 부리"><br>호무새 부리<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 부리 테두리 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain-mouse-line</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">30px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-right</span>: <span class="number">160px</span> solid <span class="number">#0d4645</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">151px</span>;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">52px</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-3deg);</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-mouse-line</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">30px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">30px</span> solid <span class="number">#0d4645</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">160px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 부리 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain-mouse</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">25px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-right</span>: <span class="number">140px</span> solid <span class="number">#105f59</span>;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">28px</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-3deg);</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">174px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-mouse</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.heavy-rain-mouse</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.heavy-rain-mouse</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">25px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">25px</span> solid <span class="number">#105f59</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">140px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 호무새 부리 중앙선 */</span></span><br><span class="line"><span class="selector-class">.heavy-rain-mouse</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">161px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#0d4645</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">7</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>좀 낡은 방법이지만 css로 삼각형을 만들 땐 div의 border의 두께를 두껍게 준 후 원하는 방향을 제외한 다른 방향들을 다 투명하게 만드는 방법을 쓴다.<br>원래는 비틀어진 마름모를 하나 만들어서 한번에 다 끝내고 싶었으나 지식이 짦아서 그냥 div와 가상선택자 after로 마름모를 만들었다. 마름모 두개를 만든 후 하나는 부리 테두리로 사용했다. </p>
+<p>부리까지 만들고 나면 호무새 완성! </p>
+<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>완성작을 보니 뿌듯하긴 하지만 최대한 html 요소를 적게 쓰고 싶었는데 부리에 div를 두개나 쓴게 마음에 안든다. 더 좋은 방법이 있는지 찾아봐야겠다 ㅠ. </p>
+<h2 id="코드-전체-보기"><a href="#코드-전체-보기" class="headerlink" title="코드 전체 보기"></a>코드 전체 보기</h2><iframe height="500" scrolling="no" title="angry heavy rain" src="//codepen.io/partykyoung/embed/zyBeYQ/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/partykyoung/pen/zyBeYQ/" target="_blank" rel="noopener">angry heavy rain</a> by partyKyoung (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-10-13T12:39:09.000Z">2018-10-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Compiler/">Compiler</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10분 읽기 (나에 대하여 1529 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/10/13/2018-10-12-compiler-first/">컴파일러 개요</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="컴파일러의-필요성"><a href="#컴파일러의-필요성" class="headerlink" title="컴파일러의 필요성"></a>컴파일러의 필요성</h2><p>컴퓨터 언어 중에서 어떤 문제를 풀기 위하여 일련의 과정을 기술하는 데 사용되는 언어를 프로그래밍 언어 라고 한다. 컴퓨터는 0과 1로 구성된 2진법 수만 취급하므로 초기의 프로그래밍 언어는 0과 1로 작성된 기계어 였다. 명령어를 0과 1로 나타낸다는 것은 매우 불편했고 컴퓨터의 하드웨어 특성과 동작과정을 잘 알아야 하기 때문에 매우 어려웠다. 따라서 조금 더 편리한 프로그래밍 언어를 생각하게 되었는데 그것이 어셈블리어(assembly languagge)이다. 어셈블리어는 0과 1로 구성된 명령어 대신에 A(ADD), L(Load) 등과 같이 그에 대응하는 기호를 사용함으로써 불편한 프로그래밍 작업을 완화 시켜 주었다. </p>
+<blockquote>
+<p>어셈블리어(영어: assembly language) 또는 어셈블러 언어(assembler language)는 기계어와 일대일 대응이 되는 컴퓨터 프로그래밍의 저급 언어이다. (출처: 위키백과)</p>
+</blockquote>
+<p>어셈블리어로 작성된 프로그램을 입력하면 어셈블러(어셈블리어로 작성된 프로그램을 그에 대응하는 기계어로 번역해 주는 번역기)가 번역하여 기곙어로 작성된 프로그램을 출력해준다. 그러나 어셈블리어도 기계어 대신에 기호를 사용한다는 것 뿐이지 결국은 기계어 처리방식을 알아야 하므로 프로그래밍이 매우 어려웠다. 이에 영어와 유사한 C, C++, JAVA 같은 고급언어를 만들게 되었다. </p>
+<p>이처럼 기계어 보다는 어셈블리어, 어셈블리어 보다는 고급언어가 더 배우기 쉽고 프로그램 작성이 용이하며 디버깅이 쉽고 이식성도 높힐 수 있다. 하지만 이러한 고급언어로 작성된 프로그램은 결국 기계가 이해할 수 있는 기계어로 다시 바꾸어 주어야 한다. 즉 번역기가 번역을 해 주어야 한다. 번역기란 이처럼 하나의 프로그래밍 언어로 작성된 프로그램을 입력으로 하여, 그와 동등한 의미를 갖는 다른 프로그래밍 언어로 된 프로그램을 출력하는 하나의 프로그램이다.  이때 입력되는 프로그램을 원시 프로그램이라 하고 이 프로그램을 기술한 언어를 원시 언어라 한다. 출력되는 프로그램을 목적 프로그램이라 하고 ㅗ이 프로그램을 기술한 언어를 목적언어라 한다.</p>
+<p>번역기의 종류를 살펴보면 어셈블러, 컴파일러, 프리프로세서, 인터프리터 등이 있는데 이 중 가장 대표적인 번역기가 컴파일러다. 일반적으로 모든 컴퓨터에는 어셈블러가 있다. 따라서 컴파일러는 프로그램을 어셈블리어로 작성된 프로그램으로 번역을 해준다. 따라서 컴파일러에서 기계어 프로그램으로 번역하는 기능을 제외할 수 있으므로 컴파일러를 제작하기가 수월해진다. </p>
+<p>결론적으로 컴파일러와 인간의 의사 전달을 위해서는 고급언어가 필요하고, 고급언어로 작성된 프로그램을 컴퓨터가 인식할 수 있도록 기계어로 번역해 주어야 하므로 컴파일러가 필요하다. </p>
+<h2 id="켬파일러와-인터프리터"><a href="#켬파일러와-인터프리터" class="headerlink" title="켬파일러와 인터프리터"></a>켬파일러와 인터프리터</h2><h3 id="컴파일러"><a href="#컴파일러" class="headerlink" title="컴파일러"></a>컴파일러</h3><p>컴파일러는 고급 프로그래밍 언어를 기계어로 번역하는 프로그램이다. 컴파일러는 입력 프로그램의 전체 문장을 입력된 순서대로 처리하여 전체적인 하나의 목적 프로그램을 완성하고 이것은 후에 로드되어 실행하게 된다. </p>
+<p>반복문이나 계속 호출되는 부프로그램처럼 많은 횟수로 반복 처리되는 프로그램인 경우에는 컴파일러 기법이 큰 장점을 갔는다. 전체적으로 디코딩하게 되면 그 다음 부터는 실행만 하므로 효율적이기 때문이다. 그러나 몇 줄의 원시 프로그램이 때로는 몇백개의 기계어로 번역되기 때문에 컴파일러 기법은 커다란 기억장소가 필요하다. </p>
+<p>컴파일러 언어에는 C, C++, Java 등이 있다. </p>
+<h3 id="인터프리터"><a href="#인터프리터" class="headerlink" title="인터프리터"></a>인터프리터</h3><p>인터프리터는 컴파일러와 같은 단계를 거치지 않고, 원시 프로그램을 그때그때 처리하므로 인터프리터의 처리과정은 컴파일러와는 다르다. </p>
+<p>인터프리터 기법의 처리과정을 살펴보면, 고급언어로 작성된 원시 프로그램을 중간코드로 변환하고, 변환된 중간코드를 명령어 단위로 가져다가 디코드하고 실행한다. 그리고 명령어의 주소를 하나 늘린 후 다음 명령어를 가져온다. 따라서 반복문 등이 있을 때는 반복횟수만큼이나 명령어를 계속 가져와서 디코드하고 실행하므로, 단 한번의 번역으로 끝마치는 컴파일러 기법에 비해 시간이 많이 소요된다. 그러나 사용자가 실행과정을 눈으로 보로 수 있고, 일문일답 식의 대화가 가능하며, 언어에 사용되는 자료를 동적으로 정의하는 등의 융통성이 있다. </p>
+<p>인터프리터 언어에는 JavaScript, PHP, Python, Ruby 등이 있다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920024863&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴파일러 구성 1강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Data-Structure/">Data Structure</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8분 읽기 (나에 대하여 1228 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/16/2018-09-03-data-structure-first/">자료구조란 무엇인가</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="자료와-정보의-관계"><a href="#자료와-정보의-관계" class="headerlink" title="자료와 정보의 관계"></a>자료와 정보의 관계</h2><ul>
+<li><strong>자료</strong>: 현실 세계에서 관찰이나 측정을 통해서 수집된 값이나 사실. 우리의 생활에서 실제로 만질 수 있거나 볼 수 있거나 하는 것(길이, 무게, 부피 등을 측정할 수 있는 대상)에 대해서 물리적인 단위로 표현하여 얻어 낼 수 있는 내용.</li>
+<li><strong>정보</strong>: 어떤 상황에 대해서 적절한 의사결정을 할 수 있게 하는 지식으로서 자료의 유효한 해설이나 자료 상호간의 관계를 표현하는 내용. 어떠한 상황에 적절한 결정이나 판단에 사용될 수 있는 형태로 가공되거나 분류되기 위해 ‘처리 과정’을 거쳐서 정리되고 정돈된 ‘자료의 2차 처리 결과물’.</li>
+</ul>
+<p>I = P(D)<br>I: 정보<br>D: 자료<br>P: 처리</p>
+<p>자료와 정보를 쌀과 밥으로 예를 들면 농부가 쌀을 재배하고 식품회사에 팔면 식품회사에서 밥을 짓고 그 밥으로 즉석밥을 만들 듯이 자료도 수집 - 측정 - 관찰 등과 같은 과정으로 얻어진 후 가공하고 정리해서 정보로 만들어진다.</p>
+<p>컴퓨터가 나오기 전 자료를 가공하고 정리하는 일은 사람이 했는데 컴퓨터를 이용하여 자료를 정리하고 가공하게 되면서 자료의 규모가 커지고 정밀해졌다. </p>
+<h2 id="추상화"><a href="#추상화" class="headerlink" title="추상화"></a>추상화</h2><ul>
+<li><strong>추상화</strong>: 공통적인 개념을 이용하여 같은 종류의 다양한 객체를 정의하는 것.</li>
+</ul>
+<p>예를 들면 트럭, 버스, 승용차 등 모두 자동차라는 특성을 가지고 있다. 세부적으로 생각하면 다른점이 많지만 평소에 대화할 때 편하게 그냥 자동차라고 하듯이 추상화를 통해 말하는 사람의 의사를 간결하게 전달할 수 있게 된다.<br>자료의 추상화는 다양한 객체를 컴퓨터에서 표현하고 활용하기 위해 필요한 자료의 구조에 대해서 공통의 특징만 뽑아 정의한 것이다. 자료의 추상화에는 컴퓨터 내부에서 처리되는 이진수의 표현 방법이나 저장 위치 등은 표현되지 않는다. 단순하게 개발자의 머릿속에 그림을 그리는 일과 같은 것 이라고 생각하면 된다.</p>
+<h2 id="자료구조의-개념"><a href="#자료구조의-개념" class="headerlink" title="자료구조의 개념"></a>자료구조의 개념</h2><ul>
+<li><strong>자료구조</strong>: 전산학에서 자료를 효율적으로 이용할 수 있도록 컴퓨터에 저장하는 방법 (출처: 위키백과). 추상화를 통해 자료의 논리적 관계를 구조화 한 것.</li>
+</ul>
+<p>자료의 추상화와 구조화가 적절히 이루어지지 못하면 소프트웨어는 비효율적으로 수행되거나 소프트웨어의 확장성에 문제가 생길 수 있다. 따라서 자료가 복잡해지거나 소프트웨어가 복잡해질수로고 자료구조의 중요성이 강조되고 있다. </p>
+<p>어떤 일을 컴퓨터에 시키기 위해 필요한 명령문을 알고리즘이라고 한다면 알고리즘이 일을 하기 위해서 필요한 다양한 자료의 논리적 구조나 논리적 관계를 자료구조 라고 한다.<br>자료구조가 컴퓨터에 대한 입력값의 추상화된 상태라면 알고리즘은 컴퓨터가 수행해야 할 명령의 추상화다.</p>
+<p>I = P(D, A)</p>
+<p>개발자는 입력될 값을 머릿속에서 추상화된 형태(자료구조)로 구조화 하고, 수행되어야 할 명령어를 머릿속에서 추상화된 형태(알고리즘)으로 체계화 한 후 프로그래밍 언어로 자료구조와 알고리즘을 표현(구체화) 한다.</p>
+<p>자료구조의 형태는 프로그래밍 언어에서 제공되는 ‘미리 정의된 자료구조’와 개발자가 정의하여 사용하는 ‘사용자 정의 자료구조(스택, 큐, 트리, 그래프 등)’로 나누어 진다. 미리 정의된 자료구조는 정수, 실수, 문자와 같은 ‘기본 자료구조’와 배열, 구조체, 포인터 같은 ‘파생된 자료구조’로 나뉘어 진다.<br>미리 정의된 자료구조는 프로그래밍 언어 개발자가 프로그램 개발을 위해 미리 정의하지만 사용자 정의 자료구조는 프로그램 개발자가 자신의 프로그램 개발 방향에 따라 프로그래밍 언어로 새롭게 정의하여 사용한다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920025679&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 자료구조 1강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-Architecture/">Computer Architecture</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    19분 읽기 (나에 대하여 2790 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/16/2018-10-03-computer-architecture-first/">컴퓨터 구조 개요</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="컴퓨터"><a href="#컴퓨터" class="headerlink" title="컴퓨터"></a>컴퓨터</h2><p>컴퓨터(computer)는 진공관, 트랜지스터 등의 전자 회로를 이용하여 방대한 정보를 저장하고 자동적으로 계산하고 입력된 데이터를 정해진 방법에 따라 처리하는 장치(device)다. (출처: 위키백과)</p>
+<p>일반적으로 컴퓨터를 말할 때 시스템이란 용어를 덧붙여 컴퓨터 시스템이라 부른다. 시스템이란 그 시스템에 부여된 목적을 달성하기 위하여 상호작용 하는 구성요소들의 집합으로 정의된다.<br>따라서 컴퓨터를 제대로 이해하기 위해서는 ‘시스템 측면에서 컴퓨터는 무엇으로 구성되어 있는가?’, ‘구성요소는 각각 무슨 기능을 갖는가?’, ‘입력과 출력은 무엇인가?’ 등을 살펴보아야 한다. </p>
+<h2 id="컴퓨터-시스템의-전체적-구성"><a href="#컴퓨터-시스템의-전체적-구성" class="headerlink" title="컴퓨터 시스템의 전체적 구성"></a>컴퓨터 시스템의 전체적 구성</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">컴퓨터 시스템</span><br><span class="line">  ├─ 하드웨어</span><br><span class="line">  │   ├─ 입력장치</span><br><span class="line">  │   ├─ 출력장치</span><br><span class="line">  │   ├─ 기억장치</span><br><span class="line">  │   ├─ 중앙처리장치</span><br><span class="line">  │   └─  시스템버스                        </span><br><span class="line">  └─ 소프트웨어</span><br><span class="line">      ├─ 시스템 소프트웨어</span><br><span class="line">      └─ 응용 소프트웨어</span><br></pre></td></tr></table></figure>
+<p>컴퓨터 시스템을 구체적으로 살펴보면 크게 하드웨어와 소프트웨어 측면으로 구분할 수 있다. 하드웨어는 컴퓨터의 기계적인 장치를 의미하며 소프트웨어는 하드웨어를 제어하여 원하는 결과를 얻을 수 있도록 하는 모든 종류의 프로그램을 의미한다.<br>소프트웨어는 컴퓨터에서 사용할 수 있는 명령어들의 조합으로 구현되는데 이를 프로그램이라 부른다. 시스템 소프트웨어는 컴파일러, 어셈블러, 로더, 운영체제 같이 컴퓨터 시스템의 운영을 제어하고 지원하는 프로그램을 말하며 응용 소프트웨어는 워드프로세서, 데이터베이스, 스프레드시트 등과 같이 사용자 편의를 위해 만들어놓은 프로그램을 말한다. </p>
+<p><img src="/images/base/computer-architecture-first-01.png" alt="하드웨어와 소프트웨어의 계층구조"></p>
+<h2 id="컴퓨터-하드웨어-구성요소"><a href="#컴퓨터-하드웨어-구성요소" class="headerlink" title="컴퓨터 하드웨어 구성요소"></a>컴퓨터 하드웨어 구성요소</h2><h3 id="입력장치"><a href="#입력장치" class="headerlink" title="입력장치"></a>입력장치</h3><p>컴퓨터는 사용자로부터 데이터를 명령어와 함께 받아들여서 그 명령어에 따라 데이터를 처리하는 기계이다. 이때 입력장치란 사용자가 입력하는 데이터와 명령어를 받아들여 컴퓨터가 알 수 있는 형태로 변환하여 기억장치나 중앙처리장치에 전달해 주는 장치를 말한다.<br>기본적인 입력장치로 키보드를 사용한다. 키보드상의 문자 각각에 해당되는 키를 누르면 이에 대응하는 전기적 신호가 컴퓨터로 전달된다. 다른 입력장치로는 마우스, 마이크, 스캐너 등이 있다. </p>
+<h3 id="출력장치"><a href="#출력장치" class="headerlink" title="출력장치"></a>출력장치</h3><p>컴퓨터는 입력장치로부터 데이터와 명령어를 받아들여서 그 명령대로 데이터를 처리하고 이에 대한 결과를 생성시킨다. 출력장치란 이렇게 생성된 결과를 사람이 알아볼 수 있는 형태로 변환해 주는 장치를 말한다.<br>최근 가장 많이 사용되고 있는 출력장치로는 LCD(Liquid Crystal Display)가 있는데 이것은 인가전압에 따른 액정의 투과도 변화를 이용하여 각종 장치에서 발생되는 여러가지 전기적인 정보를 시각정보로 변화시켜 전달하는 방법을 주로 사용한다. 또다른 출력장치로는 데이터를 화면이 아니라 종이에 나타내 보여주는 프린터가 있다. </p>
+<h3 id="기억장치"><a href="#기억장치" class="headerlink" title="기억장치"></a>기억장치</h3><p>입력장치로부터 컴퓨터 내부로 전달되는 모든 데이터는 2진수로 바뀌어 기억장치에 저장된다. 데이터 저장 역할을 하는 기억장치는 그 특성과 역할에 따라 캐시와 주기억장치, 그리고 보조기억장치로 나뉜다. </p>
+<h4 id="주기억장치"><a href="#주기억장치" class="headerlink" title="주기억장치"></a>주기억장치</h4><p>주기억장치는 컴퓨터에서 중앙처리장치가 처리할 데이터와 명령어들을 저장한다. 대표적으로 RAM과 ROM이 있다. </p>
+<ul>
+<li>RAM: 전원이 공급되는 동안에는 데이터를 계속 기억하고 있으나 전원 공급이 끊기면 기억된 내용이 없어지는 휘발성 기억장치이다. <ul>
+<li>SRAM: 일단 기억소자에 정보가 저장되면 전원이 유지되는 한 그 데이터를 상실하지 않는다.</li>
+<li>DRAM: 전원이 공급되는 동안에도 일정 주기로 충전을 해주어야 데이터를 상실하지 않기 떄문에 DRAM을 채용한 컴퓨터 시스템에서는 재충전이 필요한 하드웨어 회로가 포함된다. 특수한 경우를 제외하면 대부분 가격이 저렴한 DRAM으로 구성되며 이러한 DRAM은 데이터를 처리하는 중앙처리장치에 비해 속도가 매우 느리므로 중앙처리장치는 주기억장치에서 데이터를 가져올 때 시간이 많이 낭비된다. </li>
+</ul>
+</li>
+<li>ROM: 전원 공급이 끊겨도 이전의 정보가 계속 기억되는 비휘발성 기억장치이다. </li>
+</ul>
+<h4 id="캐시"><a href="#캐시" class="headerlink" title="캐시"></a>캐시</h4><p>주기억장치의 단점을 해결하기 위해 데이터가 중앙처리장치에 신속하게 전달될 수 있도록 하기 위해 사용되는 주기억장치와 중앙처리장치 사이에 위치한 기억장치를 캐시라고 한다. 캐시는 일반적으로 가격이 비싸고 부피가 큰 대신 매우 빠른 SRAM으로 구성되며 보통 수백 MB까지의 용량을 갖는다. </p>
+<h4 id="보조기억장치"><a href="#보조기억장치" class="headerlink" title="보조기억장치"></a>보조기억장치</h4><p>캐시나 주기억장치는 전원이 꺼지면 현재까지 저장한 내용을 잃어버린다. 컴퓨터 사용자가 현재 기억장칭에 저장한 내용을 전원을 끄고 난 다음에도 사용할 수 있도록 해주는 기억장치를 보조기억장치라 한다. 대량의 데이터를 저장하기 위해 사용하며 자기디스크와 자기테이프, CD-ROM 등이 있다. </p>
+<h3 id="중앙처리장치"><a href="#중앙처리장치" class="headerlink" title="중앙처리장치"></a>중앙처리장치</h3><p>중앙처리장치는 컴퓨터의 두뇌에 해당하는 부분이다.</p>
+<h4 id="산술-논리연산장치"><a href="#산술-논리연산장치" class="headerlink" title="산술/논리연산장치"></a>산술/논리연산장치</h4><p>산술/논리연산장치는 중앙처리장치의 가장 중요한 요소로서 사칙연산을 포함한 산술연산과 참과 거짓을 판별하는 논리연산을 수행하는 장치이다. </p>
+<h4 id="제어장치"><a href="#제어장치" class="headerlink" title="제어장치"></a>제어장치</h4><p>제어장치는 중앙처리장치 내부에서 일어나는 모든 동작을 제어하고 관리하는 장치이다. 기억장치로부터 명령을 읽고 해석하여 해석된 결과에 따라 명령을 수행하기 위한 제어신호를 만드는 장치이다. </p>
+<h4 id="레지스터"><a href="#레지스터" class="headerlink" title="레지스터"></a>레지스터</h4><p>레지스터는 중앙처리장치에 있는 내부기억장치로서 연산처리를 위한 데이터나 결과 등을 일시적으로 보관해두는 장치이다. 고속의 연산처리나 편리한 프로그래밍에 도움을 주지만 가격이 비싸므로 중앙처리장치 내의 레지스터의 수는 제한적이다. </p>
+<h3 id="시스템버스"><a href="#시스템버스" class="headerlink" title="시스템버스"></a>시스템버스</h3><p>컴퓨터 구조에서 버스란 두 개 이상의 장치를 연결해 주는 통신선로를 말한다. 일반적으로 하나의 버스는 여러 개의 통신선으로 구성되어 있고 각 선은 2진수 0과 1로 표현되는 신호를 전송할 수 있다. 따라서 한 버스가 8개의 선으로 구성된 경우에는 8개의 신호를 동시에 전송할 수 있다.<br>컴퓨터 시스템은 다양한 시스템 계층에서의 구성요소들 간에 통신을 가능하게 하는 많은 종류의 버스를 포함하고 있다. 이러한 버스의 종류 중 입력장치와 출력장치, 기억장치, 중앙처리장치를 연결해주는 버스를 시스템버스라고 한다. 이러한 시스템버스는 전송되는 데이터가 의미하는 내용에 따라 주소버스, 데이터버스, 제어버스로 구분된다. </p>
+<h2 id="컴퓨터-시스템의-분류"><a href="#컴퓨터-시스템의-분류" class="headerlink" title="컴퓨터 시스템의 분류"></a>컴퓨터 시스템의 분류</h2><h3 id="마이크로컴퓨터"><a href="#마이크로컴퓨터" class="headerlink" title="마이크로컴퓨터"></a>마이크로컴퓨터</h3><p>마이크로컴퓨터는 가장 널리 사용되고 있는 범용 컴퓨터로서 연산장치, 제어장치, 기억장치, 입출력장치 등을 하나의 칩으로 만든 마이크로 프로세서를 중앙처리장치로 채택한 컴퓨터로서, 단일 칩 마이크로 컴퓨터라고 한다. 대표적으로 PC(Personal Computer)가 있다. </p>
+<h3 id="미니컴퓨터"><a href="#미니컴퓨터" class="headerlink" title="미니컴퓨터"></a>미니컴퓨터</h3><p>미니컴퓨터는 외형적으로 마이크로컴퓨터보다 조금 크고, 메인프레임 컴퓨터 보다는 작은 컴퓨터로 단위부서와 같은 작은 규모의 조직에서 사용할 수 있는 소규모 컴퓨터이다. 슈퍼 미니컴퓨터가 등장하면서 많은 범용 컴퓨터의 응용을 흡수하였고 컴퓨팅 서버, 파일 서버, 네트워크 서버 등 각종 서버의 등장으로 인해 도태되었다. </p>
+<h3 id="메인프레임-컴퓨터"><a href="#메인프레임-컴퓨터" class="headerlink" title="메인프레임 컴퓨터"></a>메인프레임 컴퓨터</h3><p>메인프레임 컴퓨터는 고속의 입출력 처리능력을 가지고 있으며 대용량의 저장장치를 보유한 컴퓨터이다. 대규모의 데이터베이스 저장 및 관리용으로 사용된다.</p>
+<h3 id="슈퍼-컴퓨터"><a href="#슈퍼-컴퓨터" class="headerlink" title="슈퍼 컴퓨터"></a>슈퍼 컴퓨터</h3><p>슈퍼컴퓨터는 병렬처리가 가능한 복잡한 구조로 되어 있으며 복잡한 연산을 초고속으로 계산하기 위한 컴퓨텅이다. 이 컴퓨터는 아주 복잡한 과학 계산을 위한 것으로 연산속도가 무엇보다 중요하다. 환경, 에너지, 우주 및 항공, 지원탐사 등에 응용된다.</p>
+<h3 id="파이프라인-슈퍼컴퓨터"><a href="#파이프라인-슈퍼컴퓨터" class="headerlink" title="파이프라인 슈퍼컴퓨터"></a>파이프라인 슈퍼컴퓨터</h3><p>파이프라인 슈퍼컴퓨터는 1개의 중앙처리장치 내에 다수 개의 연산장치를 갖고 있는 컴퓨터로서 각 연산장치는 파이프라이닝 구조를 이용하여 고속의 벡터 계산이 가능하다.</p>
+<h3 id="대규모-병렬처리-컴퓨터"><a href="#대규모-병렬처리-컴퓨터" class="headerlink" title="대규모 병렬처리 컴퓨터"></a>대규모 병렬처리 컴퓨터</h3><p>대규모 병렬처리 컴퓨터는 하나의 시스템 내에 상호 연결된 수백 혹은 수천개 이상의 처리장치를 갖고 있으며 처리장치들이 하나의 큰 작업을 나누어서 병렬로 처리하는 구조를 갖는다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-02T14:29:09.000Z">2018-09-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2분 읽기 (나에 대하여 273 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/02/2018-08-30-reactjs-component/">Component</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><p>Component는 JavaScript function과 같다. props라고 불리는 임의의 input을 받아들이고 화면에 어떻게 나타낼지를 설명하는 React Element를 반환한다.<br>Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주고 LifeCycle API를 이용하여 Component가 화면에서 나타날 때, 사라질 때, 변화가 일어날 때 주어진 작업들을 처리할 수 있으며 method를 만들어 특별한 기능을 붙일 수 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">        first component!</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+<p>컴포넌트의 초기 코드이다. es6에 추가된 export 명령어로 컴포넌트를 모듈화 시켜 내보낼 수 있다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppContainer</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;App /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> AppContainer;</span><br></pre></td></tr></table></figure>
+<p>import 명령어로 원하는 컴포넌트를 불러와 사용할 수 있다. import 역시 es6에서 추가된 명령어 이다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://reactjs.org/docs/components-and-props.html" target="_blank" rel="noopener">Components and Props</a><br><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-22T15:16:39.000Z">2018-08-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/memo/">memo</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (나에 대하여 1088 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/08/23/2018-08-11-html-email-templete/">html 이메일 템플릿 작성하기</a>
+            
+        </h1>
+        <div class="content">
+            <p>오랜만에 퍼블리싱 외주를 받았는데 이메일 템플릿을 퍼블리싱 하는 일이었다.<br>이메일 템플릿은 처음 퍼블리싱 해보는거라 작업 전 먼저 사전작업으로 리서치나 관련 정보들을 알아봤다. </p>
+<h2 id="리서치"><a href="#리서치" class="headerlink" title="리서치"></a>리서치</h2><p>먼저 내가 받은 이메일 중 몇몇 이메일을 검사해 보았다. </p>
+<p><img src="/images/frontend/html-email-template-03.png" alt="aws 메일"><br><img src="/images/frontend/html-email-template-04.png" alt="구글 애널리틱스 메일"><br>대부분은 table로 레이아웃을 잡고 퍼블리싱을 했다. </p>
+<p><img src="/images/frontend/html-email-template-01.png" alt="구글 드라이브 알림 메일"><br><img src="/images/frontend/html-email-template-02.png" alt="티스토리 메일"><br>평범하게 div를 사용해서 레이아웃을 잡은 이메일들도 있었다. </p>
+<p>스타일은 전부다 인라인 스타일을 적용하고 있었다. </p>
+<h2 id="이메일-템플릿을-작성할-때-주의해야-할-점"><a href="#이메일-템플릿을-작성할-때-주의해야-할-점" class="headerlink" title="이메일 템플릿을 작성할 때 주의해야 할 점"></a>이메일 템플릿을 작성할 때 주의해야 할 점</h2><p>위에서 리서치한 결과대로 검색을 해봤더니  이메일 클라이언트 템플릿을 만들 때에는 주의해야 할 것들이 많았다.</p>
+<ul>
+<li><p>레이아웃은 table로 잡자.<br>이메일에서 사용하는 HTML과 CSS는 웹 표준과는 거리가 멀다. 게다가 이메일 클라이언트 마다 html과 css를 다르게 해석하기 때문에 주의해야 한다. 다행이 table 코드는 대부분 적용되므로 이를 사용하는 방법이 가장 많이 쓰인다.<br>맨처음 이메일 템플릿 작업을 들어가면서 에이 뭐 어때 하며 평소대로 div나 다른 태그들로 레이아웃을 잡았었다가 작업했었다가 나중에 아웃룩 구버전에서 레이아웃이 다 깨지는걸 확인하고 허겁지겁 table로 레이아웃을 다 바꿨다 ㅠ.</p>
+</li>
+<li><p>인라인으로 CSS를 적어주는 것이 가장 안전하다.<br>대부분의 메일 서비스 업체에서는 보안상 css 파일을 모두 제거하기 때문에 인라인 스타일로 css를 작성해주는 것이 좋다. 대신 안되는 css 요소들도 많으니 조심해야 한다. (position, background-image 등…) media query도 지원하는 곳에서만 쓸 수 있다. </p>
+</li>
+</ul>
+<h2 id="이메일-템플릿을-작성하면서-도움을-받았던-사이트"><a href="#이메일-템플릿을-작성하면서-도움을-받았던-사이트" class="headerlink" title="이메일 템플릿을 작성하면서 도움을 받았던 사이트"></a>이메일 템플릿을 작성하면서 도움을 받았던 사이트</h2><ul>
+<li><p><a href="https://webdesign.tutsplus.com/ko/articles/build-an-html-email-template-from-scratch--webdesign-12770" target="_blank" rel="noopener">HTML 이메일 템플릿 처음부터 제작하기</a><br>이메일 템플릿을 작성하는 방법을 가르쳐준다. 튜토리얼 하는 식으로 한번 읽어보고 진행했었다.</p>
+</li>
+<li><p><a href="https://zurb.com/playground/responsive-email-templates" target="_blank" rel="noopener">Responsive Email Templates</a><br>무료 이메일 템플릿을 다운받을 수 있는 사이트이다. 이메일 템플릿 하나를 골라 다운 받은 뒤 작업하면서 많이 참고 했었는데 도움이 많이 되었다. </p>
+</li>
+<li><p><a href="https://litmus.com/" target="_blank" rel="noopener">litmus</a><br>작성한 템플릿을 아웃룩, 아이폰, 안드로이드 등 여러 클라이언트에서 테스트 해 볼 수 있는 웹서비스이다. 일주일 동안 무료로 사용할 수 있고 그 다음 부터는 결제를 해야한다.  gmail이랑 네이버 메일에서는 작성했던 템플릿이 무너지지 않고 잘 나오길래 안심하고 있다가 litmus로 아웃룩에서 다 무너져있는 템플릿을 보고 식겁하며 새로 작업했었다.</p>
+</li>
+<li><p><a href="https://templates.mailchimp.com/resources/inline-css/" target="_blank" rel="noopener">CSS Inliner Tool</a><br>html이랑 style을 합쳐서 인라인 스타일 html을 만들어주는 웹사이트이다. 이 사이트 덕분에 css파일과 html 파일을 편하게 합칠 수 있었다. 대신 여러번 작업하면 제대로 결과물이 출력이 안되는 오류가 있어서 파일을 한번 합치고 새로고침 하고 또 다른 파일들을 합치는 작업을 반복했었다. </p>
+</li>
+</ul>
+<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>이메일 템플릿 퍼블리싱을 하면서 테이블로 레이아웃 짜는것이 얼마나 구리고 html5가 얼마나 좋은지 느낄 수 있었다. css도 마음대로 못쓰고 미디어쿼리가 안되는것도 정말 힘들었다 ㅠ. 다시는… 이메일…템플릿…퍼블리싱…하고 싶지….않아… </p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-04T21:06:13.000Z">2018-08-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 597 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/08/05/2018-08-05-reactjs-jsx-fragment/">Fragment</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;React.js&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;JSX &lt;br/</span>&gt; :)&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+<p>JSX는 JavaScript XML의 약자이다. render 함수를 보면 HTML 태그 처럼 생긴 것들이 보이는데 저 부분이 JSX 이다. JSX로 컴포넌트가 화면에 어떻게 보일지 나타낼 수 있다. JSX는 HTML과 비슷해 보이지만 용도도 사용법도 다르다. </p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">/* &#123;</span></span><br><span class="line"><span class="comment">        error</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        &lt;div&gt;안녕하세요&lt;/div&gt;</span></span><br><span class="line"><span class="comment">        &lt;div&gt;반갑습니다&lt;/div&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">      &#125; */</span></span><br><span class="line"></span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;div&gt;안녕하세요&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;반갑습니다&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-fragment-1.png" alt="실행결과"><br>JSX는 컴포넌트에 여러 요소가 있다면 부모 요소 하나로 꼭 감싸야 한다. Virtual DOM에서 컴포넌트 변화를 감지해 낼 때 효율적으로 비교할 수 있도록 컴포넌트 내부는 DOM 트리 구조 하나여야 한다는 규칙이 있기 때문이다.<br>하지만 이렇게 요소들을 감싸기 위한 용도로 DOM 요소들을 추가하다보면 쓸모없는 요소들이 늘어나게 된다. </p>
+<h2 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h2><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component, Fragment &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Fragment&gt;</span><br><span class="line">        &lt;div&gt;안녕하세요&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;반갑습니다&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="regexp">/Fragment&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/frontend/reactjs-fragment-2.png" alt="실행결과"></p>
+<p>Fragment는 React v16 이상의 버전에서 도입되었다. Fragment로 부모 DOM 요소를 추가하지 않고도 자식 요소들을 그룹화 할 수 있다.<br>Fragment를 사용하면 단지 부모 요소로만 쓰이는 불필요한 DOM을 줄일 수 있어 조금 더 빨라지고 메모리 사용량도 조금 더 적어진다. 개발자 도구로 DOM 요소를 확인 할 때도 조금 더 편리하게 확인할 수 있다. </p>
+<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>실무에서 React.js를 사용하면서 왜 JSX에 부모요소로 꼭 자식요소들을 감싸야 하는지 이유도 모른체 매번 써왔는데 이번에 처음부터 React.js를 공부하면서 드디어 그 이유를 알게 되었다 ㅠ…<br>개인적으로 부모요소 규칙때문에 짜증난적이 한두번이 아니었는데 Fragment 덕분에 많이 편해졌다. 필요한걸 쏙쏙 골라서 업데이트 해주는 React.js가 너무 좋다 :).</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a><br><a href="https://reactjs.org/docs/fragments.html" target="_blank" rel="noopener">Fragments</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-08-01T17:49:46.000Z">2018-08-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 889 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/08/02/2018-08-02-reactjs-first-reactjs/">React.js</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="React-js"><a href="#React-js" class="headerlink" title="React.js?"></a>React.js?</h2><p>페이스북에서 개발한 오픈소스 JavaScript Library.</p>
+<h2 id="React-js-특징"><a href="#React-js-특징" class="headerlink" title="React.js 특징"></a>React.js 특징</h2><h3 id="Only-View"><a href="#Only-View" class="headerlink" title="Only View"></a>Only View</h3><p>React는 오직 View만 신경쓰고 담당하는 Library 이다. </p>
+<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p>React.js는 컴포넌트를 화면에 어떻게 보일지를 정의할 때 JSX를 사용한다. JSX는 JavaScript XML의 약자이다.<br>JSX를 사용하지 않아도 되지만 사용하는게 훨씬 편하다.</p>
+<h3 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h3><p>Virtual DOM 을 사용하여 상태의 변함에 따라 선택적으로 유저 인터페이스를 렌더링 한다. 따라서, 최소한의 DOM 처리로 컴포넌트들을 업데이트 할 수 있게 해준다.</p>
+<p>DOM은 문서 객체 모델(Document Object Model)의 약자이다. HTML과 XML 문서를 위한 API 이며 문서의 구조화된 표현을 제공한다.</p>
+<p>Virtual DOM은 실제 DOM의 빠른 인 메모리의 형태이며 JavaScript와 DOM이 반응을 하는것 처럼 다룰 수 있게 하는 추상적 개념이다. 동작과정은 아래의 순서와 같다.</p>
+<ol>
+<li>데이터 모델 상태가 변경될 때 마다 Virtual DOM과 React는 Virtual DOM 표현에 맞게 UI를 다시 렌더링한다.<ul>
+<li>컴포넌트가 초기 렌더링을 할 때 render 함수를 사용하는데 이 함수는 View의 생김새, 작동하는 방법 같은 정보를 지닌 객체를 반환한다.<br>렌더링이 끝나면 지니고 있는 정보들을 사용하여 HTML 마크업을 만들고 지정해놓은 DOM 요소 안에 주입한다.<br>컴포넌트가 데이터를 업데이트 했을 때 새로운 데이터를 가지고 render 함수를 또 호출한다. </li>
+</ul>
+</li>
+<li>React는 두 개의 Virtual DOM 사이의 차이점, 즉 실제 DOM이 변경되어야 하는 부분을 연산한다. <ul>
+<li>render 함수가 반환한 결과와 이전 render 함수가 만들었던 정보를 최소한의 연산으로 비교한다. </li>
+</ul>
+</li>
+<li>React는 실제 DOM에서 변경 되어야 하는 부분만 새로 실제 DOM에 적용한다.</li>
+</ol>
+<p>두 Virtual DOM 표현의 차이점을 찾고 실제 DOM에 업데이트 된 패치만 다시 랜더링하는 과정은 빠르며 실제로 다시 그려져야 하는 부분이 무엇인지 고민할 필요가 없다. UI를 업데이트하는 과정에서 생기는 복잡함을 모두 해소하고 더욱 쉽게 업데이트에 접근할 수 있다. </p>
+<h3 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h3><p>Component는 UI를 재사용할 수 있는 독립적인 단위 라고 볼 수있다.<br>UI는 컴포넌트를 이용해 제작하며 원하는 방법으로 이러한 컴포넌트를 조합할 수 있다. 실제로 애플리케이션을 개발할 때는 커스텀 컴포넌트를 제작하게 된다. </p>
+<h3 id="단방향-데이터-흐름"><a href="#단방향-데이터-흐름" class="headerlink" title="단방향 데이터 흐름"></a>단방향 데이터 흐름</h3><p>부모 컴포넌트에서 자식 컴포넌트로 흐르는 단방향 데이터 흐름을 지향한다.</p>
+<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>회사에서 이때까지 혼자서 프론트앤드를 담당하다가 신입이 들어오면서 모르는게 있으면 가르쳐 주고 같이 협업하게 되었다. 과연 내가 누구에게 가르쳐주고 도와줄만큼 React.js를 잘알고 있나 싶어서 리마인드 하는식으로 다시 한번 되짚고 넘어가보고자 한다.<br>열심히 공부해야지. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-07-30T16:33:31.000Z">2018-07-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Back-end/">Back-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Back-end/Node-js/">Node.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 655 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/07/31/2018-07-24-nodejs-setting/">Node.js 작업환경 설정하기</a>
+            
+        </h1>
+        <div class="content">
+            <p>Node.js 프로젝트를 만들고 Webpack 설정까지 해보자.</p>
+<h2 id="시작하기-전에-필요한-것"><a href="#시작하기-전에-필요한-것" class="headerlink" title="시작하기 전에 필요한 것"></a>시작하기 전에 필요한 것</h2><h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p><a href="https://nodejs.org/ko/" target="_blank" rel="noopener">Node.js 공식사이트</a><br>여기서 Node.js 를 설치할 수 있다. </p>
+<h3 id="NPM-또는-Yarn"><a href="#NPM-또는-Yarn" class="headerlink" title="NPM 또는 Yarn"></a>NPM 또는 Yarn</h3><p><a href="https://www.npmjs.com/" target="_blank" rel="noopener">NPM</a><br>NPM은 Node.js Package Manger의 약자이다.  Node.js에서 사용가능한 모듈들을 패키지화시켜 모아놓은 곳 이다. npm으로 원하는 모듈들을 설치하고 관리할 수 있다. </p>
+<p><a href="https://yarnpkg.com/lang/en/" target="_blank" rel="noopener">Yarn</a><br>Yarn은 의존하는 라이브러리가 많아지면 느려지고 설치하는 시기에 따라 다른 버전을 설치할 가능성이 있는 NPM의 단점을 보완하기 위해 나왔다. npm을 대체할 수 있다.</p>
+<p>NPM의 이슈는 NPM 최신버전에서 해결됐고 속도 차이점은 솔직히 난 잘 못느끼겠다. 이번에 Node.js를 공부하면서 Yarn이 써보고 싶어서 Yarn을 썼는데 딱히 NPM이랑 다른건 없는거 같으니 원하는걸 쓰면 되겠다. </p>
+<h2 id="작업환경-설정"><a href="#작업환경-설정" class="headerlink" title="작업환경 설정"></a>작업환경 설정</h2><p>es6 개발환경을 구축하기 위해 webpack이랑 babel을 사용할 것이다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn init -y</span><br><span class="line">yarn add --dev webpack webpack-cli babel-loader babel-core babel-preset-env</span><br></pre></td></tr></table></figure>
+<p>먼저 yarn init 또는 npm init 으로 package.json 파일을 생성해준 후 webpack과 babel 관련 모듈들을 깔아주자.</p>
+<h3 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> nodeExternals = <span class="built_in">require</span>(<span class="string">'webpack-node-externals'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  target: <span class="string">'node'</span>, <span class="comment">// 기본은 web 이기 때문에 꼭 node로 맞춰줘야 한다. </span></span><br><span class="line">  externals: [nodeExternals()],</span><br><span class="line">  entry: &#123;</span><br><span class="line">    server: <span class="string">'./src/server.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'[name].js'</span>,</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">'build'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">        exclude: <span class="regexp">/(node_modules)/</span>, <span class="comment">// babel-loader로 트랜스파일시 node_modules는 제외한다. </span></span><br><span class="line">        use: &#123;</span><br><span class="line">          loader: <span class="string">'babel-loader'</span>,</span><br><span class="line">          options: &#123;</span><br><span class="line">            presets: [<span class="string">'babel-preset-env'</span>]</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>server-side에서도 webpack을 사용할 수 있도록 webpack.config.js를 작성했다. webpack-node-externals은 node_modules를 빌드과정에서 제외시키는 역할을 한다. </p>
+<h3 id="src-server-js"><a href="#src-server-js" class="headerlink" title="src/server.js"></a>src/server.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> http <span class="keyword">from</span> <span class="string">'http'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer();</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span>;</span><br><span class="line"></span><br><span class="line">server.listen(port, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'server start!'</span>, port);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>간단하게 서버쪽 소스를 작성했다. </p>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">  <span class="string">"build"</span>: <span class="string">"webpack --mode production &amp;&amp; node ./build/server.js"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>빌드와 실행을 동시에 하기 위해 script에 build 명령어도 넣어주면 설정은 끝났다.<br>webpack 4 버전 부터는 꼭 –mode (develop or production)를 설정해주어야한다. </p>
+<h2 id="npm-run-build"><a href="#npm-run-build" class="headerlink" title="npm run build"></a>npm run build</h2><p><img src="/images/backend/nodejs-setting-1.png" alt="실행 결과"><br>빌드도 잘되고 실행도 잘된다. 작업환경을 끝냈으니 이제 본격적으로 Node.js 공부를 해보자.</p>
+<p><a href="https://github.com/partyKyoung/nodejs-study" target="_blank" rel="noopener">해당 포스트에 작성된 모든 소스는 여기서 확인할 수 있다.</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/page/3/">이전</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/page/5/">다음</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/">1</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
+            
+            <li><a class="pagination-link is-current" href="/page/4/">4</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/5/">5</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Your name
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Your title
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Your location</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        42
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        17
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        15
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice" target="_blank">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/ppoffice">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Back-end/">
+            <span class="level-start">
+                <span class="level-item">Back-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Back-end/Node-js/">
+            <span class="level-start">
+                <span class="level-item">Node.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Base/">
+            <span class="level-start">
+                <span class="level-item">Base</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">22</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Base/Algorithms/">
+            <span class="level-start">
+                <span class="level-item">Algorithms</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Compiler/">
+            <span class="level-start">
+                <span class="level-item">Compiler</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-Architecture/">
+            <span class="level-start">
+                <span class="level-item">Computer Architecture</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-security/">
+            <span class="level-start">
+                <span class="level-item">Computer security</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Data-Structure/">
+            <span class="level-start">
+                <span class="level-item">Data Structure</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Information-network/">
+            <span class="level-start">
+                <span class="level-item">Information network</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Operating-systems/">
+            <span class="level-start">
+                <span class="level-item">Operating systems</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Software-engineering/">
+            <span class="level-start">
+                <span class="level-item">Software engineering</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/">
+            <span class="level-start">
+                <span class="level-item">Front-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">14</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Front-end/Css/">
+            <span class="level-start">
+                <span class="level-item">Css</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/React-js/">
+            <span class="level-start">
+                <span class="level-item">React.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/TypeScript/">
+            <span class="level-start">
+                <span class="level-item">TypeScript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/memo/">
+            <span class="level-start">
+                <span class="level-item">memo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/etc/">
+            <span class="level-start">
+                <span class="level-item">etc</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="경아&#39;s 개발일기" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 경아&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

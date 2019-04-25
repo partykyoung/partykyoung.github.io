@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>태그: Operating systems - 경아&#39;s 개발일기</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="경아&#39;s 개발일기">
+<meta property="og:url" content="http://dev.kyoungah.com/tags/Operating-systems/index.html">
+<meta property="og:site_name" content="경아&#39;s 개발일기">
+<meta property="og:description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="http://dev.kyoungah.com/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="경아&#39;s 개발일기">
+<meta name="twitter:description" content="관심있는 기술들과 공부한 것들을 기록합니다. :)">
+<meta name="twitter:image" content="http://dev.kyoungah.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="경아&#39;s 개발일기" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">태그</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Operating systems</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-17T13:31:51.000Z">2019-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (나에 대하여 515 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/17/2019-03-06-operating-systems-pcb/">프로세스 제어 블록</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="프로세스-제어-블록-PCB"><a href="#프로세스-제어-블록-PCB" class="headerlink" title="프로세스 제어 블록(PCB)"></a>프로세스 제어 블록(PCB)</h2><p>프로세스를 관리하기 위해 운영체제는 각 프로세스마다 프로세스 제어블록(PCB)을 두고서 여기에 해당 프로세스의 정보를 보관한다. 프로세스가 진행함에 따라 PCB의 내용은 변경된다.<br>프로세스가 종료되면 해당 프로세스 제어 블록도 없어지게 된다. </p>
+<p><img src="/images/base/operating-systems-pcb-1.png" alt="프로세스 제어 블록의 내용"></p>
+<h3 id="프로세스-상태"><a href="#프로세스-상태" class="headerlink" title="프로세스 상태"></a>프로세스 상태</h3><p>프로세스의 현재 상태를 나타낸다. </p>
+<h3 id="프로세스-번호-PID"><a href="#프로세스-번호-PID" class="headerlink" title="프로세스 번호(PID)"></a>프로세스 번호(PID)</h3><p>프로세스의 기준이 되는 ID를 나타낸다.</p>
+<h3 id="프로그램-카운터-PC"><a href="#프로그램-카운터-PC" class="headerlink" title="프로그램 카운터(PC)"></a>프로그램 카운터(PC)</h3><p>프로세스 수행을 위한 다음 명령의 주소를 표시한다.</p>
+<h3 id="레지스터-register"><a href="#레지스터-register" class="headerlink" title="레지스터(register)"></a>레지스터(register)</h3><p>CPU의 레지스터에 해당하는 정보들을 포함한다.<br>실행상테에서 다른 상태로 전이될 때 CPU의 레지스터 정보를 이곳에 저장시켜서 나중에 다시 실행상태로 전이될 때 복구시켜 프로세스의 정확한 수행을 계속할 수 있도록 한다.</p>
+<h3 id="메모리"><a href="#메모리" class="headerlink" title="메모리"></a>메모리</h3><p>프로세스가 저장된 주소와 가상 메모리를 사용하는 경우에는 가상주소와 실제 주소의 사상정보, 기준 레지스터와 경계 레지스터 등의 정보를 포함한다.</p>
+<h3 id="프로세스-우선순위"><a href="#프로세스-우선순위" class="headerlink" title="프로세스 우선순위"></a>프로세스 우선순위</h3><p>우선순위를 이용하여 스케줄링 시 어떤 작업을 선택 할 것인가를 결정하는데 필요한 정보를 포함한다.</p>
+<h3 id="회계-정보"><a href="#회계-정보" class="headerlink" title="회계 정보"></a>회계 정보</h3><p>주로 성능 측정과 순위에 대한 목적을 위한 정보로서, CPU 사용 시간, 프로세스의 시스템 존재 시간, 메모리 사용량, 보조기억장치 사용량, 기타 시스템 프로그램의 사용 실태 등 다양한 정보를 포함하고 있다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-16T13:34:05.000Z">2019-03-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 855 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/16/2019-03-06-operating-systems-process/">프로세스</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="프로세스"><a href="#프로세스" class="headerlink" title="프로세스"></a>프로세스</h2><p>실행 중인 프로그램.</p>
+<ul>
+<li>프로그램: 동작을 하지 않는 정적, 수동적 개체 </li>
+<li>프로세스: 동작을 하는 능동적 개체</li>
+</ul>
+<p>프로세스의 동작은 CPU가 그 프로세스의 명령들을 실행하는 것이다. </p>
+<ul>
+<li>자원: CPU, 메모리, 입출력장치, 파일 등</li>
+<li>동작: CPU가 프로세스의 명령을 실행</li>
+</ul>
+<p>운영체제는 실행할 준비가 된 프로세스들이 적절히 CPU를 배정받아 효율적으로 작업을 처리할 수 있도록 관리해야 한다. </p>
+<h2 id="프로세스-간의-관계"><a href="#프로세스-간의-관계" class="headerlink" title="프로세스 간의 관계"></a>프로세스 간의 관계</h2><h3 id="독립적-프로세스"><a href="#독립적-프로세스" class="headerlink" title="독립적 프로세스"></a>독립적 프로세스</h3><p>시스템에서 실행 중인 다른 프로세스의 영향을 받지도 않고 주지도 않는 프로세스.</p>
+<ul>
+<li>프로세스의 상태와 데이터는 다른 프로세스와 공유되지 않는다. </li>
+<li>프로세스의 실행은 결정적이며 재생 가능하다.</li>
+<li>프로세스의 실행은 타 프로세스와 무관하게 중단되거나 재시작될 수 있다.</li>
+</ul>
+<h3 id="유기적-프로세스"><a href="#유기적-프로세스" class="headerlink" title="유기적 프로세스"></a>유기적 프로세스</h3><p>시스템에서 실행 중인 따른 프로세스의 영향을 주고받으며 동작하는 프로세스.</p>
+<ul>
+<li>프로세스의 상태와 데이터는 다른 프로세스와 공유된다</li>
+<li>프로세스의 실행은 비결정적며 재생 불가능하다.</li>
+</ul>
+<h2 id="프로세스-관리자"><a href="#프로세스-관리자" class="headerlink" title="프로세스 관리자"></a>프로세스 관리자</h2><ul>
+<li>프로세스를 생성 및 삭제함.</li>
+<li>프로세스 실행(CPU 할당)을 위한 스케줄 결정.</li>
+<li>프로세스의 상태를 관리하며 상태 전이를 처리.</li>
+</ul>
+<h2 id="프로세스의-상태-변화"><a href="#프로세스의-상태-변화" class="headerlink" title="프로세스의 상태 변화"></a>프로세스의 상태 변화</h2><p>시스템에서 프로세스가 처리될 때 프로세스는 생성, 준비, 실행, 대기, 종료의 다섯 가지 중 하나의 상태에 있게 된다.</p>
+<p><img src="/images/base/operating-systems-process-1.png" alt="프로세스의 상태 변화"></p>
+<h3 id="생성"><a href="#생성" class="headerlink" title="생성"></a>생성</h3><p>처음 작업이 시스템에 주어진 상태. 프로세스가 생성되는 중이다.</p>
+<h3 id="생성-gt-준비"><a href="#생성-gt-준비" class="headerlink" title="생성 -&gt; 준비"></a>생성 -&gt; 준비</h3><p>미리 정의된 정책에 따라 스케줄러에 의해 호출되는데 이때 다양한 자원들이 어떻게 필요한지 파악하는 작업을 함.</p>
+<h3 id="준비"><a href="#준비" class="headerlink" title="준비"></a>준비</h3><p>실행 준비가 되어 CPU 할당을 기다리는 상태. </p>
+<ul>
+<li>필요한 자원들은 다 할당받은 후 CPU 할당만 기다리고 있음.</li>
+</ul>
+<h3 id="준비-gt-실행"><a href="#준비-gt-실행" class="headerlink" title="준비 -&gt; 실행"></a>준비 -&gt; 실행</h3><p>사전에 정의된 알고리즘ㅁ에 따라 스케줄러에 의해 프로세스가 처리 된다. 이 과정을 <strong>디스패치</strong> 라고 한다. </p>
+<h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><p>프로세스가 CPU를 할당 받아 작업을 처리하고 있는 상태이다.</p>
+<h3 id="대기"><a href="#대기" class="headerlink" title="대기"></a>대기</h3><p>I/O 작업 같은 이벤트를 처리하기 위해 프로세스의 작업이 보류되는 상태이다.</p>
+<h3 id="실행-gt-준비"><a href="#실행-gt-준비" class="headerlink" title="실행 -&gt; 준비"></a>실행 -&gt; 준비</h3><p>할당시간의 만료나 높은 우선순위의 프로세스가 오는 경우 스케줄러에 의해서 처리된다. </p>
+<h3 id="실행-gt-대기"><a href="#실행-gt-대기" class="headerlink" title="실행 -&gt; 대기"></a>실행 -&gt; 대기</h3><p>I/O 처리, 페이지 교환 같은 명령어 등에 의해 일어난다. 이러한 작업은 상대적으로 오랜 시간이 걸리기 때문에 그동안 CPU를 다른 프로세스에 할당하여 활용하기 위함이다. </p>
+<h3 id="종료"><a href="#종료" class="headerlink" title="종료"></a>종료</h3><p>프로세스의 실행이 종료되었다.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-16T13:10:01.000Z">2019-03-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 583 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/16/2019-03-05-operating-systems-types/">운영체제의 유형</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="운영체제의-유형"><a href="#운영체제의-유형" class="headerlink" title="운영체제의 유형"></a>운영체제의 유형</h2><p>운영체제는 응답시간의 속도와 데이터 입력의 방식에 따라 일괄처리, 대화형, 실시간, 하이브리드 운영체제의 네 가지 유형으로 분류된다.</p>
+<h3 id="일괄처리-batch-processing-운영체제"><a href="#일괄처리-batch-processing-운영체제" class="headerlink" title="일괄처리(batch processing) 운영체제"></a>일괄처리(batch processing) 운영체제</h3><ul>
+<li>초창기 컴퓨터에서 사용되었던 유형으로 작업을 모아서 처리하는 방식.</li>
+<li>사용자와 상호작용 없이 순차적으로 실행한다.</li>
+<li>OMR카드, OCR카드를 입력장치로 이용.</li>
+<li>효율성 평가는 처리량과 반환시간으로 함.<ul>
+<li>처리량: 주어진 전체 시간 안에 처리된 작업의 수 </li>
+<li>반환시간: 작업의 생성 시점부터 종료 시점 까지의 소요 시간</li>
+</ul>
+</li>
+</ul>
+<h3 id="대화형-interactive-운영체제"><a href="#대화형-interactive-운영체제" class="headerlink" title="대화형(interactive) 운영체제"></a>대화형(interactive) 운영체제</h3><ul>
+<li>시분할 운영체제라고도 함.</li>
+<li>시간 단위로 잘라서 다양한 요청들을 차례 차례 돌아가며 처리할 수 있도록 함.</li>
+<li>이용자에게 즉각적인 피드백을 제공하고 응답시간은 사용 중인 이용자의 수에 따라 수 분 또는 수초 안에 처리됨.</li>
+<li>일괄처리 운영체제 보다 빠르지만 실시간 운영체제보다는 느린 응답시간.<ul>
+<li>응답시간: 요청한 시점부터 반응이 시작되는 시점까지의 소요시간.</li>
+</ul>
+</li>
+</ul>
+<h3 id="실시간-운영체제"><a href="#실시간-운영체제" class="headerlink" title="실시간 운영체제"></a>실시간 운영체제</h3><ul>
+<li>모든 운영체제 중 응답시간이 가장 빠름.</li>
+<li>처리의 결과가 현재의 결정에 영향을 주기 때문에 데이터의 처리가 극도로 빨라야 하는 환경에서 사용된다.<ul>
+<li>ex) 우주선 비행 시스템, 미사일 제어, 증권거래 관리 시스템, 은행 입출금 시스템 등…</li>
+</ul>
+</li>
+</ul>
+<h3 id="하이브리드-운영체제"><a href="#하이브리드-운영체제" class="headerlink" title="하이브리드 운영체제"></a>하이브리드 운영체제</h3><ul>
+<li>일괄처리 운영체제와 대화형 운영체제의 결합.</li>
+<li>각 이용자가 터미널을 통해 접속하고 빠른 응답시간을 얻을 수 있기 때문에 대화형 운영체제.</li>
+<li>대화형 작업량이 많지 않을 경우 운영체제는 실제로 백그라운드에서 배치 프로그램을 받아들이고 실행한다.</li>
+<li>현재 사용되고 있는 대부분의 대형 컴퓨터 시스템은 하이브리드 운영체제.</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-16T13:04:34.000Z">2019-03-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (나에 대하여 509 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/16/2019-03-05-operating-systems-configuration/">운영체제의 구성</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="운영체제의-구성"><a href="#운영체제의-구성" class="headerlink" title="운영체제의 구성"></a>운영체제의 구성</h2><p>운영체제를 구성하는 요소는 다양하지만 컴퓨터 시스템의 자원의 성격에 따라 구분한다. 크게 프로세스 관리자, 메모리 관리자, 장치 관리자, 파일 관리자로 나눌 수 있다.</p>
+<h3 id="프로세스-관리자"><a href="#프로세스-관리자" class="headerlink" title="프로세스 관리자"></a>프로세스 관리자</h3><p>프로세스들을 생성하고 삭제하며 CPU에 할당하기 위한 스케줄을 결정한다. </p>
+<ul>
+<li>프로세스: 실행 중인 프로그램 또는 작업. </li>
+<li>컴퓨터의 핵심적인 부분: CPU, 메모리<ul>
+<li>CPU로 명령어 처리, 명령어는 메모리에 저장되어 있음.<ul>
+<li>실행 중인 프로그램은 메모리 상에 프로세스로 존재.</li>
+<li>동작을 하려면 CPU를 이용하여 명령어를 처리해야 함.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>프로세스의 상태(준비, 실행, 대기 등)를 관리하며 상태 전이를 처리한다. </li>
+</ul>
+<h3 id="메모리-관리자"><a href="#메모리-관리자" class="headerlink" title="메모리 관리자"></a>메모리 관리자</h3><p>메모리(주기억장치) 공간에 대한 각각의 요규가 유효한지 체크하고 적법한 요구라면 메모리 관리자가 주기억장치에서 아직 사용 중이지 않은 부분을 할당한다. </p>
+<ul>
+<li>메모리 할당 및 회수</li>
+<li>메모리 공간 보호</li>
+<li>운영체제가 점유하고 있는 주기억장치의 공간을 지킴</li>
+</ul>
+<h3 id="장치-관리자"><a href="#장치-관리자" class="headerlink" title="장치 관리자"></a>장치 관리자</h3><p>컴퓨터 시스템의 모든 장치를 관리한다.</p>
+<ul>
+<li>ex) 비디오 디스플레이, 키보드, 프린터, 디스크 드라이브, 네트워크 장치 등</li>
+<li>시스템의 장치를 할당하고 작동을 시작하며 마지막으로 장치를 반환한다.</li>
+</ul>
+<h3 id="파일-관리자"><a href="#파일-관리자" class="headerlink" title="파일 관리자"></a>파일 관리자</h3><p>컴퓨터 시스템의 모든 파일을 관리한다.</p>
+<ul>
+<li>파일의 접근 제한을 관리.</li>
+<li>파일을 열어 자원을 할당하거나 파일을 닫아 자원을 회수하는 일 등을 수행한다. </li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-16T12:43:35.000Z">2019-03-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (나에 대하여 1319 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/16/2019-03-04-operating-systems-first/">운영체제</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="운영체제"><a href="#운영체제" class="headerlink" title="운영체제"></a>운영체제</h2><p>컴퓨터의 하드웨어 자원을 관리하고 컴퓨터 프로그램이 동작하기 위한 서비스를 제공하는 시스템 소프트웨어.<br>ex) 윈도우, 맥 OS, 리눅스 등..</p>
+<h2 id="운영체제의-역할"><a href="#운영체제의-역할" class="headerlink" title="운영체제의 역할"></a>운영체제의 역할</h2><h3 id="컴퓨터-시스템의-운영"><a href="#컴퓨터-시스템의-운영" class="headerlink" title="컴퓨터 시스템의 운영"></a>컴퓨터 시스템의 운영</h3><ul>
+<li>컴퓨터 시스템의 자원을 제어 및 관리 하여 컴퓨터 시스템을 효율적으로 운영하는 역할.<ul>
+<li>자원이란 컴퓨터 시스템을 구성하고 있는 하드웨어 혹은 소프트웨어.<ul>
+<li>하드웨어 자원: CPU, 메모리, 키보드, 마우스, 네트워크 카드 등…</li>
+<li>소프트웨어 자원: 각종 프로그램 데이터 등… </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="사용자-지원"><a href="#사용자-지원" class="headerlink" title="사용자 지원"></a>사용자 지원</h3><ul>
+<li>사용자의 명령을 해석하여 실행.</li>
+<li>사용자와 하드웨어 사이의 매개체 역할 수행.</li>
+</ul>
+<h2 id="컴퓨터-시스템과-운영체제"><a href="#컴퓨터-시스템과-운영체제" class="headerlink" title="컴퓨터 시스템과 운영체제"></a>컴퓨터 시스템과 운영체제</h2><p>운영체제가 없던 초기 컴퓨터 시스템에서는…</p>
+<ul>
+<li>사용자가 응용 프로그램을 수행시키면 응용 프로그램이 직접 컴퓨터 시스템의 자원을 제어해야만 했다.<ul>
+<li>응용 프로그램에서 하드웨어를 다룰 수 있는 기능들을 모두 가지고 있었고 이때믄에 응용 프로그램 개발자는 하드웨어에 대한 방법을 잘 알아야 했다. </li>
+</ul>
+</li>
+<li>하나의 하드웨어를 여러 사용자가 공유해서 사용하는 경우 응용 프로그램들 끼리 효울적인 자원 분할이 어려웠다.</li>
+</ul>
+<p>이런 문제점을 극복하기 위해 하드웨어와 응용 프로그램 사이에 운영체제를 두고 하드웨어에 대한 제어는 운영체제만 하도록 했다. </p>
+<ul>
+<li>응용 프로그램은 하드웨어에 대한 자세한 정보를 모르더라도 운영체제에 부탁만 하면 운영체제가 대신 하드웨어를 제어하고 그 결과를 응용 프로그램에 제공해 주게 되었다.</li>
+<li>여러 응용 프로그램이 동시에 수행되더라도 운영체제가 중간에서 충돌 없이 자원을 효율적으로 나눠 줌으로써 컴퓨터 시스템이 안정적으로 동작할 수 있게 되었다. </li>
+</ul>
+<p>이러한 형태로 운영체제가 동작하려면 응용프로그램이 직접 하드웨어에 접근하는 것을 강제로 막을 필요가 있다. 응용 프로그램이 하드웨어를 직접 제어할 수 있는 방법이 여전히 존재한다면 시스템의 안정성을 보장할 수 없기 때문이다. </p>
+<h3 id="슈퍼바이저-모드-커널-모드"><a href="#슈퍼바이저-모드-커널-모드" class="headerlink" title="슈퍼바이저 모드(커널 모드)"></a>슈퍼바이저 모드(커널 모드)</h3><ul>
+<li>운영체제의 커널이 동작되는 모드.</li>
+<li>하드웨어를 직접 제어할 수 있는 CPU 명령어 사용 가능.</li>
+</ul>
+<h3 id="보호-모드-사용자-모드"><a href="#보호-모드-사용자-모드" class="headerlink" title="보호 모드(사용자 모드)"></a>보호 모드(사용자 모드)</h3><ul>
+<li>응용 프로그램이 동작되는 모드.</li>
+<li>하드웨어를 직접 제어할 수 있는 CPU 명령어 사용 불가능</li>
+</ul>
+<p>보호 모드에서 동작하는 응용 프로그램이 하드웨어에 대한 제어가 필욯한 경우에는 운영체제에 부탁을 해야만 하고, 그 경우 보호 모드에서 슈퍼바이저 모드로 변경이 되고 운영체제의 커널이 동작하여 하드웨어를 제어하게 된다.<br>이 때 응용 프로그램이 운영체제에 서비스를 요청하는 메커니즘을 <strong>시스템 호출</strong>이라고 한다.</p>
+<p>보호 모드 사용 시 하드웨어 접근이 필요한 경우…<br>==&gt; 보호 모드 사용 중 -&gt; 시스템 호출 -&gt; 보호 모드에서 슈퍼바이저 모드로 변경 -&gt; 커널 동작 -&gt; 하드웨어 제어 -&gt; 응용 프로그램에게 결과를 돌려줌 -&gt; 보호 모드로 돌아옴</p>
+<h2 id="커널"><a href="#커널" class="headerlink" title="커널"></a>커널</h2><ul>
+<li>운영체제의 핵심 요소.</li>
+<li>응용 프로그램과 하드웨어 수준의 처리 사이의 가교 역할을 함.</li>
+</ul>
+<h3 id="일체형-커널"><a href="#일체형-커널" class="headerlink" title="일체형 커널"></a>일체형 커널</h3><ul>
+<li>운영체제의 모든 서비스가 커널 내에 포함되어 있다.</li>
+<li>커널 내부 요소들이 서로 효율적으로 상호작용을 할 수 있다.</li>
+<li>모든 요소가 커널 내부에 존재하기 떄문에 하나의 요소에서라도 오류가 발생하면 시스템 전체에 장애를 일으킬 수 있다.</li>
+<li>UNIX, Linux.</li>
+</ul>
+<h3 id="마이크로-커널"><a href="#마이크로-커널" class="headerlink" title="마이크로 커널"></a>마이크로 커널</h3><ul>
+<li>운영체제의 대부분의 요소들을 커널 외부로 분리.</li>
+<li>커널 내부에는 메모리 관리, 멀티태스킹, 프로세스 간 통신(IPC) 등의 최소한의 요소들만 남겨놓음.</li>
+<li>새로운 서비스를 추가하여 운영체제를 확장하기 쉬움.</li>
+<li>커널 외부의 요소에 문제가 발생하더라도 커널 자체에는 영향이 없기 때문에 유지보수가 용이하여 안정성이 우수함.</li>
+<li>커널 외부 요소들 사이에 데이터 전달이 필요한 경우에는 프로세스 간 통신(IPC)을 통해야만 하기 떄문에 성능 저하가 발생한다.</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-06T13:41:58.000Z">2019-03-06</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 649 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/06/2019-03-06-operating-systems-process-gerating/">프로세스의 생성과 종료</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="프로세스-생성"><a href="#프로세스-생성" class="headerlink" title="프로세스 생성"></a>프로세스 생성</h3><p>운영체제가 새로은 프로세스를 생성하고 실행하려면 프로세스 관리를 위한 프로세스 제어 블록을 만든 후에 프로세스에 주소 공간을 할당해야 한다. </p>
+<ol>
+<li>새로운 프로세스에 프로세스 식별자 할당.</li>
+<li>프로세스의 모든 구성 요소를 포함할 수 있는 주소 공간과 프로세스 제어 블록 공간 할당.</li>
+<li>프로세스 제어 블록 초기화.</li>
+<li>준비 큐에 삽입.</li>
+</ol>
+<p>일반적으로 프로세스는 작업을 수행하기 위해 자원이 필요하다. 한 프로세스가 자식 프로세스를 생성하면 생성된 자식 프로세스는 운영체제로 부터 직접 자원을 얻거나 부모 프로세스 자원의 일부를 얻는다. 하나의 프로세스가 프로세스 생성 시스템 호출을 통해 새로운 프로세스를 생성할 수 있다. ex) fork()</p>
+<ul>
+<li>호출하는 프로세스: 부모 프로세스 </li>
+<li>생성되는 프로세스: 자식 프로세스</li>
+</ul>
+<p>시스템 프로세스와 사용자 프로세스 모두 자식 프로세스를 생성할 수 있다. 즉 부모 프로세스가 될 수 있다. </p>
+<p>부모 프로세스는 자식 프로세스에게 자원을 나눠주거나 공유할 수 잇도록 한다. 보통 자식 프로세스의 자원은 부모 프로세스의 자원으로 제한하는데 과도한 자식 프로세스 생성에 따른 시스템 과부하 방지를 위해서이다.</p>
+<h3 id="프로세스-종료"><a href="#프로세스-종료" class="headerlink" title="프로세스 종료"></a>프로세스 종료</h3><p>프로세스의 마지막 명령이 실행을 마치는 경우 또는 프로세스 종료 시스템 호출을 통하는 경우(ex: exit()) 프로세스는 종료된다. 프로세스 종료 후 부모 프로세스에게 실행 결과를 되돌려 준다. </p>
+<p>프로세스 종료 시스템 호출은 부모 프로세스에 의해서만 호출 된다. 부모 프로세스는 다음과 같은 이유 때문에 자식 프로세스의 실행을 종료시킬 수 있다. </p>
+<ul>
+<li>자식 프로세스가 할당된 자원의 사용을 초과할 때.</li>
+<li>자식 프로세스에게 할당된 작업이 더 이상 필요치 않을 때.</li>
+</ul>
+<p>부모 프로세스가 종료되면 자식 프로세스도 모두 종료된다.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Your name
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Your title
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Your location</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        42
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        17
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        15
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice" target="_blank">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/ppoffice">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Back-end/">
+            <span class="level-start">
+                <span class="level-item">Back-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Back-end/Node-js/">
+            <span class="level-start">
+                <span class="level-item">Node.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Base/">
+            <span class="level-start">
+                <span class="level-item">Base</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">22</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Base/Algorithms/">
+            <span class="level-start">
+                <span class="level-item">Algorithms</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Compiler/">
+            <span class="level-start">
+                <span class="level-item">Compiler</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-Architecture/">
+            <span class="level-start">
+                <span class="level-item">Computer Architecture</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Computer-security/">
+            <span class="level-start">
+                <span class="level-item">Computer security</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Data-Structure/">
+            <span class="level-start">
+                <span class="level-item">Data Structure</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Information-network/">
+            <span class="level-start">
+                <span class="level-item">Information network</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Operating-systems/">
+            <span class="level-start">
+                <span class="level-item">Operating systems</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Base/Software-engineering/">
+            <span class="level-start">
+                <span class="level-item">Software engineering</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/">
+            <span class="level-start">
+                <span class="level-item">Front-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">14</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Front-end/Css/">
+            <span class="level-start">
+                <span class="level-item">Css</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/React-js/">
+            <span class="level-start">
+                <span class="level-item">React.js</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/TypeScript/">
+            <span class="level-start">
+                <span class="level-item">TypeScript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Front-end/memo/">
+            <span class="level-start">
+                <span class="level-item">memo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/etc/">
+            <span class="level-start">
+                <span class="level-item">etc</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Mac 개발환경 설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2019-01-14-typescript-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TypeScript">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/25/2018-09-28-reactjs-props/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="props">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
+                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="암호의 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
+                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/07/2019-04-07-computer-security-first/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="컴퓨터 보안 개념">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
+                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">15</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">11월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/09/">
+                <span class="level-start">
+                    <span class="level-item">9월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Algorithms/">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS/">
+                        <span class="tag">CSS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Compiler/">
+                        <span class="tag">Compiler</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
+                        <span class="tag">Computer Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Computer-security/">
+                        <span class="tag">Computer security</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Data-structure/">
+                        <span class="tag">Data structure</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/HTML/">
+                        <span class="tag">HTML</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Information-network/">
+                        <span class="tag">Information network</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Operating-systems/">
+                        <span class="tag">Operating systems</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/React-js/">
+                        <span class="tag">React.js</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software-engineering/">
+                        <span class="tag">Software engineering</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/TypeScript/">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/etc/">
+                        <span class="tag">etc</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="경아&#39;s 개발일기" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 경아&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
