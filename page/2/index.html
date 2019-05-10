@@ -139,6 +139,67 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-17T16:13:13.000Z">2019-03-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (나에 대하여 693 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/18/2019-03-17-algorithms-merge-sort/">합병정렬</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="합병정렬"><a href="#합병정렬" class="headerlink" title="합병정렬"></a>합병정렬</h2><p>배열을 동일한 크기의 두 개의 부분배열로 분할하고 각각의 부분 배열을 순환적으로 정렬한 후, 정렬된 두 부분배열을 합병하여 하나의 정렬된 배열을 만든다.</p>
+<h3 id="분할"><a href="#분할" class="headerlink" title="분할"></a>분할</h3><p>입력의 크기가 n인 배열을 n/2개의 원소를 가진 두 부분배열로 분할한다.</p>
+<h3 id="정복"><a href="#정복" class="headerlink" title="정복"></a>정복</h3><p>각각의 부분배열에 대해서 합병 정렬을 순환적으로 적용하여 각 부분배열을 정렬한다. </p>
+<h3 id="결합"><a href="#결합" class="headerlink" title="결합"></a>결합</h3><p>정렬된 두 부분배열을 합병하여 하나의 정렬된 배열을 만든다.</p>
+<p><img src="/images/base/algorithms-merge-sort-1.png" alt="합병정렬"></p>
+<h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> sorted[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> mid, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> l_hold = leftIndex, r_hold = mid + <span class="hljs-number">1</span>;</span><br><span class="line">  <span class="hljs-keyword">int</span> resultIndex = leftIndex; <span class="hljs-comment">// 결과 배열의 index</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">while</span>(l_hold &lt;= mid &amp;&amp; r_hold &lt;= rightIndex) &#123;</span><br><span class="line">    <span class="hljs-comment">// 부분배열 두개를 비교하여 작은 값을 선택한다.</span></span><br><span class="line">    <span class="hljs-keyword">if</span> (arr[l_hold] &lt; arr[r_hold]) &#123;</span><br><span class="line">      sorted[resultIndex] = arr[l_hold];</span><br><span class="line"></span><br><span class="line">      l_hold++;</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">      sorted[resultIndex] = arr[r_hold];</span><br><span class="line"></span><br><span class="line">      r_hold++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    resultIndex++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 왼쪽 부분배열에 남아있는 모든 원소를 새로은 배열로 이동시킨다.</span></span><br><span class="line">  <span class="hljs-keyword">while</span> (l_hold &lt;= mid) &#123;</span><br><span class="line">    sorted[resultIndex] = arr[l_hold];</span><br><span class="line"></span><br><span class="line">    resultIndex ++;</span><br><span class="line">    l_hold ++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 오른쪽 부분배열에 남아있는 모든 원소를 새로은 배열로 이동시킨다.</span></span><br><span class="line">  <span class="hljs-keyword">while</span> (r_hold &lt;= rightIndex) &#123;</span><br><span class="line">    sorted[resultIndex] = arr[r_hold];</span><br><span class="line"></span><br><span class="line">    resultIndex ++;</span><br><span class="line">    r_hold ++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 원본 배열에 정렬된 배열을 이동 시킨다.</span></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = leftIndex; i &lt;= rightIndex; i++) &#123;</span><br><span class="line">    arr[i] = sorted[i];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mergeSort</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> sorted[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span> (leftIndex &lt; rightIndex) &#123;</span><br><span class="line">    <span class="hljs-comment">// 각각 n/2크기를 가진 두 부분배열로 나누기 위해 가운데 값 정함.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 왼쪽 부분배열의 순환호출</span></span><br><span class="line">    mergeSort(arr, sorted, leftIndex, mid);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 오른쪽 부분배열의 순환호출</span></span><br><span class="line">    mergeSort(arr, sorted, mid + <span class="hljs-number">1</span>, rightIndex);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 정렬된 두 부분배열의 합병</span></span><br><span class="line">    merge(arr, sorted, leftIndex, mid, rightIndex);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><h3 id="합병-함수-수행-시간"><a href="#합병-함수-수행-시간" class="headerlink" title="합병 함수 수행 시간"></a>합병 함수 수행 시간</h3><p>합병 함수 수행 시간 = 부분배열[n/2] + 부분배열[n/2] = 배열[n]</p>
+<p>두 부분 배열을 합병하면 최악의 경우 결과 배열엔 n + m개의 원소가 저장되는에 이때 최악의 경우  n + m - 1회의 비교가 필요하다. </p>
+<ul>
+<li>최소 비교횟수: $\frac{n}{2}$</li>
+<li>최대 비교횟수: ($\frac{n}{2}$ + $\frac{n}{2}$ - 1) = n - 1;<br>=&gt; 입력 데이터 개수만큼의 저장 장소가 추가로 필요하다.</li>
+</ul>
+<p>결국 합병을 하는데 걸리는 시간은 입력 크기 n에 비례하므로 Θ(n)이 된다. </p>
+<h3 id="합병-정렬-수행-시간"><a href="#합병-정렬-수행-시간" class="headerlink" title="합병 정렬 수행 시간"></a>합병 정렬 수행 시간</h3><p>합병 정렬 수행시간 = 크기 n/2인 두번의 합병 정렬 순환 호출 + 한번의 합병</p>
+<p>T(1) = 1;<br>T(n) = T($\frac{n}{2}$) + T($\frac{n}{2}$) + Θ(n);</p>
+<p>=&gt; T(n) = 2T($\frac{n}{2}$) + Θ(n)<br>=&gt; T(n) = O($n log n$)</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 4강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-03-17T13:31:51.000Z">2019-03-17</time>
                 
                 <div class="level-item">
@@ -818,72 +879,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-06T13:41:58.000Z">2019-03-06</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 읽기 (나에 대하여 649 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/06/2019-03-06-operating-systems-process-gerating/">프로세스의 생성과 종료</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="프로세스-생성"><a href="#프로세스-생성" class="headerlink" title="프로세스 생성"></a>프로세스 생성</h3><p>운영체제가 새로은 프로세스를 생성하고 실행하려면 프로세스 관리를 위한 프로세스 제어 블록을 만든 후에 프로세스에 주소 공간을 할당해야 한다. </p>
-<ol>
-<li>새로운 프로세스에 프로세스 식별자 할당.</li>
-<li>프로세스의 모든 구성 요소를 포함할 수 있는 주소 공간과 프로세스 제어 블록 공간 할당.</li>
-<li>프로세스 제어 블록 초기화.</li>
-<li>준비 큐에 삽입.</li>
-</ol>
-<p>일반적으로 프로세스는 작업을 수행하기 위해 자원이 필요하다. 한 프로세스가 자식 프로세스를 생성하면 생성된 자식 프로세스는 운영체제로 부터 직접 자원을 얻거나 부모 프로세스 자원의 일부를 얻는다. 하나의 프로세스가 프로세스 생성 시스템 호출을 통해 새로운 프로세스를 생성할 수 있다. ex) fork()</p>
-<ul>
-<li>호출하는 프로세스: 부모 프로세스 </li>
-<li>생성되는 프로세스: 자식 프로세스</li>
-</ul>
-<p>시스템 프로세스와 사용자 프로세스 모두 자식 프로세스를 생성할 수 있다. 즉 부모 프로세스가 될 수 있다. </p>
-<p>부모 프로세스는 자식 프로세스에게 자원을 나눠주거나 공유할 수 잇도록 한다. 보통 자식 프로세스의 자원은 부모 프로세스의 자원으로 제한하는데 과도한 자식 프로세스 생성에 따른 시스템 과부하 방지를 위해서이다.</p>
-<h3 id="프로세스-종료"><a href="#프로세스-종료" class="headerlink" title="프로세스 종료"></a>프로세스 종료</h3><p>프로세스의 마지막 명령이 실행을 마치는 경우 또는 프로세스 종료 시스템 호출을 통하는 경우(ex: exit()) 프로세스는 종료된다. 프로세스 종료 후 부모 프로세스에게 실행 결과를 되돌려 준다. </p>
-<p>프로세스 종료 시스템 호출은 부모 프로세스에 의해서만 호출 된다. 부모 프로세스는 다음과 같은 이유 때문에 자식 프로세스의 실행을 종료시킬 수 있다. </p>
-<ul>
-<li>자식 프로세스가 할당된 자원의 사용을 초과할 때.</li>
-<li>자식 프로세스에게 할당된 작업이 더 이상 필요치 않을 때.</li>
-</ul>
-<p>부모 프로세스가 종료되면 자식 프로세스도 모두 종료된다.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -952,7 +947,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        42
+                        43
                     </p>
                 </div>
             </div>
@@ -1056,7 +1051,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">22</span>
+                <span class="level-item tag">23</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -1064,7 +1059,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -1182,7 +1177,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 17.5px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12.5px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
     </div>
 </div>
 
@@ -1196,6 +1191,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1249,19 +1257,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1273,6 +1268,17 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/04/">
@@ -1400,7 +1406,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1529,6 +1535,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
                     <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
                     <p class="is-size-7 is-uppercase">
@@ -1577,19 +1596,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1601,6 +1607,17 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/04/">
@@ -1728,7 +1745,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 

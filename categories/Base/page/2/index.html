@@ -150,6 +150,73 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-16T18:03:57.000Z">2019-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (나에 대하여 710 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/17/2019-03-11-algorithms-binary-search/">이진 탐색</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="이진탐색"><a href="#이진탐색" class="headerlink" title="이진탐색"></a>이진탐색</h2><ul>
+<li><strong>탐색</strong>: 배열 형태로 주어진 데이터에서 원하는 값을 가진 데이터를 찾는 문제.</li>
+<li><strong>이진 탐색</strong>: 정렬된 상태의 데이텅에 대해 적용 가능한 효과적인 탐색 방법.</li>
+</ul>
+<h2 id="탐색-방법"><a href="#탐색-방법" class="headerlink" title="탐색 방법"></a>탐색 방법</h2><p>배열은 오름차순 정렬 되어 있다고 가정한다.</p>
+<p>###분할<br>배열의 가운데 원소를 기준으로 왼쪽 부분배열과 오른쪽 부분배열로 분할한다. 탐색키 x가 가운데 원소와 같으면 가운데 원소에 해당하는 배열의 인덱스를 반환하고 종료한다.</p>
+<p>###정복<br>x가 가운데 원소보다 작으면 왼쪽 부분배열을 대상으로 이진 탐색을 순환호출 하고, 크면 오른쪽 부분배열을 대상으로 이진 탐색을 순환호출한다. 탐색을 다시 수행할 때마다 탐색 범위가 절반으로 줄어든다.</p>
+<h3 id="결합"><a href="#결합" class="headerlink" title="결합."></a>결합.</h3><p>부분배열에 대해서 이진 탐색의 결과가 직접 반환되므로 결과를 결합할 필요가 없다. </p>
+<p><img src="/images/base/algorithms-binary-search-1.png" alt="이진 탐색 분할"></p>
+<h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><h3 id="재귀함수"><a href="#재귀함수" class="headerlink" title="재귀함수"></a>재귀함수</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex, <span class="hljs-keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-comment">// 탐색 실패</span></span><br><span class="line">  <span class="hljs-keyword">if</span> (leftIndex &gt; rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (x == arr[mid]) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> mid;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (x &lt; arr[mid]) &#123;</span><br><span class="line">    <span class="hljs-comment">// 왼족 배열 탐색</span></span><br><span class="line">    <span class="hljs-keyword">return</span> binarySearch(arr, leftIndex, mid - <span class="hljs-number">1</span>, x);</span><br><span class="line">  &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">    <span class="hljs-comment">// 오른쪽 배열 탐색</span></span><br><span class="line">    <span class="hljs-keyword">return</span> binarySearch(arr, mid + <span class="hljs-number">1</span>, rightIndex, x);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="반복함수"><a href="#반복함수" class="headerlink" title="반복함수"></a>반복함수</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">binarySearch_Iteration</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> leftIndex = <span class="hljs-number">0</span>, rightIndex = index - <span class="hljs-number">1</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="hljs-keyword">while</span>(leftIndex &lt;= rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (x == arr[mid]) &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (x &lt; arr[mid]) &#123;</span><br><span class="line">      <span class="hljs-comment">// 왼쪽 부분배열 탐색</span></span><br><span class="line">      rightIndex = mid - <span class="hljs-number">1</span>;</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">      <span class="hljs-comment">// 오른쪽 부분배열 탐색</span></span><br><span class="line">      leftIndex = mid + <span class="hljs-number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 탐색키가 존재하지 않을 경우</span></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>이진 탐색에서는 분할 될 때마다 입력 크기가 절반으로 감소 하며, 탐색 대상의 개수가 1이 되면 더는 분할이 수행되지 않고 탐색 성공 여부가 결정된다.</p>
+<h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>T(n) = 입력 크기 n에 대한 탐색 과정에서의 모든 비교 횟수의 합 = 맨 바깥 수준에서의 비교 횟수 + 순환 호출에서의 비교 횟수.</p>
+<p>맨 바깥 수준에서의 비교 횟수는 상수이므로 1.<br>순환 호출에서의 비교 횟수는 비교 할 때마다 절반 씩 데이터를 나누므로 $\frac{n}{2}$.</p>
+<p>T(n) = T($\frac{n}{2}$) + O(1)(n &gt; 1), T(1) = 1;<br>T(n) = O($logn$)</p>
+<h2 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h2><ul>
+<li>입력이 정렬된 리스트에 대해서만 적용이 가능하다.</li>
+<li>데이터의 삽입/삭제 연산을 수행하면 데이터의 이동이 발생한다.<ul>
+<li>평균 $\frac{2}{n}$개의 데이터 이동이 발생하므로 삽입/삭제가 빈번한 응용에는 부적합하다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-03-16T13:34:05.000Z">2019-03-16</time>
                 
                 <div class="level-item">
@@ -839,65 +906,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-10-13T12:39:09.000Z">2018-10-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Compiler/">Compiler</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    10분 읽기 (나에 대하여 1529 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/10/13/2018-10-12-compiler-first/">컴파일러 개요</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="컴파일러의-필요성"><a href="#컴파일러의-필요성" class="headerlink" title="컴파일러의 필요성"></a>컴파일러의 필요성</h2><p>컴퓨터 언어 중에서 어떤 문제를 풀기 위하여 일련의 과정을 기술하는 데 사용되는 언어를 프로그래밍 언어 라고 한다. 컴퓨터는 0과 1로 구성된 2진법 수만 취급하므로 초기의 프로그래밍 언어는 0과 1로 작성된 기계어 였다. 명령어를 0과 1로 나타낸다는 것은 매우 불편했고 컴퓨터의 하드웨어 특성과 동작과정을 잘 알아야 하기 때문에 매우 어려웠다. 따라서 조금 더 편리한 프로그래밍 언어를 생각하게 되었는데 그것이 어셈블리어(assembly languagge)이다. 어셈블리어는 0과 1로 구성된 명령어 대신에 A(ADD), L(Load) 등과 같이 그에 대응하는 기호를 사용함으로써 불편한 프로그래밍 작업을 완화 시켜 주었다. </p>
-<blockquote>
-<p>어셈블리어(영어: assembly language) 또는 어셈블러 언어(assembler language)는 기계어와 일대일 대응이 되는 컴퓨터 프로그래밍의 저급 언어이다. (출처: 위키백과)</p>
-</blockquote>
-<p>어셈블리어로 작성된 프로그램을 입력하면 어셈블러(어셈블리어로 작성된 프로그램을 그에 대응하는 기계어로 번역해 주는 번역기)가 번역하여 기곙어로 작성된 프로그램을 출력해준다. 그러나 어셈블리어도 기계어 대신에 기호를 사용한다는 것 뿐이지 결국은 기계어 처리방식을 알아야 하므로 프로그래밍이 매우 어려웠다. 이에 영어와 유사한 C, C++, JAVA 같은 고급언어를 만들게 되었다. </p>
-<p>이처럼 기계어 보다는 어셈블리어, 어셈블리어 보다는 고급언어가 더 배우기 쉽고 프로그램 작성이 용이하며 디버깅이 쉽고 이식성도 높힐 수 있다. 하지만 이러한 고급언어로 작성된 프로그램은 결국 기계가 이해할 수 있는 기계어로 다시 바꾸어 주어야 한다. 즉 번역기가 번역을 해 주어야 한다. 번역기란 이처럼 하나의 프로그래밍 언어로 작성된 프로그램을 입력으로 하여, 그와 동등한 의미를 갖는 다른 프로그래밍 언어로 된 프로그램을 출력하는 하나의 프로그램이다.  이때 입력되는 프로그램을 원시 프로그램이라 하고 이 프로그램을 기술한 언어를 원시 언어라 한다. 출력되는 프로그램을 목적 프로그램이라 하고 ㅗ이 프로그램을 기술한 언어를 목적언어라 한다.</p>
-<p>번역기의 종류를 살펴보면 어셈블러, 컴파일러, 프리프로세서, 인터프리터 등이 있는데 이 중 가장 대표적인 번역기가 컴파일러다. 일반적으로 모든 컴퓨터에는 어셈블러가 있다. 따라서 컴파일러는 프로그램을 어셈블리어로 작성된 프로그램으로 번역을 해준다. 따라서 컴파일러에서 기계어 프로그램으로 번역하는 기능을 제외할 수 있으므로 컴파일러를 제작하기가 수월해진다. </p>
-<p>결론적으로 컴파일러와 인간의 의사 전달을 위해서는 고급언어가 필요하고, 고급언어로 작성된 프로그램을 컴퓨터가 인식할 수 있도록 기계어로 번역해 주어야 하므로 컴파일러가 필요하다. </p>
-<h2 id="켬파일러와-인터프리터"><a href="#켬파일러와-인터프리터" class="headerlink" title="켬파일러와 인터프리터"></a>켬파일러와 인터프리터</h2><h3 id="컴파일러"><a href="#컴파일러" class="headerlink" title="컴파일러"></a>컴파일러</h3><p>컴파일러는 고급 프로그래밍 언어를 기계어로 번역하는 프로그램이다. 컴파일러는 입력 프로그램의 전체 문장을 입력된 순서대로 처리하여 전체적인 하나의 목적 프로그램을 완성하고 이것은 후에 로드되어 실행하게 된다. </p>
-<p>반복문이나 계속 호출되는 부프로그램처럼 많은 횟수로 반복 처리되는 프로그램인 경우에는 컴파일러 기법이 큰 장점을 갔는다. 전체적으로 디코딩하게 되면 그 다음 부터는 실행만 하므로 효율적이기 때문이다. 그러나 몇 줄의 원시 프로그램이 때로는 몇백개의 기계어로 번역되기 때문에 컴파일러 기법은 커다란 기억장소가 필요하다. </p>
-<p>컴파일러 언어에는 C, C++, Java 등이 있다. </p>
-<h3 id="인터프리터"><a href="#인터프리터" class="headerlink" title="인터프리터"></a>인터프리터</h3><p>인터프리터는 컴파일러와 같은 단계를 거치지 않고, 원시 프로그램을 그때그때 처리하므로 인터프리터의 처리과정은 컴파일러와는 다르다. </p>
-<p>인터프리터 기법의 처리과정을 살펴보면, 고급언어로 작성된 원시 프로그램을 중간코드로 변환하고, 변환된 중간코드를 명령어 단위로 가져다가 디코드하고 실행한다. 그리고 명령어의 주소를 하나 늘린 후 다음 명령어를 가져온다. 따라서 반복문 등이 있을 때는 반복횟수만큼이나 명령어를 계속 가져와서 디코드하고 실행하므로, 단 한번의 번역으로 끝마치는 컴파일러 기법에 비해 시간이 많이 소요된다. 그러나 사용자가 실행과정을 눈으로 보로 수 있고, 일문일답 식의 대화가 가능하며, 언어에 사용되는 자료를 동적으로 정의하는 등의 융통성이 있다. </p>
-<p>인터프리터 언어에는 JavaScript, PHP, Python, Ruby 등이 있다. </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920024863&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴파일러 구성 1강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -962,7 +970,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        42
+                        43
                     </p>
                 </div>
             </div>
@@ -1066,7 +1074,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">22</span>
+                <span class="level-item tag">23</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -1074,7 +1082,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -1192,7 +1200,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 17.5px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12.5px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
     </div>
 </div>
 
@@ -1206,6 +1214,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1259,19 +1280,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1283,6 +1291,17 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/04/">
@@ -1410,7 +1429,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1539,6 +1558,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
                     <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
                     <p class="is-size-7 is-uppercase">
@@ -1587,19 +1619,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1611,6 +1630,17 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/04/">
@@ -1738,7 +1768,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 

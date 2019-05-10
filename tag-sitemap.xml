@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>http://dev.kyoungah.com/tags/Algorithms/</loc>
+        <lastmod>2019-05-10T10:57:16.991Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://dev.kyoungah.com/tags/etc/</loc>
         <lastmod>2019-04-25T15:05:12.628Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,13 +32,6 @@
 
     <url>
         <loc>http://dev.kyoungah.com/tags/Software-engineering/</loc>
-        <lastmod>2019-04-25T05:59:19.489Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/Algorithms/</loc>
         <lastmod>2019-04-25T05:59:19.489Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

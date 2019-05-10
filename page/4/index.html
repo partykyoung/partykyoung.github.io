@@ -139,6 +139,77 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-11-04T12:32:14.000Z">2018-11-04</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12분 읽기 (나에 대하여 1759 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/11/04/2018-10-16-database-first/">데이터베이스 모델링</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="데이터베이스"><a href="#데이터베이스" class="headerlink" title="데이터베이스"></a>데이터베이스</h2><p>데이터베이스(영어: database, DB)는 체계화된 데이터의 모임이다. 즉, 작성된 목록으로써 여러 응용 시스템들의 통합된 정보들을 저장하여 운영할 수 있는 공용 데이터들의 묶음이다. (출처: 위키백과)<br>특정 조직의 업무처리를 위해 애플리케이션 시스템에서 사용되는 시스템을 데이터베이스라 한다. </p>
+<h2 id="데이터-모델링"><a href="#데이터-모델링" class="headerlink" title="데이터 모델링"></a>데이터 모델링</h2><ul>
+<li>데이터<ul>
+<li>사실을 나타내는 수치</li>
+<li>양적 데이터와 질적 데이터로 구성</li>
+<li>사실에 대한 정량적, 정성적 특징을 나타낼 수 있는 값과 값에 대한 설명인 메타데이터로 구성</li>
+</ul>
+</li>
+</ul>
+<p>예전에는 파일 시스템으로 데이터들을 관리 하였는데 파일 시스템은 처리 지향적인 방법으로 데이터가 컴퓨터 시스템의 물리적, 논리적 특성에 종속됨으로써 사용자의 요구에 유연하게 대처하지 못하는 문제점이 있다.<br>데이터베이스는 사용자의 요구와 시스템의 특징에 맞게 데이터를 유연하게 관리, 운용하기 위하여 세 가지 모델링 단계를 거쳐 설계된다. </p>
+<p>데이터 모델링이란 데이터 개체들을 정의하고, 데이터 개체들 사이의 의미를 정의하는 작업과정을 말한다. 데이터의 합리적인 해석을 얻을 수 있는 데이터에 관한 모델화 작업으로서, 데이터 모델은 숲(데이터의 정보내용)과 나무(데이터의 개개 값)의 대응관계를 이해하기 쉽게 구성하는 추상화 방법이다. 즉 데이터 모델은 현실세계에 존재하는 정보와 현상을 선과 도형등을 이용하여 전체 구조와 역할을 한눈에 알아볼 수 있도록 쉽게 표현한 것이다. 간단하게 표현하면 현실세계의 추상화라 할 수 있겠다. </p>
+<p>데이터 모델링을 통해 완성된 뎅이터 모델은 크게 두 가지 목적으로 활용할 수 있다. </p>
+<ol>
+<li>응용 프로그래머, 데이터베이스 설계자, 의뢰인 등과 의사소통을 위한 수단이 된다. </li>
+<li>제대로 작성된 데이터 모델은 프로젝트의 수정 및 확장을 위한 대비책도 된다. </li>
+</ol>
+<p>데이터 모델링은 프로젝트의 최종 목표를 위해 전체를 구상하고 그 범위 내에서 여러가지 개체와 속성을 정의하며 개체와 개체의 관계를 설정하고 예외상황을 대입하여 진행한다. 이때 일반화를 하는데 여러가지 제약조건이 필요하다면 개체 간의 관계에 제약조건을 설정하여 모델링을 완성한다. </p>
+<h2 id="모델링-단계"><a href="#모델링-단계" class="headerlink" title="모델링 단계"></a>모델링 단계</h2><p>데이터베이스 모델링 단계는 각각의 데이터 모델의 기능적 측면에서 작성하는 것을 원칙으로 한다. </p>
+<h3 id="사용자-요구사항-수정-및-분석"><a href="#사용자-요구사항-수정-및-분석" class="headerlink" title="사용자 요구사항 수정 및 분석"></a>사용자 요구사항 수정 및 분석</h3><p>사용자 요구사항 분석 단계에서 데이터베이스 설계자들은 실제 데이터베이스 사용자가 데이터베이스를 어떻게 이용할 것인가, 즉 목표를 수립하고 그 목표를 달성하기 위해 필요한 데이터베이스의 요구사항을 의뢰인과 데이터베이스 설계자가 동시에 만족할 수 있는 형태의 문서화가 진행되며 간결하게 작성된 사용자 요구사항 명세서가 만들어진다. </p>
+<h3 id="개념적-DB-모델링"><a href="#개념적-DB-모델링" class="headerlink" title="개념적 DB 모델링"></a>개념적 DB 모델링</h3><p>개념적 데이터베이스 모델링 단계에서는 사용자 요구사항에 대한 명세를 토대로 데이터베이스 접근을 위한 논리설계를 한다. 현실세계의 추상화를 통해 속성들로 기술된 개체 타입과 이 개체 타입의 관계를 나타내는 개념적 데이터 모델을 사용해서 데이터베이스에 대한 개념적 구조를 만든다. </p>
+<p>데이터베이스의 대상이 되는 현실세계의 사물에 대해 논리적으로 체계화하는 설계가 필요하며 이 설계가 ER 모델을 아용한 설계이다. </p>
+<h3 id="논리적-DB-모델링"><a href="#논리적-DB-모델링" class="headerlink" title="논리적 DB 모델링"></a>논리적 DB 모델링</h3><p>논리적 데이터베이스 모델링 단계에서는 데이터베이스 설계를 위해 한 단계 더 구체적으로 접근한다.<br>상용 DBMS를 사용하여 실제 데이터베이스를 구현하려면 개념적 구조의 논리표현을 목표 DBMS에 적합한 구현 모델로의 스키마로 변환하는 작업이 필요하다. 이 변환과정을 논리적 데이터베이스 모델링이라고 하며 이 단계를 논리적 데이터베이스 설계라고 한다. </p>
+<h3 id="물리적-DB-모델링"><a href="#물리적-DB-모델링" class="headerlink" title="물리적 DB 모델링"></a>물리적 DB 모델링</h3><p>물리적 데이터베이스 모델링은 데이터베이스 논리적 설계로부터 효율적이고 구현 가능한 물리적 데이터베이스 구조를 설계하는 것이다. </p>
+<ul>
+<li><p><strong>인덱스</strong><br>레코드가 물리적 디스크상의 어느 블록에 저장되어 있는지 위치정보르르 모아서 정렬한 구조체를 말한다. 인덱스는 데이터베이스에서 빠른 검색을 위해 사용되며 제약조건을 부여하여 유일성을 갖는 컬럼의 정의로도 사용된다.<br>컬럼값의 특성, 속성값의 변경 주기, 검색방법에 따라 다양한 종류의 인덱스가 존재한다. 일반적으로 B-트리 계열이 숫자 및 문자 속성에 사용되며 해시(hash) 인덱스, 역키(inverse key) 인덱스 등이 있다. </p>
+<p>효율적인 인덱스 구현을 위해서는 인덱스의 구조와 동작원리에 대한 메커니즘을 정확히 이해하는 것이 중요하다. 결국 데이터베이스 관리 시스템에서 지원되는 인덱스의 특성을 파악하여 목적에 맞게 구현하는 과정이 물리적 데이터베이스 모델링 단계에서 필요하다. </p>
+</li>
+<li><p><strong>뷰</strong><br>기반 테이블에서 자주 사용되는 정보를 모아 별도의 개체로 정의한 가상 테이블(virtual table)을 의미한다. 사용자의 요구가 복잡한 질의를 자주 호칠한다면 이를 단순화하여 뷰로 정의할 경우, 데이터베이스의 복잡도를 줄일 수 있다. </p>
+<p>뷰를 생성한 후에는 뷰를 그냥 테이블로 생각하고 접근하면 된다. 원래의 테이블에 접근한 것과 동일한 결과를 얻을 수 있다. </p>
+</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-10-28T14:49:54.000Z">2018-10-28</time>
                 
                 <div class="level-item">
@@ -713,66 +784,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-30T16:33:31.000Z">2018-07-31</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Back-end/">Back-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Back-end/Node-js/">Node.js</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 읽기 (나에 대하여 655 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/07/31/2018-07-24-nodejs-setting/">Node.js 작업환경 설정하기</a>
-            
-        </h1>
-        <div class="content">
-            <p>Node.js 프로젝트를 만들고 Webpack 설정까지 해보자.</p>
-<h2 id="시작하기-전에-필요한-것"><a href="#시작하기-전에-필요한-것" class="headerlink" title="시작하기 전에 필요한 것"></a>시작하기 전에 필요한 것</h2><h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p><a href="https://nodejs.org/ko/" target="_blank" rel="noopener">Node.js 공식사이트</a><br>여기서 Node.js 를 설치할 수 있다. </p>
-<h3 id="NPM-또는-Yarn"><a href="#NPM-또는-Yarn" class="headerlink" title="NPM 또는 Yarn"></a>NPM 또는 Yarn</h3><p><a href="https://www.npmjs.com/" target="_blank" rel="noopener">NPM</a><br>NPM은 Node.js Package Manger의 약자이다.  Node.js에서 사용가능한 모듈들을 패키지화시켜 모아놓은 곳 이다. npm으로 원하는 모듈들을 설치하고 관리할 수 있다. </p>
-<p><a href="https://yarnpkg.com/lang/en/" target="_blank" rel="noopener">Yarn</a><br>Yarn은 의존하는 라이브러리가 많아지면 느려지고 설치하는 시기에 따라 다른 버전을 설치할 가능성이 있는 NPM의 단점을 보완하기 위해 나왔다. npm을 대체할 수 있다.</p>
-<p>NPM의 이슈는 NPM 최신버전에서 해결됐고 속도 차이점은 솔직히 난 잘 못느끼겠다. 이번에 Node.js를 공부하면서 Yarn이 써보고 싶어서 Yarn을 썼는데 딱히 NPM이랑 다른건 없는거 같으니 원하는걸 쓰면 되겠다. </p>
-<h2 id="작업환경-설정"><a href="#작업환경-설정" class="headerlink" title="작업환경 설정"></a>작업환경 설정</h2><p>es6 개발환경을 구축하기 위해 webpack이랑 babel을 사용할 것이다. </p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn init -y</span><br><span class="line">yarn add --dev webpack webpack-cli babel-loader babel-core babel-preset-env</span><br></pre></td></tr></table></figure>
-<p>먼저 yarn init 또는 npm init 으로 package.json 파일을 생성해준 후 webpack과 babel 관련 모듈들을 깔아주자.</p>
-<h3 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">'webpack'</span>);</span><br><span class="line"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);</span><br><span class="line"><span class="hljs-keyword">const</span> nodeExternals = <span class="hljs-built_in">require</span>(<span class="hljs-string">'webpack-node-externals'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  target: <span class="hljs-string">'node'</span>, <span class="hljs-comment">// 기본은 web 이기 때문에 꼭 node로 맞춰줘야 한다. </span></span><br><span class="line">  externals: [nodeExternals()],</span><br><span class="line">  entry: &#123;</span><br><span class="line">    server: <span class="hljs-string">'./src/server.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="hljs-string">'[name].js'</span>,</span><br><span class="line">    path: path.resolve(__dirname, <span class="hljs-string">'build'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="hljs-built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="hljs-regexp">/\.js$/</span>,</span><br><span class="line">        exclude: <span class="hljs-regexp">/(node_modules)/</span>, <span class="hljs-comment">// babel-loader로 트랜스파일시 node_modules는 제외한다. </span></span><br><span class="line">        use: &#123;</span><br><span class="line">          loader: <span class="hljs-string">'babel-loader'</span>,</span><br><span class="line">          options: &#123;</span><br><span class="line">            presets: [<span class="hljs-string">'babel-preset-env'</span>]</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>server-side에서도 webpack을 사용할 수 있도록 webpack.config.js를 작성했다. webpack-node-externals은 node_modules를 빌드과정에서 제외시키는 역할을 한다. </p>
-<h3 id="src-server-js"><a href="#src-server-js" class="headerlink" title="src/server.js"></a>src/server.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> http <span class="hljs-keyword">from</span> <span class="hljs-string">'http'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> server = http.createServer();</span><br><span class="line"><span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;</span><br><span class="line"></span><br><span class="line">server.listen(port, () =&gt; &#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'server start!'</span>, port);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>간단하게 서버쪽 소스를 작성했다. </p>
-<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">"scripts"</span>: &#123;</span><br><span class="line">  <span class="hljs-string">"build"</span>: <span class="hljs-string">"webpack --mode production &amp;&amp; node ./build/server.js"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<p>빌드와 실행을 동시에 하기 위해 script에 build 명령어도 넣어주면 설정은 끝났다.<br>webpack 4 버전 부터는 꼭 –mode (develop or production)를 설정해주어야한다. </p>
-<h2 id="npm-run-build"><a href="#npm-run-build" class="headerlink" title="npm run build"></a>npm run build</h2><p><img src="/images/backend/nodejs-setting-1.png" alt="실행 결과"><br>빌드도 잘되고 실행도 잘된다. 작업환경을 끝냈으니 이제 본격적으로 Node.js 공부를 해보자.</p>
-<p><a href="https://github.com/partyKyoung/nodejs-study" target="_blank" rel="noopener">해당 포스트에 작성된 모든 소스는 여기서 확인할 수 있다.</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -841,7 +852,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        42
+                        43
                     </p>
                 </div>
             </div>
@@ -945,7 +956,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">22</span>
+                <span class="level-item tag">23</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -953,7 +964,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -1071,7 +1082,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 17.5px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12.5px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
     </div>
 </div>
 
@@ -1085,6 +1096,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1138,19 +1162,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1162,6 +1173,17 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/04/">
@@ -1289,7 +1311,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1418,6 +1440,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
                     <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
                     <p class="is-size-7 is-uppercase">
@@ -1466,19 +1501,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time></div>
-                    <a href="/2019/04/07/2019-04-07-computer-security-first/" class="has-link-black-ter is-size-6">컴퓨터 보안 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1490,6 +1512,17 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/04/">
@@ -1617,7 +1650,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
