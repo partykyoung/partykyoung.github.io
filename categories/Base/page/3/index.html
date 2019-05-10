@@ -150,6 +150,95 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-10-28T14:49:54.000Z">2018-10-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Compiler/">Compiler</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12분 읽기 (나에 대하여 1776 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/10/28/2018-10-13-compiler-structure/">컴파일러 구조</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="컴파일러의-논리적-구조"><a href="#컴파일러의-논리적-구조" class="headerlink" title="컴파일러의 논리적 구조"></a>컴파일러의 논리적 구조</h2><p>컴파일러의 논리적 구조를 살펴보면 6단계로 나누어 볼 수 있다. 각 단계들은 한 프로그램을 어떤 다른 형태로 변형시키지만 이 중 일부 단계는 하나로 합칠 수 있다. </p>
+<h3 id="어휘본석-단계"><a href="#어휘본석-단계" class="headerlink" title="어휘본석 단계"></a>어휘본석 단계</h3><p>어휘분석 단계에서는 원시 프로그램을 읽어 들여서 프로그램 문장을 구성하고 있는 최소 단위인 어휘들을 떼어내어 이 어휘들이 올바른지 분석하는 일을 한다. 어휘들은 이들을 정의한 해당 문법에 의하여 분석되는데 어휘가 올바르지 않으면 오류메시지가 출력되고, 올바른 경우에는 토큰(token)형태로 출력된다. 이와 같은 일을 하는 것을 어휘분석기 또는 스캐너 라고 한다. 토큰은 예약어나 상수, 연산자와 프로그래머가 정의한 식별자, 구분자 등이 있다. </p>
+<p>ABC:= E <em> 3.14 + ABC / E; 라는 문장을 읽었다고 가정하자.<br>어휘분석 단계에서는 ABC, :=, E, </em>, 3.14, +, ABC, /, E, ; 같이 10개의 토큰으로 분리하며 이러한 토큰들은 토큰번호와 토큰 값으로 구성되며 다음 단계인 구문분석 단계의 입력이 된다. 프로그래머가 작성한 주석은 이 과정에서 모두 처리된다.</p>
+<h3 id="구문분석-단계"><a href="#구문분석-단계" class="headerlink" title="구문분석 단계"></a>구문분석 단계</h3><p>구문분석 또는 파싱(parsing)이라고도 하며 어휘분석 단계의 결과인 토큰들을 입력으로 받아 이 토큰들의 열이 올바른 문장구조를 갖고 있는지를 검사한다. 올바른 문장에 대해서는 그 문장에 대한 구문구조를 만들어 출력하고 올바르지 않은 문장에 대해서는 오류메시지를 출력한다. 이처럼 구문분석을 담당하는 것을 구문분석기(syntax analyzer) 또는 파서(parse)라고 한다. </p>
+<p><img src="/images/base/compiler-structure-01.png" alt="파스트리"><br>구문구조는 토큰들을 단말노드로 하는 트리(tree)형태로 치환되는데 이 트리를 파스트리(parse tree)라고 한다. 파스트리는 중간코드 생성 단계에서 이용된다.</p>
+<p><img src="/images/base/compiler-structure-02.png" alt="구문트리"><br> 파스트리는 불필요한 정보인 식별자, 숫자, 식 등이 있어서 기억공간을 낭비하고 컴파일러의 속도를 떨어뜨린다. 따라서 불필요한 정보를 제거하고 다음 단계에 꼭 필요한 정보만으로 구성된 트리를 만들 수 있는데 이것을 구문트리(syntax tree, abstract syntax tree)라 한다. </p>
+<h3 id="의미분석-단계"><a href="#의미분석-단계" class="headerlink" title="의미분석 단계"></a>의미분석 단계</h3><p>구문분석 단계의 결과인 구문트리가 어떠한 의미가 있고 어떠한 기능을 하는지 분석하고 이러한 기능이 올바르게 수행될 수 있도록 환경을 조성하는 일을 한다. 이와 같은 일을 담당하는 것을 의미분석기(semantic analyzer)라고 한다.<br>여기서는 구문트리를 보며 산술식과 각 문장의 연산자 및 피연산자를 인식하고 유형검사 등을 한다. 유형검사란 각 연산자들이 원시 프로그램 규칙에 의해 허용된 피연산자를 가졌는지를 검사하는 것을 뜻한다. </p>
+<h3 id="중간코드-생성-단계"><a href="#중간코드-생성-단계" class="headerlink" title="중간코드 생성 단계"></a>중간코드 생성 단계</h3><p>이 단계는 최적화를 위한 중간단계이다. 구문분석 단계에서 만들어진 구문트리를 이용하여 코드를 생성하거나 한 문법규칙이 reduce될 때마다 구문지시적 변환으로 이루어진다. 구문지시적 변환은 문법규칙이 reduce될 때 그 규칙에 알맞은 코드생성 루틴을 부름으로써 최적화를 위한 코드, 중간코드를 생성한다. 중간코드 생성을 담당하는 도구를 중간코드 생성기 라고 한다. </p>
+<p>ex) </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">중간코드</th>
+<th style="text-align:center">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">(*, E, 3.14, T0)</td>
+<td style="text-align:center">T0 = E * 3.14</td>
+</tr>
+<tr>
+<td style="text-align:center">(/, ABC, E, T1)</td>
+<td style="text-align:center">/ T1 = ABC / E</td>
+</tr>
+<tr>
+<td style="text-align:center">(+, T0, T1, T2)</td>
+<td style="text-align:center">T2 = T0 + T1</td>
+</tr>
+<tr>
+<td style="text-align:center">(:=, T2, ⏀, ABC)</td>
+<td style="text-align:center">ABC := T2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="코드-최적화-단계"><a href="#코드-최적화-단계" class="headerlink" title="코드 최적화 단계"></a>코드 최적화 단계</h3><p>여기서는 코드를 좀더 효율적으로 만들어 코드 실행 시 기억공간이나 실행시간을 절약하기 위한 단계이다. 이 단계는 선택적 단계로 생략되는 경우도 있지만 요즘은 RISC(Reduced Instruction Set Computer)와 같은 컴퓨터 구조의 특성을 활용하기 위하여 최적화 단계를 많이 사용하고 있다.<br>최적화는 지역최적화와 전역최적화, 단일문에서의 최적화와 루프 문장에서의 최적화, 실행 속도 면에서의 최적화, 기억장소 절약 면에서의 최적화로 나눌 수 있다. </p>
+<h3 id="목적코드-생성-단계"><a href="#목적코드-생성-단계" class="headerlink" title="목적코드 생성 단계"></a>목적코드 생성 단계</h3><p>컴파일 단계의 마지막 단계로 연산을 수행할 레지스터를 선택하거나 자료에 기억장소의 위치를 정해주며, 실제로 목적기계어에 대한 코드를 생성하는 단계이다. 이 과정에서는 중간코드 생성 단계에서 만들어진 중간코드들을 기계명령어로 바꾸어 주는 역할을 한다. </p>
+<h2 id="컴파일러의-물리적-구조"><a href="#컴파일러의-물리적-구조" class="headerlink" title="컴파일러의 물리적 구조"></a>컴파일러의 물리적 구조</h2><p>컴파일러의 구현에서는 여러 단계를 모아서 하나의 모듈로 묶을 수 있는데 이를 패스(pass)라고 한다.<br>현재 많이 사용하는 컴파일러 구현방법으로는 1-패스 컴파일러, 2-패스 컴파일러가 있다. </p>
+<ul>
+<li><p>1-패스 컴파일러<br>초창기에 컴파일러를 만들 때 사용하였던 방법으로 컴파일러의 전 과정을 하나의 패스로 구현하는 방법이다. 전진분기의 처리를 위해 빈칸으로 남겨두었다가 그 정보를 얻었을 때 채워 넣는 백패칭(backpatching)이 필요하나 직접 그 기계에 맞는 코드로 변환시킬 수 있기 때문에 효율성이 좋고 실생속도가 빠르다.</p>
+</li>
+<li><p>2-패스 컴파일러<br>컴파일러의 구성을 중간코드를 기점으로 하여 앞 단계를 전반부, 뒷 단계를 후반부로 구성하는 방법이다. 코드로 직접 번역하지 못하기 때문에 기계코드 표현에 제약을 받고 실생속도가 느리지만 컴파일러를 기능적으로 독립된 여러 모듈로 구성할 수 있기 떄문에 이식성이 좋고 중간코드를 이용한 최적화에 따라 기계와 독립적인 최적화가 가능하며 하나의 패스가 사용했던 공간을 다시 사용할 수 있으므로 기억장소를 절약할 수 있다.<br>일반적으로는 2-패스 컴팡일러를 사용하고 있다. </p>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920024863&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴파일러 구성 1강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-10-13T12:39:09.000Z">2018-10-13</time>
                 
                 <div class="level-item">
@@ -405,7 +494,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        43
+                        44
                     </p>
                 </div>
             </div>
@@ -509,7 +598,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">23</span>
+                <span class="level-item tag">24</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -565,7 +654,7 @@
                 <span class="level-item">Operating systems</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Software-engineering/">
@@ -635,7 +724,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 17.5px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12.5px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -649,6 +738,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -702,19 +804,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
-                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -733,7 +822,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -934,7 +1023,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Operating-systems/">
                         <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -993,6 +1082,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
                     <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
                     <p class="is-size-7 is-uppercase">
@@ -1041,19 +1143,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
-                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1072,7 +1161,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1273,7 +1362,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Operating-systems/">
                         <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 

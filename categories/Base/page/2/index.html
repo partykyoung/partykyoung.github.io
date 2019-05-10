@@ -150,6 +150,89 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-17T10:15:00.000Z">2019-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7분 읽기 (나에 대하여 1062 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/17/2019-03-11-algorithms-quick-sort/">퀵 정렬</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="퀵-정렬"><a href="#퀵-정렬" class="headerlink" title="퀵 정렬"></a>퀵 정렬</h2><p>특정 원소를 기준으로 주어진 배열을 두 부분배열로 분할하고, 각 부분배열에 대해서 퀵 정렬을 순환적으로 적용하는 방식.<br>특정 원소를 <strong>피벗</strong> 이라고 부름. 즉, 피벗이 제자리를 잡조록 하여 정렬하는 방식. 피벗의 왼쪽 부분배열엔 피벗보다 작은 값이, 오른쪽 부분배열엔 피벗보다 큰 값이 온다.</p>
+<ul>
+<li>피벗: 두 부분배열로 분할할 때 기준에 되는 특정 원소. 보통 주어진 배열의 첫 번째 원소로 지정한다. </li>
+</ul>
+<h3 id="분할"><a href="#분할" class="headerlink" title="분할"></a>분할</h3><p>피벗을 기준으로 주어진 배열을 두 부분배열로 분할한다.</p>
+<h3 id="정복"><a href="#정복" class="headerlink" title="정복"></a>정복</h3><p>두 부분배열에 대해서 퀵 정렬을 순환적으로 적용하여 각 부분배열을 정렬한다.</p>
+<h3 id="결합"><a href="#결합" class="headerlink" title="결합"></a>결합</h3><p>필요 없음</p>
+<p><img src="/images/base/algorithms-quick-sort-1.png" alt="퀵정렬"></p>
+<h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> temp = arr[a];</span><br><span class="line">    arr[a] = arr[b];</span><br><span class="line">    arr[b] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 배열의 맨 오른쪽 index엔 무한대 값이 있다고 가정한다.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">partition</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line"><span class="hljs-comment">// 맨 왼쪽을 피벗으로 잡기 때문에 l_hold는 피벗의 위치 + 1, r_hold는 배열의 마지막 index</span></span><br><span class="line">  <span class="hljs-keyword">int</span> pivot = arr[leftIndex], l_hold = leftIndex + <span class="hljs-number">1</span>, r_hold = rightIndex;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">while</span> (l_hold &lt;= r_hold) &#123;</span><br><span class="line">    <span class="hljs-comment">// l_hold는 피벗보다 큰 값을 찾는다.</span></span><br><span class="line">    <span class="hljs-keyword">while</span> (l_hold &lt;= rightIndex &amp;&amp; arr[l_hold] &lt; pivot) &#123;</span><br><span class="line">      l_hold++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// r_hold는 피벗보다 작은 값을 찾는다.</span></span><br><span class="line">    <span class="hljs-keyword">while</span> (r_hold &gt; leftIndex &amp;&amp; arr[r_hold] &gt;= pivot) &#123;</span><br><span class="line">      r_hold--;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">if</span> (l_hold &lt; r_hold) &#123;</span><br><span class="line">      <span class="hljs-comment">// arr[l_hold]와 arr[r_hold]의 값을 교환한다.</span></span><br><span class="line">      swap(arr, l_hold, r_hold);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 피벗과 arr[r_hold]값을 교환한다. </span></span><br><span class="line">  swap(arr, leftIndex, r_hold);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> r_hold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">quickSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span> (leftIndex &lt;= rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> pivot = partition(arr, leftIndex, rightIndex); <span class="hljs-comment">// 두 부분배열로 분할</span></span><br><span class="line"></span><br><span class="line">    quickSort(arr, leftIndex, pivot - <span class="hljs-number">1</span>);  <span class="hljs-comment">// 왼쪽 부분배열에 대해 순환호출</span></span><br><span class="line">    quickSort(arr, pivot + <span class="hljs-number">1</span>, rightIndex); <span class="hljs-comment">// 오른쪽 부분배열에 대해서 순환호출</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>퀵 정렬 알고리즘은 한 번의 분할과 두 번의 순환 호출로 구성된다.</p>
+<h3 id="분할-함수-수행-시간"><a href="#분할-함수-수행-시간" class="headerlink" title="분할 함수 수행 시간"></a>분할 함수 수행 시간</h3><p>피벗을 제외한 배열의 원소들은 피벗과 최대 2번 비교 하게 된다. 전체적으로는 입력 크기 n에 비례하는 Θ(n) 시간이 걸린다.</p>
+<h3 id="퀵-정렬-수행-시간"><a href="#퀵-정렬-수행-시간" class="headerlink" title="퀵 정렬 수행 시간"></a>퀵 정렬 수행 시간</h3><p>퀵 정렬 수행 시간 = 한 번의 분할 + 두번의 킉정렬 순환 호출.<br>배열 부분 시 두 부분배열의 크기가 다르기 때문에  배열이 어떤 크기의 두 부분배열로 분할되느냐에 따라 수행 시간이 다르다.</p>
+<h4 id="최악의-경우"><a href="#최악의-경우" class="headerlink" title="최악의 경우"></a>최악의 경우</h4><p>극심한 불균형적 분할.</p>
+<ul>
+<li>피벗만 제자리를 잡고, 나머지 모든 원소가 하나의 부분배열로 분할되는 경우</li>
+<li>피벗이 항상 부분배열의 최솟값, 또는 최댓값이 되는 경우</li>
+<li>입력 데이터가 정렬되어 있고 피벗을 배열의 처음 원소로 지정한 경우</li>
+</ul>
+<p>T(n) = T(n-1) + T(0) + Θ(n) (n &gt; 0) // 한쪽은 데이터가 없으므로 T(0)<br>T(0) = 0</p>
+<p>=&gt; T(n) = T(n - 1) + Θ(n)<br>=&gt; T(n) = O($n^2$)</p>
+<h3 id="최선의-경우"><a href="#최선의-경우" class="headerlink" title="최선의 경우"></a>최선의 경우</h3><p>가장 균형적인 분할.</p>
+<ul>
+<li>피벗을 중심으로 항상 동일한 크기의 두 부분배열로 분할되는 경우 </li>
+<li>피벗이 항상 부분배열의 중간값이 되는 경우 </li>
+</ul>
+<p>T(n) = T($\frac{n}{2}$) + T($\frac{n}{2}$) + Θ(n) (n &gt; 1)<br>T(1) = 1</p>
+<p>=&gt; T(n) = 2T($\frac{n}{2}$) + Θ(n)<br>=&gt; T(n) = O($n log n$)</p>
+<h3 id="평균적인-경우"><a href="#평균적인-경우" class="headerlink" title="평균적인 경우"></a>평균적인 경우</h3><p>부분배열의 모든 분할 비율에 따른 수행 시간의 평균.</p>
+<ul>
+<li>피벗은 동일한 확률로서 분할 후 배열의 어느 곳에나 위치 가능 </li>
+</ul>
+<p>T(1) = T(0) = 0<br>T(n) = $\frac{1}{n}\sum_{i = 1}^{n}(T(i - 1) + T(n - i)) + O(n) (n &gt;= 2)$</p>
+<p>=&gt; T(n) = O($n log n$)</p>
+<h2 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h2><ul>
+<li>최선/ 평균의 경우 O($n log n$)</li>
+<li>최악의 경우 O($n^2$)</li>
+</ul>
+<p>즉 피벗 선택의 임의성만 보장되면 평균적인 성능을 보일 가능성이 매우 높다. 그래서 배열에서 임의로 값을 선택해서 배열의 처음 원소와 서로 교환 후 정렬 수행하면 최악의 경우를 피할 가능성이 커진다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-03-16T18:03:57.000Z">2019-03-17</time>
                 
                 <div class="level-item">
@@ -227,7 +310,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6분 읽기 (나에 대하여 855 단어)
+                    6분 읽기 (나에 대하여 948 단어)
                 </span>
                 
                 
@@ -253,14 +336,16 @@
 <p>운영체제는 실행할 준비가 된 프로세스들이 적절히 CPU를 배정받아 효율적으로 작업을 처리할 수 있도록 관리해야 한다. </p>
 <h2 id="프로세스-간의-관계"><a href="#프로세스-간의-관계" class="headerlink" title="프로세스 간의 관계"></a>프로세스 간의 관계</h2><h3 id="독립적-프로세스"><a href="#독립적-프로세스" class="headerlink" title="독립적 프로세스"></a>독립적 프로세스</h3><p>시스템에서 실행 중인 다른 프로세스의 영향을 받지도 않고 주지도 않는 프로세스.</p>
 <ul>
-<li>프로세스의 상태와 데이터는 다른 프로세스와 공유되지 않는다. </li>
-<li>프로세스의 실행은 결정적이며 재생 가능하다.</li>
+<li>프로세스의 상태는 다른 프로세스와 공유되지 않는다.</li>
+<li>프로세스의 실행결과는 입력상태에 의해서만 결정되기 때문에 결정적이다.</li>
+<li>프로세스의 실행결과는 같은 입력에 대하여 항상 동일하기 때문에 재생 가능하다.</li>
 <li>프로세스의 실행은 타 프로세스와 무관하게 중단되거나 재시작될 수 있다.</li>
 </ul>
-<h3 id="유기적-프로세스"><a href="#유기적-프로세스" class="headerlink" title="유기적 프로세스"></a>유기적 프로세스</h3><p>시스템에서 실행 중인 따른 프로세스의 영향을 주고받으며 동작하는 프로세스.</p>
+<h3 id="유기적-프로세스"><a href="#유기적-프로세스" class="headerlink" title="유기적 프로세스"></a>유기적 프로세스</h3><p>시스템에서 실행 중인 다른 프로세스의 영향을 주고받으며 동작하는 프로세스.</p>
 <ul>
-<li>프로세스의 상태와 데이터는 다른 프로세스와 공유된다</li>
-<li>프로세스의 실행은 비결정적며 재생 불가능하다.</li>
+<li>프로세스의 상태는 다른 프로세스와 공유된다.</li>
+<li>프로세스의 실행결과는 실행순서에 좌우되기 때문에 미리 예측될 수 없으므로 비결정적이다.</li>
+<li>프로세스의 실행결과는 동일한 입력에 대하여 항상 동일하지는 않기 때문에 재생 불가능 이다. </li>
 </ul>
 <h2 id="프로세스-관리자"><a href="#프로세스-관리자" class="headerlink" title="프로세스 관리자"></a>프로세스 관리자</h2><ul>
 <li>프로세스를 생성 및 삭제함.</li>
@@ -817,95 +902,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-10-28T14:49:54.000Z">2018-10-28</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Compiler/">Compiler</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    12분 읽기 (나에 대하여 1776 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/10/28/2018-10-13-compiler-structure/">컴파일러 구조</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="컴파일러의-논리적-구조"><a href="#컴파일러의-논리적-구조" class="headerlink" title="컴파일러의 논리적 구조"></a>컴파일러의 논리적 구조</h2><p>컴파일러의 논리적 구조를 살펴보면 6단계로 나누어 볼 수 있다. 각 단계들은 한 프로그램을 어떤 다른 형태로 변형시키지만 이 중 일부 단계는 하나로 합칠 수 있다. </p>
-<h3 id="어휘본석-단계"><a href="#어휘본석-단계" class="headerlink" title="어휘본석 단계"></a>어휘본석 단계</h3><p>어휘분석 단계에서는 원시 프로그램을 읽어 들여서 프로그램 문장을 구성하고 있는 최소 단위인 어휘들을 떼어내어 이 어휘들이 올바른지 분석하는 일을 한다. 어휘들은 이들을 정의한 해당 문법에 의하여 분석되는데 어휘가 올바르지 않으면 오류메시지가 출력되고, 올바른 경우에는 토큰(token)형태로 출력된다. 이와 같은 일을 하는 것을 어휘분석기 또는 스캐너 라고 한다. 토큰은 예약어나 상수, 연산자와 프로그래머가 정의한 식별자, 구분자 등이 있다. </p>
-<p>ABC:= E <em> 3.14 + ABC / E; 라는 문장을 읽었다고 가정하자.<br>어휘분석 단계에서는 ABC, :=, E, </em>, 3.14, +, ABC, /, E, ; 같이 10개의 토큰으로 분리하며 이러한 토큰들은 토큰번호와 토큰 값으로 구성되며 다음 단계인 구문분석 단계의 입력이 된다. 프로그래머가 작성한 주석은 이 과정에서 모두 처리된다.</p>
-<h3 id="구문분석-단계"><a href="#구문분석-단계" class="headerlink" title="구문분석 단계"></a>구문분석 단계</h3><p>구문분석 또는 파싱(parsing)이라고도 하며 어휘분석 단계의 결과인 토큰들을 입력으로 받아 이 토큰들의 열이 올바른 문장구조를 갖고 있는지를 검사한다. 올바른 문장에 대해서는 그 문장에 대한 구문구조를 만들어 출력하고 올바르지 않은 문장에 대해서는 오류메시지를 출력한다. 이처럼 구문분석을 담당하는 것을 구문분석기(syntax analyzer) 또는 파서(parse)라고 한다. </p>
-<p><img src="/images/base/compiler-structure-01.png" alt="파스트리"><br>구문구조는 토큰들을 단말노드로 하는 트리(tree)형태로 치환되는데 이 트리를 파스트리(parse tree)라고 한다. 파스트리는 중간코드 생성 단계에서 이용된다.</p>
-<p><img src="/images/base/compiler-structure-02.png" alt="구문트리"><br> 파스트리는 불필요한 정보인 식별자, 숫자, 식 등이 있어서 기억공간을 낭비하고 컴파일러의 속도를 떨어뜨린다. 따라서 불필요한 정보를 제거하고 다음 단계에 꼭 필요한 정보만으로 구성된 트리를 만들 수 있는데 이것을 구문트리(syntax tree, abstract syntax tree)라 한다. </p>
-<h3 id="의미분석-단계"><a href="#의미분석-단계" class="headerlink" title="의미분석 단계"></a>의미분석 단계</h3><p>구문분석 단계의 결과인 구문트리가 어떠한 의미가 있고 어떠한 기능을 하는지 분석하고 이러한 기능이 올바르게 수행될 수 있도록 환경을 조성하는 일을 한다. 이와 같은 일을 담당하는 것을 의미분석기(semantic analyzer)라고 한다.<br>여기서는 구문트리를 보며 산술식과 각 문장의 연산자 및 피연산자를 인식하고 유형검사 등을 한다. 유형검사란 각 연산자들이 원시 프로그램 규칙에 의해 허용된 피연산자를 가졌는지를 검사하는 것을 뜻한다. </p>
-<h3 id="중간코드-생성-단계"><a href="#중간코드-생성-단계" class="headerlink" title="중간코드 생성 단계"></a>중간코드 생성 단계</h3><p>이 단계는 최적화를 위한 중간단계이다. 구문분석 단계에서 만들어진 구문트리를 이용하여 코드를 생성하거나 한 문법규칙이 reduce될 때마다 구문지시적 변환으로 이루어진다. 구문지시적 변환은 문법규칙이 reduce될 때 그 규칙에 알맞은 코드생성 루틴을 부름으로써 최적화를 위한 코드, 중간코드를 생성한다. 중간코드 생성을 담당하는 도구를 중간코드 생성기 라고 한다. </p>
-<p>ex) </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">중간코드</th>
-<th style="text-align:center">의미</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">(*, E, 3.14, T0)</td>
-<td style="text-align:center">T0 = E * 3.14</td>
-</tr>
-<tr>
-<td style="text-align:center">(/, ABC, E, T1)</td>
-<td style="text-align:center">/ T1 = ABC / E</td>
-</tr>
-<tr>
-<td style="text-align:center">(+, T0, T1, T2)</td>
-<td style="text-align:center">T2 = T0 + T1</td>
-</tr>
-<tr>
-<td style="text-align:center">(:=, T2, ⏀, ABC)</td>
-<td style="text-align:center">ABC := T2</td>
-</tr>
-</tbody>
-</table>
-<h3 id="코드-최적화-단계"><a href="#코드-최적화-단계" class="headerlink" title="코드 최적화 단계"></a>코드 최적화 단계</h3><p>여기서는 코드를 좀더 효율적으로 만들어 코드 실행 시 기억공간이나 실행시간을 절약하기 위한 단계이다. 이 단계는 선택적 단계로 생략되는 경우도 있지만 요즘은 RISC(Reduced Instruction Set Computer)와 같은 컴퓨터 구조의 특성을 활용하기 위하여 최적화 단계를 많이 사용하고 있다.<br>최적화는 지역최적화와 전역최적화, 단일문에서의 최적화와 루프 문장에서의 최적화, 실행 속도 면에서의 최적화, 기억장소 절약 면에서의 최적화로 나눌 수 있다. </p>
-<h3 id="목적코드-생성-단계"><a href="#목적코드-생성-단계" class="headerlink" title="목적코드 생성 단계"></a>목적코드 생성 단계</h3><p>컴파일 단계의 마지막 단계로 연산을 수행할 레지스터를 선택하거나 자료에 기억장소의 위치를 정해주며, 실제로 목적기계어에 대한 코드를 생성하는 단계이다. 이 과정에서는 중간코드 생성 단계에서 만들어진 중간코드들을 기계명령어로 바꾸어 주는 역할을 한다. </p>
-<h2 id="컴파일러의-물리적-구조"><a href="#컴파일러의-물리적-구조" class="headerlink" title="컴파일러의 물리적 구조"></a>컴파일러의 물리적 구조</h2><p>컴파일러의 구현에서는 여러 단계를 모아서 하나의 모듈로 묶을 수 있는데 이를 패스(pass)라고 한다.<br>현재 많이 사용하는 컴파일러 구현방법으로는 1-패스 컴파일러, 2-패스 컴파일러가 있다. </p>
-<ul>
-<li><p>1-패스 컴파일러<br>초창기에 컴파일러를 만들 때 사용하였던 방법으로 컴파일러의 전 과정을 하나의 패스로 구현하는 방법이다. 전진분기의 처리를 위해 빈칸으로 남겨두었다가 그 정보를 얻었을 때 채워 넣는 백패칭(backpatching)이 필요하나 직접 그 기계에 맞는 코드로 변환시킬 수 있기 때문에 효율성이 좋고 실생속도가 빠르다.</p>
-</li>
-<li><p>2-패스 컴파일러<br>컴파일러의 구성을 중간코드를 기점으로 하여 앞 단계를 전반부, 뒷 단계를 후반부로 구성하는 방법이다. 코드로 직접 번역하지 못하기 때문에 기계코드 표현에 제약을 받고 실생속도가 느리지만 컴파일러를 기능적으로 독립된 여러 모듈로 구성할 수 있기 떄문에 이식성이 좋고 중간코드를 이용한 최적화에 따라 기계와 독립적인 최적화가 가능하며 하나의 패스가 사용했던 공간을 다시 사용할 수 있으므로 기억장소를 절약할 수 있다.<br>일반적으로는 2-패스 컴팡일러를 사용하고 있다. </p>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920024863&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴파일러 구성 1강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -970,7 +966,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        43
+                        44
                     </p>
                 </div>
             </div>
@@ -1074,7 +1070,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">23</span>
+                <span class="level-item tag">24</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -1130,7 +1126,7 @@
                 <span class="level-item">Operating systems</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Software-engineering/">
@@ -1200,7 +1196,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 17.5px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12.5px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -1214,6 +1210,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1267,19 +1276,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
-                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1298,7 +1294,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1499,7 +1495,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Operating-systems/">
                         <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -1558,6 +1554,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
                     <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
                     <p class="is-size-7 is-uppercase">
@@ -1606,19 +1615,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
-                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1637,7 +1633,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1838,7 +1834,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Operating-systems/">
                         <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 

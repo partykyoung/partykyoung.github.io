@@ -2,24 +2,24 @@
 <html lang="ko">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>운영체제 - 경아&#39;s 개발일기</title>
+<title>쓰레드 - 경아&#39;s 개발일기</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="운영체제컴퓨터의 하드웨어 자원을 관리하고 컴퓨터 프로그램이 동작하기 위한 서비스를 제공하는 시스템 소프트웨어.ex) 윈도우, 맥 OS, 리눅스 등.. 운영체제의 역할컴퓨터 시스템의 운영 컴퓨터 시스템의 자원을 제어 및 관리 하여 컴퓨터 시스템을 효율적으로 운영하는 역할. 자원이란 컴퓨터 시스템을 구성하고 있는 하드웨어 혹은 소프트웨어. 하드웨어 자원: CP">
+    <meta name="description" content="기본적인 처리단위는 프로세스라고 할 수 있다. 하나의 프로그램을 수행하기 위하여 하나의 주소공간과 그 주소공간 내에서 하나의 제어흐름으로 구성되는 프로세스를 사용하게 된다. 프로세스의 실행단위가 되는 것은 하나의 프로세스 내에서 프로그램이 수행될 때 각각의 실행 단위 시간 안에 하나의 실행점 만이 존재함을 의미하며, 단일 프로세스 내에서 동시처리, 즉 병렬">
 <meta name="keywords" content="Operating systems">
 <meta property="og:type" content="article">
-<meta property="og:title" content="운영체제">
-<meta property="og:url" content="http://dev.kyoungah.com/2019/03/16/2019-03-04-operating-systems-first/index.html">
+<meta property="og:title" content="쓰레드">
+<meta property="og:url" content="http://dev.kyoungah.com/2019/05/10/2019-03-09-operating-system-thread/index.html">
 <meta property="og:site_name" content="경아&#39;s 개발일기">
-<meta property="og:description" content="운영체제컴퓨터의 하드웨어 자원을 관리하고 컴퓨터 프로그램이 동작하기 위한 서비스를 제공하는 시스템 소프트웨어.ex) 윈도우, 맥 OS, 리눅스 등.. 운영체제의 역할컴퓨터 시스템의 운영 컴퓨터 시스템의 자원을 제어 및 관리 하여 컴퓨터 시스템을 효율적으로 운영하는 역할. 자원이란 컴퓨터 시스템을 구성하고 있는 하드웨어 혹은 소프트웨어. 하드웨어 자원: CP">
+<meta property="og:description" content="기본적인 처리단위는 프로세스라고 할 수 있다. 하나의 프로그램을 수행하기 위하여 하나의 주소공간과 그 주소공간 내에서 하나의 제어흐름으로 구성되는 프로세스를 사용하게 된다. 프로세스의 실행단위가 되는 것은 하나의 프로세스 내에서 프로그램이 수행될 때 각각의 실행 단위 시간 안에 하나의 실행점 만이 존재함을 의미하며, 단일 프로세스 내에서 동시처리, 즉 병렬">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="http://dev.kyoungah.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-04-25T05:59:19.486Z">
+<meta property="og:updated_time" content="2019-05-10T11:38:19.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="운영체제">
-<meta name="twitter:description" content="운영체제컴퓨터의 하드웨어 자원을 관리하고 컴퓨터 프로그램이 동작하기 위한 서비스를 제공하는 시스템 소프트웨어.ex) 윈도우, 맥 OS, 리눅스 등.. 운영체제의 역할컴퓨터 시스템의 운영 컴퓨터 시스템의 자원을 제어 및 관리 하여 컴퓨터 시스템을 효율적으로 운영하는 역할. 자원이란 컴퓨터 시스템을 구성하고 있는 하드웨어 혹은 소프트웨어. 하드웨어 자원: CP">
+<meta name="twitter:title" content="쓰레드">
+<meta name="twitter:description" content="기본적인 처리단위는 프로세스라고 할 수 있다. 하나의 프로그램을 수행하기 위하여 하나의 주소공간과 그 주소공간 내에서 하나의 제어흐름으로 구성되는 프로세스를 사용하게 된다. 프로세스의 실행단위가 되는 것은 하나의 프로세스 내에서 프로그램이 수행될 때 각각의 실행 단위 시간 안에 하나의 실행점 만이 존재함을 의미하며, 단일 프로세스 내에서 동시처리, 즉 병렬">
 <meta name="twitter:image" content="http://dev.kyoungah.com/images/og_image.png">
 
 
@@ -89,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/kyoungah.png" alt="운영체제" height="28">
+                <img src="/images/kyoungah.png" alt="쓰레드" height="28">
             
             </a>
         </div>
@@ -140,7 +140,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-16T12:43:35.000Z">2019-03-16</time>
+                <time class="level-item has-text-grey" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
@@ -150,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9분 읽기 (나에 대하여 1319 단어)
+                    4분 읽기 (나에 대하여 587 단어)
                 </span>
                 
                 
@@ -159,67 +159,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                운영체제
+                쓰레드
             
         </h1>
         <div class="content">
-            <h2 id="운영체제"><a href="#운영체제" class="headerlink" title="운영체제"></a>운영체제</h2><p>컴퓨터의 하드웨어 자원을 관리하고 컴퓨터 프로그램이 동작하기 위한 서비스를 제공하는 시스템 소프트웨어.<br>ex) 윈도우, 맥 OS, 리눅스 등..</p>
-<h2 id="운영체제의-역할"><a href="#운영체제의-역할" class="headerlink" title="운영체제의 역할"></a>운영체제의 역할</h2><h3 id="컴퓨터-시스템의-운영"><a href="#컴퓨터-시스템의-운영" class="headerlink" title="컴퓨터 시스템의 운영"></a>컴퓨터 시스템의 운영</h3><ul>
-<li>컴퓨터 시스템의 자원을 제어 및 관리 하여 컴퓨터 시스템을 효율적으로 운영하는 역할.<ul>
-<li>자원이란 컴퓨터 시스템을 구성하고 있는 하드웨어 혹은 소프트웨어.<ul>
-<li>하드웨어 자원: CPU, 메모리, 키보드, 마우스, 네트워크 카드 등…</li>
-<li>소프트웨어 자원: 각종 프로그램 데이터 등… </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="사용자-지원"><a href="#사용자-지원" class="headerlink" title="사용자 지원"></a>사용자 지원</h3><ul>
-<li>사용자의 명령을 해석하여 실행.</li>
-<li>사용자와 하드웨어 사이의 매개체 역할 수행.</li>
-</ul>
-<h2 id="컴퓨터-시스템과-운영체제"><a href="#컴퓨터-시스템과-운영체제" class="headerlink" title="컴퓨터 시스템과 운영체제"></a>컴퓨터 시스템과 운영체제</h2><p>운영체제가 없던 초기 컴퓨터 시스템에서는…</p>
+            <p>기본적인 처리단위는 <strong>프로세스</strong>라고 할 수 있다. 하나의 프로그램을 수행하기 위하여 하나의 주소공간과 그 주소공간 내에서 하나의 제어흐름으로 구성되는 프로세스를 사용하게 된다.</p>
+<p>프로세스의 실행단위가 되는 것은 하나의 프로세스 내에서 프로그램이 수행될 때 각각의 실행 단위 시간 안에 하나의 실행점 만이 존재함을 의미하며, 단일 프로세스 내에서 동시처리, 즉 병렬처리는 불가능하다는 것을 나타낸다.</p>
+<h2 id="쓰레드"><a href="#쓰레드" class="headerlink" title="쓰레드"></a>쓰레드</h2><p><a href="/images/base/operating-system-thread.png">프로세스와 쓰레드</a></p>
 <ul>
-<li>사용자가 응용 프로그램을 수행시키면 응용 프로그램이 직접 컴퓨터 시스템의 자원을 제어해야만 했다.<ul>
-<li>응용 프로그램에서 하드웨어를 다룰 수 있는 기능들을 모두 가지고 있었고 이때믄에 응용 프로그램 개발자는 하드웨어에 대한 방법을 잘 알아야 했다. </li>
+<li>하나의 프로세스 내에서 다중처리를 위해 제안된 개념으로 실행 단위를 프로세스에서 한 단계 낮추어 규정한 것이다. </li>
+<li>대부분의 기존 프로그램은 하나의 프로세스가 하나의 쓰레드를 갖는 형태이나, 처리효율을 극대화하는 방법으로 프로세스 내에서의 병렬적 수행을 위해 다중 쓰레딩을 이용한다.</li>
+<li>하나의 프로그램 내에서 제어의 단일 순차적 흐름으로 정의된다.</li>
+<li>하나의 프로세스 내에는 하나 이상의 쓰레드가 존재한다.</li>
+<li>하나의 쓰레드 내에서는 하나의 실행점만 존재한다. </li>
+<li>실행에 필요한 최소한의 정보만을 가지고 프로그램 수행 시 자신이 속해있는 프로세스의 실행환경을 공유한다.<ul>
+<li>프로그램 카운터, 스택, 쓰레드 관리 정보 등…</li>
 </ul>
 </li>
-<li>하나의 하드웨어를 여러 사용자가 공유해서 사용하는 경우 응용 프로그램들 끼리 효울적인 자원 분할이 어려웠다.</li>
+<li>프로세스와 마찬가지로 쓰레드가 생성된 후 준비상태, 실행상태, 대기상태를 거친 후 종료상태에 이르게 된다.</li>
 </ul>
-<p>이런 문제점을 극복하기 위해 하드웨어와 응용 프로그램 사이에 운영체제를 두고 하드웨어에 대한 제어는 운영체제만 하도록 했다. </p>
-<ul>
-<li>응용 프로그램은 하드웨어에 대한 자세한 정보를 모르더라도 운영체제에 부탁만 하면 운영체제가 대신 하드웨어를 제어하고 그 결과를 응용 프로그램에 제공해 주게 되었다.</li>
-<li>여러 응용 프로그램이 동시에 수행되더라도 운영체제가 중간에서 충돌 없이 자원을 효율적으로 나눠 줌으로써 컴퓨터 시스템이 안정적으로 동작할 수 있게 되었다. </li>
+<h2 id="다중-쓰레드의-장점"><a href="#다중-쓰레드의-장점" class="headerlink" title="다중 쓰레드의 장점"></a>다중 쓰레드의 장점</h2><ul>
+<li>멀티 CPU 혹은 멀티 코어 시스템에서는 병렬처리 가능</li>
+<li>처리 속도 별로 쓰레드가 나눠진 경우 효율적인 처리 가능<br>ex) 하나의 프로세스 안에 계산용 쓰레드, 입력용 쓰레드, 백업용 쓰레드가 있을 시 서로간에 영향을 미치지 않고 독립적으로 작업을 처리할 수 있다. </li>
 </ul>
-<p>이러한 형태로 운영체제가 동작하려면 응용프로그램이 직접 하드웨어에 접근하는 것을 강제로 막을 필요가 있다. 응용 프로그램이 하드웨어를 직접 제어할 수 있는 방법이 여전히 존재한다면 시스템의 안정성을 보장할 수 없기 때문이다. </p>
-<h3 id="슈퍼바이저-모드-커널-모드"><a href="#슈퍼바이저-모드-커널-모드" class="headerlink" title="슈퍼바이저 모드(커널 모드)"></a>슈퍼바이저 모드(커널 모드)</h3><ul>
-<li>운영체제의 커널이 동작되는 모드.</li>
-<li>하드웨어를 직접 제어할 수 있는 CPU 명령어 사용 가능.</li>
-</ul>
-<h3 id="보호-모드-사용자-모드"><a href="#보호-모드-사용자-모드" class="headerlink" title="보호 모드(사용자 모드)"></a>보호 모드(사용자 모드)</h3><ul>
-<li>응용 프로그램이 동작되는 모드.</li>
-<li>하드웨어를 직접 제어할 수 있는 CPU 명령어 사용 불가능</li>
-</ul>
-<p>보호 모드에서 동작하는 응용 프로그램이 하드웨어에 대한 제어가 필욯한 경우에는 운영체제에 부탁을 해야만 하고, 그 경우 보호 모드에서 슈퍼바이저 모드로 변경이 되고 운영체제의 커널이 동작하여 하드웨어를 제어하게 된다.<br>이 때 응용 프로그램이 운영체제에 서비스를 요청하는 메커니즘을 <strong>시스템 호출</strong>이라고 한다.</p>
-<p>보호 모드 사용 시 하드웨어 접근이 필요한 경우…<br>==&gt; 보호 모드 사용 중 -&gt; 시스템 호출 -&gt; 보호 모드에서 슈퍼바이저 모드로 변경 -&gt; 커널 동작 -&gt; 하드웨어 제어 -&gt; 응용 프로그램에게 결과를 돌려줌 -&gt; 보호 모드로 돌아옴</p>
-<h2 id="커널"><a href="#커널" class="headerlink" title="커널"></a>커널</h2><ul>
-<li>운영체제의 핵심 요소.</li>
-<li>응용 프로그램과 하드웨어 수준의 처리 사이의 가교 역할을 함.</li>
-</ul>
-<h3 id="일체형-커널"><a href="#일체형-커널" class="headerlink" title="일체형 커널"></a>일체형 커널</h3><ul>
-<li>운영체제의 모든 서비스가 커널 내에 포함되어 있다.</li>
-<li>커널 내부 요소들이 서로 효율적으로 상호작용을 할 수 있다.</li>
-<li>모든 요소가 커널 내부에 존재하기 떄문에 하나의 요소에서라도 오류가 발생하면 시스템 전체에 장애를 일으킬 수 있다.</li>
-<li>UNIX, Linux.</li>
-</ul>
-<h3 id="마이크로-커널"><a href="#마이크로-커널" class="headerlink" title="마이크로 커널"></a>마이크로 커널</h3><ul>
-<li>운영체제의 대부분의 요소들을 커널 외부로 분리.</li>
-<li>커널 내부에는 메모리 관리, 멀티태스킹, 프로세스 간 통신(IPC) 등의 최소한의 요소들만 남겨놓음.</li>
-<li>새로운 서비스를 추가하여 운영체제를 확장하기 쉬움.</li>
-<li>커널 외부의 요소에 문제가 발생하더라도 커널 자체에는 영향이 없기 때문에 유지보수가 용이하여 안정성이 우수함.</li>
-<li>커널 외부 요소들 사이에 데이터 전달이 필요한 경우에는 프로세스 간 통신(IPC)을 통해야만 하기 떄문에 성능 저하가 발생한다.</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>
 
         </div>
         
@@ -244,17 +206,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/03/16/2019-03-05-operating-systems-configuration/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">운영체제의 구성</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/11/2019-03-11-algorithms-divide-and-conquer/">
-                <span class="level-item">분할정복 방법</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/10/2019-03-17-algorithms-selection/">
+                <span class="level-item">선택 문제</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -270,8 +225,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'http://dev.kyoungah.com/2019/03/16/2019-03-04-operating-systems-first/';
-        this.page.identifier = '2019/03/16/2019-03-04-operating-systems-first/';
+        this.page.url = 'http://dev.kyoungah.com/2019/05/10/2019-03-09-operating-system-thread/';
+        this.page.identifier = '2019/05/10/2019-03-09-operating-system-thread/';
     };
     (function() {
         var d = document, s = d.createElement('script');  
@@ -1247,7 +1202,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/kyoungah.png" alt="운영체제" height="28">
+                    <img src="/images/kyoungah.png" alt="쓰레드" height="28">
                 
                 </a>
                 <p class="is-size-7">

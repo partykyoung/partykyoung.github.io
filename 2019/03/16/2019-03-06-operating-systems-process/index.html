@@ -16,7 +16,7 @@
 <meta property="og:description" content="프로세스실행 중인 프로그램.  프로그램: 동작을 하지 않는 정적, 수동적 개체  프로세스: 동작을 하는 능동적 개체  프로세스의 동작은 CPU가 그 프로세스의 명령들을 실행하는 것이다.   자원: CPU, 메모리, 입출력장치, 파일 등 동작: CPU가 프로세스의 명령을 실행  운영체제는 실행할 준비가 된 프로세스들이 적절히 CPU를 배정받아 효율적으로 작업">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="http://dev.kyoungah.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-04-25T05:59:19.487Z">
+<meta property="og:updated_time" content="2019-05-10T11:42:32.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="프로세스">
 <meta name="twitter:description" content="프로세스실행 중인 프로그램.  프로그램: 동작을 하지 않는 정적, 수동적 개체  프로세스: 동작을 하는 능동적 개체  프로세스의 동작은 CPU가 그 프로세스의 명령들을 실행하는 것이다.   자원: CPU, 메모리, 입출력장치, 파일 등 동작: CPU가 프로세스의 명령을 실행  운영체제는 실행할 준비가 된 프로세스들이 적절히 CPU를 배정받아 효율적으로 작업">
@@ -150,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6분 읽기 (나에 대하여 855 단어)
+                    6분 읽기 (나에 대하여 948 단어)
                 </span>
                 
                 
@@ -176,14 +176,16 @@
 <p>운영체제는 실행할 준비가 된 프로세스들이 적절히 CPU를 배정받아 효율적으로 작업을 처리할 수 있도록 관리해야 한다. </p>
 <h2 id="프로세스-간의-관계"><a href="#프로세스-간의-관계" class="headerlink" title="프로세스 간의 관계"></a>프로세스 간의 관계</h2><h3 id="독립적-프로세스"><a href="#독립적-프로세스" class="headerlink" title="독립적 프로세스"></a>독립적 프로세스</h3><p>시스템에서 실행 중인 다른 프로세스의 영향을 받지도 않고 주지도 않는 프로세스.</p>
 <ul>
-<li>프로세스의 상태와 데이터는 다른 프로세스와 공유되지 않는다. </li>
-<li>프로세스의 실행은 결정적이며 재생 가능하다.</li>
+<li>프로세스의 상태는 다른 프로세스와 공유되지 않는다.</li>
+<li>프로세스의 실행결과는 입력상태에 의해서만 결정되기 때문에 결정적이다.</li>
+<li>프로세스의 실행결과는 같은 입력에 대하여 항상 동일하기 때문에 재생 가능하다.</li>
 <li>프로세스의 실행은 타 프로세스와 무관하게 중단되거나 재시작될 수 있다.</li>
 </ul>
-<h3 id="유기적-프로세스"><a href="#유기적-프로세스" class="headerlink" title="유기적 프로세스"></a>유기적 프로세스</h3><p>시스템에서 실행 중인 따른 프로세스의 영향을 주고받으며 동작하는 프로세스.</p>
+<h3 id="유기적-프로세스"><a href="#유기적-프로세스" class="headerlink" title="유기적 프로세스"></a>유기적 프로세스</h3><p>시스템에서 실행 중인 다른 프로세스의 영향을 주고받으며 동작하는 프로세스.</p>
 <ul>
-<li>프로세스의 상태와 데이터는 다른 프로세스와 공유된다</li>
-<li>프로세스의 실행은 비결정적며 재생 불가능하다.</li>
+<li>프로세스의 상태는 다른 프로세스와 공유된다.</li>
+<li>프로세스의 실행결과는 실행순서에 좌우되기 때문에 미리 예측될 수 없으므로 비결정적이다.</li>
+<li>프로세스의 실행결과는 동일한 입력에 대하여 항상 동일하지는 않기 때문에 재생 불가능 이다. </li>
 </ul>
 <h2 id="프로세스-관리자"><a href="#프로세스-관리자" class="headerlink" title="프로세스 관리자"></a>프로세스 관리자</h2><ul>
 <li>프로세스를 생성 및 삭제함.</li>
@@ -315,7 +317,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        43
+                        44
                     </p>
                 </div>
             </div>
@@ -419,7 +421,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">23</span>
+                <span class="level-item tag">24</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -475,7 +477,7 @@
                 <span class="level-item">Operating systems</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Software-engineering/">
@@ -545,7 +547,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 17.5px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12.5px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -559,6 +561,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -612,19 +627,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
-                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -643,7 +645,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -844,7 +846,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Operating-systems/">
                         <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -903,6 +905,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
+                    <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
                     <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
                     <p class="is-size-7 is-uppercase">
@@ -951,19 +966,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time></div>
-                    <a href="/2019/04/21/2019-04-21-compouter-security-secret-code/" class="has-link-black-ter is-size-6">암호의 개념</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -982,7 +984,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1183,7 +1185,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Operating-systems/">
                         <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
