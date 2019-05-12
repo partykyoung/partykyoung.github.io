@@ -139,6 +139,217 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-21T15:48:28.000Z">2019-01-22</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 611 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/01/22/2019-01-20-typescript-react/">create-react-app으로 생성한 React 프로젝트 TypeScript로 마이그레이션 하기</a>
+            
+        </h1>
+        <div class="content">
+            <p>TypeScript에 익숙해질 겸 기존에 진행하고 있던 프로젝트를 TypeScript으로 마이그레이션 해보기로 했다.<br>create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션 할 수 있다. </p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add @types/node @types/react @types/react-dom</span><br><span class="line">yarn add --dev typescript awesome-typescript-loader source-map-loader @types/jest</span><br></pre></td></tr></table></figure>
+<p>먼저 위의 모듈들을 install 해주자. </p>
+<h3 id="App-tsx"><a href="#App-tsx" class="headerlink" title="App.tsx"></a>App.tsx</h3><figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">interface</span> Props &#123;&#125;</span><br><span class="line"><span class="hljs-keyword">interface</span> State &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> App <span class="hljs-keyword">extends</span> React.Component&lt;Props, State&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">props: Props</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">super</span>(props);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render(): JSX.Element &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> &lt;div&gt;TypeScript&lt;<span class="hljs-regexp">/div&gt;;</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>위의 App 컴포넌트 처럼 컴포넌트 파일들의 확장자를 tsx로 바꾸고 Props, State 타입을 지정해주면 된다.<br>마지막으로 index.js 파일을 index.tsx로 바꾸면 마이그레이션이 간단하게 끝난다.</p>
+<p>여기까지는 React 공식문서를 따라 해서 문제가 없었는데 나는 yarn eject로 프로젝트 의존성을 풀어놔서 문제가 잠시 생겼었다.<br>컴포넌트 import시 컴포넌트 경로를 적을 때 tsx 확장자를 적지 않으면 컴포넌트를 제대로 불러오지 못하는 것이었다. </p>
+<p><img src="https://facebook.github.io/create-react-app/docs/adding-typescript" alt="컴포넌트를 import할 때 tsx 확장자가 없으면 프로젝트가 제대로 실행되지 않았다."></p>
+<p>빨간줄이 거슬려서 해결법을 찾아보았다. </p>
+<h3 id="paths-js"><a href="#paths-js" class="headerlink" title="paths.js"></a>paths.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> moduleFileExtensions = [</span><br><span class="line">  <span class="hljs-string">'web.mjs'</span>,</span><br><span class="line">  <span class="hljs-string">'mjs'</span>,</span><br><span class="line">  <span class="hljs-string">'web.js'</span>,</span><br><span class="line">  <span class="hljs-string">'js'</span>,</span><br><span class="line">  <span class="hljs-string">'web.ts'</span>,</span><br><span class="line">  <span class="hljs-string">'ts'</span>,</span><br><span class="line">  <span class="hljs-string">'web.tsx'</span>,</span><br><span class="line">  <span class="hljs-string">'tsx'</span>,</span><br><span class="line">  <span class="hljs-string">'json'</span>,</span><br><span class="line">  <span class="hljs-string">'web.jsx'</span>,</span><br><span class="line">  <span class="hljs-string">'jsx'</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>paths.js 파일을 확인해보면 분명 확장자에 ts, tsx가 있는데 제대로 확장자를 빼면 컴포넌트를 제대로 불러오지 않는것이 이상해서 webpack 설정을 보았다. </p>
+<h3 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">   <span class="hljs-comment">/* 생략 */</span></span><br><span class="line"></span><br><span class="line">  extensions: paths.moduleFileExtensions.map(<span class="hljs-function"><span class="hljs-params">ext</span> =&gt;</span> <span class="hljs-string">`.<span class="hljs-subst">$&#123;ext&#125;</span>`</span>),</span><br><span class="line">  <span class="hljs-comment">// .filter(ext =&gt; useTypeScript || !ext.includes("ts")),</span></span><br><span class="line">  </span><br><span class="line">  <span class="hljs-comment">/* 생략 */</span></span><br></pre></td></tr></table></figure>
+<p>resolve 옵션은 webpack이 알아서 경로나 확장자를 처리할 수 있게 도와준다. extensions에 넣은 확장자들은 웹팩에서 알아서 처리해주기 때문에 파일 경로를 입력할 때 확장자를 적을 필요가 없어진다.<br>확인 해보니 Array.filter 메소드로 TypeScript 파일들을 다 걸러내고 있길래 해당 부분을 주석처리 해주었더니 정상 작동 되었다. </p>
+<p>진작 webpack 설정을 봤었어야 했는데 삽질을 좀 많이 했다. 흑흑…  그래도 무사히 마이그레이션 성공!</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://facebook.github.io/create-react-app/docs/adding-typescript" target="_blank" rel="noopener">Adding TypeScript</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-10T03:28:04.000Z">2019-01-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Back-end/">Back-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Back-end/Node-js/">Node.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 945 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/01/10/2018-01-09-node-global/">Node.js 내장 객체</a>
+            
+        </h1>
+        <div class="content">
+            <p>Node.js에서는 기본적인 내장 객체와 내장 모듈으르 제공한다. 브라우저의 window 객체와 비슷하다고 보면 된다.<br>노드에는 DOM이나 BOM이 없어 window와 document 객체를 사용할 수 없다. 노드에서 window나 document를 사용하면 에러가 발생한다. </p>
+<h2 id="global"><a href="#global" class="headerlink" title="global"></a>global</h2><p>브라우저의 window와 같은 전역 객체이다. 모든 파일에서 접근할 수 있다. window.open 메서드를 그냥 open으로 호출할 수 있는 것 처럼 global도 생략 가능하다.<br>전역 객체라는 점을 이용하여 간단한 데이터를 파일끼리 공유할 때 사용하기도 하나 프로그램의 규모가 커질 수록 어떤 파일에서 global 객체에 값을 대입했는지 찾기 힘들어 유지보수에 어려움을 겪게 되기 때문에 남용하면 안된다.</p>
+<h2 id="console"><a href="#console" class="headerlink" title="console"></a>console</h2><p>노드에서는 window 대신 global 객체 안에 console이 들어있다. 브라우저에서의 console과 거의 비슷하다. console 객체는 보통 디버깅을 위해 사용된다.</p>
+<ul>
+<li><p>console.time(레이블): console.timeEnd(레이블)과 대응되어 같은 레이블을 가진 time과 timeEnd 사이의 시간을 측정한다.<br><img src="/images/backend/node-global-01.png" alt="console.time"></p>
+</li>
+<li><p>console.log(내용): 평범한 로그를 콘솔에 표시한다.<br><img src="/images/backend/node-global-02.png" alt="console.log"></p>
+</li>
+<li><p>console.error(에러): 에러를 콘솔에 표시한다.<br><img src="/images/backend/node-global-03.png" alt="console.error"></p>
+</li>
+<li><p>console.dir(객체, 옵션): 객체를 콘솔에 표시할때 사용한다. 첫 번째 인자로 객체를 넣고 두 번째 인자로 옵션을 넣는다.<br><img src="/images/backend/node-global-04.png" alt="console.dir"></p>
+</li>
+<li><p>console.trace(레이블): 에러가 어디서 발생했는지 추적할 수 있게 해준다.<br><img src="/images/backend/node-global-05.png" alt="console.trace"></p>
+</li>
+</ul>
+<h2 id="타이머"><a href="#타이머" class="headerlink" title="타이머"></a>타이머</h2><p>타이머 기능을 제공하는 함수인 setTimeout, setInterval, setImmediate는 노드에서 window 대신 global 객체 안에 들어있다. 이 타이머 함수들은 모두 아이디르르 반환하고 이 아이디를 사용하여 타이머를 취소할 수 있다. </p>
+<ul>
+<li>setTimeout(콜백 함수, 밀리초): 주어진 밀리초(1000분의 1초) 이후에 콜백 함수를 실행한다.</li>
+<li><p>clearTimeout(아이디): setTimeout을 취소한다.</p>
+</li>
+<li><p>setInterval(콜백 함수, 밀리초): 주어진 밀리초마다 콜백 함수를 반복 실행한다. </p>
+</li>
+<li><p>clearInterval(아이디): setInterval을 취소한다.</p>
+</li>
+<li><p>setImmediate(콜백 함수): 콜백 함수를 즉시 실행한다.</p>
+</li>
+<li>clearImmediate(아이디): setImmediate를 취소한다. </li>
+</ul>
+<h2 id="filename-dirname"><a href="#filename-dirname" class="headerlink" title="filename, dirname"></a><strong>filename, </strong>dirname</h2><p>노드는 <strong>filename, </strong>dirname이라는 키워드로 경로에 대한 정보를 제공한다. 파일에 <strong>filename과 </strong>dirname을 넣어두면 파일 실행 시 현제 파일명과 파일 경로로 바뀐다.<br>경로가 문자열로 반환되가도 하고 \나 /같은 경로 구분자 문제도 있어 보통은 이를 해결해주는 path 모듈과 함꼐 쓴다.</p>
+<h2 id="module-exports"><a href="#module-exports" class="headerlink" title="module, exports"></a>module, exports</h2><p>모듈을 만들때 주로 module.exports를 사용하지만 module 객체 말고 exports 객체로도 모듈으르 만들 수 있다.</p>
+<ul>
+<li><p>module.exports</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> test = <span class="hljs-number">0</span></span><br><span class="line"><span class="hljs-keyword">const</span> test2 = <span class="hljs-number">1</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  test,</span><br><span class="line">  test2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>exports</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exports.test = 0</span><br><span class="line">exports.test2 = 1</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>module.exports와 exports가 동일하게 동작하는 이유는 module.exports와 exports가 같은 객체를 참조하기 때문이다.<br>exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도록 주의해야 한다. module.exports에는 어떤 값이든 대입해도 되지만 exports에는 객체만 대입할 수 있다. 만약 exports에 다른 값을 대입하면 객체의 참조 관게가 끊겨 더 이상 모듈로 기능하지 않는다.</p>
+<p>exports와 module.exports에는 참조 관계가 있으므로 한 모듈에 exports 객체와 module.exports를 동시에 사용하지 않는 것이 좋다. </p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-31T11:38:24.000Z">2018-12-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/etc/">etc</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 934 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/12/31/2018-12-31-2018-memoir/">2018년 회고록</a>
+            
+        </h1>
+        <div class="content">
+            <p>시간이 참 빨리간다. 눈 몇번 깜빡하고 나니까 벌써 2018년이 지나갔다 ㅠ.<br>2019년을 맞이하는 마음으로 2018년을 한번 돌아보자.</p>
+<h3 id="올해-잘한-일"><a href="#올해-잘한-일" class="headerlink" title="올해 잘한 일"></a>올해 잘한 일</h3><ul>
+<li><p>방송통신대에 3학년으로 편입해서 1학기, 2학기를 보냈다.<br>전문학사가 아쉬워서 학사를 따야지, 따야지 하다가 더 미루면 안될것 같아 눈 딱 감고 편입을 했다. 회사일과 학교공부를 동시에 하는게 좀 힘들었지만 그래도 후회는 없다. 도중에 포기하지않고 학사까지 무사히 따는 것이 목표이다. </p>
+</li>
+<li><p>혼자서 프론트 프로젝트 설정 부터 구현까지 해냈다.<br>지금 다니고 있는 회사에서 올해 초에 같이 프론트를 담당하던 이사님이 빠지고 나서 혼자서 프론트 프로젝트를 다 책임져야 하는 상황에 쳐했었다. 맨처음엔 이걸 어떻게 나 혼자 관리하고 만들지 하며 걱정했었는데 에라 모르겠다 하고 달린 결과 나름 괜찮게 결과물이 나왔다. 내가 책임지다 보니 도중에 추가하고 싶은 모듈이나 설정을 맘껏 할 수 있는 장점이 있었다. 내년에는 테스트 환경을 도입하고 성능을 생각하며 리팩토링을 하는 것이 목표이다.</p>
+</li>
+<li><p>오픈소스 활동에 기여했다.<br>회사에서 프로젝트를 하며 react-lazy-load-image-component 라는 컴포넌트를 쓰고 있었는데 className prop를 추가하지 않으면 class명에 undefined 들어가는게 은근 거슬렸다. 해당 오픈소스를 fork 한 후 propTypes, defaultProps만 추가한 후 풀리퀘를 날릴까 말까 고민하고 있었는데 오픈소스 제작자가 먼저 나에게 괜찮으면 이거 풀리퀘를 날려달라고 코멘트를 달아서 우여곡절 끝에 별거 아닌 내 코드가 소스에 반영되었다. 이 외에도 다른 오픈소스 readMe 파일에 오타가 있어서 풀리퀘를 날린적이 있는데 제작자가 잠수(?)를 타서 아직도 컨펌을 못받은것도 있다 ㅠ.</p>
+</li>
+</ul>
+<h3 id="올해-못한-일"><a href="#올해-못한-일" class="headerlink" title="올해 못한 일"></a>올해 못한 일</h3><ul>
+<li><p>개인 공부를 제대로 하지 못했다.<br>학교 공부 핑계로 공부해야할건 많은데 제대로 공부 하지 않앗다. 주말에도 짬이라도 내서 해야했는데 노느라 바빴던것 같다. 흑…</p>
+</li>
+<li><p>개인 프로젝트를 진행하지 못했다.<br>올해 초에 프로젝트 설정만 잡아놓고 조금 끄적이다가 연말까지 계속 손을 놓고 있었다. 내년에는 꼭 프로젝트 진행을 하자. 기능 구현만 아니라 만든 프로젝트로 서비스 운영까지 해보는 것이 목표이다. </p>
+</li>
+<li><p>학교 공부를 벼락치기 식으로 진행했다.<br>전 대학교를 다닐때 한번씩 배운 내용이라고 설렁설렁 공부했다가 학점이 영 만족스럽게 나오지 않았다. 2학기 때는 회사일이 너무 바쁘다는 핑계로 강의도 다 듣지 못하고 완전 벼락치기로 공부를 한 후 시험을 쳤다. 그 결과 수학 F… ㅇ&lt;-&lt; </p>
+</li>
+<li><p>독서를 멀리했다.<br>올해는 제대로 읽은 책도 없다. 내년에는 서점, 책이랑 친해져야지 ㅠ…</p>
+</li>
+</ul>
+<h3 id="내년-목표"><a href="#내년-목표" class="headerlink" title="내년 목표"></a>내년 목표</h3><ul>
+<li>개인 공부(특히 MobX, TypeScript) 하기</li>
+<li>개인 공부한 것들로 토이 프로젝트 진행하기</li>
+<li>학교 공부 복습 미루지 않기</li>
+<li>한달에 한권씩 꼭 책을 읽기</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-11-11T14:03:46.000Z">2018-11-11</time>
                 
                 <div class="level-item">
@@ -478,80 +689,6 @@
                 <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-Architecture/">Computer Architecture</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    19분 읽기 (나에 대하여 2790 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/09/16/2018-10-03-computer-architecture-first/">컴퓨터 구조 개요</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="컴퓨터"><a href="#컴퓨터" class="headerlink" title="컴퓨터"></a>컴퓨터</h2><p>컴퓨터(computer)는 진공관, 트랜지스터 등의 전자 회로를 이용하여 방대한 정보를 저장하고 자동적으로 계산하고 입력된 데이터를 정해진 방법에 따라 처리하는 장치(device)다. (출처: 위키백과)</p>
-<p>일반적으로 컴퓨터를 말할 때 시스템이란 용어를 덧붙여 컴퓨터 시스템이라 부른다. 시스템이란 그 시스템에 부여된 목적을 달성하기 위하여 상호작용 하는 구성요소들의 집합으로 정의된다.<br>따라서 컴퓨터를 제대로 이해하기 위해서는 ‘시스템 측면에서 컴퓨터는 무엇으로 구성되어 있는가?’, ‘구성요소는 각각 무슨 기능을 갖는가?’, ‘입력과 출력은 무엇인가?’ 등을 살펴보아야 한다. </p>
-<h2 id="컴퓨터-시스템의-전체적-구성"><a href="#컴퓨터-시스템의-전체적-구성" class="headerlink" title="컴퓨터 시스템의 전체적 구성"></a>컴퓨터 시스템의 전체적 구성</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">컴퓨터 시스템</span><br><span class="line">  ├─ 하드웨어</span><br><span class="line">  │   ├─ 입력장치</span><br><span class="line">  │   ├─ 출력장치</span><br><span class="line">  │   ├─ 기억장치</span><br><span class="line">  │   ├─ 중앙처리장치</span><br><span class="line">  │   └─  시스템버스                        </span><br><span class="line">  └─ 소프트웨어</span><br><span class="line">      ├─ 시스템 소프트웨어</span><br><span class="line">      └─ 응용 소프트웨어</span><br></pre></td></tr></table></figure>
-<p>컴퓨터 시스템을 구체적으로 살펴보면 크게 하드웨어와 소프트웨어 측면으로 구분할 수 있다. 하드웨어는 컴퓨터의 기계적인 장치를 의미하며 소프트웨어는 하드웨어를 제어하여 원하는 결과를 얻을 수 있도록 하는 모든 종류의 프로그램을 의미한다.<br>소프트웨어는 컴퓨터에서 사용할 수 있는 명령어들의 조합으로 구현되는데 이를 프로그램이라 부른다. 시스템 소프트웨어는 컴파일러, 어셈블러, 로더, 운영체제 같이 컴퓨터 시스템의 운영을 제어하고 지원하는 프로그램을 말하며 응용 소프트웨어는 워드프로세서, 데이터베이스, 스프레드시트 등과 같이 사용자 편의를 위해 만들어놓은 프로그램을 말한다. </p>
-<p><img src="/images/base/computer-architecture-first-01.png" alt="하드웨어와 소프트웨어의 계층구조"></p>
-<h2 id="컴퓨터-하드웨어-구성요소"><a href="#컴퓨터-하드웨어-구성요소" class="headerlink" title="컴퓨터 하드웨어 구성요소"></a>컴퓨터 하드웨어 구성요소</h2><h3 id="입력장치"><a href="#입력장치" class="headerlink" title="입력장치"></a>입력장치</h3><p>컴퓨터는 사용자로부터 데이터를 명령어와 함께 받아들여서 그 명령어에 따라 데이터를 처리하는 기계이다. 이때 입력장치란 사용자가 입력하는 데이터와 명령어를 받아들여 컴퓨터가 알 수 있는 형태로 변환하여 기억장치나 중앙처리장치에 전달해 주는 장치를 말한다.<br>기본적인 입력장치로 키보드를 사용한다. 키보드상의 문자 각각에 해당되는 키를 누르면 이에 대응하는 전기적 신호가 컴퓨터로 전달된다. 다른 입력장치로는 마우스, 마이크, 스캐너 등이 있다. </p>
-<h3 id="출력장치"><a href="#출력장치" class="headerlink" title="출력장치"></a>출력장치</h3><p>컴퓨터는 입력장치로부터 데이터와 명령어를 받아들여서 그 명령대로 데이터를 처리하고 이에 대한 결과를 생성시킨다. 출력장치란 이렇게 생성된 결과를 사람이 알아볼 수 있는 형태로 변환해 주는 장치를 말한다.<br>최근 가장 많이 사용되고 있는 출력장치로는 LCD(Liquid Crystal Display)가 있는데 이것은 인가전압에 따른 액정의 투과도 변화를 이용하여 각종 장치에서 발생되는 여러가지 전기적인 정보를 시각정보로 변화시켜 전달하는 방법을 주로 사용한다. 또다른 출력장치로는 데이터를 화면이 아니라 종이에 나타내 보여주는 프린터가 있다. </p>
-<h3 id="기억장치"><a href="#기억장치" class="headerlink" title="기억장치"></a>기억장치</h3><p>입력장치로부터 컴퓨터 내부로 전달되는 모든 데이터는 2진수로 바뀌어 기억장치에 저장된다. 데이터 저장 역할을 하는 기억장치는 그 특성과 역할에 따라 캐시와 주기억장치, 그리고 보조기억장치로 나뉜다. </p>
-<h4 id="주기억장치"><a href="#주기억장치" class="headerlink" title="주기억장치"></a>주기억장치</h4><p>주기억장치는 컴퓨터에서 중앙처리장치가 처리할 데이터와 명령어들을 저장한다. 대표적으로 RAM과 ROM이 있다. </p>
-<ul>
-<li>RAM: 전원이 공급되는 동안에는 데이터를 계속 기억하고 있으나 전원 공급이 끊기면 기억된 내용이 없어지는 휘발성 기억장치이다. <ul>
-<li>SRAM: 일단 기억소자에 정보가 저장되면 전원이 유지되는 한 그 데이터를 상실하지 않는다.</li>
-<li>DRAM: 전원이 공급되는 동안에도 일정 주기로 충전을 해주어야 데이터를 상실하지 않기 떄문에 DRAM을 채용한 컴퓨터 시스템에서는 재충전이 필요한 하드웨어 회로가 포함된다. 특수한 경우를 제외하면 대부분 가격이 저렴한 DRAM으로 구성되며 이러한 DRAM은 데이터를 처리하는 중앙처리장치에 비해 속도가 매우 느리므로 중앙처리장치는 주기억장치에서 데이터를 가져올 때 시간이 많이 낭비된다. </li>
-</ul>
-</li>
-<li>ROM: 전원 공급이 끊겨도 이전의 정보가 계속 기억되는 비휘발성 기억장치이다. </li>
-</ul>
-<h4 id="캐시"><a href="#캐시" class="headerlink" title="캐시"></a>캐시</h4><p>주기억장치의 단점을 해결하기 위해 데이터가 중앙처리장치에 신속하게 전달될 수 있도록 하기 위해 사용되는 주기억장치와 중앙처리장치 사이에 위치한 기억장치를 캐시라고 한다. 캐시는 일반적으로 가격이 비싸고 부피가 큰 대신 매우 빠른 SRAM으로 구성되며 보통 수백 MB까지의 용량을 갖는다. </p>
-<h4 id="보조기억장치"><a href="#보조기억장치" class="headerlink" title="보조기억장치"></a>보조기억장치</h4><p>캐시나 주기억장치는 전원이 꺼지면 현재까지 저장한 내용을 잃어버린다. 컴퓨터 사용자가 현재 기억장칭에 저장한 내용을 전원을 끄고 난 다음에도 사용할 수 있도록 해주는 기억장치를 보조기억장치라 한다. 대량의 데이터를 저장하기 위해 사용하며 자기디스크와 자기테이프, CD-ROM 등이 있다. </p>
-<h3 id="중앙처리장치"><a href="#중앙처리장치" class="headerlink" title="중앙처리장치"></a>중앙처리장치</h3><p>중앙처리장치는 컴퓨터의 두뇌에 해당하는 부분이다.</p>
-<h4 id="산술-논리연산장치"><a href="#산술-논리연산장치" class="headerlink" title="산술/논리연산장치"></a>산술/논리연산장치</h4><p>산술/논리연산장치는 중앙처리장치의 가장 중요한 요소로서 사칙연산을 포함한 산술연산과 참과 거짓을 판별하는 논리연산을 수행하는 장치이다. </p>
-<h4 id="제어장치"><a href="#제어장치" class="headerlink" title="제어장치"></a>제어장치</h4><p>제어장치는 중앙처리장치 내부에서 일어나는 모든 동작을 제어하고 관리하는 장치이다. 기억장치로부터 명령을 읽고 해석하여 해석된 결과에 따라 명령을 수행하기 위한 제어신호를 만드는 장치이다. </p>
-<h4 id="레지스터"><a href="#레지스터" class="headerlink" title="레지스터"></a>레지스터</h4><p>레지스터는 중앙처리장치에 있는 내부기억장치로서 연산처리를 위한 데이터나 결과 등을 일시적으로 보관해두는 장치이다. 고속의 연산처리나 편리한 프로그래밍에 도움을 주지만 가격이 비싸므로 중앙처리장치 내의 레지스터의 수는 제한적이다. </p>
-<h3 id="시스템버스"><a href="#시스템버스" class="headerlink" title="시스템버스"></a>시스템버스</h3><p>컴퓨터 구조에서 버스란 두 개 이상의 장치를 연결해 주는 통신선로를 말한다. 일반적으로 하나의 버스는 여러 개의 통신선으로 구성되어 있고 각 선은 2진수 0과 1로 표현되는 신호를 전송할 수 있다. 따라서 한 버스가 8개의 선으로 구성된 경우에는 8개의 신호를 동시에 전송할 수 있다.<br>컴퓨터 시스템은 다양한 시스템 계층에서의 구성요소들 간에 통신을 가능하게 하는 많은 종류의 버스를 포함하고 있다. 이러한 버스의 종류 중 입력장치와 출력장치, 기억장치, 중앙처리장치를 연결해주는 버스를 시스템버스라고 한다. 이러한 시스템버스는 전송되는 데이터가 의미하는 내용에 따라 주소버스, 데이터버스, 제어버스로 구분된다. </p>
-<h2 id="컴퓨터-시스템의-분류"><a href="#컴퓨터-시스템의-분류" class="headerlink" title="컴퓨터 시스템의 분류"></a>컴퓨터 시스템의 분류</h2><h3 id="마이크로컴퓨터"><a href="#마이크로컴퓨터" class="headerlink" title="마이크로컴퓨터"></a>마이크로컴퓨터</h3><p>마이크로컴퓨터는 가장 널리 사용되고 있는 범용 컴퓨터로서 연산장치, 제어장치, 기억장치, 입출력장치 등을 하나의 칩으로 만든 마이크로 프로세서를 중앙처리장치로 채택한 컴퓨터로서, 단일 칩 마이크로 컴퓨터라고 한다. 대표적으로 PC(Personal Computer)가 있다. </p>
-<h3 id="미니컴퓨터"><a href="#미니컴퓨터" class="headerlink" title="미니컴퓨터"></a>미니컴퓨터</h3><p>미니컴퓨터는 외형적으로 마이크로컴퓨터보다 조금 크고, 메인프레임 컴퓨터 보다는 작은 컴퓨터로 단위부서와 같은 작은 규모의 조직에서 사용할 수 있는 소규모 컴퓨터이다. 슈퍼 미니컴퓨터가 등장하면서 많은 범용 컴퓨터의 응용을 흡수하였고 컴퓨팅 서버, 파일 서버, 네트워크 서버 등 각종 서버의 등장으로 인해 도태되었다. </p>
-<h3 id="메인프레임-컴퓨터"><a href="#메인프레임-컴퓨터" class="headerlink" title="메인프레임 컴퓨터"></a>메인프레임 컴퓨터</h3><p>메인프레임 컴퓨터는 고속의 입출력 처리능력을 가지고 있으며 대용량의 저장장치를 보유한 컴퓨터이다. 대규모의 데이터베이스 저장 및 관리용으로 사용된다.</p>
-<h3 id="슈퍼-컴퓨터"><a href="#슈퍼-컴퓨터" class="headerlink" title="슈퍼 컴퓨터"></a>슈퍼 컴퓨터</h3><p>슈퍼컴퓨터는 병렬처리가 가능한 복잡한 구조로 되어 있으며 복잡한 연산을 초고속으로 계산하기 위한 컴퓨텅이다. 이 컴퓨터는 아주 복잡한 과학 계산을 위한 것으로 연산속도가 무엇보다 중요하다. 환경, 에너지, 우주 및 항공, 지원탐사 등에 응용된다.</p>
-<h3 id="파이프라인-슈퍼컴퓨터"><a href="#파이프라인-슈퍼컴퓨터" class="headerlink" title="파이프라인 슈퍼컴퓨터"></a>파이프라인 슈퍼컴퓨터</h3><p>파이프라인 슈퍼컴퓨터는 1개의 중앙처리장치 내에 다수 개의 연산장치를 갖고 있는 컴퓨터로서 각 연산장치는 파이프라이닝 구조를 이용하여 고속의 벡터 계산이 가능하다.</p>
-<h3 id="대규모-병렬처리-컴퓨터"><a href="#대규모-병렬처리-컴퓨터" class="headerlink" title="대규모 병렬처리 컴퓨터"></a>대규모 병렬처리 컴퓨터</h3><p>대규모 병렬처리 컴퓨터는 하나의 시스템 내에 상호 연결된 수백 혹은 수천개 이상의 처리장치를 갖고 있으며 처리장치들이 하나의 큰 작업을 나누어서 병렬로 처리하는 구조를 갖는다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
-                
-                <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Data-Structure/">Data Structure</a>
                 </div>
                 
@@ -613,17 +750,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-02T14:29:09.000Z">2018-09-02</time>
+                <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-Architecture/">Computer Architecture</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2분 읽기 (나에 대하여 273 단어)
+                    19분 읽기 (나에 대하여 2790 단어)
                 </span>
                 
                 
@@ -632,136 +769,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/09/02/2018-08-30-reactjs-component/">Component</a>
+                <a class="has-link-black-ter" href="/2018/09/16/2018-10-03-computer-architecture-first/">컴퓨터 구조 개요</a>
             
         </h1>
         <div class="content">
-            <h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><p>Component는 JavaScript function과 같다. props라고 불리는 임의의 input을 받아들이고 화면에 어떻게 나타낼지를 설명하는 React Element를 반환한다.<br>Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주고 LifeCycle API를 이용하여 Component가 화면에서 나타날 때, 사라질 때, 변화가 일어날 때 주어진 작업들을 처리할 수 있으며 method를 만들어 특별한 기능을 붙일 수 있다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React, &#123; Component &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      &lt;div className=<span class="hljs-string">"App"</span>&gt;</span><br><span class="line">        first component!</span><br><span class="line">      &lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">    );</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br><span class="line"><span class="hljs-regexp"></span></span><br><span class="line"><span class="hljs-regexp">export default App;</span></span><br></pre></td></tr></table></figure>
-<p>컴포넌트의 초기 코드이다. es6에 추가된 export 명령어로 컴포넌트를 모듈화 시켜 내보낼 수 있다. </p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React, &#123; Component &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">'./App'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppContainer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      &lt;App /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> AppContainer;</span><br></pre></td></tr></table></figure>
-<p>import 명령어로 원하는 컴포넌트를 불러와 사용할 수 있다. import 역시 es6에서 추가된 명령어 이다. </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://reactjs.org/docs/components-and-props.html" target="_blank" rel="noopener">Components and Props</a><br><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-08-22T15:16:39.000Z">2018-08-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/memo/">memo</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    7분 읽기 (나에 대하여 1088 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/08/23/2018-08-11-html-email-templete/">html 이메일 템플릿 작성하기</a>
-            
-        </h1>
-        <div class="content">
-            <p>오랜만에 퍼블리싱 외주를 받았는데 이메일 템플릿을 퍼블리싱 하는 일이었다.<br>이메일 템플릿은 처음 퍼블리싱 해보는거라 작업 전 먼저 사전작업으로 리서치나 관련 정보들을 알아봤다. </p>
-<h2 id="리서치"><a href="#리서치" class="headerlink" title="리서치"></a>리서치</h2><p>먼저 내가 받은 이메일 중 몇몇 이메일을 검사해 보았다. </p>
-<p><img src="/images/frontend/html-email-template-03.png" alt="aws 메일"><br><img src="/images/frontend/html-email-template-04.png" alt="구글 애널리틱스 메일"><br>대부분은 table로 레이아웃을 잡고 퍼블리싱을 했다. </p>
-<p><img src="/images/frontend/html-email-template-01.png" alt="구글 드라이브 알림 메일"><br><img src="/images/frontend/html-email-template-02.png" alt="티스토리 메일"><br>평범하게 div를 사용해서 레이아웃을 잡은 이메일들도 있었다. </p>
-<p>스타일은 전부다 인라인 스타일을 적용하고 있었다. </p>
-<h2 id="이메일-템플릿을-작성할-때-주의해야-할-점"><a href="#이메일-템플릿을-작성할-때-주의해야-할-점" class="headerlink" title="이메일 템플릿을 작성할 때 주의해야 할 점"></a>이메일 템플릿을 작성할 때 주의해야 할 점</h2><p>위에서 리서치한 결과대로 검색을 해봤더니  이메일 클라이언트 템플릿을 만들 때에는 주의해야 할 것들이 많았다.</p>
+            <h2 id="컴퓨터"><a href="#컴퓨터" class="headerlink" title="컴퓨터"></a>컴퓨터</h2><p>컴퓨터(computer)는 진공관, 트랜지스터 등의 전자 회로를 이용하여 방대한 정보를 저장하고 자동적으로 계산하고 입력된 데이터를 정해진 방법에 따라 처리하는 장치(device)다. (출처: 위키백과)</p>
+<p>일반적으로 컴퓨터를 말할 때 시스템이란 용어를 덧붙여 컴퓨터 시스템이라 부른다. 시스템이란 그 시스템에 부여된 목적을 달성하기 위하여 상호작용 하는 구성요소들의 집합으로 정의된다.<br>따라서 컴퓨터를 제대로 이해하기 위해서는 ‘시스템 측면에서 컴퓨터는 무엇으로 구성되어 있는가?’, ‘구성요소는 각각 무슨 기능을 갖는가?’, ‘입력과 출력은 무엇인가?’ 등을 살펴보아야 한다. </p>
+<h2 id="컴퓨터-시스템의-전체적-구성"><a href="#컴퓨터-시스템의-전체적-구성" class="headerlink" title="컴퓨터 시스템의 전체적 구성"></a>컴퓨터 시스템의 전체적 구성</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">컴퓨터 시스템</span><br><span class="line">  ├─ 하드웨어</span><br><span class="line">  │   ├─ 입력장치</span><br><span class="line">  │   ├─ 출력장치</span><br><span class="line">  │   ├─ 기억장치</span><br><span class="line">  │   ├─ 중앙처리장치</span><br><span class="line">  │   └─  시스템버스                        </span><br><span class="line">  └─ 소프트웨어</span><br><span class="line">      ├─ 시스템 소프트웨어</span><br><span class="line">      └─ 응용 소프트웨어</span><br></pre></td></tr></table></figure>
+<p>컴퓨터 시스템을 구체적으로 살펴보면 크게 하드웨어와 소프트웨어 측면으로 구분할 수 있다. 하드웨어는 컴퓨터의 기계적인 장치를 의미하며 소프트웨어는 하드웨어를 제어하여 원하는 결과를 얻을 수 있도록 하는 모든 종류의 프로그램을 의미한다.<br>소프트웨어는 컴퓨터에서 사용할 수 있는 명령어들의 조합으로 구현되는데 이를 프로그램이라 부른다. 시스템 소프트웨어는 컴파일러, 어셈블러, 로더, 운영체제 같이 컴퓨터 시스템의 운영을 제어하고 지원하는 프로그램을 말하며 응용 소프트웨어는 워드프로세서, 데이터베이스, 스프레드시트 등과 같이 사용자 편의를 위해 만들어놓은 프로그램을 말한다. </p>
+<p><img src="/images/base/computer-architecture-first-01.png" alt="하드웨어와 소프트웨어의 계층구조"></p>
+<h2 id="컴퓨터-하드웨어-구성요소"><a href="#컴퓨터-하드웨어-구성요소" class="headerlink" title="컴퓨터 하드웨어 구성요소"></a>컴퓨터 하드웨어 구성요소</h2><h3 id="입력장치"><a href="#입력장치" class="headerlink" title="입력장치"></a>입력장치</h3><p>컴퓨터는 사용자로부터 데이터를 명령어와 함께 받아들여서 그 명령어에 따라 데이터를 처리하는 기계이다. 이때 입력장치란 사용자가 입력하는 데이터와 명령어를 받아들여 컴퓨터가 알 수 있는 형태로 변환하여 기억장치나 중앙처리장치에 전달해 주는 장치를 말한다.<br>기본적인 입력장치로 키보드를 사용한다. 키보드상의 문자 각각에 해당되는 키를 누르면 이에 대응하는 전기적 신호가 컴퓨터로 전달된다. 다른 입력장치로는 마우스, 마이크, 스캐너 등이 있다. </p>
+<h3 id="출력장치"><a href="#출력장치" class="headerlink" title="출력장치"></a>출력장치</h3><p>컴퓨터는 입력장치로부터 데이터와 명령어를 받아들여서 그 명령대로 데이터를 처리하고 이에 대한 결과를 생성시킨다. 출력장치란 이렇게 생성된 결과를 사람이 알아볼 수 있는 형태로 변환해 주는 장치를 말한다.<br>최근 가장 많이 사용되고 있는 출력장치로는 LCD(Liquid Crystal Display)가 있는데 이것은 인가전압에 따른 액정의 투과도 변화를 이용하여 각종 장치에서 발생되는 여러가지 전기적인 정보를 시각정보로 변화시켜 전달하는 방법을 주로 사용한다. 또다른 출력장치로는 데이터를 화면이 아니라 종이에 나타내 보여주는 프린터가 있다. </p>
+<h3 id="기억장치"><a href="#기억장치" class="headerlink" title="기억장치"></a>기억장치</h3><p>입력장치로부터 컴퓨터 내부로 전달되는 모든 데이터는 2진수로 바뀌어 기억장치에 저장된다. 데이터 저장 역할을 하는 기억장치는 그 특성과 역할에 따라 캐시와 주기억장치, 그리고 보조기억장치로 나뉜다. </p>
+<h4 id="주기억장치"><a href="#주기억장치" class="headerlink" title="주기억장치"></a>주기억장치</h4><p>주기억장치는 컴퓨터에서 중앙처리장치가 처리할 데이터와 명령어들을 저장한다. 대표적으로 RAM과 ROM이 있다. </p>
 <ul>
-<li><p>레이아웃은 table로 잡자.<br>이메일에서 사용하는 HTML과 CSS는 웹 표준과는 거리가 멀다. 게다가 이메일 클라이언트 마다 html과 css를 다르게 해석하기 때문에 주의해야 한다. 다행이 table 코드는 대부분 적용되므로 이를 사용하는 방법이 가장 많이 쓰인다.<br>맨처음 이메일 템플릿 작업을 들어가면서 에이 뭐 어때 하며 평소대로 div나 다른 태그들로 레이아웃을 잡았었다가 작업했었다가 나중에 아웃룩 구버전에서 레이아웃이 다 깨지는걸 확인하고 허겁지겁 table로 레이아웃을 다 바꿨다 ㅠ.</p>
-</li>
-<li><p>인라인으로 CSS를 적어주는 것이 가장 안전하다.<br>대부분의 메일 서비스 업체에서는 보안상 css 파일을 모두 제거하기 때문에 인라인 스타일로 css를 작성해주는 것이 좋다. 대신 안되는 css 요소들도 많으니 조심해야 한다. (position, background-image 등…) media query도 지원하는 곳에서만 쓸 수 있다. </p>
-</li>
+<li>RAM: 전원이 공급되는 동안에는 데이터를 계속 기억하고 있으나 전원 공급이 끊기면 기억된 내용이 없어지는 휘발성 기억장치이다. <ul>
+<li>SRAM: 일단 기억소자에 정보가 저장되면 전원이 유지되는 한 그 데이터를 상실하지 않는다.</li>
+<li>DRAM: 전원이 공급되는 동안에도 일정 주기로 충전을 해주어야 데이터를 상실하지 않기 떄문에 DRAM을 채용한 컴퓨터 시스템에서는 재충전이 필요한 하드웨어 회로가 포함된다. 특수한 경우를 제외하면 대부분 가격이 저렴한 DRAM으로 구성되며 이러한 DRAM은 데이터를 처리하는 중앙처리장치에 비해 속도가 매우 느리므로 중앙처리장치는 주기억장치에서 데이터를 가져올 때 시간이 많이 낭비된다. </li>
 </ul>
-<h2 id="이메일-템플릿을-작성하면서-도움을-받았던-사이트"><a href="#이메일-템플릿을-작성하면서-도움을-받았던-사이트" class="headerlink" title="이메일 템플릿을 작성하면서 도움을 받았던 사이트"></a>이메일 템플릿을 작성하면서 도움을 받았던 사이트</h2><ul>
-<li><p><a href="https://webdesign.tutsplus.com/ko/articles/build-an-html-email-template-from-scratch--webdesign-12770" target="_blank" rel="noopener">HTML 이메일 템플릿 처음부터 제작하기</a><br>이메일 템플릿을 작성하는 방법을 가르쳐준다. 튜토리얼 하는 식으로 한번 읽어보고 진행했었다.</p>
 </li>
-<li><p><a href="https://zurb.com/playground/responsive-email-templates" target="_blank" rel="noopener">Responsive Email Templates</a><br>무료 이메일 템플릿을 다운받을 수 있는 사이트이다. 이메일 템플릿 하나를 골라 다운 받은 뒤 작업하면서 많이 참고 했었는데 도움이 많이 되었다. </p>
-</li>
-<li><p><a href="https://litmus.com/" target="_blank" rel="noopener">litmus</a><br>작성한 템플릿을 아웃룩, 아이폰, 안드로이드 등 여러 클라이언트에서 테스트 해 볼 수 있는 웹서비스이다. 일주일 동안 무료로 사용할 수 있고 그 다음 부터는 결제를 해야한다.  gmail이랑 네이버 메일에서는 작성했던 템플릿이 무너지지 않고 잘 나오길래 안심하고 있다가 litmus로 아웃룩에서 다 무너져있는 템플릿을 보고 식겁하며 새로 작업했었다.</p>
-</li>
-<li><p><a href="https://templates.mailchimp.com/resources/inline-css/" target="_blank" rel="noopener">CSS Inliner Tool</a><br>html이랑 style을 합쳐서 인라인 스타일 html을 만들어주는 웹사이트이다. 이 사이트 덕분에 css파일과 html 파일을 편하게 합칠 수 있었다. 대신 여러번 작업하면 제대로 결과물이 출력이 안되는 오류가 있어서 파일을 한번 합치고 새로고침 하고 또 다른 파일들을 합치는 작업을 반복했었다. </p>
-</li>
+<li>ROM: 전원 공급이 끊겨도 이전의 정보가 계속 기억되는 비휘발성 기억장치이다. </li>
 </ul>
-<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>이메일 템플릿 퍼블리싱을 하면서 테이블로 레이아웃 짜는것이 얼마나 구리고 html5가 얼마나 좋은지 느낄 수 있었다. css도 마음대로 못쓰고 미디어쿼리가 안되는것도 정말 힘들었다 ㅠ. 다시는… 이메일…템플릿…퍼블리싱…하고 싶지….않아… </p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-08-04T21:06:13.000Z">2018-08-05</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 읽기 (나에 대하여 597 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/08/05/2018-08-05-reactjs-jsx-fragment/">Fragment</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><figure class="highlight jsx hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React, &#123; Component &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;React.js&lt;<span class="hljs-regexp">/h1&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;div&gt;JSX &lt;br/</span>&gt; :)&lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;</span><br></pre></td></tr></table></figure>
-<p>JSX는 JavaScript XML의 약자이다. render 함수를 보면 HTML 태그 처럼 생긴 것들이 보이는데 저 부분이 JSX 이다. JSX로 컴포넌트가 화면에 어떻게 보일지 나타낼 수 있다. JSX는 HTML과 비슷해 보이지만 용도도 사용법도 다르다. </p>
-<figure class="highlight jsx hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React, &#123; Component &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      <span class="hljs-comment">/* &#123;</span></span><br><span class="line"><span class="hljs-comment">        error</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">        &lt;div&gt;안녕하세요&lt;/div&gt;</span></span><br><span class="line"><span class="hljs-comment">        &lt;div&gt;반갑습니다&lt;/div&gt;</span></span><br><span class="line"><span class="hljs-comment"></span></span><br><span class="line"><span class="hljs-comment">      &#125; */</span></span><br><span class="line"></span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;div&gt;안녕하세요&lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;div&gt;반갑습니다&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">    );</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br><span class="line"><span class="hljs-regexp"></span></span><br><span class="line"><span class="hljs-regexp">export default App;</span></span><br></pre></td></tr></table></figure>
-<p><img src="/images/frontend/reactjs-fragment-1.png" alt="실행결과"><br>JSX는 컴포넌트에 여러 요소가 있다면 부모 요소 하나로 꼭 감싸야 한다. Virtual DOM에서 컴포넌트 변화를 감지해 낼 때 효율적으로 비교할 수 있도록 컴포넌트 내부는 DOM 트리 구조 하나여야 한다는 규칙이 있기 때문이다.<br>하지만 이렇게 요소들을 감싸기 위한 용도로 DOM 요소들을 추가하다보면 쓸모없는 요소들이 늘어나게 된다. </p>
-<h2 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h2><figure class="highlight jsx hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React, &#123; Component, Fragment &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      &lt;Fragment&gt;</span><br><span class="line">        &lt;div&gt;안녕하세요&lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;div&gt;반갑습니다&lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/Fragment&gt;</span></span><br><span class="line"><span class="hljs-regexp">    );</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br><span class="line"><span class="hljs-regexp"></span></span><br><span class="line"><span class="hljs-regexp">export default App;</span></span><br></pre></td></tr></table></figure>
-<p><img src="/images/frontend/reactjs-fragment-2.png" alt="실행결과"></p>
-<p>Fragment는 React v16 이상의 버전에서 도입되었다. Fragment로 부모 DOM 요소를 추가하지 않고도 자식 요소들을 그룹화 할 수 있다.<br>Fragment를 사용하면 단지 부모 요소로만 쓰이는 불필요한 DOM을 줄일 수 있어 조금 더 빨라지고 메모리 사용량도 조금 더 적어진다. 개발자 도구로 DOM 요소를 확인 할 때도 조금 더 편리하게 확인할 수 있다. </p>
-<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>실무에서 React.js를 사용하면서 왜 JSX에 부모요소로 꼭 자식요소들을 감싸야 하는지 이유도 모른체 매번 써왔는데 이번에 처음부터 React.js를 공부하면서 드디어 그 이유를 알게 되었다 ㅠ…<br>개인적으로 부모요소 규칙때문에 짜증난적이 한두번이 아니었는데 Fragment 덕분에 많이 편해졌다. 필요한걸 쏙쏙 골라서 업데이트 해주는 React.js가 너무 좋다 :).</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160505238&amp;orderClick=LAG&amp;Kc=" target="_blank" rel="noopener">리액트를 다루는 기술</a><br><a href="https://reactjs.org/docs/fragments.html" target="_blank" rel="noopener">Fragments</a></p>
+<h4 id="캐시"><a href="#캐시" class="headerlink" title="캐시"></a>캐시</h4><p>주기억장치의 단점을 해결하기 위해 데이터가 중앙처리장치에 신속하게 전달될 수 있도록 하기 위해 사용되는 주기억장치와 중앙처리장치 사이에 위치한 기억장치를 캐시라고 한다. 캐시는 일반적으로 가격이 비싸고 부피가 큰 대신 매우 빠른 SRAM으로 구성되며 보통 수백 MB까지의 용량을 갖는다. </p>
+<h4 id="보조기억장치"><a href="#보조기억장치" class="headerlink" title="보조기억장치"></a>보조기억장치</h4><p>캐시나 주기억장치는 전원이 꺼지면 현재까지 저장한 내용을 잃어버린다. 컴퓨터 사용자가 현재 기억장칭에 저장한 내용을 전원을 끄고 난 다음에도 사용할 수 있도록 해주는 기억장치를 보조기억장치라 한다. 대량의 데이터를 저장하기 위해 사용하며 자기디스크와 자기테이프, CD-ROM 등이 있다. </p>
+<h3 id="중앙처리장치"><a href="#중앙처리장치" class="headerlink" title="중앙처리장치"></a>중앙처리장치</h3><p>중앙처리장치는 컴퓨터의 두뇌에 해당하는 부분이다.</p>
+<h4 id="산술-논리연산장치"><a href="#산술-논리연산장치" class="headerlink" title="산술/논리연산장치"></a>산술/논리연산장치</h4><p>산술/논리연산장치는 중앙처리장치의 가장 중요한 요소로서 사칙연산을 포함한 산술연산과 참과 거짓을 판별하는 논리연산을 수행하는 장치이다. </p>
+<h4 id="제어장치"><a href="#제어장치" class="headerlink" title="제어장치"></a>제어장치</h4><p>제어장치는 중앙처리장치 내부에서 일어나는 모든 동작을 제어하고 관리하는 장치이다. 기억장치로부터 명령을 읽고 해석하여 해석된 결과에 따라 명령을 수행하기 위한 제어신호를 만드는 장치이다. </p>
+<h4 id="레지스터"><a href="#레지스터" class="headerlink" title="레지스터"></a>레지스터</h4><p>레지스터는 중앙처리장치에 있는 내부기억장치로서 연산처리를 위한 데이터나 결과 등을 일시적으로 보관해두는 장치이다. 고속의 연산처리나 편리한 프로그래밍에 도움을 주지만 가격이 비싸므로 중앙처리장치 내의 레지스터의 수는 제한적이다. </p>
+<h3 id="시스템버스"><a href="#시스템버스" class="headerlink" title="시스템버스"></a>시스템버스</h3><p>컴퓨터 구조에서 버스란 두 개 이상의 장치를 연결해 주는 통신선로를 말한다. 일반적으로 하나의 버스는 여러 개의 통신선으로 구성되어 있고 각 선은 2진수 0과 1로 표현되는 신호를 전송할 수 있다. 따라서 한 버스가 8개의 선으로 구성된 경우에는 8개의 신호를 동시에 전송할 수 있다.<br>컴퓨터 시스템은 다양한 시스템 계층에서의 구성요소들 간에 통신을 가능하게 하는 많은 종류의 버스를 포함하고 있다. 이러한 버스의 종류 중 입력장치와 출력장치, 기억장치, 중앙처리장치를 연결해주는 버스를 시스템버스라고 한다. 이러한 시스템버스는 전송되는 데이터가 의미하는 내용에 따라 주소버스, 데이터버스, 제어버스로 구분된다. </p>
+<h2 id="컴퓨터-시스템의-분류"><a href="#컴퓨터-시스템의-분류" class="headerlink" title="컴퓨터 시스템의 분류"></a>컴퓨터 시스템의 분류</h2><h3 id="마이크로컴퓨터"><a href="#마이크로컴퓨터" class="headerlink" title="마이크로컴퓨터"></a>마이크로컴퓨터</h3><p>마이크로컴퓨터는 가장 널리 사용되고 있는 범용 컴퓨터로서 연산장치, 제어장치, 기억장치, 입출력장치 등을 하나의 칩으로 만든 마이크로 프로세서를 중앙처리장치로 채택한 컴퓨터로서, 단일 칩 마이크로 컴퓨터라고 한다. 대표적으로 PC(Personal Computer)가 있다. </p>
+<h3 id="미니컴퓨터"><a href="#미니컴퓨터" class="headerlink" title="미니컴퓨터"></a>미니컴퓨터</h3><p>미니컴퓨터는 외형적으로 마이크로컴퓨터보다 조금 크고, 메인프레임 컴퓨터 보다는 작은 컴퓨터로 단위부서와 같은 작은 규모의 조직에서 사용할 수 있는 소규모 컴퓨터이다. 슈퍼 미니컴퓨터가 등장하면서 많은 범용 컴퓨터의 응용을 흡수하였고 컴퓨팅 서버, 파일 서버, 네트워크 서버 등 각종 서버의 등장으로 인해 도태되었다. </p>
+<h3 id="메인프레임-컴퓨터"><a href="#메인프레임-컴퓨터" class="headerlink" title="메인프레임 컴퓨터"></a>메인프레임 컴퓨터</h3><p>메인프레임 컴퓨터는 고속의 입출력 처리능력을 가지고 있으며 대용량의 저장장치를 보유한 컴퓨터이다. 대규모의 데이터베이스 저장 및 관리용으로 사용된다.</p>
+<h3 id="슈퍼-컴퓨터"><a href="#슈퍼-컴퓨터" class="headerlink" title="슈퍼 컴퓨터"></a>슈퍼 컴퓨터</h3><p>슈퍼컴퓨터는 병렬처리가 가능한 복잡한 구조로 되어 있으며 복잡한 연산을 초고속으로 계산하기 위한 컴퓨텅이다. 이 컴퓨터는 아주 복잡한 과학 계산을 위한 것으로 연산속도가 무엇보다 중요하다. 환경, 에너지, 우주 및 항공, 지원탐사 등에 응용된다.</p>
+<h3 id="파이프라인-슈퍼컴퓨터"><a href="#파이프라인-슈퍼컴퓨터" class="headerlink" title="파이프라인 슈퍼컴퓨터"></a>파이프라인 슈퍼컴퓨터</h3><p>파이프라인 슈퍼컴퓨터는 1개의 중앙처리장치 내에 다수 개의 연산장치를 갖고 있는 컴퓨터로서 각 연산장치는 파이프라이닝 구조를 이용하여 고속의 벡터 계산이 가능하다.</p>
+<h3 id="대규모-병렬처리-컴퓨터"><a href="#대규모-병렬처리-컴퓨터" class="headerlink" title="대규모 병렬처리 컴퓨터"></a>대규모 병렬처리 컴퓨터</h3><p>대규모 병렬처리 컴퓨터는 하나의 시스템 내에 상호 연결된 수백 혹은 수천개 이상의 처리장치를 갖고 있으며 처리장치들이 하나의 큰 작업을 나누어서 병렬로 처리하는 구조를 갖는다.</p>
 
         </div>
         
@@ -845,7 +886,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        47
                     </p>
                 </div>
             </div>
@@ -949,7 +990,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">24</span>
+                <span class="level-item tag">27</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -957,7 +998,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">8</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -981,7 +1022,7 @@
                 <span class="level-item">Computer security</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Data-Structure/">
@@ -1075,7 +1116,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 15px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
     </div>
 </div>
 
@@ -1089,6 +1130,45 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1116,45 +1196,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1173,7 +1214,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1304,7 +1345,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -1332,7 +1373,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Computer-security/">
                         <span class="tag">Computer security</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1433,6 +1474,45 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
                     <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
                     <p class="is-size-7 is-uppercase">
@@ -1450,45 +1530,6 @@
                     <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
                     </p>
                 </div>
             </div>
@@ -1512,7 +1553,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1643,7 +1684,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -1671,7 +1712,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Computer-security/">
                         <span class="tag">Computer security</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 

@@ -139,6 +139,186 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (나에 대하여 468 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/12/2019-03-17-algorithms-fibonachi/">피보나치 수열</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="피보나치-수열"><a href="#피보나치-수열" class="headerlink" title="피보나치 수열"></a>피보나치 수열</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f(0) = 0.</span><br><span class="line">f(1) = 1.</span><br><span class="line">f(n) = f(n - 1) + f(n -2), n &gt;= 2.</span><br></pre></td></tr></table></figure>
+<p>피보나치 수열은 정의 자체가 최적성의 원리가 성립되는 점화식이므로 바로 동적 프로그래밍 방법을 적용할 수 있다.</p>
+<p>2 이상인 n에 대해 f(n)은 그 소문제의 해인 f(n - 1)과 f(n - 2)의 합으로 구성되므로 f(0)과 f(1)을 먼저 테이블에 저장한 후 n을 2로부터 1씩 증가시키며 해를 구한 뒤 테이블에 저장한다. n에 어떤 값이 있더라도 f(n)을 구할 시점에는 f(n - 1)과 f(n - 2)가 항상 테이블에 저장되어 있으므로 테이블을 이용하여 즉시 f(n)을 구할 수 있다.</p>
+<h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 50 이상의 수열에서는 int형 범위를 초과하기 때문에 double을 반환형으로 사용하였다.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fibonachi</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">double</span> *fiboArr = (<span class="hljs-keyword">double</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">double</span>) * num);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// f(0)과 f(1)을 테이블에 저장한다.</span></span><br><span class="line">  fiboArr[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;</span><br><span class="line">  fiboArr[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// i를 2부터 1씩 증가시키며 f(i)의 해를 테이블에 저장된 f(i - 1)과 f(i - 2)의 합으로 계산하여 다시 테이블에 저장한다.</span></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= num; i++) &#123;</span><br><span class="line">    fiboArr[i] = fiboArr[i - <span class="hljs-number">1</span>] + fiboArr[i - <span class="hljs-number">2</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> fiboArr[num];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이렇게 하면 데이터를 저장하기 위해 필요한 테이블이 O(n) 에 비례해지는 단점이 있다.</p>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fibonachi</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span> (num == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (num == <span class="hljs-number">1</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> fibonachi(num - <span class="hljs-number">1</span>) + fibonachi(num - <span class="hljs-number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>재귀방식으로 구현할 수도 있으나 실행시간이 늘어난다는 단점이 있다.</p>
+<h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>동적 프로그래밍 방식으로 푸는 경우 알고리즘의 for 루프는 구하려는 피보나치 수열의 순번 n만큼 반복하므로 시간 복잡도는 O(n)이다.</p>
+<p>순환 호출 방식으로 푸는 경우 성능은 O($n^2$) 이다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (나에 대하여 384 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/">동적 프로그래밍 방법</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="동적-프로그래밍-방식"><a href="#동적-프로그래밍-방식" class="headerlink" title="동적 프로그래밍 방식"></a>동적 프로그래밍 방식</h2><p>문제의 크기가 작은 소문제에 대한 해를 저장해 놓고, 이를 이용하여 크기가 보다 큰 문제의 해를 점진적으로 만들어가는 상향식 접근 방법.</p>
+<ul>
+<li>각 작은 문제는 원래의 문제와 동일한 문제지만 입력의 크기만 작다.</li>
+<li>입력의 크기가 아주 작은 단순한 문제가 되면 쉽게 해를 구할 수 있고 이를 테이블에 저장한다.</li>
+<li>이후 해당 소문제의 해가 필요할 떄마다 테이블에 저장된 결과를 바로 이용한다.</li>
+</ul>
+<p>동적 프로그래밍 방법은 주로 최솟값 또는 최댓값 구하는 최적화 문제에 사용된다.</p>
+<h3 id="최적성의-원리"><a href="#최적성의-원리" class="headerlink" title="최적성의 원리"></a>최적성의 원리</h3><p>동적 프로그래밍 방법은 최적성의 원리가 반드시 성립하는 최적화 문제의 대상이 된다. </p>
+<ul>
+<li><strong>최적성의 원리</strong>: 주어진 문제에 대한 최적해는 주어진 문제의 소문제에 대한 문제에 대한 최적해로 구성된다는 원리.</li>
+</ul>
+<h2 id="동적-프로그래밍-방법의-처리-과정"><a href="#동적-프로그래밍-방법의-처리-과정" class="headerlink" title="동적 프로그래밍 방법의 처리 과정"></a>동적 프로그래밍 방법의 처리 과정</h2><ol>
+<li>주어진 문제에 대해서 최적해를 제공하는 점화식을 도출한다.</li>
+<li>가장 작은 소문제부터 점화식의 해를 구한 뒤 이를 테이블에 저장한ㄷ나.</li>
+<li>테이블에 저장되어 있는 소문제의 해를 이용하여 점차적으로 큰 상위 문제의 해를 구한다.</li>
+</ol>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (나에 대하여 1333 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/12/2019-05-12-computer-security-authentication/">인증</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="인증"><a href="#인증" class="headerlink" title="인증"></a>인증</h2><p>어떤 실체가 정말 그 실체가 맞는지 확인하는 과정. 이때 실체는 메시지, 사용자, 출처, 장치 등이 될 수 있다.</p>
+<h2 id="메시지-인증"><a href="#메시지-인증" class="headerlink" title="메시지 인증"></a>메시지 인증</h2><p>수신된 메시지에 대한 인증을 의미한다. 즉, 메시지의 내용이 전송 도중 불법적으로 변경되지 않고 정확하고 완전하게 수신되었는지 확인하는 것을 말한다.</p>
+<p>받는 사람은 메시지 이외의 부가적인 정보를 보낸 사람으로부터 얻어야 한다. 그러한 정보를 메시지 인증 코드(MAC)라고 한다. </p>
+<ul>
+<li>MAC는 메시지에 덧붙혀서 전송해야 하므로 메시지 크기와는 독립적이면서 작은 크기가 좋다.</li>
+<li>MAC는 크기가 작으면서도 메시지의 위변조 여부 확인이 가능해야 한다.</li>
+<li>제 3자가 메시지의 내용을 위변조 할 수 없도록 비밀키를 이용한다.</li>
+</ul>
+<h3 id="메시지-인증-방법"><a href="#메시지-인증-방법" class="headerlink" title="메시지 인증 방법"></a>메시지 인증 방법</h3><p>송신자는 메시지를 송신할 때 송수신 양자 간에 사전에 약속된 비밀키를 이용하여 메시지 무결성 검사 부호인 메시지 인증 코드(MAC)를 산출하고 이를 메시지와 함께 전송한다.</p>
+<p>키를 알고 있는 수신자는 비밀키를 이용하여 메시지 인증 코드를 재산출하여 수신한 미세지 인증 코드와 비교함으로써 변조 사실을 검사할 수 있다.</p>
+<p>비교 결과 동일한 값이면 메시지의 내용을 신뢰할 수 있고, 값이 서로 다르다면 메시지가 변조되었거나 메시지 인증 코드가 변조 되었음을 의미한다.</p>
+<h3 id="메시지-인증-알고리즘"><a href="#메시지-인증-알고리즘" class="headerlink" title="메시지 인증 알고리즘"></a>메시지 인증 알고리즘</h3><p>해시 함수에 기반을 둔 HMAC, 블록 암호에 기반을 둔 CMAC 등이 있다.</p>
+<h2 id="사용자-인증"><a href="#사용자-인증" class="headerlink" title="사용자 인증"></a>사용자 인증</h2><p>시스템에 접근하려는 사용자에 대한 인증을 의미한다. 이때 시스템은 서버, PC,스마트폰, 홈페이지, 건물이나 사무실의 전자식 잠금장치 등이 될 수 있다.</p>
+<h3 id="비밀번호-방식"><a href="#비밀번호-방식" class="headerlink" title="비밀번호 방식"></a>비밀번호 방식</h3><p>사용자가 입력하는 비밀번호를 이용하여 시스템이 이미 가지고 있던 정보와 일치하는지를 확인함으로써 사용자를 인증하는 방식이다. 가장 일반적인 방식의 사용자 인증이다. </p>
+<p>이를 이해 시스템은 미리 사용자의 ID와 비밀번호의 쌍을 알고 있어야 한다. 예를 들어 데이터베이스를 이용하는 홈페이지 시스템이라면 사용자 ID와 비밀번호의 쌍을 특정 테이블에 저장해 두고 키는 사용자 ID로 설정해서 가지고 있다. </p>
+<p>비밀번호 방식의 사용자 인증을 이용하는 경우, 시스템에 저장된 비밀번호가 유출되면 악의적인 사용자가 정상적인 사용자로 가장하여 인증을 통과할 수 있는 위험이 있다. 이를 막기 위한 방법으로 비밀번호를 그대로 시스템에 저장하지 않고 해시코드로 저장하는 방법을 이용한다.</p>
+<h3 id="생체인식-방식"><a href="#생체인식-방식" class="headerlink" title="생체인식 방식"></a>생체인식 방식</h3><p>개개인의 고유한 정보로 알려진 특정 생체의 정보를 이용하여 사용자를 인증하는 방식이다. 대표적인 생체정보로는 지문, 홍채, 음성, 손등의 혈관 등이 있다.</p>
+<p>비밀번호 방식과 마찬가지로 특정 사용자를 인증하기 위해서는 해당 사용자의 생체정보를 미리 시스템에 저장해두어야 하며 인증이 필요한 시점에 시스템에 접근하려는 사용자의 생체정보를 읽어들여서 저장해 둔 정보와 비교해야 한다.</p>
+<p>요즘에는 지문이나 홍채 등을 인식하는 스마트폰이 있어, 스마트폰의 잠금 해제뿐만 아니라 스마트폰을 이용한 결제나 스마트폰을 이용한 홈페이지 접근 시 생체인식 방식으로 사용자 인증을 하는 사례가 늘고 있다.</p>
+<h3 id="토큰-방식"><a href="#토큰-방식" class="headerlink" title="토큰 방식"></a>토큰 방식</h3><p>사용자가 소요하고 있는 특정한 정보를 이용하여 해당 사용자를 인증하는 방식이다. 대표적인 토큰으로는 USB 토큰, 스마트카드, 실물 키 등이 있다.</p>
+<h3 id="2단계-인증"><a href="#2단계-인증" class="headerlink" title="2단계 인증"></a>2단계 인증</h3><p>한가지 정보만 이용하는 경우 유출이나 분실 시 제 3자가 사용자 인증을 통과할 수 있는 취약점이 있다. 이를 보완하는 방법으로 2단계 인증을 이용한다.</p>
+<p>첫 번째 단계에서는 사용자가 알고 있는 비밀번호를 이용하여 사용자 인증을 하고, 두 번째 단계에서는 사용자가 소유하고 있는 토큰을 이용하여 사용자 인증을 한다. 서로 다른 성격의 정보를 혼합하여 이용함으로써 보다 엄밀하게 사용자 인증을 할 수 있게 된다.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920020759&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴퓨터 보안 3강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time>
                 
                 <div class="level-item">
@@ -709,285 +889,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-24T10:35:01.000Z">2019-03-24</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Information-network/">Information network</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6분 읽기 (나에 대하여 904 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/24/2019-03-24-information-network-data-communication-system/">데이터 통신 시스템</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="데이터-통신-시스템"><a href="#데이터-통신-시스템" class="headerlink" title="데이터 통신 시스템"></a>데이터 통신 시스템</h2><p>원거리에 떨어져 있는 데이터 발생지와 목적지 사이에 정보를 신속하고 정확하게 전송하고 처리하기 위해 데이터 전송과 데이터 처리를 상호 유기적 으로 결합한 시스템.</p>
-<h2 id="데이터-통신-시스템의-기능"><a href="#데이터-통신-시스템의-기능" class="headerlink" title="데이터 통신 시스템의 기능"></a>데이터 통신 시스템의 기능</h2><ul>
-<li>전송 시스템 활용</li>
-<li>접속</li>
-<li>동기화</li>
-<li>교환관리 </li>
-<li>오류검출 및 정정</li>
-<li>흐름제어</li>
-<li>주소지정</li>
-<li>라우팅</li>
-<li>복구</li>
-<li>메시지 형식화 </li>
-<li>보호</li>
-<li>시스템 관리</li>
-</ul>
-<h2 id="데이터-통신-시스템의-구성-요소"><a href="#데이터-통신-시스템의-구성-요소" class="headerlink" title="데이터 통신 시스템의 구성 요소"></a>데이터 통신 시스템의 구성 요소</h2><p><img src="/images/base/information-network-data-communication-system-1.png" alt="데이터 통신 시스템의 구성 요소"></p>
-<h3 id="단말장치"><a href="#단말장치" class="headerlink" title="단말장치"></a>단말장치</h3><ul>
-<li>데이터 통신 시스템에서 최종적으로 데이터를 송신하거나 수신하는 기능을 수행하는 장치.</li>
-<li>단말기 또는 터미널이라고도 불린다.</li>
-<li>키보드와 모니터, 프린터 등과 같이 컴퓨터와 연결되는 모든 주변장치를 의미한다.</li>
-<li>입출력 기능, 기억 기능 및 전송제어 기능으로 구분된다.</li>
-</ul>
-<h4 id="입출력-기능"><a href="#입출력-기능" class="headerlink" title="입출력 기능"></a>입출력 기능</h4><p>외부로부터 정보를 받아들이고, 역으로 데이터 통신 시스템에서 처리한 결과를 외부에 출력한다.</p>
-<h4 id="기억-기능"><a href="#기억-기능" class="headerlink" title="기억 기능"></a>기억 기능</h4><p>단말장치에 디스크나 소용량 기억장치를 부가하여 송,수신 데이터를 일시적으로 기억하거나 정보의 자체적이고 지역적인 처리를 수행한다.</p>
-<h4 id="전송제어-기능"><a href="#전송제어-기능" class="headerlink" title="전송제어 기능"></a>전송제어 기능</h4><p>컴퓨터와 단말장치 간에 정확한 데이터의 송수신이 가능하도록 전송제어를 수행한다. </p>
-<h3 id="데이터-전송회선"><a href="#데이터-전송회선" class="headerlink" title="데이터 전송회선"></a>데이터 전송회선</h3><ul>
-<li>단말장치로부터 통신제어장치까지의 데이터 전송 경로.</li>
-<li>신호변환장치와 통신회선으로 구분된다.</li>
-</ul>
-<h4 id="신호변환장치"><a href="#신호변환장치" class="headerlink" title="신호변환장치"></a>신호변환장치</h4><ul>
-<li>송신측이 전송한 데이터는 신호변환장치를 통과하면서 전기적 신호로 변환된 후 통신회선을 통해 수신측 신호변환장치에 전달된다.</li>
-<li>수신측 신호변환장치는 전기적 신호를 원래의 데이터로 변환하여 통신제어장치에 전달한다. </li>
-<li>대표적인 신호변환장치는 변복조기와 디지털 서비스 유니트가 있다. </li>
-</ul>
-<h3 id="통신제어장치"><a href="#통신제어장치" class="headerlink" title="통신제어장치"></a>통신제어장치</h3><ul>
-<li>컴퓨터와 신호변환장치 사이에 위치하며, 단말장치와의 통신에 있어 각종 제어 기능을 분담한다.</li>
-<li>통신제어장치는 데이터 전송회선과의 전기적 접속을 이루며 문자의 조립, 분해 기능과 버퍼링, 오류검출, 오류제어용 확장 비트 부가, 전송 제어, 회선의 감지, 접속제어 기능을 갖는다.</li>
-</ul>
-<h3 id="컴퓨터"><a href="#컴퓨터" class="headerlink" title="컴퓨터"></a>컴퓨터</h3><p>컴퓨터의 중앙처리장치에는 통신제어 프로그램이 내장되어 있어 통신제어장치로부터 입력된 데이터를 처리하고, 데이터 통신 시스템 전체를 제어한다. </p>
-<h2 id="통신-소프트웨어"><a href="#통신-소프트웨어" class="headerlink" title="통신 소프트웨어"></a>통신 소프트웨어</h2><p><img src="/images/base/information-network-data-communication-system-2.png" alt="통신 소프트웨어"></p>
-<ul>
-<li>데이터 전송회선과 통신제어장치를 이용하여 컴퓨터와 단말장치 사이에서 정보를 송수신하기 위한 프로그램.</li>
-<li>주요 기능: 데이터 송수신, 통신 하드웨어의 제어, 이용자 접속의 제어</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920014864&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 정보통신망 1강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-24T09:18:29.000Z">2019-03-24</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Information-network/">Information network</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    11분 읽기 (나에 대하여 1598 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/24/2019-03-24-information-network-first/">컴퓨터 통신망</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="컴퓨터-통신망의-출현"><a href="#컴퓨터-통신망의-출현" class="headerlink" title="컴퓨터 통신망의 출현"></a>컴퓨터 통신망의 출현</h2><p>지역적으로 떨어진 컴퓨터와 컴퓨터를 서로 통신망으로 연결시켜 컴퓨터 자원을 공유하려는 이유에서 컴퓨터 통신망이 출현하게 되었다.</p>
-<h3 id="데이터-통신-기술"><a href="#데이터-통신-기술" class="headerlink" title="데이터 통신 기술"></a>데이터 통신 기술</h3><p>데이터 처리에 있어서 데이터 통신은 매우 중요한 역할을 한다. 통신망으로 서로 연결되어 있지 않은 컴퓨터, stand-alone 컴퓨터에서도 데이터 통신은 없어서는 안될 중요한 기능이다. </p>
-<p>A컴퓨터와 B컴퓨터가 송•수신을 할 때 통신 시스템을 거쳐서 원하는 데이터의 송 • 수신이 가능하다. </p>
-<h3 id="데이터-처리-기술"><a href="#데이터-처리-기술" class="headerlink" title="데이터 처리 기술"></a>데이터 처리 기술</h3><p>컴퓨터를 이용하는 데이터 처리 기술이 데이터 통신 분야에도 큰 영향을 미치고 있다.<br>현재의 디지털 신호 전송 방식은 컴퓨터를 활용함으로써 음성뿐만 아니라 문자 데이터, 화상 데이터 등도 모두 디지털화 하여 고품질의 데이터 전송이 가능하게 만들었다.</p>
-<p>즉, 통신 기술이 아날로그 방식에서 디지털 방식으로 전이됨으로써 얻게 되는 많은 장점은 컴퓨터 시스템의 데이터 처리 기술 덕분이다. </p>
-<h3 id="분산-시스템"><a href="#분산-시스템" class="headerlink" title="분산 시스템"></a>분산 시스템</h3><p>컴퓨터 자원을 공유하고 그들의 확장과 축소를 용이하도록 하며 오류에 대한 신뢰도를 높일 수 있도록 컴퓨터 자원을 분산시켜 작업을 처리하는 시스템.</p>
-<ul>
-<li>여러군데다가 자원을 분산시켜 놓음으로써 한쪽에서 고장이 나도 다른쪽에서 데이터를 가져올 수 있기 때문에 오류에 대한 신뢰도가 높아짐. </li>
-</ul>
-<h4 id="강연결-분산-시스템"><a href="#강연결-분산-시스템" class="headerlink" title="강연결 분산 시스템"></a>강연결 분산 시스템</h4><p>분산된 거리가 짧고 처리기 사이의 상호 작용이 많은 분산 시스템.</p>
-<p>ex) 자료흐름기계, 멀티프로세서</p>
-<h4 id="약연결-분산-시스템"><a href="#약연결-분산-시스템" class="headerlink" title="약연결 분산 시스템"></a>약연결 분산 시스템</h4><p>분산된 거리가 비교적 길고 처리기 사이의 상호 작용이 비교적 적은 분산 시스템.</p>
-<p>ex) 근거리 통신망(LAN), 원거리 통신망(WAN), 도시권 통신망(MAN).</p>
-<h2 id="컴퓨터-통신망의-정의-및-구성-요소"><a href="#컴퓨터-통신망의-정의-및-구성-요소" class="headerlink" title="컴퓨터 통신망의 정의 및 구성 요소"></a>컴퓨터 통신망의 정의 및 구성 요소</h2><ul>
-<li><strong>통신</strong> 넓은 의미로는 ‘거리상 서로 떨어진 사람 또는 장치들 사이에 여러 종류의 매개체를 이용하여 정보를 전달하는 활동’을 뜻하며 좁은 의미로는 ‘원격통신’을 뜻한다.<ul>
-<li><strong>원격통신</strong>: 전자적 신호나 전자기적 파장을 이용하여 정보를 전송하는 것.</li>
-</ul>
-</li>
-<li><strong>데이터 통신</strong>: 컴퓨터 시스템에 의한 데이터를 처리하는 기술과 데이터를 전송하는 기술이 결합된 것.</li>
-<li><strong>데이터 통신망</strong>: 데이터 통신 기술과 망 기술이 융합된 개념.</li>
-<li><strong>컴퓨터 통신망(컴퓨터 망)</strong>: 자원과 정보를 공유할 수 있게 해 주기 위해 통신 채널들로 상호 연결된 컴퓨터들과 기타 하드웨어 및 소프트웨어 구성 요소들의 집합체. 서버, 클라이언트, 전송 매체, 네트워킹 장치, 프로토콜, 애플리케이션 등의 구성 요소로 이루어진다.<ul>
-<li><strong>서버</strong>: 컴퓨터 서비스에서 특정 서비스를 제공해 주는 컴퓨터.</li>
-<li><strong>클라이언트</strong>: 서비스를 받고자 하는 컴퓨터 또는 단말.</li>
-<li><strong>전송 매체</strong>: 컴퓨터 통신망에서 서버 및 클라이언트를 상호연결 시키고 데이터 전송이 가능하도로고 하기 위해 사용되는 장비.</li>
-<li><strong>네트워킹 장치</strong>: 서버와 클라이언트를 컴퓨터 통신망에 연결시키기 위해 필요한 연결 장치.</li>
-<li><strong>프로토콜</strong>: 서버와 클라이언트가 통신하기 위해 미리 정해 놓은 규칙.</li>
-<li><strong>애플리케이션</strong>: 컴퓨터 통신망을 통해 서버가 클라이언트에게 제공하는 서비스 또는 그것을 위한 프로그램.</li>
-</ul>
-</li>
-</ul>
-<h2 id="컴퓨터-통신망의-서비스"><a href="#컴퓨터-통신망의-서비스" class="headerlink" title="컴퓨터 통신망의 서비스"></a>컴퓨터 통신망의 서비스</h2><ul>
-<li>e-mail</li>
-<li>파일 전송</li>
-<li>원격 처리 </li>
-<li>원격 회의</li>
-<li>분산 데이터베이스 시스템</li>
-<li>Web Service </li>
-<li>Social Network Service</li>
-</ul>
-<p>그외 등등…</p>
-<h2 id="컴퓨터-통신망의-역사"><a href="#컴퓨터-통신망의-역사" class="headerlink" title="컴퓨터 통신망의 역사"></a>컴퓨터 통신망의 역사</h2><ul>
-<li><strong>SAGE(Semi-Automatic Ground Environment) 시스템</strong>: 1958년 미국에서 군사 목적으로 개발된 컴퓨터와 통신을 결합시킨 최초의 컴퓨터 통신 시스템.</li>
-<li><strong>SABRE(Semi-Automatic Business Research Environment) 시스템</strong>: 1961년에 발표된 여객기의 좌석 예약과 회사 업무를 종합적으로 처리하기 위한 상업적인 컴퓨터 통신 시스템.</li>
-<li><strong>CTSS(Compatible Time Sharing System)</strong>: 다수 사용자의 공동 이용을 위해 미국의MIT 대학에서 개발한 시분할 시스템(time sharing system).</li>
-<li><strong>ARPANET</strong>: 1969년 이후 가동되어 1990년까지 운영되었으며 인터넷의 전신이 된 컴퓨터 네트워크 시스템.</li>
-<li><strong>ALOHA(Additive Links Online Hawaii Area) 시스템</strong>: 1968년 하와이 대학에서 실험적으로 시작한 무선 패킷 교환방식의 통신 시스템.</li>
-<li><strong>SNA(System Network Architecture)</strong> : 1974년에 IBM에서 발표한 컴퓨터 간의 접속을 용이하게 하고, 이용 형태의 다양화·복잡화를 대체하기 위한 체계화된 네트워크 구조.</li>
-</ul>
-<h2 id="컴퓨터-통신망의-활용-목적"><a href="#컴퓨터-통신망의-활용-목적" class="headerlink" title="컴퓨터 통신망의 활용 목적"></a>컴퓨터 통신망의 활용 목적</h2><h3 id="자원의-공유"><a href="#자원의-공유" class="headerlink" title="자원의 공유"></a>자원의 공유</h3><p>컴퓨터 통신망이 구축되면 사용자 또는 컴퓨터의 지리적 위치에 관계 없이 컴퓨터 통신망에 연결된 사람이면 누구든지 컴퓨터 자원을 자유롭게 이용할 수 있다.</p>
-<h3 id="신뢰도의-향상-및-안정성-보장"><a href="#신뢰도의-향상-및-안정성-보장" class="headerlink" title="신뢰도의 향상 및 안정성 보장"></a>신뢰도의 향상 및 안정성 보장</h3><p>컴퓨터 통신망이 구축되면 한대의 컴퓨터가 고장나더라도 복구될 때까지 다른 컴퓨터를 사용할 수 있으므로 신뢰도및 안정성이 향상된다. </p>
-<h3 id="처리-기능의-분산"><a href="#처리-기능의-분산" class="headerlink" title="처리 기능의 분산"></a>처리 기능의 분산</h3><p>컴퓨터 통신망이 구축되면 처리 기능을 지역적으로 분산시킴으로써 전체 시스템의 처리 능력을 향상시킬 수 있다. </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920014864&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 정보통신망 1강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-23T09:13:28.000Z">2019-03-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Software-engineering/">Software engineering</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8분 읽기 (나에 대하여 1169 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/23/2019-03-23-software-engineering-crisis-engineering/">소프트웨어 위기 현상 및 소프트웨어 공학</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="소프트웨어-위기-현상"><a href="#소프트웨어-위기-현상" class="headerlink" title="소프트웨어 위기 현상"></a>소프트웨어 위기 현상</h2><p>급격한 컴퓨터 하드웨어 기술의 발전으로 인해 사용자의 요구사항이 다양해지면서 해결해야 할 문제는 복잡해졌으나 상대적으로 소프트웨어 기술의 진보가 더딤을 일컫는 말.</p>
-<ul>
-<li>개발 일정이 계획보다 지연된다.</li>
-<li>초과 비용이 발생한다.</li>
-<li>제품의 신뢰도가 결여된다.</li>
-<li>빈번하게 명세와 불일치하는 부분이 나타난다.</li>
-<li>품질 저하와 유지보수의 어려움이 생긴다.</li>
-</ul>
-<h3 id="소프트웨어-위기-현상의-원인"><a href="#소프트웨어-위기-현상의-원인" class="headerlink" title="소프트웨어 위기 현상의 원인"></a>소프트웨어 위기 현상의 원인</h3><ul>
-<li>소프트웨어 공학의 훈련을 받은 전문 인력의 부족.</li>
-<li>소프트웨어에 관한 경영층의 인식 부족.</li>
-<li>일관성 있는 방법론 및 지원 도구의 문제.</li>
-<li>소프트웨어 개발 생산성 저하.</li>
-<li>소프트웨어 자체의 복잡성 증가.</li>
-</ul>
-<h2 id="소프트웨어-공학"><a href="#소프트웨어-공학" class="headerlink" title="소프트웨어 공학"></a>소프트웨어 공학</h2><p>소프트웨어 위기 현상의 해결책으로 표현하기 위해 만들어진 용어.<br>고품질 소프트웨어의 경제적이고 빠른 생산과 유지보수를 위한 전문 작업과 연구 분야가 되었다. </p>
-<ul>
-<li>신롸성 있고 요구기능을 효율적으로 수행하는 소프트웨어를 경제적으로 생산하기 위해 건전한 공학적 원리와 방법을 만들고 사용하는 것.<ul>
-<li>초기 NATO 컨퍼런스에서 바우어 교수가 제시한 정의</li>
-</ul>
-</li>
-<li>소프트웨어의 개발, 운영, 유지보수에 체계적이고 숙달되고 정량화된 접근 방법을 적용하는 것. 즉 소프트웨어에 공학 기술을 적용하는 것 또는 이러한 접근 방법에 관한 연구 분야.<ul>
-<li>IEEE 소프트웨어 공학 표준 용어집에 정의되어 있다. </li>
-</ul>
-</li>
-<li>인간에게 유용한 소프트웨어 제품을 만드는 과정에 과학적 지식을 적용함으로써 실제적 문제의 비용 효율적 해결책을 다루는 일</li>
-</ul>
-<h2 id="소프트웨어-공학-환경"><a href="#소프트웨어-공학-환경" class="headerlink" title="소프트웨어 공학 환경"></a>소프트웨어 공학 환경</h2><p>소프트웨어 개발이 단순히 코드의 생성이 아님을 인식하고 문서화와 프로젝트 관리의 중요성이 인식되었다.<br>개발 과정 초기의 요구사항 명세화 작업에 많은 노력을 기울임으로써 오류를 줄이고 비용을 절약할 수 있다.<br>변경이나 재사용을 염두에 둔 작업 등이 품질, 비용 및 생산성을 향상시킬 수 있다. </p>
-<p>이렇게 다양한 해결 방법들을 통합적으로 다루기 위해 등장한 것이 소프트웨어 공학환경이다.</p>
-<p><img src="/images/base/software-engineering-crisis-engineering-1.png" alt="소프트웨어 공학 환경"></p>
-<p>소프트웨어 공학 환경의 최하위층에 소프트웨어 공학 원리가 위치하고 그 위에 방법과 기술이 위치하며 그 위에 방법론이, 그리고 최상위층에 도구가 위치한다. 각 계층은 그 아래 게층에 기초를 두고 있으며, 아래 계층보다 변화 가능성이 높다. </p>
-<h3 id="스포트웨어-공학-원리"><a href="#스포트웨어-공학-원리" class="headerlink" title="스포트웨어 공학 원리"></a>스포트웨어 공학 원리</h3><p>소프트웨어 프로세스와 제품의 바람직한 측변들을 기술하는 일반적이고 추상적인 설명이다.<br>추상화, 분할 정복, 계층적 조직의 원리 등이 이것에 해당한다. </p>
-<h3 id="방법과-기술"><a href="#방법과-기술" class="headerlink" title="방법과 기술"></a>방법과 기술</h3><ul>
-<li>방법: 행위를 통제하는 체계적이고 일반적인 가이드라인 또는 구조화된 접근 방법.<ul>
-<li>소프트웨어 제품을 정의, 기술, 추상화, 수정, 정제 및 문서화하는 데 필요한 모든 행위들을 포함한다. </li>
-</ul>
-</li>
-<li>기술: 방법에 비해 보다 기계적으로 적용되나 제한된 적용성을 가진다. </li>
-</ul>
-<h3 id="방법론과-도구"><a href="#방법론과-도구" class="headerlink" title="방법론과 도구"></a>방법론과 도구</h3><ul>
-<li>방법론: 프로세스(what)과 방법(how)를 함께 기술하는 것.<ul>
-<li>방법론의 목적은 문제 해결을 위해 사용되어야 할 방법들과 기술들을 지정함으로써 특정 방식의 해법을 권장하는 것이다. </li>
-</ul>
-</li>
-<li>도구: 기술과 방법, 그리고 방법론들의 적용을 지원하기 위해 개발된다.<ul>
-<li>도구를 사용하는 것을 자동화라고 하며 소프트웨어 제품 개발에 필요한 방법들을 구현하기 위해 컴퓨터를 활용하는 것을 말한다. </li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920004346&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 소프트웨어 공학 1강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1054,7 +955,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        47
                     </p>
                 </div>
             </div>
@@ -1158,7 +1059,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">24</span>
+                <span class="level-item tag">27</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -1166,7 +1067,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">8</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -1190,7 +1091,7 @@
                 <span class="level-item">Computer security</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Data-Structure/">
@@ -1284,7 +1185,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 15px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
     </div>
 </div>
 
@@ -1298,6 +1199,45 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1325,45 +1265,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1382,7 +1283,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1513,7 +1414,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -1541,7 +1442,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Computer-security/">
                         <span class="tag">Computer security</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1642,6 +1543,45 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
                     <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
                     <p class="is-size-7 is-uppercase">
@@ -1659,45 +1599,6 @@
                     <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
                     </p>
                 </div>
             </div>
@@ -1721,7 +1622,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1852,7 +1753,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -1880,7 +1781,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Computer-security/">
                         <span class="tag">Computer security</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 

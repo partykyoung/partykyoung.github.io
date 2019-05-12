@@ -149,6 +149,73 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9분 읽기 (나에 대하여 1333 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/12/2019-05-12-computer-security-authentication/">인증</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="인증"><a href="#인증" class="headerlink" title="인증"></a>인증</h2><p>어떤 실체가 정말 그 실체가 맞는지 확인하는 과정. 이때 실체는 메시지, 사용자, 출처, 장치 등이 될 수 있다.</p>
+<h2 id="메시지-인증"><a href="#메시지-인증" class="headerlink" title="메시지 인증"></a>메시지 인증</h2><p>수신된 메시지에 대한 인증을 의미한다. 즉, 메시지의 내용이 전송 도중 불법적으로 변경되지 않고 정확하고 완전하게 수신되었는지 확인하는 것을 말한다.</p>
+<p>받는 사람은 메시지 이외의 부가적인 정보를 보낸 사람으로부터 얻어야 한다. 그러한 정보를 메시지 인증 코드(MAC)라고 한다. </p>
+<ul>
+<li>MAC는 메시지에 덧붙혀서 전송해야 하므로 메시지 크기와는 독립적이면서 작은 크기가 좋다.</li>
+<li>MAC는 크기가 작으면서도 메시지의 위변조 여부 확인이 가능해야 한다.</li>
+<li>제 3자가 메시지의 내용을 위변조 할 수 없도록 비밀키를 이용한다.</li>
+</ul>
+<h3 id="메시지-인증-방법"><a href="#메시지-인증-방법" class="headerlink" title="메시지 인증 방법"></a>메시지 인증 방법</h3><p>송신자는 메시지를 송신할 때 송수신 양자 간에 사전에 약속된 비밀키를 이용하여 메시지 무결성 검사 부호인 메시지 인증 코드(MAC)를 산출하고 이를 메시지와 함께 전송한다.</p>
+<p>키를 알고 있는 수신자는 비밀키를 이용하여 메시지 인증 코드를 재산출하여 수신한 미세지 인증 코드와 비교함으로써 변조 사실을 검사할 수 있다.</p>
+<p>비교 결과 동일한 값이면 메시지의 내용을 신뢰할 수 있고, 값이 서로 다르다면 메시지가 변조되었거나 메시지 인증 코드가 변조 되었음을 의미한다.</p>
+<h3 id="메시지-인증-알고리즘"><a href="#메시지-인증-알고리즘" class="headerlink" title="메시지 인증 알고리즘"></a>메시지 인증 알고리즘</h3><p>해시 함수에 기반을 둔 HMAC, 블록 암호에 기반을 둔 CMAC 등이 있다.</p>
+<h2 id="사용자-인증"><a href="#사용자-인증" class="headerlink" title="사용자 인증"></a>사용자 인증</h2><p>시스템에 접근하려는 사용자에 대한 인증을 의미한다. 이때 시스템은 서버, PC,스마트폰, 홈페이지, 건물이나 사무실의 전자식 잠금장치 등이 될 수 있다.</p>
+<h3 id="비밀번호-방식"><a href="#비밀번호-방식" class="headerlink" title="비밀번호 방식"></a>비밀번호 방식</h3><p>사용자가 입력하는 비밀번호를 이용하여 시스템이 이미 가지고 있던 정보와 일치하는지를 확인함으로써 사용자를 인증하는 방식이다. 가장 일반적인 방식의 사용자 인증이다. </p>
+<p>이를 이해 시스템은 미리 사용자의 ID와 비밀번호의 쌍을 알고 있어야 한다. 예를 들어 데이터베이스를 이용하는 홈페이지 시스템이라면 사용자 ID와 비밀번호의 쌍을 특정 테이블에 저장해 두고 키는 사용자 ID로 설정해서 가지고 있다. </p>
+<p>비밀번호 방식의 사용자 인증을 이용하는 경우, 시스템에 저장된 비밀번호가 유출되면 악의적인 사용자가 정상적인 사용자로 가장하여 인증을 통과할 수 있는 위험이 있다. 이를 막기 위한 방법으로 비밀번호를 그대로 시스템에 저장하지 않고 해시코드로 저장하는 방법을 이용한다.</p>
+<h3 id="생체인식-방식"><a href="#생체인식-방식" class="headerlink" title="생체인식 방식"></a>생체인식 방식</h3><p>개개인의 고유한 정보로 알려진 특정 생체의 정보를 이용하여 사용자를 인증하는 방식이다. 대표적인 생체정보로는 지문, 홍채, 음성, 손등의 혈관 등이 있다.</p>
+<p>비밀번호 방식과 마찬가지로 특정 사용자를 인증하기 위해서는 해당 사용자의 생체정보를 미리 시스템에 저장해두어야 하며 인증이 필요한 시점에 시스템에 접근하려는 사용자의 생체정보를 읽어들여서 저장해 둔 정보와 비교해야 한다.</p>
+<p>요즘에는 지문이나 홍채 등을 인식하는 스마트폰이 있어, 스마트폰의 잠금 해제뿐만 아니라 스마트폰을 이용한 결제나 스마트폰을 이용한 홈페이지 접근 시 생체인식 방식으로 사용자 인증을 하는 사례가 늘고 있다.</p>
+<h3 id="토큰-방식"><a href="#토큰-방식" class="headerlink" title="토큰 방식"></a>토큰 방식</h3><p>사용자가 소요하고 있는 특정한 정보를 이용하여 해당 사용자를 인증하는 방식이다. 대표적인 토큰으로는 USB 토큰, 스마트카드, 실물 키 등이 있다.</p>
+<h3 id="2단계-인증"><a href="#2단계-인증" class="headerlink" title="2단계 인증"></a>2단계 인증</h3><p>한가지 정보만 이용하는 경우 유출이나 분실 시 제 3자가 사용자 인증을 통과할 수 있는 취약점이 있다. 이를 보완하는 방법으로 2단계 인증을 이용한다.</p>
+<p>첫 번째 단계에서는 사용자가 알고 있는 비밀번호를 이용하여 사용자 인증을 하고, 두 번째 단계에서는 사용자가 소유하고 있는 토큰을 이용하여 사용자 인증을 한다. 서로 다른 성격의 정보를 혼합하여 이용함으로써 보다 엄밀하게 사용자 인증을 할 수 있게 된다.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920020759&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴퓨터 보안 3강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time>
                 
                 <div class="level-item">
@@ -370,7 +437,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        47
                     </p>
                 </div>
             </div>
@@ -474,7 +541,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">24</span>
+                <span class="level-item tag">27</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -482,7 +549,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">8</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -506,7 +573,7 @@
                 <span class="level-item">Computer security</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Data-Structure/">
@@ -600,7 +667,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 16px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 12px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 14px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 15px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
     </div>
 </div>
 
@@ -614,6 +681,45 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -641,45 +747,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -698,7 +765,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -829,7 +896,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -857,7 +924,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Computer-security/">
                         <span class="tag">Computer security</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -958,6 +1025,45 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T11:35:45.000Z">2019-05-10</time></div>
                     <a href="/2019/05/10/2019-03-09-operating-system-thread/" class="has-link-black-ter is-size-6">쓰레드</a>
                     <p class="is-size-7 is-uppercase">
@@ -975,45 +1081,6 @@
                     <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T14:46:25.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-04-25-etc-development-env-setting/" class="has-link-black-ter is-size-6">Mac 개발환경 설정</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/etc/">etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2019-01-14-typescript-first/" class="has-link-black-ter is-size-6">TypeScript</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T05:59:19.480Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/2018-09-28-reactjs-props/" class="has-link-black-ter is-size-6">props</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/React-js/">React.js</a>
                     </p>
                 </div>
             </div>
@@ -1037,7 +1104,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1168,7 +1235,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">6</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -1196,7 +1263,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Computer-security/">
                         <span class="tag">Computer security</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 

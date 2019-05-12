@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://dev.kyoungah.com/"/>
-  <updated>2019-05-10T11:38:19.012Z</updated>
+  <updated>2019-05-12T13:35:49.151Z</updated>
   <id>http://dev.kyoungah.com/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>피보나치 수열</title>
+    <link href="http://dev.kyoungah.com/2019/05/12/2019-03-17-algorithms-fibonachi/"/>
+    <id>http://dev.kyoungah.com/2019/05/12/2019-03-17-algorithms-fibonachi/</id>
+    <published>2019-05-12T13:35:49.000Z</published>
+    <updated>2019-05-12T13:35:49.151Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="피보나치-수열"><a href="#피보나치-수열" class="headerlink" title="피보나치 수열"></a>피보나치 수열</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f(0) = 0.</span><br><span class="line">f(1) = 1.</span><br><span class="line">f(n) = f(n - 1) + f(n -2), n &gt;= 2.</span><br></pre></td></tr></table></figure><p>피보나치 수열은 정의 자체가 최적성의 원리가 성립되는 점화식이므로 바로 동적 프로그래밍 방법을 적용할 수 있다.</p><p>2 이상인 n에 대해 f(n)은 그 소문제의 해인 f(n - 1)과 f(n - 2)의 합으로 구성되므로 f(0)과 f(1)을 먼저 테이블에 저장한 후 n을 2로부터 1씩 증가시키며 해를 구한 뒤 테이블에 저장한다. n에 어떤 값이 있더라도 f(n)을 구할 시점에는 f(n - 1)과 f(n - 2)가 항상 테이블에 저장되어 있으므로 테이블을 이용하여 즉시 f(n)을 구할 수 있다.</p><h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 50 이상의 수열에서는 int형 범위를 초과하기 때문에 double을 반환형으로 사용하였다.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fibonachi</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">double</span> *fiboArr = (<span class="hljs-keyword">double</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">double</span>) * num);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// f(0)과 f(1)을 테이블에 저장한다.</span></span><br><span class="line">  fiboArr[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;</span><br><span class="line">  fiboArr[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// i를 2부터 1씩 증가시키며 f(i)의 해를 테이블에 저장된 f(i - 1)과 f(i - 2)의 합으로 계산하여 다시 테이블에 저장한다.</span></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt;= num; i++) &#123;</span><br><span class="line">    fiboArr[i] = fiboArr[i - <span class="hljs-number">1</span>] + fiboArr[i - <span class="hljs-number">2</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> fiboArr[num];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>이렇게 하면 데이터를 저장하기 위해 필요한 테이블이 O(n) 에 비례해지는 단점이 있다.</p><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">fibonachi</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span> (num == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (num == <span class="hljs-number">1</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> fibonachi(num - <span class="hljs-number">1</span>) + fibonachi(num - <span class="hljs-number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>재귀방식으로 구현할 수도 있으나 실행시간이 늘어난다는 단점이 있다.</p><h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>동적 프로그래밍 방식으로 푸는 경우 알고리즘의 for 루프는 구하려는 피보나치 수열의 순번 n만큼 반복하므로 시간 복잡도는 O(n)이다.</p><p>순환 호출 방식으로 푸는 경우 성능은 O($n^2$) 이다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;피보나치-수열&quot;&gt;&lt;a href=&quot;#피보나치-수열&quot; class=&quot;headerlink&quot; title=&quot;피보나치 수열&quot;&gt;&lt;/a&gt;피보나치 수열&lt;/h2&gt;&lt;figure class=&quot;highlight plain hljs&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+      
+    
+    </summary>
+    
+      <category term="Base" scheme="http://dev.kyoungah.com/categories/Base/"/>
+    
+      <category term="Algorithms" scheme="http://dev.kyoungah.com/categories/Base/Algorithms/"/>
+    
+    
+      <category term="Algorithms" scheme="http://dev.kyoungah.com/tags/Algorithms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>동적 프로그래밍 방법</title>
+    <link href="http://dev.kyoungah.com/2019/05/12/2019-03-17-algorithms-dynamic-programming/"/>
+    <id>http://dev.kyoungah.com/2019/05/12/2019-03-17-algorithms-dynamic-programming/</id>
+    <published>2019-05-12T12:53:04.000Z</published>
+    <updated>2019-05-12T13:35:58.962Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="동적-프로그래밍-방식"><a href="#동적-프로그래밍-방식" class="headerlink" title="동적 프로그래밍 방식"></a>동적 프로그래밍 방식</h2><p>문제의 크기가 작은 소문제에 대한 해를 저장해 놓고, 이를 이용하여 크기가 보다 큰 문제의 해를 점진적으로 만들어가는 상향식 접근 방법.</p><ul><li>각 작은 문제는 원래의 문제와 동일한 문제지만 입력의 크기만 작다.</li><li>입력의 크기가 아주 작은 단순한 문제가 되면 쉽게 해를 구할 수 있고 이를 테이블에 저장한다.</li><li>이후 해당 소문제의 해가 필요할 떄마다 테이블에 저장된 결과를 바로 이용한다.</li></ul><p>동적 프로그래밍 방법은 주로 최솟값 또는 최댓값 구하는 최적화 문제에 사용된다.</p><h3 id="최적성의-원리"><a href="#최적성의-원리" class="headerlink" title="최적성의 원리"></a>최적성의 원리</h3><p>동적 프로그래밍 방법은 최적성의 원리가 반드시 성립하는 최적화 문제의 대상이 된다. </p><ul><li><strong>최적성의 원리</strong>: 주어진 문제에 대한 최적해는 주어진 문제의 소문제에 대한 문제에 대한 최적해로 구성된다는 원리.</li></ul><h2 id="동적-프로그래밍-방법의-처리-과정"><a href="#동적-프로그래밍-방법의-처리-과정" class="headerlink" title="동적 프로그래밍 방법의 처리 과정"></a>동적 프로그래밍 방법의 처리 과정</h2><ol><li>주어진 문제에 대해서 최적해를 제공하는 점화식을 도출한다.</li><li>가장 작은 소문제부터 점화식의 해를 구한 뒤 이를 테이블에 저장한ㄷ나.</li><li>테이블에 저장되어 있는 소문제의 해를 이용하여 점차적으로 큰 상위 문제의 해를 구한다.</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;동적-프로그래밍-방식&quot;&gt;&lt;a href=&quot;#동적-프로그래밍-방식&quot; class=&quot;headerlink&quot; title=&quot;동적 프로그래밍 방식&quot;&gt;&lt;/a&gt;동적 프로그래밍 방식&lt;/h2&gt;&lt;p&gt;문제의 크기가 작은 소문제에 대한 해를 저장해 놓고, 이를 이
+      
+    
+    </summary>
+    
+      <category term="Base" scheme="http://dev.kyoungah.com/categories/Base/"/>
+    
+      <category term="Algorithms" scheme="http://dev.kyoungah.com/categories/Base/Algorithms/"/>
+    
+    
+      <category term="Algorithms" scheme="http://dev.kyoungah.com/tags/Algorithms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>인증</title>
+    <link href="http://dev.kyoungah.com/2019/05/12/2019-05-12-computer-security-authentication/"/>
+    <id>http://dev.kyoungah.com/2019/05/12/2019-05-12-computer-security-authentication/</id>
+    <published>2019-05-12T11:04:26.000Z</published>
+    <updated>2019-05-12T11:31:58.031Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="인증"><a href="#인증" class="headerlink" title="인증"></a>인증</h2><p>어떤 실체가 정말 그 실체가 맞는지 확인하는 과정. 이때 실체는 메시지, 사용자, 출처, 장치 등이 될 수 있다.</p><h2 id="메시지-인증"><a href="#메시지-인증" class="headerlink" title="메시지 인증"></a>메시지 인증</h2><p>수신된 메시지에 대한 인증을 의미한다. 즉, 메시지의 내용이 전송 도중 불법적으로 변경되지 않고 정확하고 완전하게 수신되었는지 확인하는 것을 말한다.</p><p>받는 사람은 메시지 이외의 부가적인 정보를 보낸 사람으로부터 얻어야 한다. 그러한 정보를 메시지 인증 코드(MAC)라고 한다. </p><ul><li>MAC는 메시지에 덧붙혀서 전송해야 하므로 메시지 크기와는 독립적이면서 작은 크기가 좋다.</li><li>MAC는 크기가 작으면서도 메시지의 위변조 여부 확인이 가능해야 한다.</li><li>제 3자가 메시지의 내용을 위변조 할 수 없도록 비밀키를 이용한다.</li></ul><h3 id="메시지-인증-방법"><a href="#메시지-인증-방법" class="headerlink" title="메시지 인증 방법"></a>메시지 인증 방법</h3><p>송신자는 메시지를 송신할 때 송수신 양자 간에 사전에 약속된 비밀키를 이용하여 메시지 무결성 검사 부호인 메시지 인증 코드(MAC)를 산출하고 이를 메시지와 함께 전송한다.</p><p>키를 알고 있는 수신자는 비밀키를 이용하여 메시지 인증 코드를 재산출하여 수신한 미세지 인증 코드와 비교함으로써 변조 사실을 검사할 수 있다.</p><p>비교 결과 동일한 값이면 메시지의 내용을 신뢰할 수 있고, 값이 서로 다르다면 메시지가 변조되었거나 메시지 인증 코드가 변조 되었음을 의미한다.</p><h3 id="메시지-인증-알고리즘"><a href="#메시지-인증-알고리즘" class="headerlink" title="메시지 인증 알고리즘"></a>메시지 인증 알고리즘</h3><p>해시 함수에 기반을 둔 HMAC, 블록 암호에 기반을 둔 CMAC 등이 있다.</p><h2 id="사용자-인증"><a href="#사용자-인증" class="headerlink" title="사용자 인증"></a>사용자 인증</h2><p>시스템에 접근하려는 사용자에 대한 인증을 의미한다. 이때 시스템은 서버, PC,스마트폰, 홈페이지, 건물이나 사무실의 전자식 잠금장치 등이 될 수 있다.</p><h3 id="비밀번호-방식"><a href="#비밀번호-방식" class="headerlink" title="비밀번호 방식"></a>비밀번호 방식</h3><p>사용자가 입력하는 비밀번호를 이용하여 시스템이 이미 가지고 있던 정보와 일치하는지를 확인함으로써 사용자를 인증하는 방식이다. 가장 일반적인 방식의 사용자 인증이다. </p><p>이를 이해 시스템은 미리 사용자의 ID와 비밀번호의 쌍을 알고 있어야 한다. 예를 들어 데이터베이스를 이용하는 홈페이지 시스템이라면 사용자 ID와 비밀번호의 쌍을 특정 테이블에 저장해 두고 키는 사용자 ID로 설정해서 가지고 있다. </p><p>비밀번호 방식의 사용자 인증을 이용하는 경우, 시스템에 저장된 비밀번호가 유출되면 악의적인 사용자가 정상적인 사용자로 가장하여 인증을 통과할 수 있는 위험이 있다. 이를 막기 위한 방법으로 비밀번호를 그대로 시스템에 저장하지 않고 해시코드로 저장하는 방법을 이용한다.</p><h3 id="생체인식-방식"><a href="#생체인식-방식" class="headerlink" title="생체인식 방식"></a>생체인식 방식</h3><p>개개인의 고유한 정보로 알려진 특정 생체의 정보를 이용하여 사용자를 인증하는 방식이다. 대표적인 생체정보로는 지문, 홍채, 음성, 손등의 혈관 등이 있다.</p><p>비밀번호 방식과 마찬가지로 특정 사용자를 인증하기 위해서는 해당 사용자의 생체정보를 미리 시스템에 저장해두어야 하며 인증이 필요한 시점에 시스템에 접근하려는 사용자의 생체정보를 읽어들여서 저장해 둔 정보와 비교해야 한다.</p><p>요즘에는 지문이나 홍채 등을 인식하는 스마트폰이 있어, 스마트폰의 잠금 해제뿐만 아니라 스마트폰을 이용한 결제나 스마트폰을 이용한 홈페이지 접근 시 생체인식 방식으로 사용자 인증을 하는 사례가 늘고 있다.</p><h3 id="토큰-방식"><a href="#토큰-방식" class="headerlink" title="토큰 방식"></a>토큰 방식</h3><p>사용자가 소요하고 있는 특정한 정보를 이용하여 해당 사용자를 인증하는 방식이다. 대표적인 토큰으로는 USB 토큰, 스마트카드, 실물 키 등이 있다.</p><h3 id="2단계-인증"><a href="#2단계-인증" class="headerlink" title="2단계 인증"></a>2단계 인증</h3><p>한가지 정보만 이용하는 경우 유출이나 분실 시 제 3자가 사용자 인증을 통과할 수 있는 취약점이 있다. 이를 보완하는 방법으로 2단계 인증을 이용한다.</p><p>첫 번째 단계에서는 사용자가 알고 있는 비밀번호를 이용하여 사용자 인증을 하고, 두 번째 단계에서는 사용자가 소유하고 있는 토큰을 이용하여 사용자 인증을 한다. 서로 다른 성격의 정보를 혼합하여 이용함으로써 보다 엄밀하게 사용자 인증을 할 수 있게 된다.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920020759&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴퓨터 보안 3강</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;인증&quot;&gt;&lt;a href=&quot;#인증&quot; class=&quot;headerlink&quot; title=&quot;인증&quot;&gt;&lt;/a&gt;인증&lt;/h2&gt;&lt;p&gt;어떤 실체가 정말 그 실체가 맞는지 확인하는 과정. 이때 실체는 메시지, 사용자, 출처, 장치 등이 될 수 있다.&lt;/p&gt;
+&lt;h
+      
+    
+    </summary>
+    
+      <category term="Base" scheme="http://dev.kyoungah.com/categories/Base/"/>
+    
+      <category term="Computer security" scheme="http://dev.kyoungah.com/categories/Base/Computer-security/"/>
+    
+    
+      <category term="Computer security" scheme="http://dev.kyoungah.com/tags/Computer-security/"/>
+    
+  </entry>
   
   <entry>
     <title>쓰레드</title>
@@ -483,88 +565,6 @@
     
     
       <category term="Operating systems" scheme="http://dev.kyoungah.com/tags/Operating-systems/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>운영체제의 구성</title>
-    <link href="http://dev.kyoungah.com/2019/03/16/2019-03-05-operating-systems-configuration/"/>
-    <id>http://dev.kyoungah.com/2019/03/16/2019-03-05-operating-systems-configuration/</id>
-    <published>2019-03-16T13:04:34.000Z</published>
-    <updated>2019-04-25T05:59:19.486Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="운영체제의-구성"><a href="#운영체제의-구성" class="headerlink" title="운영체제의 구성"></a>운영체제의 구성</h2><p>운영체제를 구성하는 요소는 다양하지만 컴퓨터 시스템의 자원의 성격에 따라 구분한다. 크게 프로세스 관리자, 메모리 관리자, 장치 관리자, 파일 관리자로 나눌 수 있다.</p><h3 id="프로세스-관리자"><a href="#프로세스-관리자" class="headerlink" title="프로세스 관리자"></a>프로세스 관리자</h3><p>프로세스들을 생성하고 삭제하며 CPU에 할당하기 위한 스케줄을 결정한다. </p><ul><li>프로세스: 실행 중인 프로그램 또는 작업. </li><li>컴퓨터의 핵심적인 부분: CPU, 메모리<ul><li>CPU로 명령어 처리, 명령어는 메모리에 저장되어 있음.<ul><li>실행 중인 프로그램은 메모리 상에 프로세스로 존재.</li><li>동작을 하려면 CPU를 이용하여 명령어를 처리해야 함.</li></ul></li></ul></li></ul><ul><li>프로세스의 상태(준비, 실행, 대기 등)를 관리하며 상태 전이를 처리한다. </li></ul><h3 id="메모리-관리자"><a href="#메모리-관리자" class="headerlink" title="메모리 관리자"></a>메모리 관리자</h3><p>메모리(주기억장치) 공간에 대한 각각의 요규가 유효한지 체크하고 적법한 요구라면 메모리 관리자가 주기억장치에서 아직 사용 중이지 않은 부분을 할당한다. </p><ul><li>메모리 할당 및 회수</li><li>메모리 공간 보호</li><li>운영체제가 점유하고 있는 주기억장치의 공간을 지킴</li></ul><h3 id="장치-관리자"><a href="#장치-관리자" class="headerlink" title="장치 관리자"></a>장치 관리자</h3><p>컴퓨터 시스템의 모든 장치를 관리한다.</p><ul><li>ex) 비디오 디스플레이, 키보드, 프린터, 디스크 드라이브, 네트워크 장치 등</li><li>시스템의 장치를 할당하고 작동을 시작하며 마지막으로 장치를 반환한다.</li></ul><h3 id="파일-관리자"><a href="#파일-관리자" class="headerlink" title="파일 관리자"></a>파일 관리자</h3><p>컴퓨터 시스템의 모든 파일을 관리한다.</p><ul><li>파일의 접근 제한을 관리.</li><li>파일을 열어 자원을 할당하거나 파일을 닫아 자원을 회수하는 일 등을 수행한다. </li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;운영체제의-구성&quot;&gt;&lt;a href=&quot;#운영체제의-구성&quot; class=&quot;headerlink&quot; title=&quot;운영체제의 구성&quot;&gt;&lt;/a&gt;운영체제의 구성&lt;/h2&gt;&lt;p&gt;운영체제를 구성하는 요소는 다양하지만 컴퓨터 시스템의 자원의 성격에 따라 구분한다.
-      
-    
-    </summary>
-    
-      <category term="Base" scheme="http://dev.kyoungah.com/categories/Base/"/>
-    
-      <category term="Operating systems" scheme="http://dev.kyoungah.com/categories/Base/Operating-systems/"/>
-    
-    
-      <category term="Operating systems" scheme="http://dev.kyoungah.com/tags/Operating-systems/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>운영체제</title>
-    <link href="http://dev.kyoungah.com/2019/03/16/2019-03-04-operating-systems-first/"/>
-    <id>http://dev.kyoungah.com/2019/03/16/2019-03-04-operating-systems-first/</id>
-    <published>2019-03-16T12:43:35.000Z</published>
-    <updated>2019-04-25T05:59:19.486Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="운영체제"><a href="#운영체제" class="headerlink" title="운영체제"></a>운영체제</h2><p>컴퓨터의 하드웨어 자원을 관리하고 컴퓨터 프로그램이 동작하기 위한 서비스를 제공하는 시스템 소프트웨어.<br>ex) 윈도우, 맥 OS, 리눅스 등..</p><h2 id="운영체제의-역할"><a href="#운영체제의-역할" class="headerlink" title="운영체제의 역할"></a>운영체제의 역할</h2><h3 id="컴퓨터-시스템의-운영"><a href="#컴퓨터-시스템의-운영" class="headerlink" title="컴퓨터 시스템의 운영"></a>컴퓨터 시스템의 운영</h3><ul><li>컴퓨터 시스템의 자원을 제어 및 관리 하여 컴퓨터 시스템을 효율적으로 운영하는 역할.<ul><li>자원이란 컴퓨터 시스템을 구성하고 있는 하드웨어 혹은 소프트웨어.<ul><li>하드웨어 자원: CPU, 메모리, 키보드, 마우스, 네트워크 카드 등…</li><li>소프트웨어 자원: 각종 프로그램 데이터 등… </li></ul></li></ul></li></ul><h3 id="사용자-지원"><a href="#사용자-지원" class="headerlink" title="사용자 지원"></a>사용자 지원</h3><ul><li>사용자의 명령을 해석하여 실행.</li><li>사용자와 하드웨어 사이의 매개체 역할 수행.</li></ul><h2 id="컴퓨터-시스템과-운영체제"><a href="#컴퓨터-시스템과-운영체제" class="headerlink" title="컴퓨터 시스템과 운영체제"></a>컴퓨터 시스템과 운영체제</h2><p>운영체제가 없던 초기 컴퓨터 시스템에서는…</p><ul><li>사용자가 응용 프로그램을 수행시키면 응용 프로그램이 직접 컴퓨터 시스템의 자원을 제어해야만 했다.<ul><li>응용 프로그램에서 하드웨어를 다룰 수 있는 기능들을 모두 가지고 있었고 이때믄에 응용 프로그램 개발자는 하드웨어에 대한 방법을 잘 알아야 했다. </li></ul></li><li>하나의 하드웨어를 여러 사용자가 공유해서 사용하는 경우 응용 프로그램들 끼리 효울적인 자원 분할이 어려웠다.</li></ul><p>이런 문제점을 극복하기 위해 하드웨어와 응용 프로그램 사이에 운영체제를 두고 하드웨어에 대한 제어는 운영체제만 하도록 했다. </p><ul><li>응용 프로그램은 하드웨어에 대한 자세한 정보를 모르더라도 운영체제에 부탁만 하면 운영체제가 대신 하드웨어를 제어하고 그 결과를 응용 프로그램에 제공해 주게 되었다.</li><li>여러 응용 프로그램이 동시에 수행되더라도 운영체제가 중간에서 충돌 없이 자원을 효율적으로 나눠 줌으로써 컴퓨터 시스템이 안정적으로 동작할 수 있게 되었다. </li></ul><p>이러한 형태로 운영체제가 동작하려면 응용프로그램이 직접 하드웨어에 접근하는 것을 강제로 막을 필요가 있다. 응용 프로그램이 하드웨어를 직접 제어할 수 있는 방법이 여전히 존재한다면 시스템의 안정성을 보장할 수 없기 때문이다. </p><h3 id="슈퍼바이저-모드-커널-모드"><a href="#슈퍼바이저-모드-커널-모드" class="headerlink" title="슈퍼바이저 모드(커널 모드)"></a>슈퍼바이저 모드(커널 모드)</h3><ul><li>운영체제의 커널이 동작되는 모드.</li><li>하드웨어를 직접 제어할 수 있는 CPU 명령어 사용 가능.</li></ul><h3 id="보호-모드-사용자-모드"><a href="#보호-모드-사용자-모드" class="headerlink" title="보호 모드(사용자 모드)"></a>보호 모드(사용자 모드)</h3><ul><li>응용 프로그램이 동작되는 모드.</li><li>하드웨어를 직접 제어할 수 있는 CPU 명령어 사용 불가능</li></ul><p>보호 모드에서 동작하는 응용 프로그램이 하드웨어에 대한 제어가 필욯한 경우에는 운영체제에 부탁을 해야만 하고, 그 경우 보호 모드에서 슈퍼바이저 모드로 변경이 되고 운영체제의 커널이 동작하여 하드웨어를 제어하게 된다.<br>이 때 응용 프로그램이 운영체제에 서비스를 요청하는 메커니즘을 <strong>시스템 호출</strong>이라고 한다.</p><p>보호 모드 사용 시 하드웨어 접근이 필요한 경우…<br>==&gt; 보호 모드 사용 중 -&gt; 시스템 호출 -&gt; 보호 모드에서 슈퍼바이저 모드로 변경 -&gt; 커널 동작 -&gt; 하드웨어 제어 -&gt; 응용 프로그램에게 결과를 돌려줌 -&gt; 보호 모드로 돌아옴</p><h2 id="커널"><a href="#커널" class="headerlink" title="커널"></a>커널</h2><ul><li>운영체제의 핵심 요소.</li><li>응용 프로그램과 하드웨어 수준의 처리 사이의 가교 역할을 함.</li></ul><h3 id="일체형-커널"><a href="#일체형-커널" class="headerlink" title="일체형 커널"></a>일체형 커널</h3><ul><li>운영체제의 모든 서비스가 커널 내에 포함되어 있다.</li><li>커널 내부 요소들이 서로 효율적으로 상호작용을 할 수 있다.</li><li>모든 요소가 커널 내부에 존재하기 떄문에 하나의 요소에서라도 오류가 발생하면 시스템 전체에 장애를 일으킬 수 있다.</li><li>UNIX, Linux.</li></ul><h3 id="마이크로-커널"><a href="#마이크로-커널" class="headerlink" title="마이크로 커널"></a>마이크로 커널</h3><ul><li>운영체제의 대부분의 요소들을 커널 외부로 분리.</li><li>커널 내부에는 메모리 관리, 멀티태스킹, 프로세스 간 통신(IPC) 등의 최소한의 요소들만 남겨놓음.</li><li>새로운 서비스를 추가하여 운영체제를 확장하기 쉬움.</li><li>커널 외부의 요소에 문제가 발생하더라도 커널 자체에는 영향이 없기 때문에 유지보수가 용이하여 안정성이 우수함.</li><li>커널 외부 요소들 사이에 데이터 전달이 필요한 경우에는 프로세스 간 통신(IPC)을 통해야만 하기 떄문에 성능 저하가 발생한다.</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;운영체제&quot;&gt;&lt;a href=&quot;#운영체제&quot; class=&quot;headerlink&quot; title=&quot;운영체제&quot;&gt;&lt;/a&gt;운영체제&lt;/h2&gt;&lt;p&gt;컴퓨터의 하드웨어 자원을 관리하고 컴퓨터 프로그램이 동작하기 위한 서비스를 제공하는 시스템 소프트웨어.&lt;br&gt;e
-      
-    
-    </summary>
-    
-      <category term="Base" scheme="http://dev.kyoungah.com/categories/Base/"/>
-    
-      <category term="Operating systems" scheme="http://dev.kyoungah.com/categories/Base/Operating-systems/"/>
-    
-    
-      <category term="Operating systems" scheme="http://dev.kyoungah.com/tags/Operating-systems/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>분할정복 방법</title>
-    <link href="http://dev.kyoungah.com/2019/03/11/2019-03-11-algorithms-divide-and-conquer/"/>
-    <id>http://dev.kyoungah.com/2019/03/11/2019-03-11-algorithms-divide-and-conquer/</id>
-    <published>2019-03-10T17:03:57.000Z</published>
-    <updated>2019-04-25T05:59:19.488Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="분할정복-방법"><a href="#분할정복-방법" class="headerlink" title="분할정복 방법"></a>분할정복 방법</h2><p>순환적으로 문제를 푸는 하향식 접근 방법.</p><p>주어진 문제의 입력을 더 이상 나눌 수 없을 때까지 두 개 이상의 작은 문제들로 순환적으로 분할하고, 이렇게 분할된 작은 문제들을 각각 해결한 후 이들의 해를 결합하여 원래의 문제의 해를 구하는 방식.</p><h2 id="분할정복-방법-처리-과정"><a href="#분할정복-방법-처리-과정" class="headerlink" title="분할정복 방법 처리 과정"></a>분할정복 방법 처리 과정</h2><h3 id="분할"><a href="#분할" class="headerlink" title="분할"></a>분할</h3><p>주어진 문제를 여러 개의 작은 문제로 분할한다.</p><h3 id="정복"><a href="#정복" class="headerlink" title="정복"></a>정복</h3><p>작은 문제들을 순환적으로 분할한다. 만약 작은 문제가 더 이상 분할되지 않을 정도로 충분히 작다면 순환호출 없이 작은 문제의 해를 구한다. (정복)</p><h3 id="결합"><a href="#결합" class="headerlink" title="결합"></a>결합</h3><p>작은 문제에 대해 정복된 해를 결합하여 원래 문제의 해를 구한다. </p><h2 id="분할정복-방법의-특징"><a href="#분할정복-방법의-특징" class="headerlink" title="분할정복 방법의 특징"></a>분할정복 방법의 특징</h2><ul><li>분할된 작은 문제는 원래의 문제에 비해 입력 크기만 작아졌을 뿐 문제 자체는 원래 문제와 동일하다.</li><li>분할된 문제는 서로 독립적이기 때문에 각각의 작은 문제를 다시 순환적으로 분할하고 그 결과를 통합하는 것이 가능하다.</li></ul><h2 id="분할정복-방법을-적용한-알고리즘"><a href="#분할정복-방법을-적용한-알고리즘" class="headerlink" title="분할정복 방법을 적용한 알고리즘"></a>분할정복 방법을 적용한 알고리즘</h2><h3 id="이진-탐색"><a href="#이진-탐색" class="headerlink" title="이진 탐색"></a>이진 탐색</h3><p>  <img src="/images/base/algorithms-divide-and-conquer-1.png" alt="이진 탐색"><br>  크기가 n인 문제를 크기가 n/2인 두 개의 작은 문제로 분할한다. 그 중 하나의 작은 문제는 처리 대상에서 제외한다.</p><h3 id="합병-정렬"><a href="#합병-정렬" class="headerlink" title="합병 정렬"></a>합병 정렬</h3><p><img src="/images/base/algorithms-divide-and-conquer-2.png" alt="합병 정렬"><br>  크기가 n인 문제를 크기가 n/2인 두 개의 작은 문제로 분할한다.</p><h3 id="퀵-정렬"><a href="#퀵-정렬" class="headerlink" title="퀵 정렬"></a>퀵 정렬</h3><p><img src="/images/base/algorithms-divide-and-conquer-3.png" alt="퀵 정렬"><br>크기가 n인 문제를 쿠기는 감소하지만 일정하지 않은 크기의 두 개의 작은 문제로 분할한다.</p><h3 id="선택-문제"><a href="#선택-문제" class="headerlink" title="선택 문제"></a>선택 문제</h3><p><img src="/images/base/algorithms-divide-and-conquer-4.png" alt="선택 문제"><br>크기가 n인 문제를 크기는 감소하지만 일정하지 않은 크기의 두 개의 작은 문제로 분할한다. 그중 하나의 작은 문제는 처리 대상에서 제외한다. </p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;분할정복-방법&quot;&gt;&lt;a href=&quot;#분할정복-방법&quot; class=&quot;headerlink&quot; title=&quot;분할정복 방법&quot;&gt;&lt;/a&gt;분할정복 방법&lt;/h2&gt;&lt;p&gt;순환적으로 문제를 푸는 하향식 접근 방법.&lt;/p&gt;
-&lt;p&gt;주어진 문제의 입력을 더 이상 나눌
-      
-    
-    </summary>
-    
-      <category term="Base" scheme="http://dev.kyoungah.com/categories/Base/"/>
-    
-      <category term="Algorithms" scheme="http://dev.kyoungah.com/categories/Base/Algorithms/"/>
-    
-    
-      <category term="Algorithms" scheme="http://dev.kyoungah.com/tags/Algorithms/"/>
     
   </entry>
   

@@ -8,6 +8,27 @@
     </url>
 
     <url>
+        <loc>http://dev.kyoungah.com/categories/Base/Algorithms/</loc>
+        <lastmod>2019-05-12T13:35:58.962Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/categories/Base/</loc>
+        <lastmod>2019-05-12T13:35:58.962Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/categories/Base/Computer-security/</loc>
+        <lastmod>2019-05-12T11:31:58.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://dev.kyoungah.com/categories/Base/Operating-systems/</loc>
         <lastmod>2019-05-10T11:42:32.603Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -15,29 +36,8 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/categories/Base/</loc>
-        <lastmod>2019-05-10T11:42:32.603Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/Base/Algorithms/</loc>
-        <lastmod>2019-05-10T11:00:03.969Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://dev.kyoungah.com/categories/etc/</loc>
         <lastmod>2019-04-25T15:05:12.628Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/Base/Computer-security/</loc>
-        <lastmod>2019-04-25T05:59:19.491Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
