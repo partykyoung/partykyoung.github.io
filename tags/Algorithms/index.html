@@ -159,7 +159,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 읽기 (나에 대하여 468 단어)
+                    3분 읽기 (나에 대하여 495 단어)
                 </span>
                 
                 
@@ -181,6 +181,7 @@
 <p>재귀방식으로 구현할 수도 있으나 실행시간이 늘어난다는 단점이 있다.</p>
 <h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>동적 프로그래밍 방식으로 푸는 경우 알고리즘의 for 루프는 구하려는 피보나치 수열의 순번 n만큼 반복하므로 시간 복잡도는 O(n)이다.</p>
 <p>순환 호출 방식으로 푸는 경우 성능은 O($n^2$) 이다.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 5강</a></p>
 
         </div>
         
@@ -212,7 +213,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3분 읽기 (나에 대하여 384 단어)
+                    3분 읽기 (나에 대하여 411 단어)
                 </span>
                 
                 
@@ -241,6 +242,7 @@
 <li>가장 작은 소문제부터 점화식의 해를 구한 뒤 이를 테이블에 저장한ㄷ나.</li>
 <li>테이블에 저장되어 있는 소문제의 해를 이용하여 점차적으로 큰 상위 문제의 해를 구한다.</li>
 </ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 5강</a></p>
 
         </div>
         
@@ -326,7 +328,7 @@
 <li>이렇게 계산된 ‘중간값들의 중간값’을 피벗으로 사용하여 주어진 배열을 분할한다.</li>
 </ol>
 <h4 id="알고리즘-1"><a href="#알고리즘-1" class="headerlink" title="알고리즘"></a>알고리즘</h4><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 삽입 정렬 함수</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">insertionSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex)</span></span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> i, j, key;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">for</span>(i = leftIndex + <span class="hljs-number">1</span>; i &lt;= rightIndex; i++)&#123;</span><br><span class="line">    key = arr[i]; <span class="hljs-comment">// 현재 삽입될 숫자인 i번째 정수를 key 변수로 복사</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 현재 정렬된 배열은 i-1까지이므로 i-1번째부터 역순으로 조사한다.</span></span><br><span class="line">    <span class="hljs-comment">// j 값은 음수가 아니어야 되고</span></span><br><span class="line">    <span class="hljs-comment">// key 값보다 정렬된 배열에 있는 값이 크면 j번째를 j+1번째로 이동</span></span><br><span class="line">    <span class="hljs-keyword">for</span>(j=i<span class="hljs-number">-1</span>; j&gt;=<span class="hljs-number">0</span> &amp;&amp; arr[j]&gt;key; j--)&#123;</span><br><span class="line">      arr[j+<span class="hljs-number">1</span>] = arr[j]; <span class="hljs-comment">// 레코드의 오른쪽으로 이동</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    arr[j+<span class="hljs-number">1</span>] = key;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 분할 함수</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">partition</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex, <span class="hljs-keyword">int</span> pivot)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> swapIndex = leftIndex;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = leftIndex; i &lt;= rightIndex; i++) &#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (arr[i] &lt; pivot) &#123;</span><br><span class="line">      <span class="hljs-keyword">int</span> temp = arr[i];</span><br><span class="line">    </span><br><span class="line">      arr[i] = arr[swapIndex];</span><br><span class="line">      arr[swapIndex] = temp;</span><br><span class="line"></span><br><span class="line">      swapIndex += <span class="hljs-number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> swapIndex - <span class="hljs-number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">selection</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex, <span class="hljs-keyword">int</span> findIndex)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> arrLength = rightIndex - leftIndex + <span class="hljs-number">1</span>;</span><br><span class="line">  <span class="hljs-keyword">int</span> medianNum = arrLength / <span class="hljs-number">5</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> &gt; findIndex &amp;&amp; findIndex &gt; arrLength) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 배열의 길이가 5보다 같거나 작으면 findIndex - 1번째 원소를 찾아 봔한한다.</span></span><br><span class="line">  <span class="hljs-keyword">if</span> (arrLength &lt;= <span class="hljs-number">5</span>) &#123;</span><br><span class="line">    insertionSort(arr, leftIndex, rightIndex);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> arr[findIndex - <span class="hljs-number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">int</span> *maidanArr = (<span class="hljs-keyword">int</span> *) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>) * medianNum);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 배열 arr에서 5개씩 원소를 묶어 n/5 개의 그룹을 만든 후 각 그룹에서 중간값을 구해 배열 maidanArr을 만든다.</span></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; medianNum; i++) &#123;</span><br><span class="line">    maidanArr[i] = selection(arr, leftIndex + (<span class="hljs-number">5</span> * i), (leftIndex + (<span class="hljs-number">5</span> * (i+<span class="hljs-number">1</span>)<span class="hljs-number">-1</span>)), leftIndex + (<span class="hljs-number">5</span> * i) + <span class="hljs-number">2</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 중간값들의 중간값을 계산하기 위해 선택 함수를 순환호출한다. </span></span><br><span class="line">  <span class="hljs-keyword">int</span> pivot = selection(maidanArr, <span class="hljs-number">0</span>, medianNum - <span class="hljs-number">1</span>, (medianNum / <span class="hljs-number">2</span>) + <span class="hljs-number">1</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="hljs-comment">// pivot을 사용하여 배열 arr을 분할한다.</span></span><br><span class="line">  <span class="hljs-keyword">int</span> pivotIndex = partition(arr, leftIndex, rightIndex, pivot);</span><br><span class="line">  <span class="hljs-keyword">int</span> rank = pivotIndex - leftIndex + <span class="hljs-number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (findIndex &lt;= rank) &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> selection(arr, leftIndex, pivotIndex, findIndex);</span><br><span class="line">  &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> selection(arr, pivotIndex + <span class="hljs-number">1</span>, rightIndex, findIndex);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a><br><a href="https://ronniej.sfuh.tk/kth-largest-element-array/" target="_blank" rel="noopener">프로그래밍 면접 문제 10 : Kth Largest Element in Array</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 4강</a><br><a href="https://ronniej.sfuh.tk/kth-largest-element-array/" target="_blank" rel="noopener">프로그래밍 면접 문제 10 : Kth Largest Element in Array</a></p>
 
         </div>
         
@@ -736,7 +738,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        47
+                        48
                     </p>
                 </div>
             </div>
@@ -912,7 +914,7 @@
                 <span class="level-item">Front-end</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">14</span>
+                <span class="level-item tag">15</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Front-end/Css/">
@@ -936,7 +938,7 @@
                 <span class="level-item">TypeScript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Front-end/memo/">
@@ -966,7 +968,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 15px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -980,6 +982,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1033,19 +1048,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
-                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1064,7 +1066,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1075,7 +1077,7 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1108,7 +1110,7 @@
                     <span class="level-item">1월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1286,7 +1288,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TypeScript/">
                         <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1324,6 +1326,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
                     <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
@@ -1372,19 +1387,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
-                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1403,7 +1405,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1414,7 +1416,7 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1447,7 +1449,7 @@
                     <span class="level-item">1월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1625,7 +1627,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TypeScript/">
                         <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 

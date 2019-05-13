@@ -152,7 +152,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-25T05:59:19.483Z">2019-04-25</time>
+                <time class="level-item has-text-grey" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
@@ -162,7 +162,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4분 읽기 (나에 대하여 612 단어)
+                    6분 읽기 (나에 대하여 876 단어)
                 </span>
                 
                 
@@ -171,39 +171,83 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/25/2019-01-14-typescript-first/">TypeScript</a>
+                <a class="has-link-black-ter" href="/2019/05/13/2019-05-13-typescript-compiler-option/">2019-05-13-typescript-compiler-option</a>
             
         </h1>
         <div class="content">
-            <h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><ul>
-<li>Microsoft에서 개발한 오픈 소스 프로그래밍 언어.</li>
-<li>TypeScript는 JavaScript의 Superset이다. JavaScript의 모든 기능을 사용할 수 있고 그 위에 TypeScript만의 문법을 추가한 언어이다. </li>
-<li>TypeScript는 Compiled Language 이다. TypeScript 컴파일러가 TypeScript를 JavaScript로 컴파일 해준다. 때문에 Transpile이라는 용어를 사용하기도 한다.</li>
-</ul>
-<h3 id="정적-타입-언어-vs-동적-타입-언어"><a href="#정적-타입-언어-vs-동적-타입-언어" class="headerlink" title="정적 타입 언어 vs 동적 타입 언어"></a>정적 타입 언어 vs 동적 타입 언어</h3><p>정적 타입 언어 </p>
+            <h2 id="tsconfig-json"><a href="#tsconfig-json" class="headerlink" title="tsconfig.json"></a>tsconfig.json</h2><p><strong>tsconfig.json</strong> 파일은 프로젝트를 컴파일 하는데 필요한 루트 파일과 컴파일러 옵션을 지정한다.</p>
+<p><a href="http://json.schemastore.org/tsconfig" target="_blank" rel="noopener">JSON schema for the TypeScript compiler’s configuration file</a>에서 스펙을 확인할 수 있다.</p>
+<p>ex)<br><figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"compilerOptions"</span>: &#123;</span><br><span class="line">        <span class="hljs-attr">"module"</span>: <span class="hljs-string">"system"</span>,</span><br><span class="line">        <span class="hljs-attr">"noImplicitAny"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"removeComments"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"preserveConstEnums"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"outFile"</span>: <span class="hljs-string">"../../built/local/tsc.js"</span>,</span><br><span class="line">        <span class="hljs-attr">"sourceMap"</span>: <span class="hljs-literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="hljs-attr">"include"</span>: [</span><br><span class="line">        <span class="hljs-string">"src/**/*"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="hljs-attr">"exclude"</span>: [</span><br><span class="line">        <span class="hljs-string">"node_modules"</span>,</span><br><span class="line">        <span class="hljs-string">"**/*.spec.ts"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="compileOnSave"><a href="#compileOnSave" class="headerlink" title="compileOnSave"></a>compileOnSave</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compileOnSave": true,</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>미리 타입을 지정해놓고 시작하는 언어 <ul>
-<li>미리 타입을 지정해놓기 때문에 타입 에러로 인한 문제점을 초기에 발견할 수 있다.</li>
+<li>ts 파일을 저장 시 자동 컴파일을 해준다. </li>
+<li>true / false (default: false)</li>
+</ul>
+<h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "extends": "./configs/base",</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>extends 속성을 사용해 다른 파일의 설정을 상속할 수 있다. <ul>
+<li>클라이언트 작업물과 서버 사이드 작업물의 설정이 비슷하다면 한 파일을 만들어놓고 상속받은 후 필요한 부분만 바꿔 쓸 수 있다.</li>
 </ul>
 </li>
 </ul>
-<p>동적 타입 언어 </p>
+<h3 id="files-include-exclude"><a href="#files-include-exclude" class="headerlink" title="files, include, exclude"></a>files, include, exclude</h3><p>셋다 설정이 없으면 모든 ts 파일들을 컴파일 해준다.</p>
+<h4 id="files"><a href="#files" class="headerlink" title="files"></a>files</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "files": [</span><br><span class="line">        "core.ts",</span><br><span class="line">        "sys.ts",</span><br><span class="line">        "types.ts",</span><br><span class="line">        "emitter.ts",</span><br><span class="line">        "tsc.ts",</span><br><span class="line">        <span class="hljs-string">"diagnosticInformationMap.generated.ts"</span></span><br><span class="line">    ],</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>타입이 없는 언어</li>
-<li>실행 도중에 변수에 예상치 못한 타입이 들어와 오류가 생길 수 있다. 코드 덩어리가 커지면 오류를 잡아내기도 어렵고 동시 다발적으로 문제 생기는 경우가 많은데 이 때문에 정적 타입을 채용한 것이 TypeScript.</li>
-<li>테스트 코드를 많이 애용하면 정적 타입 언어가 필요 없으나 테스트 커버리지를 엄청 올리는 일이 가면 갈수록 힘들어진다. 미리 타입 체킹을 하며 오류를 막아 주는 것이 TypeScript 이다.</li>
+<li>상대 혹은 절대 경로의 리스트 배열이다.</li>
+<li>files에 지정되어 있는 파일은 exclude에 관계 없이 항상 컴파일 대상에 포함된다. -&gt; exclude보다 순위가 더 높다.</li>
 </ul>
-<h2 id="TypeScript-5분-튜토리얼"><a href="#TypeScript-5분-튜토리얼" class="headerlink" title="TypeScript 5분 튜토리얼"></a>TypeScript 5분 튜토리얼</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure>
-<p>TypeScript를 전역으로 설치해주자.</p>
-<h3 id="helloTypeScript-ts"><a href="#helloTypeScript-ts" class="headerlink" title="helloTypeScript.ts"></a>helloTypeScript.ts</h3><figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greeter</span>(<span class="hljs-params">person: <span class="hljs-built_in">string</span></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">$&#123;person&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">greeter(<span class="hljs-string">"typescript"</span>);</span><br></pre></td></tr></table></figure>
-<p>TypeScript 공식 사이트에서 튜토리얼을 보고 간단하게 작성해 보았다. </p>
-<p><img src="/images/frontend/typescript-first-1.png" alt="parameter에 타입을 지정해주면 타입이 맞지 않을 때 오류를 출력해준다."></p>
-<p><img src="/images/frontend/typescript-first-2.png" alt="parameter에 타입을 생략하면 any로 타입이 설정된다."></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc helloTypeScript.ts</span><br></pre></td></tr></table></figure>
-<p>tsc 명령어로 TypeScript를 컴파일 할 수 있다.</p>
-<p><img src="/images/frontend/typescript-first-3.png" alt="tsc 명령어로 ts파일을 컴파일 하면 js 파일이 생성된다."></p>
-<p><img src="/images/frontend/typescript-first-4.png" alt="컴파일된 js 파일에도 타입이 지정되어 있을까 확인해봤더니 타입이 지정되지는 않았다."></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://moon9342.github.io/typescript-introduction" target="_blank" rel="noopener">TypeScript 강좌(1) - Introduction</a><br><a href="https://www.inflearn.com/course/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%A6%AC%EC%95%84-1705-%EA%B8%B0%EC%B4%88-%EC%84%B8%EB%AF%B8%EB%82%98" target="_blank" rel="noopener">타입스크립트 코리아 : 기초 세미나</a><br><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank" rel="noopener">TypeScript in 5 minutes</a><br><a href="http://itmining.tistory.com/65" target="_blank" rel="noopener">정적언어(타입)과 동적언어(타입)</a></p>
+<h4 id="include"><a href="#include" class="headerlink" title="include"></a>include</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "include": [</span><br><span class="line">        <span class="hljs-string">"src/**/*"</span></span><br><span class="line">    ],</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>glob 패턴 (.gitignore 이랑 비슷함.).</li>
+<li>include에 포함된 패턴과 맞는 파일들을 컴파일 대상에 포함시킨다.</li>
+<li>exclude 속성으로 필터링 할 수 있다.</li>
+<li>js파일을 컴파일 대상에 포함시키는 allowJs 옵션이 있다.<ul>
+<li>true/false</li>
+</ul>
+</li>
+</ul>
+<h4 id="exclude"><a href="#exclude" class="headerlink" title="exclude"></a>exclude</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "exclude": [</span><br><span class="line">        "node_modules",</span><br><span class="line">        <span class="hljs-string">"**/*.spec.ts"</span></span><br><span class="line">    ],</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>glob 패턴 (.gitignore 이랑 비슷함.)</li>
+<li>exclude에 포함된 패턴과 맞는 파일들은 컴파일 대상에서 제외된다. </li>
+<li>node_modules, bower_components, jspm_packages, <outdir>은 default로 제외한다.</outdir></li>
+</ul>
+<h3 id="compileOptions"><a href="#compileOptions" class="headerlink" title="compileOptions"></a>compileOptions</h3><h4 id="types"><a href="#types" class="headerlink" title="types"></a>types</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "types" : ["node", "lodash", "express"],</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>타입을 가져올 패키지 목록.</li>
+<li>기본적으로는 @types 모든 패키지가 컴파일에 포함된다. types를 지정할 경우 나열된 패키지만 컴파일 대상에 포함된다. </li>
+</ul>
+<h3 id="target"><a href="#target" class="headerlink" title="target"></a>target</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "target": "es3",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>컴파일 결과물을 js의 어떤 버전으로 할 것인지 지정한다. (default: es3) </li>
+</ul>
+<h3 id="lib"><a href="#lib" class="headerlink" title="lib"></a>lib</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"CompilerOptions"</span>: &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "lib": [</span><br><span class="line">      "dom",</span><br><span class="line">      "es5",</span><br><span class="line">      <span class="hljs-string">"es2015.promise"</span> </span><br><span class="line">    ],</span><br><span class="line">    //...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>컴파일에 포함될 라이브러리 파일 목록을 지정해준다. 지정해주지 않으면 아래의 기본 값이 저장된다.</li>
+<li>ES5의 기본 값: dom, es5, scripthost</li>
+<li>ES6의 기본 값: dom, dom.iterable, es6, scripthost</li>
+<li>위의 기본 값 대신에 커스텀하게 라이브러리를 쓰려고 할 때, lib을 정의한다.</li>
+<li><a href="https://stackoverflow.com/questions/41993811/understanding-target-and-module-in-tsconfig" target="_blank" rel="noopener">Understanding “target” and “module” in tsconfig</a></li>
+</ul>
+<h3 id="outDir"><a href="#outDir" class="headerlink" title="outDir"></a>outDir</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "outDir": "",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>컴파일된 파일들의 위치를 지정해준다.</li>
+</ul>
+<h3 id="outFile"><a href="#outFile" class="headerlink" title="outFile"></a>outFile</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "outFile": "",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>컴파일 결과물을 단일 파일로 떨궈준다.</li>
+</ul>
+<h3 id="module"><a href="#module" class="headerlink" title="module"></a>module</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "module": "es3",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>컴파일된 모듈의 결과물을 어떤 모듈 시스템으로 할 지 결정한다.<ul>
+<li>commonjs, amd, umd, system, es6, es2015, none 중 설정 가능.</li>
+<li>amd, systme 은 outFile 설정과 사용된다.</li>
+</ul>
+</li>
+<li>지정하지 않으면 target이 es6일 땐 es6으로, 그렇지 않으면 commonJS가 기본값으로 사용된다.</li>
+<li>es6, es2015는 target값이 es5 이하일때 사용 가능.</li>
+</ul>
+<p><a href="https://typescript-kr.github.io/pages/tsconfig.json.html" target="_blank" rel="noopener">TypeScript-Handbook 한글 문서 - tsconfig</a><br><a href="https://typescript-kr.github.io/pages/Compiler%20Options.html" target="_blank" rel="noopener">TypeScript-Handbook 한글 문서 - 컴파일러 옵션</a><br><a href="https://vomvoru.github.io/blog/tsconfig-compiler-options-kr/" target="_blank" rel="noopener">tsconfig 컴파일 옵션 정리</a><br><a href="https://norux.me/59" target="_blank" rel="noopener">tsconfig.json의 lib</a><br><a href="https://www.inflearn.com/course/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%A6%AC%EC%95%84-1705-%EA%B8%B0%EC%B4%88-%EC%84%B8%EB%AF%B8%EB%82%98/lecture/6803" target="_blank" rel="noopener">타입스크립트 코리아 : 2017.05 기초 세미나 (4) - Compiler Options</a></p>
 
         </div>
         
@@ -366,6 +410,79 @@
 
 
 
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-14T13:45:44.000Z">2019-01-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 612 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/01/14/2019-01-14-typescript-first/">TypeScript</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><ul>
+<li>Microsoft에서 개발한 오픈 소스 프로그래밍 언어.</li>
+<li>TypeScript는 JavaScript의 Superset이다. JavaScript의 모든 기능을 사용할 수 있고 그 위에 TypeScript만의 문법을 추가한 언어이다. </li>
+<li>TypeScript는 Compiled Language 이다. TypeScript 컴파일러가 TypeScript를 JavaScript로 컴파일 해준다. 때문에 Transpile이라는 용어를 사용하기도 한다.</li>
+</ul>
+<h3 id="정적-타입-언어-vs-동적-타입-언어"><a href="#정적-타입-언어-vs-동적-타입-언어" class="headerlink" title="정적 타입 언어 vs 동적 타입 언어"></a>정적 타입 언어 vs 동적 타입 언어</h3><p>정적 타입 언어 </p>
+<ul>
+<li>미리 타입을 지정해놓고 시작하는 언어 <ul>
+<li>미리 타입을 지정해놓기 때문에 타입 에러로 인한 문제점을 초기에 발견할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<p>동적 타입 언어 </p>
+<ul>
+<li>타입이 없는 언어</li>
+<li>실행 도중에 변수에 예상치 못한 타입이 들어와 오류가 생길 수 있다. 코드 덩어리가 커지면 오류를 잡아내기도 어렵고 동시 다발적으로 문제 생기는 경우가 많은데 이 때문에 정적 타입을 채용한 것이 TypeScript.</li>
+<li>테스트 코드를 많이 애용하면 정적 타입 언어가 필요 없으나 테스트 커버리지를 엄청 올리는 일이 가면 갈수록 힘들어진다. 미리 타입 체킹을 하며 오류를 막아 주는 것이 TypeScript 이다.</li>
+</ul>
+<h2 id="TypeScript-5분-튜토리얼"><a href="#TypeScript-5분-튜토리얼" class="headerlink" title="TypeScript 5분 튜토리얼"></a>TypeScript 5분 튜토리얼</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure>
+<p>TypeScript를 전역으로 설치해주자.</p>
+<h3 id="helloTypeScript-ts"><a href="#helloTypeScript-ts" class="headerlink" title="helloTypeScript.ts"></a>helloTypeScript.ts</h3><figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greeter</span>(<span class="hljs-params">person: <span class="hljs-built_in">string</span></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">$&#123;person&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">greeter(<span class="hljs-string">"typescript"</span>);</span><br></pre></td></tr></table></figure>
+<p>TypeScript 공식 사이트에서 튜토리얼을 보고 간단하게 작성해 보았다. </p>
+<p><img src="/images/frontend/typescript-first-1.png" alt="parameter에 타입을 지정해주면 타입이 맞지 않을 때 오류를 출력해준다."></p>
+<p><img src="/images/frontend/typescript-first-2.png" alt="parameter에 타입을 생략하면 any로 타입이 설정된다."></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc helloTypeScript.ts</span><br></pre></td></tr></table></figure>
+<p>tsc 명령어로 TypeScript를 컴파일 할 수 있다.</p>
+<p><img src="/images/frontend/typescript-first-3.png" alt="tsc 명령어로 ts파일을 컴파일 하면 js 파일이 생성된다."></p>
+<p><img src="/images/frontend/typescript-first-4.png" alt="컴파일된 js 파일에도 타입이 지정되어 있을까 확인해봤더니 타입이 지정되지는 않았다."></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://moon9342.github.io/typescript-introduction" target="_blank" rel="noopener">TypeScript 강좌(1) - Introduction</a><br><a href="https://www.inflearn.com/course/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%A6%AC%EC%95%84-1705-%EA%B8%B0%EC%B4%88-%EC%84%B8%EB%AF%B8%EB%82%98" target="_blank" rel="noopener">타입스크립트 코리아 : 기초 세미나</a><br><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank" rel="noopener">TypeScript in 5 minutes</a><br><a href="http://itmining.tistory.com/65" target="_blank" rel="noopener">정적언어(타입)과 동적언어(타입)</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
 </div>
                 
 
@@ -409,7 +526,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        47
+                        48
                     </p>
                 </div>
             </div>
@@ -585,7 +702,7 @@
                 <span class="level-item">Front-end</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">14</span>
+                <span class="level-item tag">15</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Front-end/Css/">
@@ -609,7 +726,7 @@
                 <span class="level-item">TypeScript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Front-end/memo/">
@@ -639,7 +756,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 15px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -653,6 +770,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -706,19 +836,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
-                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -737,7 +854,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -748,7 +865,7 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -781,7 +898,7 @@
                     <span class="level-item">1월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -959,7 +1076,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TypeScript/">
                         <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -997,6 +1114,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
                     <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
@@ -1045,19 +1175,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
-                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1076,7 +1193,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1087,7 +1204,7 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1120,7 +1237,7 @@
                     <span class="level-item">1월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1298,7 +1415,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TypeScript/">
                         <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 

@@ -8,8 +8,16 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2019/05/12/2019-03-17-algorithms-dynamic-programming/</loc>
-        <lastmod>2019-05-12T13:35:58.962Z</lastmod>
+        <loc>http://dev.kyoungah.com/2019/05/13/2019-05-13-typescript-compiler-option/</loc>
+        <lastmod>2019-05-13T17:31:43.869Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/2019/01/14/2019-01-14-typescript-first/</loc>
+        <lastmod>2019-05-13T13:46:33.398Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +25,23 @@
 
     <url>
         <loc>http://dev.kyoungah.com/2019/05/12/2019-03-17-algorithms-fibonachi/</loc>
-        <lastmod>2019-05-12T13:35:49.151Z</lastmod>
+        <lastmod>2019-05-12T13:57:15.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/2019/05/12/2019-03-17-algorithms-dynamic-programming/</loc>
+        <lastmod>2019-05-12T13:57:06.686Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/2019/05/10/2019-03-17-algorithms-selection/</loc>
+        <lastmod>2019-05-12T13:56:53.686Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,14 +66,6 @@
     <url>
         <loc>http://dev.kyoungah.com/2019/05/10/2019-03-09-operating-system-thread/</loc>
         <lastmod>2019-05-10T11:38:19.012Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/2019/05/10/2019-03-17-algorithms-selection/</loc>
-        <lastmod>2019-05-10T11:00:03.969Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -160,7 +176,7 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2019/03/16/2019-03-04-operating-systems-first/</loc>
+        <loc>http://dev.kyoungah.com/2019/03/16/2019-03-05-operating-systems-configuration/</loc>
         <lastmod>2019-04-25T05:59:19.486Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -168,7 +184,7 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2019/03/16/2019-03-05-operating-systems-configuration/</loc>
+        <loc>http://dev.kyoungah.com/2019/03/16/2019-03-04-operating-systems-first/</loc>
         <lastmod>2019-04-25T05:59:19.486Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -192,14 +208,6 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2019/02/25/2019-02-24-reactjs-map/</loc>
-        <lastmod>2019-04-25T05:59:19.485Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://dev.kyoungah.com/2019/03/11/2019-03-02-algorithms-first/</loc>
         <lastmod>2019-04-25T05:59:19.485Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -208,8 +216,8 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2019/01/27/2019-01-27-reactjs-state/</loc>
-        <lastmod>2019-04-25T05:59:19.484Z</lastmod>
+        <loc>http://dev.kyoungah.com/2019/02/25/2019-02-24-reactjs-map/</loc>
+        <lastmod>2019-04-25T05:59:19.485Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -217,6 +225,14 @@
 
     <url>
         <loc>http://dev.kyoungah.com/2019/02/09/2019-01-30-reactjs-event/</loc>
+        <lastmod>2019-04-25T05:59:19.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/2019/01/27/2019-01-27-reactjs-state/</loc>
         <lastmod>2019-04-25T05:59:19.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -233,14 +249,6 @@
 
     <url>
         <loc>http://dev.kyoungah.com/2018/12/31/2018-12-31-2018-memoir/</loc>
-        <lastmod>2019-04-25T05:59:19.483Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/2019/04/25/2019-01-14-typescript-first/</loc>
         <lastmod>2019-04-25T05:59:19.483Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -296,7 +304,7 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2018/11/11/2018-09-16-data-structure-array/</loc>
+        <loc>http://dev.kyoungah.com/2018/09/16/2018-09-03-data-structure-first/</loc>
         <lastmod>2019-04-25T05:59:19.480Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -304,7 +312,7 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2018/09/16/2018-09-03-data-structure-first/</loc>
+        <loc>http://dev.kyoungah.com/2018/11/11/2018-09-16-data-structure-array/</loc>
         <lastmod>2019-04-25T05:59:19.480Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -344,7 +352,7 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2018/08/02/2018-08-02-reactjs-first-reactjs/</loc>
+        <loc>http://dev.kyoungah.com/2018/07/31/2018-07-24-nodejs-setting/</loc>
         <lastmod>2019-04-25T05:59:19.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -352,7 +360,7 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/2018/07/31/2018-07-24-nodejs-setting/</loc>
+        <loc>http://dev.kyoungah.com/2018/08/02/2018-08-02-reactjs-first-reactjs/</loc>
         <lastmod>2019-04-25T05:59:19.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

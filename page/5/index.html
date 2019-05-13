@@ -139,6 +139,80 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-Architecture/">Computer Architecture</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    19분 읽기 (나에 대하여 2790 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/16/2018-10-03-computer-architecture-first/">컴퓨터 구조 개요</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="컴퓨터"><a href="#컴퓨터" class="headerlink" title="컴퓨터"></a>컴퓨터</h2><p>컴퓨터(computer)는 진공관, 트랜지스터 등의 전자 회로를 이용하여 방대한 정보를 저장하고 자동적으로 계산하고 입력된 데이터를 정해진 방법에 따라 처리하는 장치(device)다. (출처: 위키백과)</p>
+<p>일반적으로 컴퓨터를 말할 때 시스템이란 용어를 덧붙여 컴퓨터 시스템이라 부른다. 시스템이란 그 시스템에 부여된 목적을 달성하기 위하여 상호작용 하는 구성요소들의 집합으로 정의된다.<br>따라서 컴퓨터를 제대로 이해하기 위해서는 ‘시스템 측면에서 컴퓨터는 무엇으로 구성되어 있는가?’, ‘구성요소는 각각 무슨 기능을 갖는가?’, ‘입력과 출력은 무엇인가?’ 등을 살펴보아야 한다. </p>
+<h2 id="컴퓨터-시스템의-전체적-구성"><a href="#컴퓨터-시스템의-전체적-구성" class="headerlink" title="컴퓨터 시스템의 전체적 구성"></a>컴퓨터 시스템의 전체적 구성</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">컴퓨터 시스템</span><br><span class="line">  ├─ 하드웨어</span><br><span class="line">  │   ├─ 입력장치</span><br><span class="line">  │   ├─ 출력장치</span><br><span class="line">  │   ├─ 기억장치</span><br><span class="line">  │   ├─ 중앙처리장치</span><br><span class="line">  │   └─  시스템버스                        </span><br><span class="line">  └─ 소프트웨어</span><br><span class="line">      ├─ 시스템 소프트웨어</span><br><span class="line">      └─ 응용 소프트웨어</span><br></pre></td></tr></table></figure>
+<p>컴퓨터 시스템을 구체적으로 살펴보면 크게 하드웨어와 소프트웨어 측면으로 구분할 수 있다. 하드웨어는 컴퓨터의 기계적인 장치를 의미하며 소프트웨어는 하드웨어를 제어하여 원하는 결과를 얻을 수 있도록 하는 모든 종류의 프로그램을 의미한다.<br>소프트웨어는 컴퓨터에서 사용할 수 있는 명령어들의 조합으로 구현되는데 이를 프로그램이라 부른다. 시스템 소프트웨어는 컴파일러, 어셈블러, 로더, 운영체제 같이 컴퓨터 시스템의 운영을 제어하고 지원하는 프로그램을 말하며 응용 소프트웨어는 워드프로세서, 데이터베이스, 스프레드시트 등과 같이 사용자 편의를 위해 만들어놓은 프로그램을 말한다. </p>
+<p><img src="/images/base/computer-architecture-first-01.png" alt="하드웨어와 소프트웨어의 계층구조"></p>
+<h2 id="컴퓨터-하드웨어-구성요소"><a href="#컴퓨터-하드웨어-구성요소" class="headerlink" title="컴퓨터 하드웨어 구성요소"></a>컴퓨터 하드웨어 구성요소</h2><h3 id="입력장치"><a href="#입력장치" class="headerlink" title="입력장치"></a>입력장치</h3><p>컴퓨터는 사용자로부터 데이터를 명령어와 함께 받아들여서 그 명령어에 따라 데이터를 처리하는 기계이다. 이때 입력장치란 사용자가 입력하는 데이터와 명령어를 받아들여 컴퓨터가 알 수 있는 형태로 변환하여 기억장치나 중앙처리장치에 전달해 주는 장치를 말한다.<br>기본적인 입력장치로 키보드를 사용한다. 키보드상의 문자 각각에 해당되는 키를 누르면 이에 대응하는 전기적 신호가 컴퓨터로 전달된다. 다른 입력장치로는 마우스, 마이크, 스캐너 등이 있다. </p>
+<h3 id="출력장치"><a href="#출력장치" class="headerlink" title="출력장치"></a>출력장치</h3><p>컴퓨터는 입력장치로부터 데이터와 명령어를 받아들여서 그 명령대로 데이터를 처리하고 이에 대한 결과를 생성시킨다. 출력장치란 이렇게 생성된 결과를 사람이 알아볼 수 있는 형태로 변환해 주는 장치를 말한다.<br>최근 가장 많이 사용되고 있는 출력장치로는 LCD(Liquid Crystal Display)가 있는데 이것은 인가전압에 따른 액정의 투과도 변화를 이용하여 각종 장치에서 발생되는 여러가지 전기적인 정보를 시각정보로 변화시켜 전달하는 방법을 주로 사용한다. 또다른 출력장치로는 데이터를 화면이 아니라 종이에 나타내 보여주는 프린터가 있다. </p>
+<h3 id="기억장치"><a href="#기억장치" class="headerlink" title="기억장치"></a>기억장치</h3><p>입력장치로부터 컴퓨터 내부로 전달되는 모든 데이터는 2진수로 바뀌어 기억장치에 저장된다. 데이터 저장 역할을 하는 기억장치는 그 특성과 역할에 따라 캐시와 주기억장치, 그리고 보조기억장치로 나뉜다. </p>
+<h4 id="주기억장치"><a href="#주기억장치" class="headerlink" title="주기억장치"></a>주기억장치</h4><p>주기억장치는 컴퓨터에서 중앙처리장치가 처리할 데이터와 명령어들을 저장한다. 대표적으로 RAM과 ROM이 있다. </p>
+<ul>
+<li>RAM: 전원이 공급되는 동안에는 데이터를 계속 기억하고 있으나 전원 공급이 끊기면 기억된 내용이 없어지는 휘발성 기억장치이다. <ul>
+<li>SRAM: 일단 기억소자에 정보가 저장되면 전원이 유지되는 한 그 데이터를 상실하지 않는다.</li>
+<li>DRAM: 전원이 공급되는 동안에도 일정 주기로 충전을 해주어야 데이터를 상실하지 않기 떄문에 DRAM을 채용한 컴퓨터 시스템에서는 재충전이 필요한 하드웨어 회로가 포함된다. 특수한 경우를 제외하면 대부분 가격이 저렴한 DRAM으로 구성되며 이러한 DRAM은 데이터를 처리하는 중앙처리장치에 비해 속도가 매우 느리므로 중앙처리장치는 주기억장치에서 데이터를 가져올 때 시간이 많이 낭비된다. </li>
+</ul>
+</li>
+<li>ROM: 전원 공급이 끊겨도 이전의 정보가 계속 기억되는 비휘발성 기억장치이다. </li>
+</ul>
+<h4 id="캐시"><a href="#캐시" class="headerlink" title="캐시"></a>캐시</h4><p>주기억장치의 단점을 해결하기 위해 데이터가 중앙처리장치에 신속하게 전달될 수 있도록 하기 위해 사용되는 주기억장치와 중앙처리장치 사이에 위치한 기억장치를 캐시라고 한다. 캐시는 일반적으로 가격이 비싸고 부피가 큰 대신 매우 빠른 SRAM으로 구성되며 보통 수백 MB까지의 용량을 갖는다. </p>
+<h4 id="보조기억장치"><a href="#보조기억장치" class="headerlink" title="보조기억장치"></a>보조기억장치</h4><p>캐시나 주기억장치는 전원이 꺼지면 현재까지 저장한 내용을 잃어버린다. 컴퓨터 사용자가 현재 기억장칭에 저장한 내용을 전원을 끄고 난 다음에도 사용할 수 있도록 해주는 기억장치를 보조기억장치라 한다. 대량의 데이터를 저장하기 위해 사용하며 자기디스크와 자기테이프, CD-ROM 등이 있다. </p>
+<h3 id="중앙처리장치"><a href="#중앙처리장치" class="headerlink" title="중앙처리장치"></a>중앙처리장치</h3><p>중앙처리장치는 컴퓨터의 두뇌에 해당하는 부분이다.</p>
+<h4 id="산술-논리연산장치"><a href="#산술-논리연산장치" class="headerlink" title="산술/논리연산장치"></a>산술/논리연산장치</h4><p>산술/논리연산장치는 중앙처리장치의 가장 중요한 요소로서 사칙연산을 포함한 산술연산과 참과 거짓을 판별하는 논리연산을 수행하는 장치이다. </p>
+<h4 id="제어장치"><a href="#제어장치" class="headerlink" title="제어장치"></a>제어장치</h4><p>제어장치는 중앙처리장치 내부에서 일어나는 모든 동작을 제어하고 관리하는 장치이다. 기억장치로부터 명령을 읽고 해석하여 해석된 결과에 따라 명령을 수행하기 위한 제어신호를 만드는 장치이다. </p>
+<h4 id="레지스터"><a href="#레지스터" class="headerlink" title="레지스터"></a>레지스터</h4><p>레지스터는 중앙처리장치에 있는 내부기억장치로서 연산처리를 위한 데이터나 결과 등을 일시적으로 보관해두는 장치이다. 고속의 연산처리나 편리한 프로그래밍에 도움을 주지만 가격이 비싸므로 중앙처리장치 내의 레지스터의 수는 제한적이다. </p>
+<h3 id="시스템버스"><a href="#시스템버스" class="headerlink" title="시스템버스"></a>시스템버스</h3><p>컴퓨터 구조에서 버스란 두 개 이상의 장치를 연결해 주는 통신선로를 말한다. 일반적으로 하나의 버스는 여러 개의 통신선으로 구성되어 있고 각 선은 2진수 0과 1로 표현되는 신호를 전송할 수 있다. 따라서 한 버스가 8개의 선으로 구성된 경우에는 8개의 신호를 동시에 전송할 수 있다.<br>컴퓨터 시스템은 다양한 시스템 계층에서의 구성요소들 간에 통신을 가능하게 하는 많은 종류의 버스를 포함하고 있다. 이러한 버스의 종류 중 입력장치와 출력장치, 기억장치, 중앙처리장치를 연결해주는 버스를 시스템버스라고 한다. 이러한 시스템버스는 전송되는 데이터가 의미하는 내용에 따라 주소버스, 데이터버스, 제어버스로 구분된다. </p>
+<h2 id="컴퓨터-시스템의-분류"><a href="#컴퓨터-시스템의-분류" class="headerlink" title="컴퓨터 시스템의 분류"></a>컴퓨터 시스템의 분류</h2><h3 id="마이크로컴퓨터"><a href="#마이크로컴퓨터" class="headerlink" title="마이크로컴퓨터"></a>마이크로컴퓨터</h3><p>마이크로컴퓨터는 가장 널리 사용되고 있는 범용 컴퓨터로서 연산장치, 제어장치, 기억장치, 입출력장치 등을 하나의 칩으로 만든 마이크로 프로세서를 중앙처리장치로 채택한 컴퓨터로서, 단일 칩 마이크로 컴퓨터라고 한다. 대표적으로 PC(Personal Computer)가 있다. </p>
+<h3 id="미니컴퓨터"><a href="#미니컴퓨터" class="headerlink" title="미니컴퓨터"></a>미니컴퓨터</h3><p>미니컴퓨터는 외형적으로 마이크로컴퓨터보다 조금 크고, 메인프레임 컴퓨터 보다는 작은 컴퓨터로 단위부서와 같은 작은 규모의 조직에서 사용할 수 있는 소규모 컴퓨터이다. 슈퍼 미니컴퓨터가 등장하면서 많은 범용 컴퓨터의 응용을 흡수하였고 컴퓨팅 서버, 파일 서버, 네트워크 서버 등 각종 서버의 등장으로 인해 도태되었다. </p>
+<h3 id="메인프레임-컴퓨터"><a href="#메인프레임-컴퓨터" class="headerlink" title="메인프레임 컴퓨터"></a>메인프레임 컴퓨터</h3><p>메인프레임 컴퓨터는 고속의 입출력 처리능력을 가지고 있으며 대용량의 저장장치를 보유한 컴퓨터이다. 대규모의 데이터베이스 저장 및 관리용으로 사용된다.</p>
+<h3 id="슈퍼-컴퓨터"><a href="#슈퍼-컴퓨터" class="headerlink" title="슈퍼 컴퓨터"></a>슈퍼 컴퓨터</h3><p>슈퍼컴퓨터는 병렬처리가 가능한 복잡한 구조로 되어 있으며 복잡한 연산을 초고속으로 계산하기 위한 컴퓨텅이다. 이 컴퓨터는 아주 복잡한 과학 계산을 위한 것으로 연산속도가 무엇보다 중요하다. 환경, 에너지, 우주 및 항공, 지원탐사 등에 응용된다.</p>
+<h3 id="파이프라인-슈퍼컴퓨터"><a href="#파이프라인-슈퍼컴퓨터" class="headerlink" title="파이프라인 슈퍼컴퓨터"></a>파이프라인 슈퍼컴퓨터</h3><p>파이프라인 슈퍼컴퓨터는 1개의 중앙처리장치 내에 다수 개의 연산장치를 갖고 있는 컴퓨터로서 각 연산장치는 파이프라이닝 구조를 이용하여 고속의 벡터 계산이 가능하다.</p>
+<h3 id="대규모-병렬처리-컴퓨터"><a href="#대규모-병렬처리-컴퓨터" class="headerlink" title="대규모 병렬처리 컴퓨터"></a>대규모 병렬처리 컴퓨터</h3><p>대규모 병렬처리 컴퓨터는 하나의 시스템 내에 상호 연결된 수백 혹은 수천개 이상의 처리장치를 갖고 있으며 처리장치들이 하나의 큰 작업을 나누어서 병렬로 처리하는 구조를 갖는다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-09-02T14:29:09.000Z">2018-09-02</time>
                 
                 <div class="level-item">
@@ -662,7 +736,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        47
+                        48
                     </p>
                 </div>
             </div>
@@ -838,7 +912,7 @@
                 <span class="level-item">Front-end</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">14</span>
+                <span class="level-item tag">15</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Front-end/Css/">
@@ -862,7 +936,7 @@
                 <span class="level-item">TypeScript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Front-end/memo/">
@@ -892,7 +966,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12.5px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 15px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12.5px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12.5px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12.5px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 17.5px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12.5px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12.5px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -906,6 +980,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -959,19 +1046,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
-                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -990,7 +1064,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1001,7 +1075,7 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1034,7 +1108,7 @@
                     <span class="level-item">1월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1212,7 +1286,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TypeScript/">
                         <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1250,6 +1324,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
                     <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
@@ -1298,19 +1385,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-10T10:55:08.000Z">2019-05-10</time></div>
-                    <a href="/2019/05/10/2019-03-17-algorithms-selection/" class="has-link-black-ter is-size-6">선택 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1329,7 +1403,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1340,7 +1414,7 @@
                     <span class="level-item">4월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1373,7 +1447,7 @@
                     <span class="level-item">1월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1551,7 +1625,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TypeScript/">
                         <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 

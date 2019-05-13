@@ -3,8 +3,15 @@
 
 
     <url>
+        <loc>http://dev.kyoungah.com/tags/TypeScript/</loc>
+        <lastmod>2019-05-13T17:31:43.869Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://dev.kyoungah.com/tags/Algorithms/</loc>
-        <lastmod>2019-05-12T13:35:58.962Z</lastmod>
+        <lastmod>2019-05-12T13:57:15.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -47,13 +54,6 @@
     <url>
         <loc>http://dev.kyoungah.com/tags/React-js/</loc>
         <lastmod>2019-04-25T05:59:19.485Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/tags/TypeScript/</loc>
-        <lastmod>2019-04-25T05:59:19.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
