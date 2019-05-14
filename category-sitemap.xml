@@ -8,14 +8,28 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/categories/Front-end/TypeScript/</loc>
-        <lastmod>2019-05-13T17:31:43.869Z</lastmod>
+        <loc>http://dev.kyoungah.com/categories/Front-end/Etc/</loc>
+        <lastmod>2019-05-14T14:00:54.286Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.kyoungah.com/categories/Front-end/</loc>
+        <lastmod>2019-05-14T14:00:54.286Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/categories/Etc/</loc>
+        <lastmod>2019-05-14T13:59:35.714Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/categories/Front-end/TypeScript/</loc>
         <lastmod>2019-05-13T17:31:43.869Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -45,13 +59,6 @@
     <url>
         <loc>http://dev.kyoungah.com/categories/Base/Operating-systems/</loc>
         <lastmod>2019-05-10T11:42:32.603Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/etc/</loc>
-        <lastmod>2019-04-25T15:05:12.628Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

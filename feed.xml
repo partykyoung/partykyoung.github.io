@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://dev.kyoungah.com/"/>
-  <updated>2019-05-13T17:31:43.869Z</updated>
+  <updated>2019-05-14T14:00:54.286Z</updated>
   <id>http://dev.kyoungah.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Next.js</title>
+    <link href="http://dev.kyoungah.com/2019/05/14/2019-05-14-nextjs-first/"/>
+    <id>http://dev.kyoungah.com/2019/05/14/2019-05-14-nextjs-first/</id>
+    <published>2019-05-14T12:27:26.000Z</published>
+    <updated>2019-05-14T14:00:54.286Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CSR"><a href="#CSR" class="headerlink" title="CSR"></a>CSR</h2><p>서버 측에서 HTML, JS, 리소스를 다운로드 한 후 브라우저에서 View를 렌더링하여 보여주는 방법.</p><ul><li>초기 로딩을 제외하면 서버에 view를 요청할 필요가 없으므로 화면 전환이 빠름.</li><li>초기 로딩속도 느림.</li><li>SEO 적용시 문제점이 있다.</li></ul><h2 id="SSR"><a href="#SSR" class="headerlink" title="SSR"></a>SSR</h2><p>서버 측에서 HTML &amp; View를 생성하여 응답하는 방법.</p><ul><li>초기 로딩 속도 빠름.</li><li>SEO 적용시에 어려움이 없다.</li><li>서버에 계속 view를 요청해야 하므로 서버 부담 큼.</li></ul><h3 id="검색엔진-최적화-SEO"><a href="#검색엔진-최적화-SEO" class="headerlink" title="검색엔진 최적화(SEO)"></a>검색엔진 최적화(SEO)</h3><p>웹 페이지 검색엔진이 자료를 수집하고 순위를 매기는 방식에 맞게 웹 페이지를 구성해서 검색 결과의 상위에 나올 수 있도록 하는 작업. 주로 meta tag를 이용해서 SEO 최적화 작업을 한다. </p><p>SSR 방식은 서버측에서 html에 콘텐츠를 채워 응답하기 떄문에 웹크롤러가 내용을 수집할 수 있으나 CSR 방식은 클라이언트에서 javaScript를 실행하여 view를 그리기 때문에 javaScript 실행 완료 전 까지 html의 콘텐츠는 비워져 있어서 웹 크롤러는 CSR 페이지를 빈 페이지로 인식하게 된다.</p><h2 id="Next-js"><a href="#Next-js" class="headerlink" title="Next.js"></a>Next.js</h2><p>React App의 SSR을 도와주는 프레임워크. </p><ul><li>서버 사이드 렌더링 기능 제공.</li><li>코드 스플릿 기능 제공.</li><li>간단한 클라이언트 사이드 라우팅 기능 제공.</li><li>HMR(Hot Module Replacement)을 지원하는 Webpack 기반의 개발 환경 제공.</li><li>Node.js HTTP 서버 구현 가능.</li><li>Babel, Webpack configuration 커스터마이징 기능 제공.</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://nextjs.org/learn/basics/getting-started" target="_blank" rel="noopener">Next.js - getting Started</a><br><a href="https://velog.io/@rjs1197/SSR%EA%B3%BC-CSR%EC%9D%98-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90" target="_blank" rel="noopener">SSR과 CSR의 차이를 알아보자</a><br><a href="https://goodgid.github.io/Server-Side-Rendering-and-Client-Side-Rendering/2" target="_blank" rel="noopener">서버 사이드 렌더링(SSR)과 클라이언트 사이드 렌더링(CSR)</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;CSR&quot;&gt;&lt;a href=&quot;#CSR&quot; class=&quot;headerlink&quot; title=&quot;CSR&quot;&gt;&lt;/a&gt;CSR&lt;/h2&gt;&lt;p&gt;서버 측에서 HTML, JS, 리소스를 다운로드 한 후 브라우저에서 View를 렌더링하여 보여주는 방법.&lt;/p&gt;
+&lt;ul
+      
+    
+    </summary>
+    
+      <category term="Front-end" scheme="http://dev.kyoungah.com/categories/Front-end/"/>
+    
+      <category term="Etc" scheme="http://dev.kyoungah.com/categories/Front-end/Etc/"/>
+    
+    
+      <category term="Next.js" scheme="http://dev.kyoungah.com/tags/Next-js/"/>
+    
+  </entry>
   
   <entry>
     <title>2019-05-13-typescript-compiler-option</title>
@@ -187,7 +215,7 @@
     <link href="http://dev.kyoungah.com/2019/04/25/2019-04-25-etc-development-env-setting/"/>
     <id>http://dev.kyoungah.com/2019/04/25/2019-04-25-etc-development-env-setting/</id>
     <published>2019-04-25T14:46:25.000Z</published>
-    <updated>2019-04-25T15:05:12.628Z</updated>
+    <updated>2019-05-14T13:59:29.040Z</updated>
     
     <content type="html"><![CDATA[<p>맥북을 포맷하면서 개발환경을 새로 세팅하다가 기록해놓으면 좋을 것 같아서 기록함.</p><h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><ol><li>Homebrew 설치<ul><li><a href="https://brew.sh/index_ko" target="_blank" rel="noopener">Homebrew</a></li><li>Mac 패키지 관리자는 Homebrew 사용 중.</li></ul></li></ol><ol start="2"><li>git 설치  <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure></li></ol><h2 id="Front-end"><a href="#Front-end" class="headerlink" title="Front-end"></a>Front-end</h2><p>개인 프로젝트 진행 시 Node.js + yarn 환경을 사용함.<br>개발툴은 vsocde 사용함.</p><ol><li><p>Node.js 설치 </p><ul><li><a href="https://nodejs.org/ko/" target="_blank" rel="noopener">Node.js</a></li><li>LTS 버전 사용 중.</li></ul></li><li><p>yarn 설치 </p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install yarn</span><br></pre></td></tr></table></figure><ul><li><a href="https://yarnpkg.com/en/" target="_blank" rel="noopener">yarn</a></li></ul></li><li><p>vscode 설치 </p><ul><li>공통 Extensions<ul><li>Atom One Dark Theme </li><li>Git History</li><li>Material IconTheme</li><li>Prettier </li></ul></li><li>JavaScript / React.js 관련 Extensions<ul><li>eslint</li><li>ES7 React/Redux/GraphQL/React-Native snippets</li></ul></li></ul></li></ol><h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><p>자료구조나 알고리즘 공부 시 c로 코드를 작성 중.</p><ol><li><p>gcc 설치</p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install gcc</span><br></pre></td></tr></table></figure></li><li><p>c로 작성 중인 프로젝트 폴더에 tasks.json 파일 작성.</p><figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"2.0.0"</span>,</span><br><span class="line">  <span class="hljs-attr">"tasks"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"shell"</span>,</span><br><span class="line">      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"gcc build active file"</span>,</span><br><span class="line">      <span class="hljs-attr">"command"</span>: <span class="hljs-string">"/usr/bin/gcc"</span>,</span><br><span class="line">      <span class="hljs-attr">"args"</span>: [</span><br><span class="line">        <span class="hljs-string">"-g"</span>,</span><br><span class="line">        <span class="hljs-string">"$&#123;file&#125;"</span>,</span><br><span class="line">        <span class="hljs-string">"-o"</span>,</span><br><span class="line">        <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;"</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="hljs-attr">"options"</span>: &#123;</span><br><span class="line">        <span class="hljs-attr">"cwd"</span>: <span class="hljs-string">"/usr/bin"</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="hljs-attr">"problemMatcher"</span>: [</span><br><span class="line">        <span class="hljs-string">"$gcc"</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="hljs-attr">"group"</span>: &#123;</span><br><span class="line">        <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"build"</span>,</span><br><span class="line">        <span class="hljs-attr">"isDefault"</span>: <span class="hljs-literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>c 관련 vscode Extenstions 설치 필요함.</p><ul><li>C/C++</li><li>Code Runner</li></ul></li></ol>]]></content>
     
@@ -202,7 +230,7 @@
     
     </summary>
     
-      <category term="etc" scheme="http://dev.kyoungah.com/categories/etc/"/>
+      <category term="Etc" scheme="http://dev.kyoungah.com/categories/Etc/"/>
     
     
       <category term="etc" scheme="http://dev.kyoungah.com/tags/etc/"/>
@@ -527,33 +555,6 @@
 &lt;ul&gt;
 &lt;li&gt;프로그램: 동작을 하지 않는 정적, 수동적 개체 &lt;/li&gt;
 &lt;li&gt;
-      
-    
-    </summary>
-    
-      <category term="Base" scheme="http://dev.kyoungah.com/categories/Base/"/>
-    
-      <category term="Operating systems" scheme="http://dev.kyoungah.com/categories/Base/Operating-systems/"/>
-    
-    
-      <category term="Operating systems" scheme="http://dev.kyoungah.com/tags/Operating-systems/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>운영체제의 유형</title>
-    <link href="http://dev.kyoungah.com/2019/03/16/2019-03-05-operating-systems-types/"/>
-    <id>http://dev.kyoungah.com/2019/03/16/2019-03-05-operating-systems-types/</id>
-    <published>2019-03-16T13:10:01.000Z</published>
-    <updated>2019-04-25T05:59:19.486Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="운영체제의-유형"><a href="#운영체제의-유형" class="headerlink" title="운영체제의 유형"></a>운영체제의 유형</h2><p>운영체제는 응답시간의 속도와 데이터 입력의 방식에 따라 일괄처리, 대화형, 실시간, 하이브리드 운영체제의 네 가지 유형으로 분류된다.</p><h3 id="일괄처리-batch-processing-운영체제"><a href="#일괄처리-batch-processing-운영체제" class="headerlink" title="일괄처리(batch processing) 운영체제"></a>일괄처리(batch processing) 운영체제</h3><ul><li>초창기 컴퓨터에서 사용되었던 유형으로 작업을 모아서 처리하는 방식.</li><li>사용자와 상호작용 없이 순차적으로 실행한다.</li><li>OMR카드, OCR카드를 입력장치로 이용.</li><li>효율성 평가는 처리량과 반환시간으로 함.<ul><li>처리량: 주어진 전체 시간 안에 처리된 작업의 수 </li><li>반환시간: 작업의 생성 시점부터 종료 시점 까지의 소요 시간</li></ul></li></ul><h3 id="대화형-interactive-운영체제"><a href="#대화형-interactive-운영체제" class="headerlink" title="대화형(interactive) 운영체제"></a>대화형(interactive) 운영체제</h3><ul><li>시분할 운영체제라고도 함.</li><li>시간 단위로 잘라서 다양한 요청들을 차례 차례 돌아가며 처리할 수 있도록 함.</li><li>이용자에게 즉각적인 피드백을 제공하고 응답시간은 사용 중인 이용자의 수에 따라 수 분 또는 수초 안에 처리됨.</li><li>일괄처리 운영체제 보다 빠르지만 실시간 운영체제보다는 느린 응답시간.<ul><li>응답시간: 요청한 시점부터 반응이 시작되는 시점까지의 소요시간.</li></ul></li></ul><h3 id="실시간-운영체제"><a href="#실시간-운영체제" class="headerlink" title="실시간 운영체제"></a>실시간 운영체제</h3><ul><li>모든 운영체제 중 응답시간이 가장 빠름.</li><li>처리의 결과가 현재의 결정에 영향을 주기 때문에 데이터의 처리가 극도로 빨라야 하는 환경에서 사용된다.<ul><li>ex) 우주선 비행 시스템, 미사일 제어, 증권거래 관리 시스템, 은행 입출금 시스템 등…</li></ul></li></ul><h3 id="하이브리드-운영체제"><a href="#하이브리드-운영체제" class="headerlink" title="하이브리드 운영체제"></a>하이브리드 운영체제</h3><ul><li>일괄처리 운영체제와 대화형 운영체제의 결합.</li><li>각 이용자가 터미널을 통해 접속하고 빠른 응답시간을 얻을 수 있기 때문에 대화형 운영체제.</li><li>대화형 작업량이 많지 않을 경우 운영체제는 실제로 백그라운드에서 배치 프로그램을 받아들이고 실행한다.</li><li>현재 사용되고 있는 대부분의 대형 컴퓨터 시스템은 하이브리드 운영체제.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;운영체제의-유형&quot;&gt;&lt;a href=&quot;#운영체제의-유형&quot; class=&quot;headerlink&quot; title=&quot;운영체제의 유형&quot;&gt;&lt;/a&gt;운영체제의 유형&lt;/h2&gt;&lt;p&gt;운영체제는 응답시간의 속도와 데이터 입력의 방식에 따라 일괄처리, 대화형, 실시간,
       
     
     </summary>
