@@ -152,6 +152,66 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (나에 대하여 457 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/05/14/2019-05-14-nextjs-setting/">create-react-app + TypeScript + Next.js</a>
+            
+        </h1>
+        <div class="content">
+            <p>TypeScript + create-react-app으로 생성된 프로젝트에 Next.js를 적용해보자.</p>
+<h2 id="모듈-설치"><a href="#모듈-설치" class="headerlink" title="모듈 설치"></a>모듈 설치</h2><p>next와 next-typescript 설치한다. next-typeScript는 next에서 TypeScript를 쓸 수 있게 도와주는 플러그인이다.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add next @types/next </span><br><span class="line">yarn add @zeit/next-typescript</span><br></pre></td></tr></table></figure></p>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>package.json에 next를 실행시키는 명령어를 적어준다.</p>
+<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "scripts": &#123;</span><br><span class="line">    "dev": "next",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;,</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="next-config-js"><a href="#next-config-js" class="headerlink" title="next.config.js"></a>next.config.js</h2><p>root 폴더에 next.config.js 파일을 생성한 후 next-typescript를 적용해준다. next에 플러그인을 적용하거나 webpack 커스터마이징을 할 때 이 파일에서 작업하면 된다. </p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> withTypescript = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@zeit/next-typescript'</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">module</span>.exports = withTypescript();</span><br></pre></td></tr></table></figure>
+<h2 id="babelrc-또는-package-json"><a href="#babelrc-또는-package-json" class="headerlink" title=".babelrc 또는 package.json"></a>.babelrc 또는 package.json</h2><p>.babelrc 파일을 생성해 아래와 같은 내용을 추가해준다. create-react-app으로 생성한 프로젝트는 babelrc 설정이 package.json안에 들어가 있기 때문에 따로 babelrc 파일을 생성할 필요가 없다.</p>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"presets"</span>: [</span><br><span class="line">    <span class="hljs-string">"next/babel"</span>,</span><br><span class="line">    <span class="hljs-string">"@zeit/next-typescript/babel"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="tsconfig-json"><a href="#tsconfig-json" class="headerlink" title="tsconfig.json"></a>tsconfig.json</h2><p>아래와 같이 typeScript 설정 파일을 생성해준다. </p>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"compilerOptions"</span>: &#123;</span><br><span class="line">    <span class="hljs-attr">"allowJs"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"allowSyntheticDefaultImports"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"jsx"</span>: <span class="hljs-string">"preserve"</span>,</span><br><span class="line">    <span class="hljs-attr">"lib"</span>: [<span class="hljs-string">"dom"</span>, <span class="hljs-string">"es2017"</span>],</span><br><span class="line">    <span class="hljs-attr">"module"</span>: <span class="hljs-string">"esnext"</span>,</span><br><span class="line">    <span class="hljs-attr">"moduleResolution"</span>: <span class="hljs-string">"node"</span>,</span><br><span class="line">    <span class="hljs-attr">"noEmit"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"noUnusedLocals"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"noUnusedParameters"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"preserveConstEnums"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"removeComments"</span>: <span class="hljs-literal">false</span>,</span><br><span class="line">    <span class="hljs-attr">"skipLibCheck"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"sourceMap"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"strict"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">    <span class="hljs-attr">"target"</span>: <span class="hljs-string">"esnext"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="pages-index-js"><a href="#pages-index-js" class="headerlink" title="pages/index.js"></a>pages/index.js</h2><p>첫 페이지를 만들어준다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">const</span> Index:React.StatelessComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Index Page<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Index;</span><br></pre></td></tr></table></figure>
+<p>nextjs를 사용하려면 pages폴더가 무조건 있어야 한다. 이 pages안에 라우팅 url과 동일한 이름의 컴포넌트를 생성해야 한다. pages 컴포넌트가 next 라우팅과 동일하게 mapping 되기 때문에 이 규칙은 반드시 지켜야한다. </p>
+<h2 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h2><p>아래의 명령어로 실행하면 방금 작성한 첫 페이지가 뜨는게 보일 것이다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-typescript" target="_blank" rel="noopener">zeit/next-plugins</a><br><a href="https://blueshw.github.io/2018/04/15/why-nextjs/" target="_blank" rel="noopener">[nextjs] nextjs는 어떻게 동작하는가?</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-05-14T12:27:26.000Z">2019-05-14</time>
                 
                 <div class="level-item">
@@ -257,7 +317,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        49
+                        50
                     </p>
                 </div>
             </div>
@@ -441,7 +501,7 @@
                 <span class="level-item">Front-end</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">16</span>
+                <span class="level-item tag">17</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Front-end/Css/">
@@ -457,7 +517,7 @@
                 <span class="level-item">Etc</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Front-end/React-js/">
@@ -495,7 +555,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 10px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 12px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -509,6 +569,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -562,19 +635,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -593,7 +653,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -787,7 +847,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Next-js/">
                         <span class="tag">Next.js</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -860,6 +920,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T12:27:26.000Z">2019-05-14</time></div>
                     <a href="/2019/05/14/2019-05-14-nextjs-first/" class="has-link-black-ter is-size-6">Next.js</a>
                     <p class="is-size-7 is-uppercase">
@@ -908,19 +981,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -939,7 +999,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -1133,7 +1193,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Next-js/">
                         <span class="tag">Next.js</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 

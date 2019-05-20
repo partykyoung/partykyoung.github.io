@@ -139,6 +139,126 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-21T09:26:49.000Z">2019-04-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14분 읽기 (나에 대하여 2142 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/04/21/2019-04-21-compouter-security-secret-code/">암호의 개념</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="암호의-정의"><a href="#암호의-정의" class="headerlink" title="암호의 정의"></a>암호의 정의</h2><ul>
+<li><strong>암호</strong>: 두 사람이 안전하지 않은 채녈을 통하여 정보를 주고받더라도 제3자는 이 정보의 내용을 알 수 없도록 하는 것.<ul>
+<li>안전하지 않은 채널: 이 채널을 통해 지나다니는 메시지를 누구든지 볼 수 있다는 의미.</li>
+</ul>
+</li>
+<li><strong>암호문</strong>: 제3자가 보더라도 그 내용을 알 수 없도록 변환된 메시지.</li>
+<li><strong>평문</strong>: 변환되기 전인 원래의 메시지.</li>
+<li><strong>암호화</strong>: 평문을 암호문으로 변환하는 것.</li>
+<li><strong>복호화</strong>: 암호문을 다시 평문으로 변환하는 것.</li>
+</ul>
+<p>결국 암호는 송신자와 수신자가 서로 약속한 방식을 이용하여 송신자는 평문을 암호화하여 암호문을 만들어 보내고 수신자는 암호문을 복호화하여 평문을 만듦으로써 서로 정보를 주고 받는 것. 여기서 약속한 방식이란 특정한 암호 알고리즘 및 특정한 키를 의미한다. 키는 암호화와 복호화를 위한 가장 중요한 열쇠로 제 3자에게 알려져서는 안된다. </p>
+<p>암호는 정보보호 핵심 목표 중 기밀성을 보장하기 위한 필수적인 기술이다.</p>
+<h2 id="암호의-역사"><a href="#암호의-역사" class="headerlink" title="암호의 역사"></a>암호의 역사</h2><p>처음에는 암호를 주로 군사와 정치적인 목적으로 사용했다.<br>최근에는 일상생활과도 깊게 관계를 맺고 있으며, 인터넷뱅킹에 사용되는 인증서, 보안 키패드, 소프트웨어의 시리얼 키뿐만 아니라 전자투표 등에서 점차 널리 쓰이고 있다.</p>
+<p>컴퓨터와 통신이 결합함에 따라 불법 사용자의 봉쇄 또는 데이터의 위조 및 변조를 막는 수단으로도 이용되고 있다.</p>
+<h3 id="고대-암호"><a href="#고대-암호" class="headerlink" title="고대 암호"></a>고대 암호</h3><p>최초의 암호는 기원전 480년에 스파르타에서 추방되어 페르시아에 살던 데마라토스가 페르시아의 침략계획 소식을 나무판에 조각하여 적은 후 밀랍을 발라 스파르타에 보낸 것.</p>
+<ul>
+<li><strong>스테가노그래피</strong>: 실제로 전달하고자 하는 정보 자체를 숨기는 것.</li>
+<li>어떤 스테가노그래피 방식이 사용되었는지 알면 제 3자가 비교적 쉽게 숨겨진 정보를 찾을 수 있기 때문에 엄밀히 말하면 최초의 암호라고 하기는 힘듦.</li>
+</ul>
+<h4 id="전치법"><a href="#전치법" class="headerlink" title="전치법"></a>전치법</h4><ul>
+<li>평문에 있는 문자들의 순서를 바꿈으로써 암호화 하는 기법.</li>
+<li>암호화를 하는 쪽과 복호화를 하는 쪽이 미리 정해놓은 문자 배열규칙에 따라 암호화와 복호화를 수행하는 방식.</li>
+<li>암호문에 사용되는 문자들은 평문에서 사용된 문자들이 그대로 이용되며 단지 위치만 바뀐다.</li>
+</ul>
+<p>ex)<br><img src="/images/base/compouter-security-secret-code-1.png" alt="스파르타의 봉 암호 (출처: 위키백과)"><br>컴퓨터보안재미있는과목입니다~! -&gt; 컴안는니퓨재과다터미목~보있입!</p>
+<h4 id="치환법"><a href="#치환법" class="headerlink" title="치환법"></a>치환법</h4><p><img src="/images/base/compouter-security-secret-code-2.png" alt="치환법 (출처: 위키백과)"></p>
+<ul>
+<li>평문의 문자들을 다른 문자로 치환함으로써 암호화 하는 기법.</li>
+<li>암호화를 하는 쪽과 복호화를 하는 쪽이 미리 정해 놓은 문자 치환규칙에 따라 암호화와 복호화를 수행하는 방식.</li>
+<li>암호문에 사용되는 문자들은 평문에서 사용된 문자들과 달라지지만 대응되는 각 문자의 위치는 바뀌지 않는다.</li>
+</ul>
+<h4 id="시저암호"><a href="#시저암호" class="headerlink" title="시저암호"></a>시저암호</h4><p><img src="/images/base/compouter-security-secret-code-3.png" alt="시저암호 (출처: 위키백과)"></p>
+<ul>
+<li>알파벳 26글자를 알파벳 순서로 세 자씩 오른쪽으로 이동시킨 뒤, 해당되는 글자로 치환하여 암호화를 함.</li>
+</ul>
+<h4 id="시프트-암호"><a href="#시프트-암호" class="headerlink" title="시프트 암호"></a>시프트 암호</h4><ul>
+<li>각 문자를 알파벳 순서로 k번째 뒤 문자로 치환하는 방법.</li>
+<li>k는 0부터 25가지의 정수 중 하나가 됨. 암호화와 복호화를 하는 두 사람이 미리 k값을 약속해야 하며 이 k 값이 바로 키가 됨.</li>
+</ul>
+<h3 id="근대-암호"><a href="#근대-암호" class="headerlink" title="근대 암호"></a>근대 암호</h3><ul>
+<li>16세기: 프랑스 외교관 비즈네르가 시프트 암호를 개선하여 새로운 비즈네르 암호라는 치환법을 고안함. 비즈네르 암호는 여러 개의 정수값을 키로 이용함.</li>
+<li>20세기: 플레이페어 암호, 힐 암호 등 다양한 암호 방식이 등장함. 20세기 들어서는 통신기술의 발전과 기계식 계산기에 대한 연구를 바탕으로 두 차례의 세계 대전을 통해 암호 설계와 해독에 대한 필요성이 높아지면서 암호에 대한 연구가 더욱 활발하게 진행됨.</li>
+<li>1949년: 섀년이 일회성 암호체계가 안전함을 증명했고 암호체계 설계의 두 가지 기본원칙인 혼돈과 확산 이론을 제시함.<ul>
+<li>혼돈은 평문과 암호문사이의 상관관계를 숨김.</li>
+<li>확산은 평문의 통계적 성격을 암호문 전반에 확산시켜 숨기는 역할을 함.</li>
+</ul>
+</li>
+</ul>
+<h3 id="현대-암호"><a href="#현대-암호" class="headerlink" title="현대 암호"></a>현대 암호</h3><p>10970년대에 표준 암호 알고리즘과 공개 키 알고리즘의 등장으로 큰 변화가 일어남. </p>
+<h3 id="표준-암호-알고리즘의-등장"><a href="#표준-암호-알고리즘의-등장" class="headerlink" title="표준 암호 알고리즘의 등장."></a>표준 암호 알고리즘의 등장.</h3><p>컴퓨터가 점차 발전하면서 데이터 보호에 대한 필요성도 증가하여 미국 NBS는 1977년 표준 암호 알고리즘으로 DES를 공표함.<br>DES는 대표적인 대칭키 알고리즘으로 2001년 새로운 표준 알고리즘인 AES가 공표될 떄까지 널리 이용됨.</p>
+<h3 id="공개-키-알고리즘의-등장"><a href="#공개-키-알고리즘의-등장" class="headerlink" title="공개 키 알고리즘의 등장"></a>공개 키 알고리즘의 등장</h3><p>1076년 디피와 헬먼이 공개키 암호의 개념을 제시함.<br>공개키 암호는 암호화와 복호화에 다른 키를 사용함. 이 개념을 이용하여 1978년 리베스트, 샤미르, 애들먼은 소인수분해 문제에 기반을 둔 RSA 공개키 알고리즘을 개발함.</p>
+<h2 id="대칭키"><a href="#대칭키" class="headerlink" title="대칭키"></a>대칭키</h2><ul>
+<li>암호화와 복호화에 같은 키 하나를 사용하는 암호 방식.<ul>
+<li>대칭키 암호는 평문을 암호화할 때 키 K를 이용하여 암호문을 만들었으면 나중에 복호화 할 때도 동일한 키 K를 이용해야만 원래의 평문을 만들 수 있다.</li>
+<li><strong>비밀키</strong>: 대칭키 암호에서 사용하는 키.</li>
+</ul>
+</li>
+<li>암호와와 복호와 속도가 빠르다.</li>
+<li>비밀키를 제 3자에게 노출하지 않으면서 송신자와 수신자가 나누어 가지기 어렵다.</li>
+<li><strong>블록 암호</strong>: 암호문을 만들기 위해 평문을 고정된 크기의 블록으로 나누어서 각 블록마다 암호화 과정을 수행하여 블록단위로 암호문을 얻는 대칭키 암호 방식.</li>
+<li><strong>스트림 암호</strong>: 평문과 같은 길이의 키 스트림을 생성하여 평문과 키를 비트 단위로 XOR하여 암호문을 얻는 대칭키 암호 방식.</li>
+<li>DES, AES, IDEA, SEED, CRYPTON, RC5, FEAL, MISTY, Skipjack, RC4 등의 대칭키 암호 알고리즘 들이 있다.</li>
+</ul>
+<h2 id="공개키"><a href="#공개키" class="headerlink" title="공개키"></a>공개키</h2><ul>
+<li>암호화와 복호화에 두 개의 서로 다른 키를 사용하는 암호 방식.</li>
+<li>공개키 암호는 평문을 암호화 할 때 K1을 이용하여 암호문을 만들면 나중에 복호화 할 때는 다른 키 K2를 이용해야만 원래의 평문을 만들 수 있다.</li>
+<li><strong>공개키</strong>: 공개되어 있어서 누구나 공개키를 이용하여 암호화 할 수 있다.</li>
+<li><strong>개인키</strong>: 아무에게도 공개하지 않고 자신만 알고 있어야 하며 오직 자신만 개인키를 이용하여 복호화 할 수 있다. </li>
+<li>키관리가 쉽고 키 분배 문제도 해결하였다.</li>
+<li>대칭키 암호에 비해 속도가 느리다.<ul>
+<li>데이터를 암호화 할 때는 대칭키 암호방식을 많이 쓰며 이때 필요한 대칭키 암호의 비밀키를 교환할 때는 공개키 암호 방식을 쓴다.</li>
+</ul>
+</li>
+<li>RSA 암호 알고리즘, EIGamal 암호 알고리즘, Rabin 암호 알고리즘, NTRU 암호 알고리즘 등의 공개키 암호 알고리즘 들이 있다.</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920020759&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 컴퓨터 보안 2강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-04-07T10:15:27.000Z">2019-04-07</time>
                 
                 <div class="level-item">
@@ -868,94 +988,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-16T13:34:05.000Z">2019-03-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6분 읽기 (나에 대하여 948 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/16/2019-03-06-operating-systems-process/">프로세스</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="프로세스"><a href="#프로세스" class="headerlink" title="프로세스"></a>프로세스</h2><p>실행 중인 프로그램.</p>
-<ul>
-<li>프로그램: 동작을 하지 않는 정적, 수동적 개체 </li>
-<li>프로세스: 동작을 하는 능동적 개체</li>
-</ul>
-<p>프로세스의 동작은 CPU가 그 프로세스의 명령들을 실행하는 것이다. </p>
-<ul>
-<li>자원: CPU, 메모리, 입출력장치, 파일 등</li>
-<li>동작: CPU가 프로세스의 명령을 실행</li>
-</ul>
-<p>운영체제는 실행할 준비가 된 프로세스들이 적절히 CPU를 배정받아 효율적으로 작업을 처리할 수 있도록 관리해야 한다. </p>
-<h2 id="프로세스-간의-관계"><a href="#프로세스-간의-관계" class="headerlink" title="프로세스 간의 관계"></a>프로세스 간의 관계</h2><h3 id="독립적-프로세스"><a href="#독립적-프로세스" class="headerlink" title="독립적 프로세스"></a>독립적 프로세스</h3><p>시스템에서 실행 중인 다른 프로세스의 영향을 받지도 않고 주지도 않는 프로세스.</p>
-<ul>
-<li>프로세스의 상태는 다른 프로세스와 공유되지 않는다.</li>
-<li>프로세스의 실행결과는 입력상태에 의해서만 결정되기 때문에 결정적이다.</li>
-<li>프로세스의 실행결과는 같은 입력에 대하여 항상 동일하기 때문에 재생 가능하다.</li>
-<li>프로세스의 실행은 타 프로세스와 무관하게 중단되거나 재시작될 수 있다.</li>
-</ul>
-<h3 id="유기적-프로세스"><a href="#유기적-프로세스" class="headerlink" title="유기적 프로세스"></a>유기적 프로세스</h3><p>시스템에서 실행 중인 다른 프로세스의 영향을 주고받으며 동작하는 프로세스.</p>
-<ul>
-<li>프로세스의 상태는 다른 프로세스와 공유된다.</li>
-<li>프로세스의 실행결과는 실행순서에 좌우되기 때문에 미리 예측될 수 없으므로 비결정적이다.</li>
-<li>프로세스의 실행결과는 동일한 입력에 대하여 항상 동일하지는 않기 때문에 재생 불가능 이다. </li>
-</ul>
-<h2 id="프로세스-관리자"><a href="#프로세스-관리자" class="headerlink" title="프로세스 관리자"></a>프로세스 관리자</h2><ul>
-<li>프로세스를 생성 및 삭제함.</li>
-<li>프로세스 실행(CPU 할당)을 위한 스케줄 결정.</li>
-<li>프로세스의 상태를 관리하며 상태 전이를 처리.</li>
-</ul>
-<h2 id="프로세스의-상태-변화"><a href="#프로세스의-상태-변화" class="headerlink" title="프로세스의 상태 변화"></a>프로세스의 상태 변화</h2><p>시스템에서 프로세스가 처리될 때 프로세스는 생성, 준비, 실행, 대기, 종료의 다섯 가지 중 하나의 상태에 있게 된다.</p>
-<p><img src="/images/base/operating-systems-process-1.png" alt="프로세스의 상태 변화"></p>
-<h3 id="생성"><a href="#생성" class="headerlink" title="생성"></a>생성</h3><p>처음 작업이 시스템에 주어진 상태. 프로세스가 생성되는 중이다.</p>
-<h3 id="생성-gt-준비"><a href="#생성-gt-준비" class="headerlink" title="생성 -&gt; 준비"></a>생성 -&gt; 준비</h3><p>미리 정의된 정책에 따라 스케줄러에 의해 호출되는데 이때 다양한 자원들이 어떻게 필요한지 파악하는 작업을 함.</p>
-<h3 id="준비"><a href="#준비" class="headerlink" title="준비"></a>준비</h3><p>실행 준비가 되어 CPU 할당을 기다리는 상태. </p>
-<ul>
-<li>필요한 자원들은 다 할당받은 후 CPU 할당만 기다리고 있음.</li>
-</ul>
-<h3 id="준비-gt-실행"><a href="#준비-gt-실행" class="headerlink" title="준비 -&gt; 실행"></a>준비 -&gt; 실행</h3><p>사전에 정의된 알고리즘ㅁ에 따라 스케줄러에 의해 프로세스가 처리 된다. 이 과정을 <strong>디스패치</strong> 라고 한다. </p>
-<h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><p>프로세스가 CPU를 할당 받아 작업을 처리하고 있는 상태이다.</p>
-<h3 id="대기"><a href="#대기" class="headerlink" title="대기"></a>대기</h3><p>I/O 작업 같은 이벤트를 처리하기 위해 프로세스의 작업이 보류되는 상태이다.</p>
-<h3 id="실행-gt-준비"><a href="#실행-gt-준비" class="headerlink" title="실행 -&gt; 준비"></a>실행 -&gt; 준비</h3><p>할당시간의 만료나 높은 우선순위의 프로세스가 오는 경우 스케줄러에 의해서 처리된다. </p>
-<h3 id="실행-gt-대기"><a href="#실행-gt-대기" class="headerlink" title="실행 -&gt; 대기"></a>실행 -&gt; 대기</h3><p>I/O 처리, 페이지 교환 같은 명령어 등에 의해 일어난다. 이러한 작업은 상대적으로 오랜 시간이 걸리기 때문에 그동안 CPU를 다른 프로세스에 할당하여 활용하기 위함이다. </p>
-<h3 id="종료"><a href="#종료" class="headerlink" title="종료"></a>종료</h3><p>프로세스의 실행이 종료되었다.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1024,7 +1056,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        49
+                        50
                     </p>
                 </div>
             </div>
@@ -1208,7 +1240,7 @@
                 <span class="level-item">Front-end</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">16</span>
+                <span class="level-item tag">17</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Front-end/Css/">
@@ -1224,7 +1256,7 @@
                 <span class="level-item">Etc</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Front-end/React-js/">
@@ -1262,7 +1294,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 10px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 12px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
     </div>
 </div>
 
@@ -1276,6 +1308,19 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1329,19 +1374,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1360,7 +1392,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -1554,7 +1586,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Next-js/">
                         <span class="tag">Next.js</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1627,6 +1659,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T12:27:26.000Z">2019-05-14</time></div>
                     <a href="/2019/05/14/2019-05-14-nextjs-first/" class="has-link-black-ter is-size-6">Next.js</a>
                     <p class="is-size-7 is-uppercase">
@@ -1675,19 +1720,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T11:04:26.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-05-12-computer-security-authentication/" class="has-link-black-ter is-size-6">인증</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Computer-security/">Computer security</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1706,7 +1738,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -1900,7 +1932,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Next-js/">
                         <span class="tag">Next.js</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
