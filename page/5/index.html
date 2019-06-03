@@ -139,6 +139,64 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-10-24T02:28:25.000Z">2018-10-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/Css/">Css</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 읽기 (나에 대하여 898 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/10/24/2018-10-24-css-drawing-tutorial/">css drawing 튜토리얼 - 호무새 그리기</a>
+            
+        </h1>
+        <div class="content">
+            <p>요즘 css drawing 에 맛들려 시간날 때마다 조금씩 css drawing을 작업하다가 튜토리얼을 간단하게 작성해보기로 했다. </p>
+<p><img src="/images/frontend/css-drawing-tutorial-01.png" alt="출처: 치킨쿤 유튜브 썸네일"><br>위의 이미지는 호무새 방송시 구독 메시지와 같이 출력되는 이미지인데 튜토리얼용으로도 괜찮을것 같아서 캡쳐해왔다. css로 이 이미지를 한번 작업해보자. </p>
+<p><img src="/images/frontend/css-drawing-tutorial-02.png" alt><br>먼저 어떻게 영역을 나눠볼지 정해보자. </p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>호무새<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"./angry-heavy-rain.css"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heavy-rain"</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heavy-rain-eyes left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heavy-rain-eyes right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heavy-rain-mouse-line"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"heavy-rain-mouse"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>얼굴안에 눈, 부리가 있으니 얼굴이 될 div안에 눈, 부리 영역을 div로 잡아 넣어주었다. 이제 css를 작성해보자.</p>
+<h2 id="얼굴"><a href="#얼굴" class="headerlink" title="얼굴"></a>얼굴</h2><p><img src="/images/frontend/css-drawing-tutorial-03.png" alt="호무새 얼굴"><br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* 얼굴 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">position</span>: relative;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">380px</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">380px</span>;</span><br><span class="line">  <span class="hljs-attribute">margin</span>: <span class="hljs-number">70px</span> auto <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;</span><br><span class="line">  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#54bc89</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 머리 위의 꽁지들 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain</span><span class="hljs-selector-pseudo">:before</span>,</span><br><span class="line"><span class="hljs-selector-class">.heavy-rain</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;</span><br><span class="line">  <span class="hljs-attribute">display</span>: block;</span><br><span class="line">  <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> <span class="hljs-number">50%</span> / <span class="hljs-number">40%</span> <span class="hljs-number">40%</span> <span class="hljs-number">60%</span> <span class="hljs-number">60%</span>;</span><br><span class="line">  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#54bc89</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain</span><span class="hljs-selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;</span><br><span class="line">  <span class="hljs-attribute">right</span>: <span class="hljs-number">100px</span>;</span><br><span class="line">  <span class="hljs-attribute">top</span>: -<span class="hljs-number">50px</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(20deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">70px</span>;</span><br><span class="line">  <span class="hljs-attribute">right</span>: <span class="hljs-number">65px</span>;</span><br><span class="line">  <span class="hljs-attribute">top</span>: -<span class="hljs-number">10px</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(45deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>div 하나를 호무새 얼굴로 잡고 가상 선택자(before, after)로 호무새의 꽁지를 표현했다.<br>가상 선택자는 존재하지 않는 요소를 존재하는 것처럼 부여하여 문서의 특정 부분 선택이 가능하다.</p>
+<h2 id="호무새-눈"><a href="#호무새-눈" class="headerlink" title="호무새 눈"></a>호무새 눈</h2><p><img src="/images/frontend/css-drawing-tutorial-04.png" alt="호무새 눈"><br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* 눈 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;</span><br><span class="line">  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;</span><br><span class="line">  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;</span><br><span class="line">  <span class="hljs-attribute">border</span>: <span class="hljs-number">4px</span> solid <span class="hljs-number">#000000</span>;</span><br><span class="line">  <span class="hljs-attribute">top</span>: <span class="hljs-number">120px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-class">.left</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">left</span>: <span class="hljs-number">70px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-class">.right</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">right</span>: <span class="hljs-number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-pseudo">:before</span>,</span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;</span><br><span class="line">  <span class="hljs-attribute">display</span>: block;</span><br><span class="line">  <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 눈썹 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">35px</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">3px</span>;</span><br><span class="line">  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#000000</span>;</span><br><span class="line">  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100px</span>;</span><br><span class="line">  <span class="hljs-attribute">top</span>: -<span class="hljs-number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-class">.left</span><span class="hljs-selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">left</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(20deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-class">.right</span><span class="hljs-selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">right</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-20deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 눈동자 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-eyes</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffffff</span>;</span><br><span class="line">  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;</span><br><span class="line">  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">10px</span> <span class="hljs-number">10px</span> <span class="hljs-number">0px</span> <span class="hljs-number">13px</span> <span class="hljs-number">#000000</span>;</span><br><span class="line">  <span class="hljs-attribute">top</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>역시 가상선택자로 눈알을 표현했다. before는 눈썹, after로는 그림자를 사용하여 눈동자를 나타내었다. </p>
+<h2 id="호무새-부리"><a href="#호무새-부리" class="headerlink" title="호무새 부리"></a>호무새 부리</h2><p><img src="/images/frontend/css-drawing-tutorial-05.png" alt="호무새 부리"><br>호무새 부리<br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* 부리 테두리 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-mouse-line</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> solid transparent;</span><br><span class="line">  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">160px</span> solid <span class="hljs-number">#0d4645</span>;</span><br><span class="line">  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">151px</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>: -<span class="hljs-number">52px</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-3deg);</span><br><span class="line">  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-mouse-line</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;</span><br><span class="line">  <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">border</span>: <span class="hljs-number">30px</span> solid transparent;</span><br><span class="line">  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">30px</span> solid <span class="hljs-number">#0d4645</span>;</span><br><span class="line">  <span class="hljs-attribute">bottom</span>: -<span class="hljs-number">30px</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>: <span class="hljs-number">160px</span>;</span><br><span class="line">  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 부리 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-mouse</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">border</span>: <span class="hljs-number">25px</span> solid transparent;</span><br><span class="line">  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">140px</span> solid <span class="hljs-number">#105f59</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>: -<span class="hljs-number">28px</span>;</span><br><span class="line">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-3deg);</span><br><span class="line">  <span class="hljs-attribute">top</span>: <span class="hljs-number">174px</span>;</span><br><span class="line">  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-mouse</span><span class="hljs-selector-pseudo">:before</span>,</span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-mouse</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;</span><br><span class="line">  <span class="hljs-attribute">display</span>: block;</span><br><span class="line">  <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-mouse</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">border</span>: <span class="hljs-number">25px</span> solid transparent;</span><br><span class="line">  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">25px</span> solid <span class="hljs-number">#105f59</span>;</span><br><span class="line">  <span class="hljs-attribute">bottom</span>: -<span class="hljs-number">25px</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>: <span class="hljs-number">140px</span>;</span><br><span class="line">  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 호무새 부리 중앙선 */</span></span><br><span class="line"><span class="hljs-selector-class">.heavy-rain-mouse</span><span class="hljs-selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">161px</span>;</span><br><span class="line">  <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#0d4645</span>;</span><br><span class="line">  <span class="hljs-attribute">bottom</span>: -<span class="hljs-number">2px</span>;</span><br><span class="line">  <span class="hljs-attribute">left</span>: <span class="hljs-number">0px</span>;</span><br><span class="line">  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">7</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>좀 낡은 방법이지만 css로 삼각형을 만들 땐 div의 border의 두께를 두껍게 준 후 원하는 방향을 제외한 다른 방향들을 다 투명하게 만드는 방법을 쓴다.<br>원래는 비틀어진 마름모를 하나 만들어서 한번에 다 끝내고 싶었으나 지식이 짦아서 그냥 div와 가상선택자 after로 마름모를 만들었다. 마름모 두개를 만든 후 하나는 부리 테두리로 사용했다. </p>
+<p>부리까지 만들고 나면 호무새 완성! </p>
+<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>완성작을 보니 뿌듯하긴 하지만 최대한 html 요소를 적게 쓰고 싶었는데 부리에 div를 두개나 쓴게 마음에 안든다. 더 좋은 방법이 있는지 찾아봐야겠다 ㅠ. </p>
+<h2 id="코드-전체-보기"><a href="#코드-전체-보기" class="headerlink" title="코드 전체 보기"></a>코드 전체 보기</h2><iframe height="500" scrolling="no" title="angry heavy rain" src="//codepen.io/partykyoung/embed/zyBeYQ/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/partykyoung/pen/zyBeYQ/" target="_blank" rel="noopener">angry heavy rain</a> by partyKyoung (<a href="https://codepen.io/partykyoung" target="_blank" rel="noopener">@partykyoung</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-10-13T12:39:09.000Z">2018-10-13</time>
                 
                 <div class="level-item">
@@ -729,70 +787,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-10T16:03:37.000Z">2018-07-11</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/memo/">memo</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5분 읽기 (나에 대하여 737 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/07/11/2018-07-03-javascript-memo-ex-if/">javascript로 사진 똑바로 만들기</a>
-            
-        </h1>
-        <div class="content">
-            <p>회사에서 열심히 일을 하던 도중 이슈가 하나 생겼다. 폰으로 사진 파일을 업로드 하면 어떤 사진들은 이미지 방향이 자꾸 돌아가서 업로드 되는 것이었다.</p>
-<p><img src="/images/frontend/javascript-memo-exif-1.png" alt="이렇게 이미지 뷰어나 앨범에서 보면 제대로 출력되는 사진들이"><br><img src="/images/frontend/javascript-memo-exif-2.png" alt="이런식으로 이미지가 돌아가서 나온다"></p>
-<p>사실 좀 귀찮기도 하고 어떻게 고칠지 막막하기도 해서 그냥 냅두고 싶었지만 그러면 절대 안되기 때문에 우여곡절 어떻게든 방법을 찾아서 해결 했는데 그 과정을 공유해보고자 한다.</p>
-<h2 id="원인"><a href="#원인" class="headerlink" title="원인"></a>원인</h2><p>카메라로 사진을 찍으면 메타데이터로 exif 값이 저장된다. 이 exif 는 디지털 카메라에서 이용되는 이미지 파일 포맷인데 여기에 orientation 이라고 사진의 방향 값이 저장되어 있다.</p>
-<p><img src="/images/frontend/javascript-memo-exif-4.gif" alt="exif orientation"></p>
-<p><a href="https://github.com/exif-js/exif-js" target="_blank" rel="noopener">exif-js</a> 오픈소스를 사용하면 exif 데이터를 읽어올 수 있길래 한번 써보았다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getExif</span>(<span class="hljs-params">file</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> reader = <span class="hljs-keyword">new</span> FileReader();</span><br><span class="line">  <span class="hljs-keyword">const</span> imageViewer = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"imageViewer"</span>);</span><br><span class="line">  <span class="hljs-keyword">const</span> image = file.files[<span class="hljs-number">0</span>];</span><br><span class="line"></span><br><span class="line">  reader.onload = <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> &#123;</span><br><span class="line">    EXIF.getData(image, () =&gt; &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> tags = EXIF.getAllTags(image);</span><br><span class="line"></span><br><span class="line">      <span class="hljs-comment">// metadata 출력</span></span><br><span class="line">      <span class="hljs-built_in">console</span>.log(tags);</span><br><span class="line"></span><br><span class="line">      <span class="hljs-comment">// 이미지 미리보기</span></span><br><span class="line">      imageViewer.style.backgroundImage = <span class="hljs-string">`url(<span class="hljs-subst">$&#123;e.target.result&#125;</span>)`</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  reader.readAsDataURL(image);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/frontend/javascript-memo-exif-3.png" alt="확인해보면 orientation값이 6으로 되어있다."></p>
-<h2 id="해결-방법"><a href="#해결-방법" class="headerlink" title="해결 방법"></a>해결 방법</h2><p>대표님이 세가지 솔루션을 제시해주셨다.</p>
-<ol>
-<li>client 단에서 업로드시 orientation 값 기준으로 수정하여 서버에 업로드</li>
-<li>server 단에서 업로드 후 rotation 처리</li>
-<li>보여줄때 그때마다 rotation 처리해 주는 방식</li>
-</ol>
-<p>여기서 <a href="https://github.com/blueimp/JavaScript-Load-Image" target="_blank" rel="noopener">JavaScript-Load-Image</a> 오픈소스를 사용하면 첫번째 방법으로 해결이 될것 같아서 첫번째 방법으로 문제를 해결하기로 했다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fixRotationOfFile</span>(<span class="hljs-params">file</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> image = file.files[<span class="hljs-number">0</span>];</span><br><span class="line"></span><br><span class="line">  loadImage(</span><br><span class="line">    image,</span><br><span class="line">    img =&gt; &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> imageViewer = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"imageViewer"</span>);</span><br><span class="line"></span><br><span class="line">      imageViewer.appendChild(img);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="hljs-attr">maxWidth</span>: <span class="hljs-number">400</span>, <span class="hljs-attr">orientation</span>: <span class="hljs-literal">true</span> &#125;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/frontend/javascript-memo-exif-4.png" alt="정방향으로 출력되는 이미지"><br>이렇게 하면 이미지가 정뱡향으로 출력된다!</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> image = file.files[<span class="hljs-number">0</span>];</span><br><span class="line">  <span class="hljs-keyword">const</span> fileType = image.type;</span><br><span class="line"></span><br><span class="line">  loadImage(</span><br><span class="line">    file,</span><br><span class="line">    img =&gt; &#123;</span><br><span class="line">      <span class="hljs-keyword">if</span> (img.type === <span class="hljs-string">"error"</span>) &#123;</span><br><span class="line">        reject(img);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-comment">//</span></span><br><span class="line">      img.toBlob(<span class="hljs-function"><span class="hljs-params">blob</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> createdFile = <span class="hljs-keyword">new</span> File([blob], image.name);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 이미지 업로드 실행은 여기서</span></span><br><span class="line">      &#125;, fileType);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="hljs-attr">orientation</span>: <span class="hljs-literal">true</span> &#125;</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>위의 코드와 같은 식으로 정방향으로 출력된 blob 이미지를 file 로 바꾸어 이미지를 업로드 하는 식으로 해결했다.</p>
-<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>AWS S3 및 몇몇 서비스에서는 원본을 그대로 두고 이미지가 출력될 때마다 rotation 처리를 해주는 방식을 사용한 것 같던데 나중에 기회가 된다면 이미지가 출력될 때마다 rotation 처리를 해주는 방식 으로도 한번 해결해보고 싶다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -800,7 +794,7 @@
         <div class="pagination-previous">
             <a class="is-flex-grow has-text-black-ter" href="/page/4/">이전</a>
         </div>
-        <div class="pagination-next is-invisible is-hidden-mobile">
+        <div class="pagination-next">
             <a class="is-flex-grow has-text-black-ter" href="/page/6/">다음</a>
         </div>
         <ul class="pagination-list is-hidden-mobile">
@@ -812,6 +806,8 @@
             <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
             
             <li><a class="pagination-link is-current" href="/page/5/">5</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/6/">6</a></li>
             
         </ul>
     </nav>
@@ -859,7 +855,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        50
+                        51
                     </p>
                 </div>
             </div>
@@ -963,7 +959,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">27</span>
+                <span class="level-item tag">28</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -971,7 +967,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">8</span>
+                <span class="level-item tag">9</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -1097,7 +1093,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 12px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
     </div>
 </div>
 
@@ -1155,8 +1151,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1168,8 +1164,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1195,7 +1191,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1326,7 +1322,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">9</span>
                     </a>
                 </div>
                 
@@ -1501,8 +1497,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1514,8 +1510,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1541,7 +1537,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1672,7 +1668,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">9</span>
                     </a>
                 </div>
                 

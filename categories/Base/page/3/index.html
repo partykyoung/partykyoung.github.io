@@ -150,6 +150,64 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-10T17:03:57.000Z">2019-03-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 583 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/11/2019-03-11-algorithms-divide-and-conquer/">분할정복 방법</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="분할정복-방법"><a href="#분할정복-방법" class="headerlink" title="분할정복 방법"></a>분할정복 방법</h2><p>순환적으로 문제를 푸는 하향식 접근 방법.</p>
+<p>주어진 문제의 입력을 더 이상 나눌 수 없을 때까지 두 개 이상의 작은 문제들로 순환적으로 분할하고, 이렇게 분할된 작은 문제들을 각각 해결한 후 이들의 해를 결합하여 원래의 문제의 해를 구하는 방식.</p>
+<h2 id="분할정복-방법-처리-과정"><a href="#분할정복-방법-처리-과정" class="headerlink" title="분할정복 방법 처리 과정"></a>분할정복 방법 처리 과정</h2><h3 id="분할"><a href="#분할" class="headerlink" title="분할"></a>분할</h3><p>주어진 문제를 여러 개의 작은 문제로 분할한다.</p>
+<h3 id="정복"><a href="#정복" class="headerlink" title="정복"></a>정복</h3><p>작은 문제들을 순환적으로 분할한다. 만약 작은 문제가 더 이상 분할되지 않을 정도로 충분히 작다면 순환호출 없이 작은 문제의 해를 구한다. (정복)</p>
+<h3 id="결합"><a href="#결합" class="headerlink" title="결합"></a>결합</h3><p>작은 문제에 대해 정복된 해를 결합하여 원래 문제의 해를 구한다. </p>
+<h2 id="분할정복-방법의-특징"><a href="#분할정복-방법의-특징" class="headerlink" title="분할정복 방법의 특징"></a>분할정복 방법의 특징</h2><ul>
+<li>분할된 작은 문제는 원래의 문제에 비해 입력 크기만 작아졌을 뿐 문제 자체는 원래 문제와 동일하다.</li>
+<li>분할된 문제는 서로 독립적이기 때문에 각각의 작은 문제를 다시 순환적으로 분할하고 그 결과를 통합하는 것이 가능하다.</li>
+</ul>
+<h2 id="분할정복-방법을-적용한-알고리즘"><a href="#분할정복-방법을-적용한-알고리즘" class="headerlink" title="분할정복 방법을 적용한 알고리즘"></a>분할정복 방법을 적용한 알고리즘</h2><h3 id="이진-탐색"><a href="#이진-탐색" class="headerlink" title="이진 탐색"></a>이진 탐색</h3><p>  <img src="/images/base/algorithms-divide-and-conquer-1.png" alt="이진 탐색"><br>  크기가 n인 문제를 크기가 n/2인 두 개의 작은 문제로 분할한다. 그 중 하나의 작은 문제는 처리 대상에서 제외한다.</p>
+<h3 id="합병-정렬"><a href="#합병-정렬" class="headerlink" title="합병 정렬"></a>합병 정렬</h3><p><img src="/images/base/algorithms-divide-and-conquer-2.png" alt="합병 정렬"><br>  크기가 n인 문제를 크기가 n/2인 두 개의 작은 문제로 분할한다.</p>
+<h3 id="퀵-정렬"><a href="#퀵-정렬" class="headerlink" title="퀵 정렬"></a>퀵 정렬</h3><p><img src="/images/base/algorithms-divide-and-conquer-3.png" alt="퀵 정렬"><br>크기가 n인 문제를 쿠기는 감소하지만 일정하지 않은 크기의 두 개의 작은 문제로 분할한다.</p>
+<h3 id="선택-문제"><a href="#선택-문제" class="headerlink" title="선택 문제"></a>선택 문제</h3><p><img src="/images/base/algorithms-divide-and-conquer-4.png" alt="선택 문제"><br>크기가 n인 문제를 크기는 감소하지만 일정하지 않은 크기의 두 개의 작은 문제로 분할한다. 그중 하나의 작은 문제는 처리 대상에서 제외한다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-03-10T15:23:17.000Z">2019-03-11</time>
                 
                 <div class="level-item">
@@ -508,6 +566,70 @@
                 <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
                 
                 <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Data-Structure/">Data Structure</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8분 읽기 (나에 대하여 1228 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/09/16/2018-09-03-data-structure-first/">자료구조란 무엇인가</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="자료와-정보의-관계"><a href="#자료와-정보의-관계" class="headerlink" title="자료와 정보의 관계"></a>자료와 정보의 관계</h2><ul>
+<li><strong>자료</strong>: 현실 세계에서 관찰이나 측정을 통해서 수집된 값이나 사실. 우리의 생활에서 실제로 만질 수 있거나 볼 수 있거나 하는 것(길이, 무게, 부피 등을 측정할 수 있는 대상)에 대해서 물리적인 단위로 표현하여 얻어 낼 수 있는 내용.</li>
+<li><strong>정보</strong>: 어떤 상황에 대해서 적절한 의사결정을 할 수 있게 하는 지식으로서 자료의 유효한 해설이나 자료 상호간의 관계를 표현하는 내용. 어떠한 상황에 적절한 결정이나 판단에 사용될 수 있는 형태로 가공되거나 분류되기 위해 ‘처리 과정’을 거쳐서 정리되고 정돈된 ‘자료의 2차 처리 결과물’.</li>
+</ul>
+<p>I = P(D)<br>I: 정보<br>D: 자료<br>P: 처리</p>
+<p>자료와 정보를 쌀과 밥으로 예를 들면 농부가 쌀을 재배하고 식품회사에 팔면 식품회사에서 밥을 짓고 그 밥으로 즉석밥을 만들 듯이 자료도 수집 - 측정 - 관찰 등과 같은 과정으로 얻어진 후 가공하고 정리해서 정보로 만들어진다.</p>
+<p>컴퓨터가 나오기 전 자료를 가공하고 정리하는 일은 사람이 했는데 컴퓨터를 이용하여 자료를 정리하고 가공하게 되면서 자료의 규모가 커지고 정밀해졌다. </p>
+<h2 id="추상화"><a href="#추상화" class="headerlink" title="추상화"></a>추상화</h2><ul>
+<li><strong>추상화</strong>: 공통적인 개념을 이용하여 같은 종류의 다양한 객체를 정의하는 것.</li>
+</ul>
+<p>예를 들면 트럭, 버스, 승용차 등 모두 자동차라는 특성을 가지고 있다. 세부적으로 생각하면 다른점이 많지만 평소에 대화할 때 편하게 그냥 자동차라고 하듯이 추상화를 통해 말하는 사람의 의사를 간결하게 전달할 수 있게 된다.<br>자료의 추상화는 다양한 객체를 컴퓨터에서 표현하고 활용하기 위해 필요한 자료의 구조에 대해서 공통의 특징만 뽑아 정의한 것이다. 자료의 추상화에는 컴퓨터 내부에서 처리되는 이진수의 표현 방법이나 저장 위치 등은 표현되지 않는다. 단순하게 개발자의 머릿속에 그림을 그리는 일과 같은 것 이라고 생각하면 된다.</p>
+<h2 id="자료구조의-개념"><a href="#자료구조의-개념" class="headerlink" title="자료구조의 개념"></a>자료구조의 개념</h2><ul>
+<li><strong>자료구조</strong>: 전산학에서 자료를 효율적으로 이용할 수 있도록 컴퓨터에 저장하는 방법 (출처: 위키백과). 추상화를 통해 자료의 논리적 관계를 구조화 한 것.</li>
+</ul>
+<p>자료의 추상화와 구조화가 적절히 이루어지지 못하면 소프트웨어는 비효율적으로 수행되거나 소프트웨어의 확장성에 문제가 생길 수 있다. 따라서 자료가 복잡해지거나 소프트웨어가 복잡해질수로고 자료구조의 중요성이 강조되고 있다. </p>
+<p>어떤 일을 컴퓨터에 시키기 위해 필요한 명령문을 알고리즘이라고 한다면 알고리즘이 일을 하기 위해서 필요한 다양한 자료의 논리적 구조나 논리적 관계를 자료구조 라고 한다.<br>자료구조가 컴퓨터에 대한 입력값의 추상화된 상태라면 알고리즘은 컴퓨터가 수행해야 할 명령의 추상화다.</p>
+<p>I = P(D, A)</p>
+<p>개발자는 입력될 값을 머릿속에서 추상화된 형태(자료구조)로 구조화 하고, 수행되어야 할 명령어를 머릿속에서 추상화된 형태(알고리즘)으로 체계화 한 후 프로그래밍 언어로 자료구조와 알고리즘을 표현(구체화) 한다.</p>
+<p>자료구조의 형태는 프로그래밍 언어에서 제공되는 ‘미리 정의된 자료구조’와 개발자가 정의하여 사용하는 ‘사용자 정의 자료구조(스택, 큐, 트리, 그래프 등)’로 나누어 진다. 미리 정의된 자료구조는 정수, 실수, 문자와 같은 ‘기본 자료구조’와 배열, 구조체, 포인터 같은 ‘파생된 자료구조’로 나뉘어 진다.<br>미리 정의된 자료구조는 프로그래밍 언어 개발자가 프로그램 개발을 위해 미리 정의하지만 사용자 정의 자료구조는 프로그램 개발자가 자신의 프로그램 개발 방향에 따라 프로그래밍 언어로 새롭게 정의하여 사용한다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920025679&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 자료구조 1강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
+                
+                <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Computer-Architecture/">Computer Architecture</a>
                 </div>
                 
@@ -558,70 +680,6 @@
 <h3 id="슈퍼-컴퓨터"><a href="#슈퍼-컴퓨터" class="headerlink" title="슈퍼 컴퓨터"></a>슈퍼 컴퓨터</h3><p>슈퍼컴퓨터는 병렬처리가 가능한 복잡한 구조로 되어 있으며 복잡한 연산을 초고속으로 계산하기 위한 컴퓨텅이다. 이 컴퓨터는 아주 복잡한 과학 계산을 위한 것으로 연산속도가 무엇보다 중요하다. 환경, 에너지, 우주 및 항공, 지원탐사 등에 응용된다.</p>
 <h3 id="파이프라인-슈퍼컴퓨터"><a href="#파이프라인-슈퍼컴퓨터" class="headerlink" title="파이프라인 슈퍼컴퓨터"></a>파이프라인 슈퍼컴퓨터</h3><p>파이프라인 슈퍼컴퓨터는 1개의 중앙처리장치 내에 다수 개의 연산장치를 갖고 있는 컴퓨터로서 각 연산장치는 파이프라이닝 구조를 이용하여 고속의 벡터 계산이 가능하다.</p>
 <h3 id="대규모-병렬처리-컴퓨터"><a href="#대규모-병렬처리-컴퓨터" class="headerlink" title="대규모 병렬처리 컴퓨터"></a>대규모 병렬처리 컴퓨터</h3><p>대규모 병렬처리 컴퓨터는 하나의 시스템 내에 상호 연결된 수백 혹은 수천개 이상의 처리장치를 갖고 있으며 처리장치들이 하나의 큰 작업을 나누어서 병렬로 처리하는 구조를 갖는다.</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-16T09:21:40.000Z">2018-09-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Data-Structure/">Data Structure</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8분 읽기 (나에 대하여 1228 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/09/16/2018-09-03-data-structure-first/">자료구조란 무엇인가</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="자료와-정보의-관계"><a href="#자료와-정보의-관계" class="headerlink" title="자료와 정보의 관계"></a>자료와 정보의 관계</h2><ul>
-<li><strong>자료</strong>: 현실 세계에서 관찰이나 측정을 통해서 수집된 값이나 사실. 우리의 생활에서 실제로 만질 수 있거나 볼 수 있거나 하는 것(길이, 무게, 부피 등을 측정할 수 있는 대상)에 대해서 물리적인 단위로 표현하여 얻어 낼 수 있는 내용.</li>
-<li><strong>정보</strong>: 어떤 상황에 대해서 적절한 의사결정을 할 수 있게 하는 지식으로서 자료의 유효한 해설이나 자료 상호간의 관계를 표현하는 내용. 어떠한 상황에 적절한 결정이나 판단에 사용될 수 있는 형태로 가공되거나 분류되기 위해 ‘처리 과정’을 거쳐서 정리되고 정돈된 ‘자료의 2차 처리 결과물’.</li>
-</ul>
-<p>I = P(D)<br>I: 정보<br>D: 자료<br>P: 처리</p>
-<p>자료와 정보를 쌀과 밥으로 예를 들면 농부가 쌀을 재배하고 식품회사에 팔면 식품회사에서 밥을 짓고 그 밥으로 즉석밥을 만들 듯이 자료도 수집 - 측정 - 관찰 등과 같은 과정으로 얻어진 후 가공하고 정리해서 정보로 만들어진다.</p>
-<p>컴퓨터가 나오기 전 자료를 가공하고 정리하는 일은 사람이 했는데 컴퓨터를 이용하여 자료를 정리하고 가공하게 되면서 자료의 규모가 커지고 정밀해졌다. </p>
-<h2 id="추상화"><a href="#추상화" class="headerlink" title="추상화"></a>추상화</h2><ul>
-<li><strong>추상화</strong>: 공통적인 개념을 이용하여 같은 종류의 다양한 객체를 정의하는 것.</li>
-</ul>
-<p>예를 들면 트럭, 버스, 승용차 등 모두 자동차라는 특성을 가지고 있다. 세부적으로 생각하면 다른점이 많지만 평소에 대화할 때 편하게 그냥 자동차라고 하듯이 추상화를 통해 말하는 사람의 의사를 간결하게 전달할 수 있게 된다.<br>자료의 추상화는 다양한 객체를 컴퓨터에서 표현하고 활용하기 위해 필요한 자료의 구조에 대해서 공통의 특징만 뽑아 정의한 것이다. 자료의 추상화에는 컴퓨터 내부에서 처리되는 이진수의 표현 방법이나 저장 위치 등은 표현되지 않는다. 단순하게 개발자의 머릿속에 그림을 그리는 일과 같은 것 이라고 생각하면 된다.</p>
-<h2 id="자료구조의-개념"><a href="#자료구조의-개념" class="headerlink" title="자료구조의 개념"></a>자료구조의 개념</h2><ul>
-<li><strong>자료구조</strong>: 전산학에서 자료를 효율적으로 이용할 수 있도록 컴퓨터에 저장하는 방법 (출처: 위키백과). 추상화를 통해 자료의 논리적 관계를 구조화 한 것.</li>
-</ul>
-<p>자료의 추상화와 구조화가 적절히 이루어지지 못하면 소프트웨어는 비효율적으로 수행되거나 소프트웨어의 확장성에 문제가 생길 수 있다. 따라서 자료가 복잡해지거나 소프트웨어가 복잡해질수로고 자료구조의 중요성이 강조되고 있다. </p>
-<p>어떤 일을 컴퓨터에 시키기 위해 필요한 명령문을 알고리즘이라고 한다면 알고리즘이 일을 하기 위해서 필요한 다양한 자료의 논리적 구조나 논리적 관계를 자료구조 라고 한다.<br>자료구조가 컴퓨터에 대한 입력값의 추상화된 상태라면 알고리즘은 컴퓨터가 수행해야 할 명령의 추상화다.</p>
-<p>I = P(D, A)</p>
-<p>개발자는 입력될 값을 머릿속에서 추상화된 형태(자료구조)로 구조화 하고, 수행되어야 할 명령어를 머릿속에서 추상화된 형태(알고리즘)으로 체계화 한 후 프로그래밍 언어로 자료구조와 알고리즘을 표현(구체화) 한다.</p>
-<p>자료구조의 형태는 프로그래밍 언어에서 제공되는 ‘미리 정의된 자료구조’와 개발자가 정의하여 사용하는 ‘사용자 정의 자료구조(스택, 큐, 트리, 그래프 등)’로 나누어 진다. 미리 정의된 자료구조는 정수, 실수, 문자와 같은 ‘기본 자료구조’와 배열, 구조체, 포인터 같은 ‘파생된 자료구조’로 나뉘어 진다.<br>미리 정의된 자료구조는 프로그래밍 언어 개발자가 프로그램 개발을 위해 미리 정의하지만 사용자 정의 자료구조는 프로그램 개발자가 자신의 프로그램 개발 방향에 따라 프로그래밍 언어로 새롭게 정의하여 사용한다. </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920025679&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 자료구조 1강</a></p>
 
         </div>
         
@@ -701,7 +759,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        50
+                        51
                     </p>
                 </div>
             </div>
@@ -805,7 +863,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">27</span>
+                <span class="level-item tag">28</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -813,7 +871,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">8</span>
+                <span class="level-item tag">9</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -939,7 +997,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 12px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
     </div>
 </div>
 
@@ -997,8 +1055,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1010,8 +1068,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1037,7 +1095,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1168,7 +1226,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">9</span>
                     </a>
                 </div>
                 
@@ -1343,8 +1401,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1356,8 +1414,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1383,7 +1441,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1514,7 +1572,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">9</span>
                     </a>
                 </div>
                 

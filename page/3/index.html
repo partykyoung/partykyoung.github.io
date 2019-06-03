@@ -139,6 +139,73 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-16T18:03:57.000Z">2019-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (나에 대하여 710 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/17/2019-03-11-algorithms-binary-search/">이진 탐색</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="이진탐색"><a href="#이진탐색" class="headerlink" title="이진탐색"></a>이진탐색</h2><ul>
+<li><strong>탐색</strong>: 배열 형태로 주어진 데이터에서 원하는 값을 가진 데이터를 찾는 문제.</li>
+<li><strong>이진 탐색</strong>: 정렬된 상태의 데이텅에 대해 적용 가능한 효과적인 탐색 방법.</li>
+</ul>
+<h2 id="탐색-방법"><a href="#탐색-방법" class="headerlink" title="탐색 방법"></a>탐색 방법</h2><p>배열은 오름차순 정렬 되어 있다고 가정한다.</p>
+<p>###분할<br>배열의 가운데 원소를 기준으로 왼쪽 부분배열과 오른쪽 부분배열로 분할한다. 탐색키 x가 가운데 원소와 같으면 가운데 원소에 해당하는 배열의 인덱스를 반환하고 종료한다.</p>
+<p>###정복<br>x가 가운데 원소보다 작으면 왼쪽 부분배열을 대상으로 이진 탐색을 순환호출 하고, 크면 오른쪽 부분배열을 대상으로 이진 탐색을 순환호출한다. 탐색을 다시 수행할 때마다 탐색 범위가 절반으로 줄어든다.</p>
+<h3 id="결합"><a href="#결합" class="headerlink" title="결합."></a>결합.</h3><p>부분배열에 대해서 이진 탐색의 결과가 직접 반환되므로 결과를 결합할 필요가 없다. </p>
+<p><img src="/images/base/algorithms-binary-search-1.png" alt="이진 탐색 분할"></p>
+<h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><h3 id="재귀함수"><a href="#재귀함수" class="headerlink" title="재귀함수"></a>재귀함수</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex, <span class="hljs-keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-comment">// 탐색 실패</span></span><br><span class="line">  <span class="hljs-keyword">if</span> (leftIndex &gt; rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (x == arr[mid]) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> mid;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (x &lt; arr[mid]) &#123;</span><br><span class="line">    <span class="hljs-comment">// 왼족 배열 탐색</span></span><br><span class="line">    <span class="hljs-keyword">return</span> binarySearch(arr, leftIndex, mid - <span class="hljs-number">1</span>, x);</span><br><span class="line">  &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">    <span class="hljs-comment">// 오른쪽 배열 탐색</span></span><br><span class="line">    <span class="hljs-keyword">return</span> binarySearch(arr, mid + <span class="hljs-number">1</span>, rightIndex, x);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="반복함수"><a href="#반복함수" class="headerlink" title="반복함수"></a>반복함수</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">binarySearch_Iteration</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> leftIndex = <span class="hljs-number">0</span>, rightIndex = index - <span class="hljs-number">1</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="hljs-keyword">while</span>(leftIndex &lt;= rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (x == arr[mid]) &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (x &lt; arr[mid]) &#123;</span><br><span class="line">      <span class="hljs-comment">// 왼쪽 부분배열 탐색</span></span><br><span class="line">      rightIndex = mid - <span class="hljs-number">1</span>;</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">      <span class="hljs-comment">// 오른쪽 부분배열 탐색</span></span><br><span class="line">      leftIndex = mid + <span class="hljs-number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 탐색키가 존재하지 않을 경우</span></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>이진 탐색에서는 분할 될 때마다 입력 크기가 절반으로 감소 하며, 탐색 대상의 개수가 1이 되면 더는 분할이 수행되지 않고 탐색 성공 여부가 결정된다.</p>
+<h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>T(n) = 입력 크기 n에 대한 탐색 과정에서의 모든 비교 횟수의 합 = 맨 바깥 수준에서의 비교 횟수 + 순환 호출에서의 비교 횟수.</p>
+<p>맨 바깥 수준에서의 비교 횟수는 상수이므로 1.<br>순환 호출에서의 비교 횟수는 비교 할 때마다 절반 씩 데이터를 나누므로 $\frac{n}{2}$.</p>
+<p>T(n) = T($\frac{n}{2}$) + O(1)(n &gt; 1), T(1) = 1;<br>T(n) = O($logn$)</p>
+<h2 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h2><ul>
+<li>입력이 정렬된 리스트에 대해서만 적용이 가능하다.</li>
+<li>데이터의 삽입/삭제 연산을 수행하면 데이터의 이동이 발생한다.<ul>
+<li>평균 $\frac{2}{n}$개의 데이터 이동이 발생하므로 삽입/삭제가 빈번한 응용에는 부적합하다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-03-16T13:34:05.000Z">2019-03-16</time>
                 
                 <div class="level-item">
@@ -820,95 +887,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-14T10:30:34.000Z">2019-02-14</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    12분 읽기 (나에 대하여 1775 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/02/14/2019-02-11-typescript-react-test/">TypeScript로 생성한 React 프로젝트에서 테스트 환경 구축 및 테스트 실행하기</a>
-            
-        </h1>
-        <div class="content">
-            <p>개인 프로젝트를 작업 하고 있던 도중 테스트 환경을 도입해보고 싶어서 열심히 끄적이다가 기록을 남기기로 했다.<br>TypeScript로 생성된 React 프로젝트에 테스트 환경 을 구축 해보고 테스트 까지 한번 해보자. </p>
-<p>해당 프로젝트는 create-react-app 으로 생성되었다. </p>
-<h2 id="테스트-환경-설정"><a href="#테스트-환경-설정" class="headerlink" title="테스트 환경 설정"></a>테스트 환경 설정</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add --dev jest @types/jest</span><br><span class="line">yarn add --dev enzyme enzyme-adapter-react-16</span><br><span class="line">yarn add --dev @types/enzyme @types/enzyme-adapter-react-16</span><br></pre></td></tr></table></figure>
-<p>먼저 테스트에 필요한 모듈들을 설치해주자. TypeScript 환경이기 때문에 각 모듈들의 @types도 설치해줘야 한다. </p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add --dev enzyme-to-json @types/enzyme-to-json</span><br></pre></td></tr></table></figure>
-<p>스냅샷의 가독성을 위해 enzyme-to-json 모듈도 설치하였다. </p>
-<h3 id="setupTest-ts"><a href="#setupTest-ts" class="headerlink" title="setupTest.ts"></a>setupTest.ts</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Enzyme <span class="hljs-keyword">from</span> <span class="hljs-string">"enzyme"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> ReactSixteenAdapter <span class="hljs-keyword">from</span> <span class="hljs-string">"enzyme-adapter-react-16"</span>;</span><br><span class="line"></span><br><span class="line">Enzyme.configure(&#123; <span class="hljs-attr">adapter</span>: <span class="hljs-keyword">new</span> ReactSixteenAdapter() &#125;);</span><br></pre></td></tr></table></figure>
-<p>CRA로 만든 프로젝트라면 위의 소스 파일 처럼 테스트 설정을 해줘야 한다.<br>테스트 파일 작성 중 계속 오류가 발생하길래 리서치를 하던 도중 <a href="https://github.com/Microsoft/TypeScript-React-Starter/issues/76#issuecomment-340544510" target="_blank" rel="noopener">여기에서</a> 제시했던 대로 파일을 작성하니 정상 작동 되었다. </p>
-<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">// ... 생략</span><br><span class="line">"jest": &#123;</span><br><span class="line">    // ... 생략</span><br><span class="line">    "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/test/setupTest.ts",</span><br><span class="line">    "snapshotSerializers": [</span><br><span class="line">      <span class="hljs-string">"enzyme-to-json/serializer"</span></span><br><span class="line">    ],</span><br><span class="line">    // ... 생략</span><br><span class="line">  &#125;,</span><br><span class="line">// ... 생략</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>package.json 파일에 위에처럼 enzyme, enzyme-to-json을 위한 설정만 추가해주면 설정은 끝난다. </p>
-<h2 id="컴포넌트-작성"><a href="#컴포넌트-작성" class="headerlink" title="컴포넌트 작성"></a>컴포넌트 작성</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">"classnames"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Portal <span class="hljs-keyword">from</span> <span class="hljs-string">"react-minimalist-portal"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> ReactCSSTransitionGroup <span class="hljs-keyword">from</span> <span class="hljs-string">"react-addons-css-transition-group"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> <span class="hljs-string">"./Modal.scss"</span>;</span><br><span class="line"></span><br><span class="line">interface ModalProps &#123;</span><br><span class="line">  backdropClassName: string;</span><br><span class="line">  children: React.ReactNode;</span><br><span class="line">  modalClassName: string;</span><br><span class="line">  isOpen: boolean;</span><br><span class="line">  onClose: any;</span><br><span class="line">  size: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface ModalStates &#123;</span><br><span class="line">  isOpen: boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Modal</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">ModalProps</span>, <span class="hljs-title">ModalStates</span>&gt; </span>&#123;</span><br><span class="line">  public <span class="hljs-keyword">static</span> defaultProps = &#123;</span><br><span class="line">    backdropClassName: <span class="hljs-string">""</span>,</span><br><span class="line">    children: <span class="hljs-literal">null</span>,</span><br><span class="line">    modalClassName: <span class="hljs-string">""</span>,</span><br><span class="line">    isOpen: <span class="hljs-literal">false</span>,</span><br><span class="line">    onClose: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;&#125;,</span><br><span class="line">    size: <span class="hljs-string">"sm"</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleIgnoreEvent: any = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">    event.stopPropagation();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleClose: any = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">    event.stopPropagation();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.props.onClose();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render(): JSX.Element &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> &#123;</span><br><span class="line">      backdropClassName,</span><br><span class="line">      children,</span><br><span class="line">      isOpen,</span><br><span class="line">      modalClassName,</span><br><span class="line">      onClose,</span><br><span class="line">      size</span><br><span class="line">    &#125; = <span class="hljs-keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (!isOpen) &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      &lt;Portal&gt;</span><br><span class="line">        &lt;div</span><br><span class="line">          className=&#123;classNames(</span><br><span class="line">            <span class="hljs-string">"modal-backdrop"</span>,</span><br><span class="line">            &#123; <span class="hljs-attr">open</span>: isOpen &#125;,</span><br><span class="line">            backdropClassName</span><br><span class="line">          )&#125;</span><br><span class="line">          onClick=&#123;onClose&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;ReactCSSTransitionGroup</span><br><span class="line">            transitionName=<span class="hljs-string">"example"</span></span><br><span class="line">            transitionAppear=&#123;<span class="hljs-literal">true</span>&#125;</span><br><span class="line">            transitionAppearTimeout=&#123;<span class="hljs-number">300</span>&#125;</span><br><span class="line">            transitionLeave=&#123;<span class="hljs-literal">true</span>&#125;</span><br><span class="line">            transitionEnterTimeout=&#123;<span class="hljs-number">300</span>&#125;</span><br><span class="line">            transitionLeaveTimeout=&#123;<span class="hljs-number">500</span>&#125;</span><br><span class="line">          &gt;</span><br><span class="line">            &lt;div</span><br><span class="line">              className=&#123;classNames(<span class="hljs-string">"modal"</span>, modalClassName, size)&#125;</span><br><span class="line">              onClick=&#123;<span class="hljs-keyword">this</span>.handleIgnoreEvent&#125;</span><br><span class="line">            &gt;</span><br><span class="line">              &lt;button type=<span class="hljs-string">"button"</span> onClick=&#123;onClose&#125;&gt;</span><br><span class="line">                닫기</span><br><span class="line">              &lt;<span class="hljs-regexp">/button&gt;</span></span><br><span class="line"><span class="hljs-regexp">              &#123;children&#125;</span></span><br><span class="line"><span class="hljs-regexp">            &lt;/</span>div&gt;</span><br><span class="line">          &lt;<span class="hljs-regexp">/ReactCSSTransitionGroup&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/Portal&gt;</span></span><br><span class="line"><span class="hljs-regexp">    );</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>간단하게 모달 컴포넌트를 작성했다. 이 모달 컴포넌트를 테스트 해 볼 것이다. </p>
-<h2 id="테스트코드-작성"><a href="#테스트코드-작성" class="headerlink" title="테스트코드 작성"></a>테스트코드 작성</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Enzyme <span class="hljs-keyword">from</span> <span class="hljs-string">"enzyme"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Modal <span class="hljs-keyword">from</span> <span class="hljs-string">"./Modal"</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="hljs-string">"&lt;Modal /&gt;"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> component = <span class="hljs-literal">null</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> isOpen = <span class="hljs-literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달 컴포넌트 랜더링</span></span><br><span class="line">  it(<span class="hljs-string">"Modal Render..."</span>, () =&gt; &#123;</span><br><span class="line">    component = Enzyme.shallow(</span><br><span class="line">      &lt;Modal</span><br><span class="line">        backdropClassName=<span class="hljs-string">"test-backdrop"</span></span><br><span class="line">        modalClassName=<span class="hljs-string">"test-modal"</span></span><br><span class="line">        isOpen=&#123;isOpen&#125;</span><br><span class="line">        size=<span class="hljs-string">"sm"</span></span><br><span class="line">        onClose=&#123;() =&gt; &#123;</span><br><span class="line">          isOpen = <span class="hljs-literal">false</span>;</span><br><span class="line">        &#125;&#125;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;div&gt;Modal Test&lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;/</span>Modal&gt;</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    expect(component).toMatchSnapshot();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>맨 먼저 스냅샷 테스트코드를 작성했다.</p>
-<ul>
-<li>describe는 테스트 무리를 가지고 있는 함수이다. 두개의 parameter를 받는데 첫번째는 테스트에 붙이는 의미있는 이름이고 두번째는 여러개의 테스트를 포함한 함수이다. descirbe는 중첩해서 사용할 수도 있다. </li>
-<li>it은 테스트 자체가 되는 함수 이며 두개의 parameter를 받는다. 첫번째는 test의 이름이고 두번째는 테스트의 본문을 유지한다.</li>
-<li>expect는 여러 가지 유효성 검사기에 대한 액세스를 제공하여 여러 가지를 검증한다. </li>
-<li>shallow는 Enzyme에서 제공하는 rendering API 이다. rednering API에는 mount, render가 더 있는데 각각 작동하는 방식이 다르므로 <a href="https://medium.com/@Yohanna/difference-between-enzymes-rendering-methods-f82108f49084" target="_blank" rel="noopener">상황에 맞춰서 알맞은 것</a>을 골라서 사용하면 된다. </li>
-</ul>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="hljs-string">"&lt;Modal /&gt;"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="hljs-comment">// ... 생략</span></span><br><span class="line">  </span><br><span class="line">  <span class="hljs-comment">// 모달이 닫겨 있을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal close..."</span>, () =&gt; &#123;</span><br><span class="line">    component.setProps(&#123; <span class="hljs-attr">isOpen</span>: <span class="hljs-literal">false</span> &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">false</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달이 열려 있을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal open..."</span>, () =&gt; &#123;</span><br><span class="line">    component.setProps(&#123; <span class="hljs-attr">isOpen</span>: <span class="hljs-literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">true</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// ... 생략</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>isOpen props를 받아서 모달의 출력 여부를 판단하므로 isOpen의 값에 따라 모달이 존재 하는지 안하는지 확인하는 테스트 코드를 작성 했다.<br>isOpen이 false 일 때는 컴포넌트의 render 함수가 null을 리턴하므로 false 값이 나와야 하고 isOpen이 true 일 때는 모달이 정상적으로 출력되므로 true 값이 나와야 한다. </p>
-<ul>
-<li>toBe 메소드는 값이 예상한 값인지 확인한다. </li>
-<li>find 메소드는 인자로 받은 selector을 통하여 컴포넌트 안에서 특정 DOM을 찾을 수 있게 해준다.</li>
-<li>exists 메소드는 찾는 노드나 selector의 존재 유무를 판단해준다.</li>
-<li>setProps 메소드로 root 컴포넌트의 props를 설정하고 재랜더링 할 수 있다.</li>
-</ul>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="hljs-string">"&lt;Modal /&gt;"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="hljs-comment">// ... 생략</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달이 열려 있을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal open..."</span>, () =&gt; &#123;</span><br><span class="line">    component.setProps(&#123; <span class="hljs-attr">isOpen</span>: <span class="hljs-literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">true</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달 안을 클릭 했을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal click..."</span>, () =&gt; &#123;</span><br><span class="line">    component.find(<span class="hljs-string">".modal"</span>).simulate(<span class="hljs-string">"click"</span>, &#123; stopPropagation() &#123;&#125; &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> lastChild = component</span><br><span class="line">      .find(<span class="hljs-string">".modal"</span>)</span><br><span class="line">      .children()</span><br><span class="line">      .last();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(lastChild.debug());</span><br><span class="line">    lastChild.simulate(<span class="hljs-string">"click"</span>, &#123; stopPropagation() &#123;&#125; &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal"</span>).exists()).toBe(<span class="hljs-literal">true</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달 닫기 버튼을 눌러 닫을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal is closing..."</span>, () =&gt; &#123;</span><br><span class="line">    component.find(<span class="hljs-string">"button"</span>).simulate(<span class="hljs-string">"click"</span>);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">false</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>이벤트가 발생했을 때 컴포넌트가 원하는 대로 작동하는지 확인하는 테스트 코드를 작성했다.<br>모달이 출력되었을 때 모달 및 모달 안의 자식 DOM들을 클릭했을 때도 모달이 닫기면 안되기 때문에 모달 안의 DOM을 눌렀을 떄 모달이 닫기는지 안닫기는지 테스트 하고 있다.<br>모달 안에서 닫기 버튼을 눌렀을 때는 모달이 닫겨야 하므로 버튼 테스트도 작성했다.<br>모달 안의 DOM을 클릭 할 때 stopPropagation 이벤트가 발생하므로 가짜 함수를 추가 하였다.(<a href="https://github.com/airbnb/enzyme/issues/323" target="_blank" rel="noopener">참조</a>)</p>
-<ul>
-<li>debug 메소드는 디버깅 목적으로 HTML과 유사한 wrapper 문자열을 반환한다. </li>
-<li>simulate 메소드는 이벤트를 시뮬레이션 한다. 첫번째 파라미터는 시뮬레이터 할 이벤트 이름을 넣고 두번째 파라미터에는 이벤트에 전달 되는 모의 이벤트 객체가 들어간다.</li>
-</ul>
-<h2 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn run test</span><br></pre></td></tr></table></figure>
-<p>위의 명령어로 테스트를 실행할 수 있다. </p>
-<p><img src="/images/frontend/typescript-react-test-1.png" alt="스냅샷 생성"><br>테스트를 실행하면 스냅샷 폴더가 생긴다. </p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Jest Snapshot v1, https://goo.gl/fbAQLP</span></span><br><span class="line"></span><br><span class="line">exports[<span class="hljs-string">`&lt;Modal /&gt; Modal Render... 1`</span>] = <span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">&lt;Portal&gt;</span></span><br><span class="line"><span class="hljs-string">  &lt;div</span></span><br><span class="line"><span class="hljs-string">    className="modal-backdrop open test-backdrop"</span></span><br><span class="line"><span class="hljs-string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="hljs-string">  &gt;</span></span><br><span class="line"><span class="hljs-string">    &lt;CSSTransitionGroup</span></span><br><span class="line"><span class="hljs-string">      transitionAppear=&#123;true&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionAppearTimeout=&#123;300&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionEnter=&#123;true&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionEnterTimeout=&#123;300&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionLeave=&#123;true&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionLeaveTimeout=&#123;500&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionName="example"</span></span><br><span class="line"><span class="hljs-string">    &gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;div</span></span><br><span class="line"><span class="hljs-string">        className="modal test-modal sm"</span></span><br><span class="line"><span class="hljs-string">        onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="hljs-string">      &gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;button</span></span><br><span class="line"><span class="hljs-string">          onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="hljs-string">          type="button"</span></span><br><span class="line"><span class="hljs-string">        &gt;</span></span><br><span class="line"><span class="hljs-string">          닫기</span></span><br><span class="line"><span class="hljs-string">        &lt;/button&gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;div&gt;</span></span><br><span class="line"><span class="hljs-string">          Modal Test</span></span><br><span class="line"><span class="hljs-string">        &lt;/div&gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;/div&gt;</span></span><br><span class="line"><span class="hljs-string">    &lt;/CSSTransitionGroup&gt;</span></span><br><span class="line"><span class="hljs-string">  &lt;/div&gt;</span></span><br><span class="line"><span class="hljs-string">&lt;/Portal&gt;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br></pre></td></tr></table></figure>
-<p>이런식으로 스냅샷이 생성된다. </p>
-<p><img src="/images/frontend/typescript-react-test-2.png" alt="테스트 성공"><br>테스트에 성공하면 위의 스샷 처럼 성공 메시지들이 출력된다.<br>debug로 child elements가 제대로 출력되는지 console.log를 찍었기 떄문에 console.log 결과물이 같이 출력되었다. </p>
-<p><img src="/images/frontend/typescript-react-test-3.png" alt="테스트 실패"><br>테스트에 실패하면 실패한 테스트 코드 위치와 원하는 테스트 값, 실제로 나온 테스트 결과값을 보여준다. </p>
-<h2 id="마무리"><a href="#마무리" class="headerlink" title="마무리"></a>마무리</h2><p>테스트코드를 작성해본건 이번이 처음이라 틀린 부분이 있을 수도 있다 ㅠ. 이번 포스팅을 기회로 테스트 습관을 들이도록 노력해봐야겠다. </p>
-<p>수정해야 할 부분이나 보완되어야 할 부분이 있으면 언제든 피드백 부탁드립니다. </p>
-<p><a href="https://github.com/partyKyoung/wolfOnAir-front/tree/master/src/components/ui/Modal" target="_blank" rel="noopener">소스 코드 전체 보기</a></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://rjzaworski.com/2018/03/testing-with-typescript-react-and-enzyme" target="_blank" rel="noopener">Testing with TypeScript, Enzyme, and React</a><br><a href="https://airbnb.io/enzyme/" target="_blank" rel="noopener">Enzyme</a><br><a href="https://medium.com/@sangboaklee/react-%ED%85%8C%EC%8A%A4%ED%8C%85-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-1c3719cee5af" target="_blank" rel="noopener">[React] 테스팅 코드 작성하기</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -930,6 +908,8 @@
             <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/page/5/">5</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/6/">6</a></li>
             
         </ul>
     </nav>
@@ -977,7 +957,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        50
+                        51
                     </p>
                 </div>
             </div>
@@ -1081,7 +1061,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">27</span>
+                <span class="level-item tag">28</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -1089,7 +1069,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">8</span>
+                <span class="level-item tag">9</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Compiler/">
@@ -1215,7 +1195,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 12px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 14px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 12px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 12px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 12px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 12px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 14px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 18px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 20px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 12px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 16px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 12px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
     </div>
 </div>
 
@@ -1273,8 +1253,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1286,8 +1266,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1313,7 +1293,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1444,7 +1424,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">9</span>
                     </a>
                 </div>
                 
@@ -1619,8 +1599,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1632,8 +1612,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T12:53:04.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-dynamic-programming/" class="has-link-black-ter is-size-6">동적 프로그래밍 방법</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
+                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
                     </p>
@@ -1659,7 +1639,7 @@
                     <span class="level-item">5월 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">9</span>
                 </span>
             </a>
         </li>
@@ -1790,7 +1770,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithms/">
                         <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">9</span>
                     </a>
                 </div>
                 

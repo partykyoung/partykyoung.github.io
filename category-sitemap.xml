@@ -8,6 +8,20 @@
     </url>
 
     <url>
+        <loc>http://dev.kyoungah.com/categories/Base/Algorithms/</loc>
+        <lastmod>2019-06-03T17:47:20.885Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/categories/Base/</loc>
+        <lastmod>2019-06-03T17:47:20.885Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://dev.kyoungah.com/categories/Front-end/Etc/</loc>
         <lastmod>2019-05-20T14:38:25.284Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -31,20 +45,6 @@
     <url>
         <loc>http://dev.kyoungah.com/categories/Front-end/TypeScript/</loc>
         <lastmod>2019-05-13T17:31:43.869Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/Base/Algorithms/</loc>
-        <lastmod>2019-05-12T13:57:15.455Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/Base/</loc>
-        <lastmod>2019-05-12T13:57:15.455Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
