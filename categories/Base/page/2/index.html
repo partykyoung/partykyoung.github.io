@@ -81,7 +81,7 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -132,7 +132,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
@@ -222,7 +222,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920004346&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 소프트웨어 공학 1강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920004346&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 소프트웨어 공학 1강</a></p>
 
         </div>
         
@@ -349,7 +349,7 @@
 <li>요구사항으로부터 테스트 계획서를 파악.</li>
 <li>테스트 계획서로부터 테스트 케이스를 파악.</li>
 </ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920004346&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 소프트웨어 공학 1강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920004346&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 소프트웨어 공학 1강</a></p>
 
         </div>
         
@@ -400,6 +400,7 @@
 <h3 id="결합"><a href="#결합" class="headerlink" title="결합"></a>결합</h3><p>정렬된 두 부분배열을 합병하여 하나의 정렬된 배열을 만든다.</p>
 <p><img src="/images/base/algorithms-merge-sort-1.png" alt="합병정렬"></p>
 <h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> sorted[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> mid, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> l_hold = leftIndex, r_hold = mid + <span class="hljs-number">1</span>;</span><br><span class="line">  <span class="hljs-keyword">int</span> resultIndex = leftIndex; <span class="hljs-comment">// 결과 배열의 index</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">while</span>(l_hold &lt;= mid &amp;&amp; r_hold &lt;= rightIndex) &#123;</span><br><span class="line">    <span class="hljs-comment">// 부분배열 두개를 비교하여 작은 값을 선택한다.</span></span><br><span class="line">    <span class="hljs-keyword">if</span> (arr[l_hold] &lt; arr[r_hold]) &#123;</span><br><span class="line">      sorted[resultIndex] = arr[l_hold];</span><br><span class="line"></span><br><span class="line">      l_hold++;</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">      sorted[resultIndex] = arr[r_hold];</span><br><span class="line"></span><br><span class="line">      r_hold++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    resultIndex++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 왼쪽 부분배열에 남아있는 모든 원소를 새로은 배열로 이동시킨다.</span></span><br><span class="line">  <span class="hljs-keyword">while</span> (l_hold &lt;= mid) &#123;</span><br><span class="line">    sorted[resultIndex] = arr[l_hold];</span><br><span class="line"></span><br><span class="line">    resultIndex ++;</span><br><span class="line">    l_hold ++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 오른쪽 부분배열에 남아있는 모든 원소를 새로은 배열로 이동시킨다.</span></span><br><span class="line">  <span class="hljs-keyword">while</span> (r_hold &lt;= rightIndex) &#123;</span><br><span class="line">    sorted[resultIndex] = arr[r_hold];</span><br><span class="line"></span><br><span class="line">    resultIndex ++;</span><br><span class="line">    r_hold ++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 원본 배열에 정렬된 배열을 이동 시킨다.</span></span><br><span class="line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = leftIndex; i &lt;= rightIndex; i++) &#123;</span><br><span class="line">    arr[i] = sorted[i];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mergeSort</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> sorted[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span> (leftIndex &lt; rightIndex) &#123;</span><br><span class="line">    <span class="hljs-comment">// 각각 n/2크기를 가진 두 부분배열로 나누기 위해 가운데 값 정함.</span></span><br><span class="line">    <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 왼쪽 부분배열의 순환호출</span></span><br><span class="line">    mergeSort(arr, sorted, leftIndex, mid);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 오른쪽 부분배열의 순환호출</span></span><br><span class="line">    mergeSort(arr, sorted, mid + <span class="hljs-number">1</span>, rightIndex);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 정렬된 두 부분배열의 합병</span></span><br><span class="line">    merge(arr, sorted, leftIndex, mid, rightIndex);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><h3 id="합병-함수-수행-시간"><a href="#합병-함수-수행-시간" class="headerlink" title="합병 함수 수행 시간"></a>합병 함수 수행 시간</h3><p>합병 함수 수행 시간 = 부분배열[n/2] + 부분배열[n/2] = 배열[n]</p>
 <p>두 부분 배열을 합병하면 최악의 경우 결과 배열엔 n + m개의 원소가 저장되는에 이때 최악의 경우  n + m - 1회의 비교가 필요하다. </p>
 <ul>
@@ -410,7 +411,7 @@
 <h3 id="합병-정렬-수행-시간"><a href="#합병-정렬-수행-시간" class="headerlink" title="합병 정렬 수행 시간"></a>합병 정렬 수행 시간</h3><p>합병 정렬 수행시간 = 크기 n/2인 두번의 합병 정렬 순환 호출 + 한번의 합병</p>
 <p>T(1) = 1;<br>T(n) = T($\frac{n}{2}$) + T($\frac{n}{2}$) + Θ(n);</p>
 <p>=&gt; T(n) = 2T($\frac{n}{2}$) + Θ(n)<br>=&gt; T(n) = O($n log n$)</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 4강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 4강</a></p>
 
         </div>
         
@@ -464,7 +465,7 @@
 <h3 id="메모리"><a href="#메모리" class="headerlink" title="메모리"></a>메모리</h3><p>프로세스가 저장된 주소와 가상 메모리를 사용하는 경우에는 가상주소와 실제 주소의 사상정보, 기준 레지스터와 경계 레지스터 등의 정보를 포함한다.</p>
 <h3 id="프로세스-우선순위"><a href="#프로세스-우선순위" class="headerlink" title="프로세스 우선순위"></a>프로세스 우선순위</h3><p>우선순위를 이용하여 스케줄링 시 어떤 작업을 선택 할 것인가를 결정하는데 필요한 정보를 포함한다.</p>
 <h3 id="회계-정보"><a href="#회계-정보" class="headerlink" title="회계 정보"></a>회계 정보</h3><p>주로 성능 측정과 순위에 대한 목적을 위한 정보로서, CPU 사용 시간, 프로세스의 시스템 존재 시간, 메모리 사용량, 보조기억장치 사용량, 기타 시스템 프로그램의 사용 실태 등 다양한 정보를 포함하고 있다. </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
 
         </div>
         
@@ -518,6 +519,7 @@
 <h3 id="결합"><a href="#결합" class="headerlink" title="결합"></a>결합</h3><p>필요 없음</p>
 <p><img src="/images/base/algorithms-quick-sort-1.png" alt="퀵정렬"></p>
 <h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> temp = arr[a];</span><br><span class="line">    arr[a] = arr[b];</span><br><span class="line">    arr[b] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 배열의 맨 오른쪽 index엔 무한대 값이 있다고 가정한다.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">partition</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line"><span class="hljs-comment">// 맨 왼쪽을 피벗으로 잡기 때문에 l_hold는 피벗의 위치 + 1, r_hold는 배열의 마지막 index</span></span><br><span class="line">  <span class="hljs-keyword">int</span> pivot = arr[leftIndex], l_hold = leftIndex + <span class="hljs-number">1</span>, r_hold = rightIndex;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">while</span> (l_hold &lt;= r_hold) &#123;</span><br><span class="line">    <span class="hljs-comment">// l_hold는 피벗보다 큰 값을 찾는다.</span></span><br><span class="line">    <span class="hljs-keyword">while</span> (l_hold &lt;= rightIndex &amp;&amp; arr[l_hold] &lt; pivot) &#123;</span><br><span class="line">      l_hold++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// r_hold는 피벗보다 작은 값을 찾는다.</span></span><br><span class="line">    <span class="hljs-keyword">while</span> (r_hold &gt; leftIndex &amp;&amp; arr[r_hold] &gt;= pivot) &#123;</span><br><span class="line">      r_hold--;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">if</span> (l_hold &lt; r_hold) &#123;</span><br><span class="line">      <span class="hljs-comment">// arr[l_hold]와 arr[r_hold]의 값을 교환한다.</span></span><br><span class="line">      swap(arr, l_hold, r_hold);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 피벗과 arr[r_hold]값을 교환한다. </span></span><br><span class="line">  swap(arr, leftIndex, r_hold);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> r_hold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">quickSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span> (leftIndex &lt;= rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> pivot = partition(arr, leftIndex, rightIndex); <span class="hljs-comment">// 두 부분배열로 분할</span></span><br><span class="line"></span><br><span class="line">    quickSort(arr, leftIndex, pivot - <span class="hljs-number">1</span>);  <span class="hljs-comment">// 왼쪽 부분배열에 대해 순환호출</span></span><br><span class="line">    quickSort(arr, pivot + <span class="hljs-number">1</span>, rightIndex); <span class="hljs-comment">// 오른쪽 부분배열에 대해서 순환호출</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>퀵 정렬 알고리즘은 한 번의 분할과 두 번의 순환 호출로 구성된다.</p>
 <h3 id="분할-함수-수행-시간"><a href="#분할-함수-수행-시간" class="headerlink" title="분할 함수 수행 시간"></a>분할 함수 수행 시간</h3><p>피벗을 제외한 배열의 원소들은 피벗과 최대 2번 비교 하게 된다. 전체적으로는 입력 크기 n에 비례하는 Θ(n) 시간이 걸린다.</p>
 <h3 id="퀵-정렬-수행-시간"><a href="#퀵-정렬-수행-시간" class="headerlink" title="퀵 정렬 수행 시간"></a>퀵 정렬 수행 시간</h3><p>퀵 정렬 수행 시간 = 한 번의 분할 + 두번의 킉정렬 순환 호출.<br>배열 부분 시 두 부분배열의 크기가 다르기 때문에  배열이 어떤 크기의 두 부분배열로 분할되느냐에 따라 수행 시간이 다르다.</p>
@@ -547,7 +549,7 @@
 <li>최악의 경우 O($n^2$)</li>
 </ul>
 <p>즉 피벗 선택의 임의성만 보장되면 평균적인 성능을 보일 가능성이 매우 높다. 그래서 배열에서 임의로 값을 선택해서 배열의 처음 원소와 서로 교환 후 정렬 수행하면 최악의 경우를 피할 가능성이 커진다. </p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
 
         </div>
         
@@ -602,7 +604,9 @@
 <h3 id="결합"><a href="#결합" class="headerlink" title="결합."></a>결합.</h3><p>부분배열에 대해서 이진 탐색의 결과가 직접 반환되므로 결과를 결합할 필요가 없다. </p>
 <p><img src="/images/base/algorithms-binary-search-1.png" alt="이진 탐색 분할"></p>
 <h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h2><h3 id="재귀함수"><a href="#재귀함수" class="headerlink" title="재귀함수"></a>재귀함수</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> leftIndex, <span class="hljs-keyword">int</span> rightIndex, <span class="hljs-keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-comment">// 탐색 실패</span></span><br><span class="line">  <span class="hljs-keyword">if</span> (leftIndex &gt; rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (x == arr[mid]) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> mid;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">if</span> (x &lt; arr[mid]) &#123;</span><br><span class="line">    <span class="hljs-comment">// 왼족 배열 탐색</span></span><br><span class="line">    <span class="hljs-keyword">return</span> binarySearch(arr, leftIndex, mid - <span class="hljs-number">1</span>, x);</span><br><span class="line">  &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">    <span class="hljs-comment">// 오른쪽 배열 탐색</span></span><br><span class="line">    <span class="hljs-keyword">return</span> binarySearch(arr, mid + <span class="hljs-number">1</span>, rightIndex, x);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <h3 id="반복함수"><a href="#반복함수" class="headerlink" title="반복함수"></a>반복함수</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">binarySearch_Iteration</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[], <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> leftIndex = <span class="hljs-number">0</span>, rightIndex = index - <span class="hljs-number">1</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="hljs-keyword">while</span>(leftIndex &lt;= rightIndex) &#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> mid = (leftIndex + rightIndex) / <span class="hljs-number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (x == arr[mid]) &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (x &lt; arr[mid]) &#123;</span><br><span class="line">      <span class="hljs-comment">// 왼쪽 부분배열 탐색</span></span><br><span class="line">      rightIndex = mid - <span class="hljs-number">1</span>;</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">      <span class="hljs-comment">// 오른쪽 부분배열 탐색</span></span><br><span class="line">      leftIndex = mid + <span class="hljs-number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 탐색키가 존재하지 않을 경우</span></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <p>이진 탐색에서는 분할 될 때마다 입력 크기가 절반으로 감소 하며, 탐색 대상의 개수가 1이 되면 더는 분할이 수행되지 않고 탐색 성공 여부가 결정된다.</p>
 <h2 id="성능-분석"><a href="#성능-분석" class="headerlink" title="성능 분석"></a>성능 분석</h2><p>T(n) = 입력 크기 n에 대한 탐색 과정에서의 모든 비교 횟수의 합 = 맨 바깥 수준에서의 비교 횟수 + 순환 호출에서의 비교 횟수.</p>
 <p>맨 바깥 수준에서의 비교 횟수는 상수이므로 1.<br>순환 호출에서의 비교 횟수는 비교 할 때마다 절반 씩 데이터를 나누므로 $\frac{n}{2}$.</p>
@@ -614,7 +618,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 3강</a></p>
 
         </div>
         
@@ -702,7 +706,7 @@
 <h3 id="실행-gt-준비"><a href="#실행-gt-준비" class="headerlink" title="실행 -&gt; 준비"></a>실행 -&gt; 준비</h3><p>할당시간의 만료나 높은 우선순위의 프로세스가 오는 경우 스케줄러에 의해서 처리된다. </p>
 <h3 id="실행-gt-대기"><a href="#실행-gt-대기" class="headerlink" title="실행 -&gt; 대기"></a>실행 -&gt; 대기</h3><p>I/O 처리, 페이지 교환 같은 명령어 등에 의해 일어난다. 이러한 작업은 상대적으로 오랜 시간이 걸리기 때문에 그동안 CPU를 다른 프로세스에 할당하여 활용하기 위함이다. </p>
 <h3 id="종료"><a href="#종료" class="headerlink" title="종료"></a>종료</h3><p>프로세스의 실행이 종료되었다.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
 
         </div>
         
@@ -856,7 +860,7 @@
 <li>파일의 접근 제한을 관리.</li>
 <li>파일을 열어 자원을 할당하거나 파일을 닫아 자원을 회수하는 일 등을 수행한다. </li>
 </ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>
 
         </div>
         
@@ -957,7 +961,7 @@
 <li>커널 외부의 요소에 문제가 발생하더라도 커널 자체에는 영향이 없기 때문에 유지보수가 용이하여 안정성이 우수함.</li>
 <li>커널 외부 요소들 사이에 데이터 전달이 필요한 경우에는 프로세스 간 통신(IPC)을 통해야만 하기 떄문에 성능 저하가 발생한다.</li>
 </ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&amp;condLscValue=001&amp;condYr=&amp;condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 1강</a></p>
 
         </div>
         
@@ -1000,7 +1004,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
     
         
 <div class="card widget">
@@ -1037,7 +1041,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        51
+                        49
                     </p>
                 </div>
             </div>
@@ -1047,7 +1051,7 @@
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        18
+                        16
                     </p>
                 </div>
             </div>
@@ -1057,7 +1061,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        14
                     </p>
                 </div>
             </div>
@@ -1141,7 +1145,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">28</span>
+                <span class="level-item tag">26</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -1149,23 +1153,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">9</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Base/Compiler/">
-            <span class="level-start">
-                <span class="level-item">Compiler</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Base/Computer-Architecture/">
-            <span class="level-start">
-                <span class="level-item">Computer Architecture</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">10</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Computer-security/">
@@ -1275,7 +1263,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
     </div>
 </div>
 
@@ -1283,690 +1271,11 @@
     
         <div class="column-right-shadow is-hidden-widescreen ">
         
-            
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            최근 글
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T12:27:26.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-first/" class="has-link-black-ter is-size-6">Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
-                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            아카이브
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/05/">
-                <span class="level-start">
-                    <span class="level-item">5월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">9</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/04/">
-                <span class="level-start">
-                    <span class="level-item">4월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/03/">
-                <span class="level-start">
-                    <span class="level-item">3월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">15</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">2월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/01/">
-                <span class="level-start">
-                    <span class="level-item">1월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/12/">
-                <span class="level-start">
-                    <span class="level-item">12월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/11/">
-                <span class="level-start">
-                    <span class="level-item">11월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/10/">
-                <span class="level-start">
-                    <span class="level-item">10월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/09/">
-                <span class="level-start">
-                    <span class="level-item">9월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/08/">
-                <span class="level-start">
-                    <span class="level-item">8월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/07/">
-                <span class="level-start">
-                    <span class="level-item">7월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                태그
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Algorithms/">
-                        <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">9</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/CSS/">
-                        <span class="tag">CSS</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Compiler/">
-                        <span class="tag">Compiler</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
-                        <span class="tag">Computer Architecture</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-security/">
-                        <span class="tag">Computer security</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Data-structure/">
-                        <span class="tag">Data structure</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/HTML/">
-                        <span class="tag">HTML</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Information-network/">
-                        <span class="tag">Information network</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/JavaScript/">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Next-js/">
-                        <span class="tag">Next.js</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Node-js/">
-                        <span class="tag">Node.js</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Operating-systems/">
-                        <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">7</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/React-js/">
-                        <span class="tag">React.js</span>
-                        <span class="tag is-grey">8</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Software-engineering/">
-                        <span class="tag">Software engineering</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/TypeScript/">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">4</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/etc/">
-                        <span class="tag">etc</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-        
         </div>
     
 </div>
 
                 
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            최근 글
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T12:27:26.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-first/" class="has-link-black-ter is-size-6">Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
-                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            아카이브
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/05/">
-                <span class="level-start">
-                    <span class="level-item">5월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">9</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/04/">
-                <span class="level-start">
-                    <span class="level-item">4월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/03/">
-                <span class="level-start">
-                    <span class="level-item">3월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">15</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">2월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/01/">
-                <span class="level-start">
-                    <span class="level-item">1월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/12/">
-                <span class="level-start">
-                    <span class="level-item">12월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/11/">
-                <span class="level-start">
-                    <span class="level-item">11월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/10/">
-                <span class="level-start">
-                    <span class="level-item">10월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/09/">
-                <span class="level-start">
-                    <span class="level-item">9월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/08/">
-                <span class="level-start">
-                    <span class="level-item">8월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/07/">
-                <span class="level-start">
-                    <span class="level-item">7월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                태그
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Algorithms/">
-                        <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">9</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/CSS/">
-                        <span class="tag">CSS</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Compiler/">
-                        <span class="tag">Compiler</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
-                        <span class="tag">Computer Architecture</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-security/">
-                        <span class="tag">Computer security</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Data-structure/">
-                        <span class="tag">Data structure</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/HTML/">
-                        <span class="tag">HTML</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Information-network/">
-                        <span class="tag">Information network</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/JavaScript/">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Next-js/">
-                        <span class="tag">Next.js</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Node-js/">
-                        <span class="tag">Node.js</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Operating-systems/">
-                        <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">7</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/React-js/">
-                        <span class="tag">React.js</span>
-                        <span class="tag is-grey">8</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Software-engineering/">
-                        <span class="tag">Software engineering</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/TypeScript/">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">4</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/etc/">
-                        <span class="tag">etc</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-</div>
-
             </div>
         </div>
     </section>

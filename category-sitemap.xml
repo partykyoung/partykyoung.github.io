@@ -9,14 +9,28 @@
 
     <url>
         <loc>http://dev.kyoungah.com/categories/Base/Algorithms/</loc>
-        <lastmod>2019-06-03T17:47:20.885Z</lastmod>
+        <lastmod>2019-06-08T15:33:22.212Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.kyoungah.com/categories/Base/</loc>
-        <lastmod>2019-06-03T17:47:20.885Z</lastmod>
+        <lastmod>2019-06-08T15:33:22.212Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/categories/Front-end/TypeScript/</loc>
+        <lastmod>2019-06-03T17:48:53.900Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.kyoungah.com/categories/Front-end/</loc>
+        <lastmod>2019-06-03T17:48:53.900Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -29,22 +43,8 @@
     </url>
 
     <url>
-        <loc>http://dev.kyoungah.com/categories/Front-end/</loc>
-        <lastmod>2019-05-20T14:38:25.284Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://dev.kyoungah.com/categories/Etc/</loc>
         <lastmod>2019-05-14T13:59:35.714Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/Front-end/TypeScript/</loc>
-        <lastmod>2019-05-13T17:31:43.869Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -87,20 +87,6 @@
     <url>
         <loc>http://dev.kyoungah.com/categories/Front-end/Css/</loc>
         <lastmod>2019-04-25T05:59:19.482Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/Base/Compiler/</loc>
-        <lastmod>2019-04-25T05:59:19.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.kyoungah.com/categories/Base/Computer-Architecture/</loc>
-        <lastmod>2019-04-25T05:59:19.481Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

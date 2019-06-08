@@ -81,7 +81,7 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -132,7 +132,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
@@ -171,19 +171,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/05/13/2019-05-13-typescript-compiler-option/">2019-05-13-typescript-compiler-option</a>
+                <a class="has-link-black-ter" href="/2019/05/13/2019-05-13-typescript-compiler-option/">tsconfig.json</a>
             
         </h1>
         <div class="content">
             <h2 id="tsconfig-json"><a href="#tsconfig-json" class="headerlink" title="tsconfig.json"></a>tsconfig.json</h2><p><strong>tsconfig.json</strong> 파일은 프로젝트를 컴파일 하는데 필요한 루트 파일과 컴파일러 옵션을 지정한다.</p>
 <p><a href="http://json.schemastore.org/tsconfig" target="_blank" rel="noopener">JSON schema for the TypeScript compiler’s configuration file</a>에서 스펙을 확인할 수 있다.</p>
-<p>ex)<br><figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"compilerOptions"</span>: &#123;</span><br><span class="line">        <span class="hljs-attr">"module"</span>: <span class="hljs-string">"system"</span>,</span><br><span class="line">        <span class="hljs-attr">"noImplicitAny"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"removeComments"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"preserveConstEnums"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"outFile"</span>: <span class="hljs-string">"../../built/local/tsc.js"</span>,</span><br><span class="line">        <span class="hljs-attr">"sourceMap"</span>: <span class="hljs-literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="hljs-attr">"include"</span>: [</span><br><span class="line">        <span class="hljs-string">"src/**/*"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="hljs-attr">"exclude"</span>: [</span><br><span class="line">        <span class="hljs-string">"node_modules"</span>,</span><br><span class="line">        <span class="hljs-string">"**/*.spec.ts"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>ex)</p>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"compilerOptions"</span>: &#123;</span><br><span class="line">        <span class="hljs-attr">"module"</span>: <span class="hljs-string">"system"</span>,</span><br><span class="line">        <span class="hljs-attr">"noImplicitAny"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"removeComments"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"preserveConstEnums"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">        <span class="hljs-attr">"outFile"</span>: <span class="hljs-string">"../../built/local/tsc.js"</span>,</span><br><span class="line">        <span class="hljs-attr">"sourceMap"</span>: <span class="hljs-literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="hljs-attr">"include"</span>: [</span><br><span class="line">        <span class="hljs-string">"src/**/*"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="hljs-attr">"exclude"</span>: [</span><br><span class="line">        <span class="hljs-string">"node_modules"</span>,</span><br><span class="line">        <span class="hljs-string">"**/*.spec.ts"</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="compileOnSave"><a href="#compileOnSave" class="headerlink" title="compileOnSave"></a>compileOnSave</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compileOnSave": true,</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>ts 파일을 저장 시 자동 컴파일을 해준다. </li>
 <li>true / false (default: false)</li>
 </ul>
 <h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "extends": "./configs/base",</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>extends 속성을 사용해 다른 파일의 설정을 상속할 수 있다. <ul>
 <li>클라이언트 작업물과 서버 사이드 작업물의 설정이 비슷하다면 한 파일을 만들어놓고 상속받은 후 필요한 부분만 바꿔 쓸 수 있다.</li>
@@ -192,11 +196,13 @@
 </ul>
 <h3 id="files-include-exclude"><a href="#files-include-exclude" class="headerlink" title="files, include, exclude"></a>files, include, exclude</h3><p>셋다 설정이 없으면 모든 ts 파일들을 컴파일 해준다.</p>
 <h4 id="files"><a href="#files" class="headerlink" title="files"></a>files</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "files": [</span><br><span class="line">        "core.ts",</span><br><span class="line">        "sys.ts",</span><br><span class="line">        "types.ts",</span><br><span class="line">        "emitter.ts",</span><br><span class="line">        "tsc.ts",</span><br><span class="line">        <span class="hljs-string">"diagnosticInformationMap.generated.ts"</span></span><br><span class="line">    ],</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>상대 혹은 절대 경로의 리스트 배열이다.</li>
 <li>files에 지정되어 있는 파일은 exclude에 관계 없이 항상 컴파일 대상에 포함된다. -&gt; exclude보다 순위가 더 높다.</li>
 </ul>
 <h4 id="include"><a href="#include" class="headerlink" title="include"></a>include</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "include": [</span><br><span class="line">        <span class="hljs-string">"src/**/*"</span></span><br><span class="line">    ],</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>glob 패턴 (.gitignore 이랑 비슷함.).</li>
 <li>include에 포함된 패턴과 맞는 파일들을 컴파일 대상에 포함시킨다.</li>
@@ -207,21 +213,25 @@
 </li>
 </ul>
 <h4 id="exclude"><a href="#exclude" class="headerlink" title="exclude"></a>exclude</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "exclude": [</span><br><span class="line">        "node_modules",</span><br><span class="line">        <span class="hljs-string">"**/*.spec.ts"</span></span><br><span class="line">    ],</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>glob 패턴 (.gitignore 이랑 비슷함.)</li>
 <li>exclude에 포함된 패턴과 맞는 파일들은 컴파일 대상에서 제외된다. </li>
 <li>node_modules, bower_components, jspm_packages, <outdir>은 default로 제외한다.</outdir></li>
 </ul>
 <h3 id="compileOptions"><a href="#compileOptions" class="headerlink" title="compileOptions"></a>compileOptions</h3><h4 id="types"><a href="#types" class="headerlink" title="types"></a>types</h4><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "types" : ["node", "lodash", "express"],</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>타입을 가져올 패키지 목록.</li>
 <li>기본적으로는 @types 모든 패키지가 컴파일에 포함된다. types를 지정할 경우 나열된 패키지만 컴파일 대상에 포함된다. </li>
 </ul>
 <h3 id="target"><a href="#target" class="headerlink" title="target"></a>target</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "target": "es3",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>컴파일 결과물을 js의 어떤 버전으로 할 것인지 지정한다. (default: es3) </li>
 </ul>
 <h3 id="lib"><a href="#lib" class="headerlink" title="lib"></a>lib</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"CompilerOptions"</span>: &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "lib": [</span><br><span class="line">      "dom",</span><br><span class="line">      "es5",</span><br><span class="line">      <span class="hljs-string">"es2015.promise"</span> </span><br><span class="line">    ],</span><br><span class="line">    //...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>컴파일에 포함될 라이브러리 파일 목록을 지정해준다. 지정해주지 않으면 아래의 기본 값이 저장된다.</li>
 <li>ES5의 기본 값: dom, es5, scripthost</li>
@@ -230,14 +240,17 @@
 <li><a href="https://stackoverflow.com/questions/41993811/understanding-target-and-module-in-tsconfig" target="_blank" rel="noopener">Understanding “target” and “module” in tsconfig</a></li>
 </ul>
 <h3 id="outDir"><a href="#outDir" class="headerlink" title="outDir"></a>outDir</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "outDir": "",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>컴파일된 파일들의 위치를 지정해준다.</li>
 </ul>
 <h3 id="outFile"><a href="#outFile" class="headerlink" title="outFile"></a>outFile</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "outFile": "",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>컴파일 결과물을 단일 파일로 떨궈준다.</li>
 </ul>
 <h3 id="module"><a href="#module" class="headerlink" title="module"></a>module</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // ...</span><br><span class="line">  "compilerOptions": &#123;</span><br><span class="line">    // ...</span><br><span class="line">    "module": "es3",</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>컴파일된 모듈의 결과물을 어떤 모듈 시스템으로 할 지 결정한다.<ul>
 <li>commonjs, amd, umd, system, es6, es2015, none 중 설정 가능.</li>
@@ -295,16 +308,22 @@
             <p>개인 프로젝트를 작업 하고 있던 도중 테스트 환경을 도입해보고 싶어서 열심히 끄적이다가 기록을 남기기로 했다.<br>TypeScript로 생성된 React 프로젝트에 테스트 환경 을 구축 해보고 테스트 까지 한번 해보자. </p>
 <p>해당 프로젝트는 create-react-app 으로 생성되었다. </p>
 <h2 id="테스트-환경-설정"><a href="#테스트-환경-설정" class="headerlink" title="테스트 환경 설정"></a>테스트 환경 설정</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add --dev jest @types/jest</span><br><span class="line">yarn add --dev enzyme enzyme-adapter-react-16</span><br><span class="line">yarn add --dev @types/enzyme @types/enzyme-adapter-react-16</span><br></pre></td></tr></table></figure>
+
 <p>먼저 테스트에 필요한 모듈들을 설치해주자. TypeScript 환경이기 때문에 각 모듈들의 @types도 설치해줘야 한다. </p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add --dev enzyme-to-json @types/enzyme-to-json</span><br></pre></td></tr></table></figure>
+
 <p>스냅샷의 가독성을 위해 enzyme-to-json 모듈도 설치하였다. </p>
 <h3 id="setupTest-ts"><a href="#setupTest-ts" class="headerlink" title="setupTest.ts"></a>setupTest.ts</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Enzyme <span class="hljs-keyword">from</span> <span class="hljs-string">"enzyme"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> ReactSixteenAdapter <span class="hljs-keyword">from</span> <span class="hljs-string">"enzyme-adapter-react-16"</span>;</span><br><span class="line"></span><br><span class="line">Enzyme.configure(&#123; <span class="hljs-attr">adapter</span>: <span class="hljs-keyword">new</span> ReactSixteenAdapter() &#125;);</span><br></pre></td></tr></table></figure>
+
 <p>CRA로 만든 프로젝트라면 위의 소스 파일 처럼 테스트 설정을 해줘야 한다.<br>테스트 파일 작성 중 계속 오류가 발생하길래 리서치를 하던 도중 <a href="https://github.com/Microsoft/TypeScript-React-Starter/issues/76#issuecomment-340544510" target="_blank" rel="noopener">여기에서</a> 제시했던 대로 파일을 작성하니 정상 작동 되었다. </p>
 <h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">// ... 생략</span><br><span class="line">"jest": &#123;</span><br><span class="line">    // ... 생략</span><br><span class="line">    "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/test/setupTest.ts",</span><br><span class="line">    "snapshotSerializers": [</span><br><span class="line">      <span class="hljs-string">"enzyme-to-json/serializer"</span></span><br><span class="line">    ],</span><br><span class="line">    // ... 생략</span><br><span class="line">  &#125;,</span><br><span class="line">// ... 생략</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>package.json 파일에 위에처럼 enzyme, enzyme-to-json을 위한 설정만 추가해주면 설정은 끝난다. </p>
 <h2 id="컴포넌트-작성"><a href="#컴포넌트-작성" class="headerlink" title="컴포넌트 작성"></a>컴포넌트 작성</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">"classnames"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Portal <span class="hljs-keyword">from</span> <span class="hljs-string">"react-minimalist-portal"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> ReactCSSTransitionGroup <span class="hljs-keyword">from</span> <span class="hljs-string">"react-addons-css-transition-group"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> <span class="hljs-string">"./Modal.scss"</span>;</span><br><span class="line"></span><br><span class="line">interface ModalProps &#123;</span><br><span class="line">  backdropClassName: string;</span><br><span class="line">  children: React.ReactNode;</span><br><span class="line">  modalClassName: string;</span><br><span class="line">  isOpen: boolean;</span><br><span class="line">  onClose: any;</span><br><span class="line">  size: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface ModalStates &#123;</span><br><span class="line">  isOpen: boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Modal</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">ModalProps</span>, <span class="hljs-title">ModalStates</span>&gt; </span>&#123;</span><br><span class="line">  public <span class="hljs-keyword">static</span> defaultProps = &#123;</span><br><span class="line">    backdropClassName: <span class="hljs-string">""</span>,</span><br><span class="line">    children: <span class="hljs-literal">null</span>,</span><br><span class="line">    modalClassName: <span class="hljs-string">""</span>,</span><br><span class="line">    isOpen: <span class="hljs-literal">false</span>,</span><br><span class="line">    onClose: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;&#125;,</span><br><span class="line">    size: <span class="hljs-string">"sm"</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleIgnoreEvent: any = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">    event.stopPropagation();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  handleClose: any = <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;</span><br><span class="line">    event.stopPropagation();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.props.onClose();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render(): JSX.Element &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> &#123;</span><br><span class="line">      backdropClassName,</span><br><span class="line">      children,</span><br><span class="line">      isOpen,</span><br><span class="line">      modalClassName,</span><br><span class="line">      onClose,</span><br><span class="line">      size</span><br><span class="line">    &#125; = <span class="hljs-keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (!isOpen) &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> (</span><br><span class="line">      &lt;Portal&gt;</span><br><span class="line">        &lt;div</span><br><span class="line">          className=&#123;classNames(</span><br><span class="line">            <span class="hljs-string">"modal-backdrop"</span>,</span><br><span class="line">            &#123; <span class="hljs-attr">open</span>: isOpen &#125;,</span><br><span class="line">            backdropClassName</span><br><span class="line">          )&#125;</span><br><span class="line">          onClick=&#123;onClose&#125;</span><br><span class="line">        &gt;</span><br><span class="line">          &lt;ReactCSSTransitionGroup</span><br><span class="line">            transitionName=<span class="hljs-string">"example"</span></span><br><span class="line">            transitionAppear=&#123;<span class="hljs-literal">true</span>&#125;</span><br><span class="line">            transitionAppearTimeout=&#123;<span class="hljs-number">300</span>&#125;</span><br><span class="line">            transitionLeave=&#123;<span class="hljs-literal">true</span>&#125;</span><br><span class="line">            transitionEnterTimeout=&#123;<span class="hljs-number">300</span>&#125;</span><br><span class="line">            transitionLeaveTimeout=&#123;<span class="hljs-number">500</span>&#125;</span><br><span class="line">          &gt;</span><br><span class="line">            &lt;div</span><br><span class="line">              className=&#123;classNames(<span class="hljs-string">"modal"</span>, modalClassName, size)&#125;</span><br><span class="line">              onClick=&#123;<span class="hljs-keyword">this</span>.handleIgnoreEvent&#125;</span><br><span class="line">            &gt;</span><br><span class="line">              &lt;button type=<span class="hljs-string">"button"</span> onClick=&#123;onClose&#125;&gt;</span><br><span class="line">                닫기</span><br><span class="line">              &lt;<span class="hljs-regexp">/button&gt;</span></span><br><span class="line"><span class="hljs-regexp">              &#123;children&#125;</span></span><br><span class="line"><span class="hljs-regexp">            &lt;/</span>div&gt;</span><br><span class="line">          &lt;<span class="hljs-regexp">/ReactCSSTransitionGroup&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;/</span>div&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/Portal&gt;</span></span><br><span class="line"><span class="hljs-regexp">    );</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
 <p>간단하게 모달 컴포넌트를 작성했다. 이 모달 컴포넌트를 테스트 해 볼 것이다. </p>
 <h2 id="테스트코드-작성"><a href="#테스트코드-작성" class="headerlink" title="테스트코드 작성"></a>테스트코드 작성</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Enzyme <span class="hljs-keyword">from</span> <span class="hljs-string">"enzyme"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Modal <span class="hljs-keyword">from</span> <span class="hljs-string">"./Modal"</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="hljs-string">"&lt;Modal /&gt;"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> component = <span class="hljs-literal">null</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> isOpen = <span class="hljs-literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달 컴포넌트 랜더링</span></span><br><span class="line">  it(<span class="hljs-string">"Modal Render..."</span>, () =&gt; &#123;</span><br><span class="line">    component = Enzyme.shallow(</span><br><span class="line">      &lt;Modal</span><br><span class="line">        backdropClassName=<span class="hljs-string">"test-backdrop"</span></span><br><span class="line">        modalClassName=<span class="hljs-string">"test-modal"</span></span><br><span class="line">        isOpen=&#123;isOpen&#125;</span><br><span class="line">        size=<span class="hljs-string">"sm"</span></span><br><span class="line">        onClose=&#123;() =&gt; &#123;</span><br><span class="line">          isOpen = <span class="hljs-literal">false</span>;</span><br><span class="line">        &#125;&#125;</span><br><span class="line">      &gt;</span><br><span class="line">        &lt;div&gt;Modal Test&lt;<span class="hljs-regexp">/div&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;/</span>Modal&gt;</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    expect(component).toMatchSnapshot();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>맨 먼저 스냅샷 테스트코드를 작성했다.</p>
 <ul>
 <li>describe는 테스트 무리를 가지고 있는 함수이다. 두개의 parameter를 받는데 첫번째는 테스트에 붙이는 의미있는 이름이고 두번째는 여러개의 테스트를 포함한 함수이다. descirbe는 중첩해서 사용할 수도 있다. </li>
@@ -313,6 +332,7 @@
 <li>shallow는 Enzyme에서 제공하는 rendering API 이다. rednering API에는 mount, render가 더 있는데 각각 작동하는 방식이 다르므로 <a href="https://medium.com/@Yohanna/difference-between-enzymes-rendering-methods-f82108f49084" target="_blank" rel="noopener">상황에 맞춰서 알맞은 것</a>을 골라서 사용하면 된다. </li>
 </ul>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="hljs-string">"&lt;Modal /&gt;"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="hljs-comment">// ... 생략</span></span><br><span class="line">  </span><br><span class="line">  <span class="hljs-comment">// 모달이 닫겨 있을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal close..."</span>, () =&gt; &#123;</span><br><span class="line">    component.setProps(&#123; <span class="hljs-attr">isOpen</span>: <span class="hljs-literal">false</span> &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">false</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달이 열려 있을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal open..."</span>, () =&gt; &#123;</span><br><span class="line">    component.setProps(&#123; <span class="hljs-attr">isOpen</span>: <span class="hljs-literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">true</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// ... 생략</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>isOpen props를 받아서 모달의 출력 여부를 판단하므로 isOpen의 값에 따라 모달이 존재 하는지 안하는지 확인하는 테스트 코드를 작성 했다.<br>isOpen이 false 일 때는 컴포넌트의 render 함수가 null을 리턴하므로 false 값이 나와야 하고 isOpen이 true 일 때는 모달이 정상적으로 출력되므로 true 값이 나와야 한다. </p>
 <ul>
 <li>toBe 메소드는 값이 예상한 값인지 확인한다. </li>
@@ -321,15 +341,18 @@
 <li>setProps 메소드로 root 컴포넌트의 props를 설정하고 재랜더링 할 수 있다.</li>
 </ul>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="hljs-string">"&lt;Modal /&gt;"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="hljs-comment">// ... 생략</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달이 열려 있을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal open..."</span>, () =&gt; &#123;</span><br><span class="line">    component.setProps(&#123; <span class="hljs-attr">isOpen</span>: <span class="hljs-literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">true</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달 안을 클릭 했을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal click..."</span>, () =&gt; &#123;</span><br><span class="line">    component.find(<span class="hljs-string">".modal"</span>).simulate(<span class="hljs-string">"click"</span>, &#123; stopPropagation() &#123;&#125; &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> lastChild = component</span><br><span class="line">      .find(<span class="hljs-string">".modal"</span>)</span><br><span class="line">      .children()</span><br><span class="line">      .last();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(lastChild.debug());</span><br><span class="line">    lastChild.simulate(<span class="hljs-string">"click"</span>, &#123; stopPropagation() &#123;&#125; &#125;);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal"</span>).exists()).toBe(<span class="hljs-literal">true</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">// 모달 닫기 버튼을 눌러 닫을 때</span></span><br><span class="line">  it(<span class="hljs-string">"Modal is closing..."</span>, () =&gt; &#123;</span><br><span class="line">    component.find(<span class="hljs-string">"button"</span>).simulate(<span class="hljs-string">"click"</span>);</span><br><span class="line"></span><br><span class="line">    expect(component.find(<span class="hljs-string">".modal-backdrop"</span>).exists()).toBe(<span class="hljs-literal">false</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>이벤트가 발생했을 때 컴포넌트가 원하는 대로 작동하는지 확인하는 테스트 코드를 작성했다.<br>모달이 출력되었을 때 모달 및 모달 안의 자식 DOM들을 클릭했을 때도 모달이 닫기면 안되기 때문에 모달 안의 DOM을 눌렀을 떄 모달이 닫기는지 안닫기는지 테스트 하고 있다.<br>모달 안에서 닫기 버튼을 눌렀을 때는 모달이 닫겨야 하므로 버튼 테스트도 작성했다.<br>모달 안의 DOM을 클릭 할 때 stopPropagation 이벤트가 발생하므로 가짜 함수를 추가 하였다.(<a href="https://github.com/airbnb/enzyme/issues/323" target="_blank" rel="noopener">참조</a>)</p>
 <ul>
 <li>debug 메소드는 디버깅 목적으로 HTML과 유사한 wrapper 문자열을 반환한다. </li>
 <li>simulate 메소드는 이벤트를 시뮬레이션 한다. 첫번째 파라미터는 시뮬레이터 할 이벤트 이름을 넣고 두번째 파라미터에는 이벤트에 전달 되는 모의 이벤트 객체가 들어간다.</li>
 </ul>
 <h2 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn run test</span><br></pre></td></tr></table></figure>
+
 <p>위의 명령어로 테스트를 실행할 수 있다. </p>
 <p><img src="/images/frontend/typescript-react-test-1.png" alt="스냅샷 생성"><br>테스트를 실행하면 스냅샷 폴더가 생긴다. </p>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Jest Snapshot v1, https://goo.gl/fbAQLP</span></span><br><span class="line"></span><br><span class="line">exports[<span class="hljs-string">`&lt;Modal /&gt; Modal Render... 1`</span>] = <span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">&lt;Portal&gt;</span></span><br><span class="line"><span class="hljs-string">  &lt;div</span></span><br><span class="line"><span class="hljs-string">    className="modal-backdrop open test-backdrop"</span></span><br><span class="line"><span class="hljs-string">    onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="hljs-string">  &gt;</span></span><br><span class="line"><span class="hljs-string">    &lt;CSSTransitionGroup</span></span><br><span class="line"><span class="hljs-string">      transitionAppear=&#123;true&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionAppearTimeout=&#123;300&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionEnter=&#123;true&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionEnterTimeout=&#123;300&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionLeave=&#123;true&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionLeaveTimeout=&#123;500&#125;</span></span><br><span class="line"><span class="hljs-string">      transitionName="example"</span></span><br><span class="line"><span class="hljs-string">    &gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;div</span></span><br><span class="line"><span class="hljs-string">        className="modal test-modal sm"</span></span><br><span class="line"><span class="hljs-string">        onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="hljs-string">      &gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;button</span></span><br><span class="line"><span class="hljs-string">          onClick=&#123;[Function]&#125;</span></span><br><span class="line"><span class="hljs-string">          type="button"</span></span><br><span class="line"><span class="hljs-string">        &gt;</span></span><br><span class="line"><span class="hljs-string">          닫기</span></span><br><span class="line"><span class="hljs-string">        &lt;/button&gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;div&gt;</span></span><br><span class="line"><span class="hljs-string">          Modal Test</span></span><br><span class="line"><span class="hljs-string">        &lt;/div&gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;/div&gt;</span></span><br><span class="line"><span class="hljs-string">    &lt;/CSSTransitionGroup&gt;</span></span><br><span class="line"><span class="hljs-string">  &lt;/div&gt;</span></span><br><span class="line"><span class="hljs-string">&lt;/Portal&gt;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br></pre></td></tr></table></figure>
+
 <p>이런식으로 스냅샷이 생성된다. </p>
 <p><img src="/images/frontend/typescript-react-test-2.png" alt="테스트 성공"><br>테스트에 성공하면 위의 스샷 처럼 성공 메시지들이 출력된다.<br>debug로 child elements가 제대로 출력되는지 console.log를 찍었기 떄문에 console.log 결과물이 같이 출력되었다. </p>
 <p><img src="/images/frontend/typescript-react-test-3.png" alt="테스트 실패"><br>테스트에 실패하면 실패한 테스트 코드 위치와 원하는 테스트 값, 실제로 나온 테스트 결과값을 보여준다. </p>
@@ -383,15 +406,19 @@
         <div class="content">
             <p>TypeScript에 익숙해질 겸 기존에 진행하고 있던 프로젝트를 TypeScript으로 마이그레이션 해보기로 했다.<br>create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션 할 수 있다. </p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add @types/node @types/react @types/react-dom</span><br><span class="line">yarn add --dev typescript awesome-typescript-loader source-map-loader @types/jest</span><br></pre></td></tr></table></figure>
+
 <p>먼저 위의 모듈들을 install 해주자. </p>
 <h3 id="App-tsx"><a href="#App-tsx" class="headerlink" title="App.tsx"></a>App.tsx</h3><figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">interface</span> Props &#123;&#125;</span><br><span class="line"><span class="hljs-keyword">interface</span> State &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> App <span class="hljs-keyword">extends</span> React.Component&lt;Props, State&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">props: Props</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">super</span>(props);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render(): JSX.Element &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> &lt;div&gt;TypeScript&lt;<span class="hljs-regexp">/div&gt;;</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
 <p>위의 App 컴포넌트 처럼 컴포넌트 파일들의 확장자를 tsx로 바꾸고 Props, State 타입을 지정해주면 된다.<br>마지막으로 index.js 파일을 index.tsx로 바꾸면 마이그레이션이 간단하게 끝난다.</p>
 <p>여기까지는 React 공식문서를 따라 해서 문제가 없었는데 나는 yarn eject로 프로젝트 의존성을 풀어놔서 문제가 잠시 생겼었다.<br>컴포넌트 import시 컴포넌트 경로를 적을 때 tsx 확장자를 적지 않으면 컴포넌트를 제대로 불러오지 못하는 것이었다. </p>
 <p><img src="https://facebook.github.io/create-react-app/docs/adding-typescript" alt="컴포넌트를 import할 때 tsx 확장자가 없으면 프로젝트가 제대로 실행되지 않았다."></p>
 <p>빨간줄이 거슬려서 해결법을 찾아보았다. </p>
 <h3 id="paths-js"><a href="#paths-js" class="headerlink" title="paths.js"></a>paths.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> moduleFileExtensions = [</span><br><span class="line">  <span class="hljs-string">'web.mjs'</span>,</span><br><span class="line">  <span class="hljs-string">'mjs'</span>,</span><br><span class="line">  <span class="hljs-string">'web.js'</span>,</span><br><span class="line">  <span class="hljs-string">'js'</span>,</span><br><span class="line">  <span class="hljs-string">'web.ts'</span>,</span><br><span class="line">  <span class="hljs-string">'ts'</span>,</span><br><span class="line">  <span class="hljs-string">'web.tsx'</span>,</span><br><span class="line">  <span class="hljs-string">'tsx'</span>,</span><br><span class="line">  <span class="hljs-string">'json'</span>,</span><br><span class="line">  <span class="hljs-string">'web.jsx'</span>,</span><br><span class="line">  <span class="hljs-string">'jsx'</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
 <p>paths.js 파일을 확인해보면 분명 확장자에 ts, tsx가 있는데 제대로 확장자를 빼면 컴포넌트를 제대로 불러오지 않는것이 이상해서 webpack 설정을 보았다. </p>
 <h3 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">   <span class="hljs-comment">/* 생략 */</span></span><br><span class="line"></span><br><span class="line">  extensions: paths.moduleFileExtensions.map(<span class="hljs-function"><span class="hljs-params">ext</span> =&gt;</span> <span class="hljs-string">`.<span class="hljs-subst">$&#123;ext&#125;</span>`</span>),</span><br><span class="line">  <span class="hljs-comment">// .filter(ext =&gt; useTypeScript || !ext.includes("ts")),</span></span><br><span class="line">  </span><br><span class="line">  <span class="hljs-comment">/* 생략 */</span></span><br></pre></td></tr></table></figure>
+
 <p>resolve 옵션은 webpack이 알아서 경로나 확장자를 처리할 수 있게 도와준다. extensions에 넣은 확장자들은 웹팩에서 알아서 처리해주기 때문에 파일 경로를 입력할 때 확장자를 적을 필요가 없어진다.<br>확인 해보니 Array.filter 메소드로 TypeScript 파일들을 다 걸러내고 있길래 해당 부분을 주석처리 해주었더니 정상 작동 되었다. </p>
 <p>진작 webpack 설정을 봤었어야 했는데 삽질을 좀 많이 했다. 흑흑…  그래도 무사히 마이그레이션 성공!</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://facebook.github.io/create-react-app/docs/adding-typescript" target="_blank" rel="noopener">Adding TypeScript</a></p>
@@ -458,12 +485,15 @@
 <li>테스트 코드를 많이 애용하면 정적 타입 언어가 필요 없으나 테스트 커버리지를 엄청 올리는 일이 가면 갈수록 힘들어진다. 미리 타입 체킹을 하며 오류를 막아 주는 것이 TypeScript 이다.</li>
 </ul>
 <h2 id="TypeScript-5분-튜토리얼"><a href="#TypeScript-5분-튜토리얼" class="headerlink" title="TypeScript 5분 튜토리얼"></a>TypeScript 5분 튜토리얼</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure>
+
 <p>TypeScript를 전역으로 설치해주자.</p>
 <h3 id="helloTypeScript-ts"><a href="#helloTypeScript-ts" class="headerlink" title="helloTypeScript.ts"></a>helloTypeScript.ts</h3><figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greeter</span>(<span class="hljs-params">person: <span class="hljs-built_in">string</span></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello <span class="hljs-subst">$&#123;person&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">greeter(<span class="hljs-string">"typescript"</span>);</span><br></pre></td></tr></table></figure>
+
 <p>TypeScript 공식 사이트에서 튜토리얼을 보고 간단하게 작성해 보았다. </p>
 <p><img src="/images/frontend/typescript-first-1.png" alt="parameter에 타입을 지정해주면 타입이 맞지 않을 때 오류를 출력해준다."></p>
 <p><img src="/images/frontend/typescript-first-2.png" alt="parameter에 타입을 생략하면 any로 타입이 설정된다."></p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc helloTypeScript.ts</span><br></pre></td></tr></table></figure>
+
 <p>tsc 명령어로 TypeScript를 컴파일 할 수 있다.</p>
 <p><img src="/images/frontend/typescript-first-3.png" alt="tsc 명령어로 ts파일을 컴파일 하면 js 파일이 생성된다."></p>
 <p><img src="/images/frontend/typescript-first-4.png" alt="컴파일된 js 파일에도 타입이 지정되어 있을까 확인해봤더니 타입이 지정되지는 않았다."></p>
@@ -489,7 +519,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
     
         
 <div class="card widget">
@@ -526,7 +556,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        51
+                        49
                     </p>
                 </div>
             </div>
@@ -536,7 +566,7 @@
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        18
+                        16
                     </p>
                 </div>
             </div>
@@ -546,7 +576,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        14
                     </p>
                 </div>
             </div>
@@ -630,7 +660,7 @@
                 <span class="level-item">Base</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">28</span>
+                <span class="level-item tag">26</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Base/Algorithms/">
@@ -638,23 +668,7 @@
                 <span class="level-item">Algorithms</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">9</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Base/Compiler/">
-            <span class="level-start">
-                <span class="level-item">Compiler</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Base/Computer-Architecture/">
-            <span class="level-start">
-                <span class="level-item">Computer Architecture</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">10</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Base/Computer-security/">
@@ -764,7 +778,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Computer-Architecture/" style="font-size: 10px;">Computer Architecture</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
     </div>
 </div>
 
@@ -772,690 +786,11 @@
     
         <div class="column-right-shadow is-hidden-widescreen ">
         
-            
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            최근 글
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T12:27:26.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-first/" class="has-link-black-ter is-size-6">Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
-                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            아카이브
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/05/">
-                <span class="level-start">
-                    <span class="level-item">5월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">9</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/04/">
-                <span class="level-start">
-                    <span class="level-item">4월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/03/">
-                <span class="level-start">
-                    <span class="level-item">3월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">15</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">2월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/01/">
-                <span class="level-start">
-                    <span class="level-item">1월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/12/">
-                <span class="level-start">
-                    <span class="level-item">12월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/11/">
-                <span class="level-start">
-                    <span class="level-item">11월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/10/">
-                <span class="level-start">
-                    <span class="level-item">10월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/09/">
-                <span class="level-start">
-                    <span class="level-item">9월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/08/">
-                <span class="level-start">
-                    <span class="level-item">8월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/07/">
-                <span class="level-start">
-                    <span class="level-item">7월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                태그
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Algorithms/">
-                        <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">9</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/CSS/">
-                        <span class="tag">CSS</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Compiler/">
-                        <span class="tag">Compiler</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
-                        <span class="tag">Computer Architecture</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-security/">
-                        <span class="tag">Computer security</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Data-structure/">
-                        <span class="tag">Data structure</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/HTML/">
-                        <span class="tag">HTML</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Information-network/">
-                        <span class="tag">Information network</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/JavaScript/">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Next-js/">
-                        <span class="tag">Next.js</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Node-js/">
-                        <span class="tag">Node.js</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Operating-systems/">
-                        <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">7</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/React-js/">
-                        <span class="tag">React.js</span>
-                        <span class="tag is-grey">8</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Software-engineering/">
-                        <span class="tag">Software engineering</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/TypeScript/">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">4</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/etc/">
-                        <span class="tag">etc</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-        
         </div>
     
 </div>
 
                 
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            최근 글
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T14:04:23.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-setting/" class="has-link-black-ter is-size-6">create-react-app + TypeScript + Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T12:27:26.000Z">2019-05-14</time></div>
-                    <a href="/2019/05/14/2019-05-14-nextjs-first/" class="has-link-black-ter is-size-6">Next.js</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/Etc/">Etc</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:45:44.000Z">2019-05-13</time></div>
-                    <a href="/2019/05/13/2019-05-13-typescript-compiler-option/" class="has-link-black-ter is-size-6">2019-05-13-typescript-compiler-option</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a> / <a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T14:30:07.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-minMatMult/" class="has-link-black-ter is-size-6">연쇄 행렬 곱셈 문제</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-12T13:35:49.000Z">2019-05-12</time></div>
-                    <a href="/2019/05/12/2019-03-17-algorithms-fibonachi/" class="has-link-black-ter is-size-6">피보나치 수열</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Base/">Base</a> / <a class="has-link-grey -link" href="/categories/Base/Algorithms/">Algorithms</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            아카이브
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/05/">
-                <span class="level-start">
-                    <span class="level-item">5월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">9</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/04/">
-                <span class="level-start">
-                    <span class="level-item">4월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/03/">
-                <span class="level-start">
-                    <span class="level-item">3월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">15</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">2월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/01/">
-                <span class="level-start">
-                    <span class="level-item">1월 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">4</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/12/">
-                <span class="level-start">
-                    <span class="level-item">12월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/11/">
-                <span class="level-start">
-                    <span class="level-item">11월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/10/">
-                <span class="level-start">
-                    <span class="level-item">10월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/09/">
-                <span class="level-start">
-                    <span class="level-item">9월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/08/">
-                <span class="level-start">
-                    <span class="level-item">8월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/07/">
-                <span class="level-start">
-                    <span class="level-item">7월 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">3</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                태그
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Algorithms/">
-                        <span class="tag">Algorithms</span>
-                        <span class="tag is-grey">9</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/CSS/">
-                        <span class="tag">CSS</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Compiler/">
-                        <span class="tag">Compiler</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-Architecture/">
-                        <span class="tag">Computer Architecture</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Computer-security/">
-                        <span class="tag">Computer security</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Data-structure/">
-                        <span class="tag">Data structure</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/HTML/">
-                        <span class="tag">HTML</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Information-network/">
-                        <span class="tag">Information network</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/JavaScript/">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Next-js/">
-                        <span class="tag">Next.js</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Node-js/">
-                        <span class="tag">Node.js</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Operating-systems/">
-                        <span class="tag">Operating systems</span>
-                        <span class="tag is-grey">7</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/React-js/">
-                        <span class="tag">React.js</span>
-                        <span class="tag is-grey">8</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Software-engineering/">
-                        <span class="tag">Software engineering</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/TypeScript/">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag is-grey">4</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/etc/">
-                        <span class="tag">etc</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-</div>
-
             </div>
         </div>
     </section>
