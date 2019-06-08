@@ -4,7 +4,7 @@
 
     <sitemap>
         <loc>http://dev.kyoungah.com/post-sitemap.xml</loc>
-        <lastmod>2019-06-08T15:33:22.212Z</lastmod>
+        <lastmod>2019-06-08T15:49:47.887Z</lastmod>
     </sitemap>
 
     <sitemap>
@@ -14,12 +14,12 @@
 
     <sitemap>
         <loc>http://dev.kyoungah.com/category-sitemap.xml</loc>
-        <lastmod>2019-06-08T15:33:22.212Z</lastmod>
+        <lastmod>2019-06-08T15:49:47.887Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://dev.kyoungah.com/tag-sitemap.xml</loc>
-        <lastmod>2019-06-08T15:33:22.212Z</lastmod>
+        <lastmod>2019-06-08T15:49:47.887Z</lastmod>
     </sitemap>
 
 </sitemapindex>
