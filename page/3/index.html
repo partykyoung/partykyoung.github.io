@@ -139,6 +139,60 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-17T13:31:51.000Z">2019-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (나에 대하여 515 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/03/17/2019-03-06-operating-systems-pcb/">프로세스 제어 블록</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="프로세스-제어-블록-PCB"><a href="#프로세스-제어-블록-PCB" class="headerlink" title="프로세스 제어 블록(PCB)"></a>프로세스 제어 블록(PCB)</h2><p>프로세스를 관리하기 위해 운영체제는 각 프로세스마다 프로세스 제어블록(PCB)을 두고서 여기에 해당 프로세스의 정보를 보관한다. 프로세스가 진행함에 따라 PCB의 내용은 변경된다.<br>프로세스가 종료되면 해당 프로세스 제어 블록도 없어지게 된다. </p>
+<p><img src="/images/base/operating-systems-pcb-1.png" alt="프로세스 제어 블록의 내용"></p>
+<h3 id="프로세스-상태"><a href="#프로세스-상태" class="headerlink" title="프로세스 상태"></a>프로세스 상태</h3><p>프로세스의 현재 상태를 나타낸다. </p>
+<h3 id="프로세스-번호-PID"><a href="#프로세스-번호-PID" class="headerlink" title="프로세스 번호(PID)"></a>프로세스 번호(PID)</h3><p>프로세스의 기준이 되는 ID를 나타낸다.</p>
+<h3 id="프로그램-카운터-PC"><a href="#프로그램-카운터-PC" class="headerlink" title="프로그램 카운터(PC)"></a>프로그램 카운터(PC)</h3><p>프로세스 수행을 위한 다음 명령의 주소를 표시한다.</p>
+<h3 id="레지스터-register"><a href="#레지스터-register" class="headerlink" title="레지스터(register)"></a>레지스터(register)</h3><p>CPU의 레지스터에 해당하는 정보들을 포함한다.<br>실행상테에서 다른 상태로 전이될 때 CPU의 레지스터 정보를 이곳에 저장시켜서 나중에 다시 실행상태로 전이될 때 복구시켜 프로세스의 정확한 수행을 계속할 수 있도록 한다.</p>
+<h3 id="메모리"><a href="#메모리" class="headerlink" title="메모리"></a>메모리</h3><p>프로세스가 저장된 주소와 가상 메모리를 사용하는 경우에는 가상주소와 실제 주소의 사상정보, 기준 레지스터와 경계 레지스터 등의 정보를 포함한다.</p>
+<h3 id="프로세스-우선순위"><a href="#프로세스-우선순위" class="headerlink" title="프로세스 우선순위"></a>프로세스 우선순위</h3><p>우선순위를 이용하여 스케줄링 시 어떤 작업을 선택 할 것인가를 결정하는데 필요한 정보를 포함한다.</p>
+<h3 id="회계-정보"><a href="#회계-정보" class="headerlink" title="회계 정보"></a>회계 정보</h3><p>주로 성능 측정과 순위에 대한 목적을 위한 정보로서, CPU 사용 시간, 프로세스의 시스템 존재 시간, 메모리 사용량, 보조기억장치 사용량, 기타 시스템 프로그램의 사용 실태 등 다양한 정보를 포함하고 있다. </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-03-17T10:15:00.000Z">2019-03-17</time>
                 
                 <div class="level-item">
@@ -703,7 +757,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    13분 읽기 (나에 대하여 1944 단어)
+                    13분 읽기 (나에 대하여 1971 단어)
                 </span>
                 
                 
@@ -900,6 +954,7 @@
 <td align="center">합병 정렬의 수행 시간, <br> 퀵 정렬의 최선의 수행 시간</td>
 </tr>
 </tbody></table>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 알고리즘 2강</a></p>
 
         </div>
         
@@ -997,72 +1052,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-03-06T13:41:58.000Z">2019-03-06</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Base/">Base</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Base/Operating-systems/">Operating systems</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4분 읽기 (나에 대하여 649 단어)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/03/06/2019-03-06-operating-systems-process-gerating/">프로세스의 생성과 종료</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="프로세스-생성"><a href="#프로세스-생성" class="headerlink" title="프로세스 생성"></a>프로세스 생성</h3><p>운영체제가 새로은 프로세스를 생성하고 실행하려면 프로세스 관리를 위한 프로세스 제어 블록을 만든 후에 프로세스에 주소 공간을 할당해야 한다. </p>
-<ol>
-<li>새로운 프로세스에 프로세스 식별자 할당.</li>
-<li>프로세스의 모든 구성 요소를 포함할 수 있는 주소 공간과 프로세스 제어 블록 공간 할당.</li>
-<li>프로세스 제어 블록 초기화.</li>
-<li>준비 큐에 삽입.</li>
-</ol>
-<p>일반적으로 프로세스는 작업을 수행하기 위해 자원이 필요하다. 한 프로세스가 자식 프로세스를 생성하면 생성된 자식 프로세스는 운영체제로 부터 직접 자원을 얻거나 부모 프로세스 자원의 일부를 얻는다. 하나의 프로세스가 프로세스 생성 시스템 호출을 통해 새로운 프로세스를 생성할 수 있다. ex) fork()</p>
-<ul>
-<li>호출하는 프로세스: 부모 프로세스 </li>
-<li>생성되는 프로세스: 자식 프로세스</li>
-</ul>
-<p>시스템 프로세스와 사용자 프로세스 모두 자식 프로세스를 생성할 수 있다. 즉 부모 프로세스가 될 수 있다. </p>
-<p>부모 프로세스는 자식 프로세스에게 자원을 나눠주거나 공유할 수 잇도록 한다. 보통 자식 프로세스의 자원은 부모 프로세스의 자원으로 제한하는데 과도한 자식 프로세스 생성에 따른 시스템 과부하 방지를 위해서이다.</p>
-<h3 id="프로세스-종료"><a href="#프로세스-종료" class="headerlink" title="프로세스 종료"></a>프로세스 종료</h3><p>프로세스의 마지막 명령이 실행을 마치는 경우 또는 프로세스 종료 시스템 호출을 통하는 경우(ex: exit()) 프로세스는 종료된다. 프로세스 종료 후 부모 프로세스에게 실행 결과를 되돌려 준다. </p>
-<p>프로세스 종료 시스템 호출은 부모 프로세스에 의해서만 호출 된다. 부모 프로세스는 다음과 같은 이유 때문에 자식 프로세스의 실행을 종료시킬 수 있다. </p>
-<ul>
-<li>자식 프로세스가 할당된 자원의 사용을 초과할 때.</li>
-<li>자식 프로세스에게 할당된 작업이 더 이상 필요치 않을 때.</li>
-</ul>
-<p>부모 프로세스가 종료되면 자식 프로세스도 모두 종료된다.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920017322&condLscValue=001&condYr=&condSmst=" target="_blank" rel="noopener">방송대 컴퓨터과학과 운영체제 2강</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -1131,7 +1120,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        49
+                        50
                     </p>
                 </div>
             </div>
@@ -1299,7 +1288,7 @@
                 <span class="level-item">Front-end</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">17</span>
+                <span class="level-item tag">18</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Front-end/Css/">
@@ -1315,7 +1304,7 @@
                 <span class="level-item">Etc</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Front-end/React-js/">
@@ -1353,7 +1342,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 13.33px;">etc</a>
     </div>
 </div>
 

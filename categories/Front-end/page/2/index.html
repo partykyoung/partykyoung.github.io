@@ -150,6 +150,68 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-21T15:48:28.000Z">2019-01-22</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Front-end/">Front-end</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Front-end/TypeScript/">TypeScript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (나에 대하여 611 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/01/22/2019-01-20-typescript-react/">create-react-app으로 생성한 React 프로젝트 TypeScript로 마이그레이션 하기</a>
+            
+        </h1>
+        <div class="content">
+            <p>TypeScript에 익숙해질 겸 기존에 진행하고 있던 프로젝트를 TypeScript으로 마이그레이션 해보기로 했다.<br>create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션 할 수 있다. </p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add @types/node @types/react @types/react-dom</span><br><span class="line">yarn add --dev typescript awesome-typescript-loader source-map-loader @types/jest</span><br></pre></td></tr></table></figure>
+
+<p>먼저 위의 모듈들을 install 해주자. </p>
+<h3 id="App-tsx"><a href="#App-tsx" class="headerlink" title="App.tsx"></a>App.tsx</h3><figure class="highlight typescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">interface</span> Props &#123;&#125;</span><br><span class="line"><span class="hljs-keyword">interface</span> State &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> App <span class="hljs-keyword">extends</span> React.Component&lt;Props, State&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">props: Props</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">super</span>(props);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render(): JSX.Element &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> &lt;div&gt;TypeScript&lt;<span class="hljs-regexp">/div&gt;;</span></span><br><span class="line"><span class="hljs-regexp">  &#125;</span></span><br><span class="line"><span class="hljs-regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>위의 App 컴포넌트 처럼 컴포넌트 파일들의 확장자를 tsx로 바꾸고 Props, State 타입을 지정해주면 된다.<br>마지막으로 index.js 파일을 index.tsx로 바꾸면 마이그레이션이 간단하게 끝난다.</p>
+<p>여기까지는 React 공식문서를 따라 해서 문제가 없었는데 나는 yarn eject로 프로젝트 의존성을 풀어놔서 문제가 잠시 생겼었다.<br>컴포넌트 import시 컴포넌트 경로를 적을 때 tsx 확장자를 적지 않으면 컴포넌트를 제대로 불러오지 못하는 것이었다. </p>
+<p><img src="https://facebook.github.io/create-react-app/docs/adding-typescript" alt="컴포넌트를 import할 때 tsx 확장자가 없으면 프로젝트가 제대로 실행되지 않았다."></p>
+<p>빨간줄이 거슬려서 해결법을 찾아보았다. </p>
+<h3 id="paths-js"><a href="#paths-js" class="headerlink" title="paths.js"></a>paths.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> moduleFileExtensions = [</span><br><span class="line">  <span class="hljs-string">'web.mjs'</span>,</span><br><span class="line">  <span class="hljs-string">'mjs'</span>,</span><br><span class="line">  <span class="hljs-string">'web.js'</span>,</span><br><span class="line">  <span class="hljs-string">'js'</span>,</span><br><span class="line">  <span class="hljs-string">'web.ts'</span>,</span><br><span class="line">  <span class="hljs-string">'ts'</span>,</span><br><span class="line">  <span class="hljs-string">'web.tsx'</span>,</span><br><span class="line">  <span class="hljs-string">'tsx'</span>,</span><br><span class="line">  <span class="hljs-string">'json'</span>,</span><br><span class="line">  <span class="hljs-string">'web.jsx'</span>,</span><br><span class="line">  <span class="hljs-string">'jsx'</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>paths.js 파일을 확인해보면 분명 확장자에 ts, tsx가 있는데 제대로 확장자를 빼면 컴포넌트를 제대로 불러오지 않는것이 이상해서 webpack 설정을 보았다. </p>
+<h3 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">   <span class="hljs-comment">/* 생략 */</span></span><br><span class="line"></span><br><span class="line">  extensions: paths.moduleFileExtensions.map(<span class="hljs-function"><span class="hljs-params">ext</span> =&gt;</span> <span class="hljs-string">`.<span class="hljs-subst">$&#123;ext&#125;</span>`</span>),</span><br><span class="line">  <span class="hljs-comment">// .filter(ext =&gt; useTypeScript || !ext.includes("ts")),</span></span><br><span class="line">  </span><br><span class="line">  <span class="hljs-comment">/* 생략 */</span></span><br></pre></td></tr></table></figure>
+
+<p>resolve 옵션은 webpack이 알아서 경로나 확장자를 처리할 수 있게 도와준다. extensions에 넣은 확장자들은 웹팩에서 알아서 처리해주기 때문에 파일 경로를 입력할 때 확장자를 적을 필요가 없어진다.<br>확인 해보니 Array.filter 메소드로 TypeScript 파일들을 다 걸러내고 있길래 해당 부분을 주석처리 해주었더니 정상 작동 되었다. </p>
+<p>진작 webpack 설정을 봤었어야 했는데 삽질을 좀 많이 했다. 흑흑…  그래도 무사히 마이그레이션 성공!</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://facebook.github.io/create-react-app/docs/adding-typescript" target="_blank" rel="noopener">Adding TypeScript</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-01-14T13:45:44.000Z">2019-01-14</time>
                 
                 <div class="level-item">
@@ -656,7 +718,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        49
+                        50
                     </p>
                 </div>
             </div>
@@ -824,7 +886,7 @@
                 <span class="level-item">Front-end</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">17</span>
+                <span class="level-item tag">18</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Front-end/Css/">
@@ -840,7 +902,7 @@
                 <span class="level-item">Etc</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Front-end/React-js/">
@@ -878,7 +940,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 11.67px;">etc</a>
+        <a href="/tags/Algorithms/" style="font-size: 20px;">Algorithms</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Computer-security/" style="font-size: 13.33px;">Computer security</a> <a href="/tags/Data-structure/" style="font-size: 11.67px;">Data structure</a> <a href="/tags/HTML/" style="font-size: 11.67px;">HTML</a> <a href="/tags/Information-network/" style="font-size: 11.67px;">Information network</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Next-js/" style="font-size: 11.67px;">Next.js</a> <a href="/tags/Node-js/" style="font-size: 13.33px;">Node.js</a> <a href="/tags/Operating-systems/" style="font-size: 16.67px;">Operating systems</a> <a href="/tags/React-js/" style="font-size: 18.33px;">React.js</a> <a href="/tags/Software-engineering/" style="font-size: 11.67px;">Software engineering</a> <a href="/tags/TypeScript/" style="font-size: 15px;">TypeScript</a> <a href="/tags/etc/" style="font-size: 13.33px;">etc</a>
     </div>
 </div>
 
