@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"/><link as="script" rel="preload" href="/app-0d5d2409b38cfdcf00cf.js"/><link as="script" rel="preload" href="/webpack-runtime-b18de972a18959228b00.js"/><link as="fetch" rel="preload" href="/page-data/etc/development-env-setting/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Mac 개발환경 설정</h1><h2>April 25, 2019</h2><div class="blog-post-content"><p>맥북을 포맷하면서 개발환경을 새로 세팅하다가 기록해놓으면 좋을 것 같아서 기록함.</p>
+<h2>Mac</h2>
+<ol>
+<li>Homebrew 설치</li>
+<li><a href="https://brew.sh/index_ko">Homebrew</a></li>
+<li>Mac 패키지 관리자는 Homebrew 사용 중.</li>
+<li>
+<p>git 설치</p>
+<pre><code>brew install git
+</code></pre>
+</li>
+</ol>
+<h2>Front-end</h2>
+<p>개인 프로젝트 진행 시 Node.js + yarn 환경을 사용함.
+개발툴은 vsocde 사용함.</p>
+<ol>
+<li>Node.js 설치</li>
+<li><a href="https://nodejs.org/ko/">Node.js</a></li>
+<li>LTS 버전 사용 중.</li>
+<li>yarn 설치</li>
+</ol>
+<pre><code>  brew install yarn
+</code></pre>
+<pre><code>- [yarn](https://yarnpkg.com/en/)
+</code></pre>
+<ol start="3">
+<li>
+<p>vscode 설치</p>
+<ul>
+<li>공통 Extensions</li>
+<li>Atom One Dark Theme</li>
+<li>Git History</li>
+<li>Material IconTheme</li>
+<li>Prettier</li>
+<li>JavaScript / React.js 관련 Extensions</li>
+<li>eslint</li>
+<li>ES7 React/Redux/GraphQL/React-Native snippets</li>
+</ul>
+</li>
+</ol>
+<h2>C</h2>
+<p>자료구조나 알고리즘 공부 시 c로 코드를 작성 중.</p>
+<ol>
+<li>gcc 설치</li>
+</ol>
+<pre><code>brew install gcc
+</code></pre>
+<ol start="2">
+<li>c로 작성 중인 프로젝트 폴더에 tasks.json 파일 작성.</li>
+</ol>
+<pre><code class="language-json">{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "gcc build active file",
+      "command": "/usr/bin/gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+</code></pre>
+<ol start="3">
+<li>c 관련 vscode Extenstions 설치 필요함.</li>
+<li>C/C++</li>
+<li>Code Runner</li>
+</ol></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/etc/development-env-setting";window.webpackCompilationHash="36f39e3b50b61b19d339";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-0d5d2409b38cfdcf00cf.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-270c6b30b12b5491f622.js"]};/*]]>*/</script><script src="/webpack-runtime-b18de972a18959228b00.js" async=""></script><script src="/app-0d5d2409b38cfdcf00cf.js" async=""></script><script src="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js" async=""></script></body></html>

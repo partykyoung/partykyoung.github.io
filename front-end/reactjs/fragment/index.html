@@ -1,0 +1,86 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"/><link as="script" rel="preload" href="/app-0d5d2409b38cfdcf00cf.js"/><link as="script" rel="preload" href="/webpack-runtime-b18de972a18959228b00.js"/><link as="fetch" rel="preload" href="/page-data/front-end/reactjs/fragment/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Fragment</h1><h2>August 05, 2018</h2><div class="blog-post-content"><h2>JSX</h2>
+<pre><code class="language-jsx">import React, { Component } from "react"
+
+class App extends Component {
+  render() {
+    return (
+      &#x3C;div>
+        &#x3C;h1>React.js&#x3C;/h1>
+        &#x3C;div>
+          JSX &#x3C;br /> :)
+        &#x3C;/div>
+      &#x3C;/div>
+    )
+  }
+}
+
+export default App
+</code></pre>
+<p>JSX는 JavaScript XML의 약자이다. render 함수를 보면 HTML 태그 처럼 생긴 것들이 보이는데 저 부분이 JSX 이다. JSX로 컴포넌트가 화면에 어떻게 보일지 나타낼 수 있다. JSX는 HTML과 비슷해 보이지만 용도도 사용법도 다르다.</p>
+<pre><code class="language-jsx">import React, { Component } from "react"
+
+class App extends Component {
+  render() {
+    return (
+      /* {
+        error
+
+        &#x3C;div>안녕하세요&#x3C;/div>
+        &#x3C;div>반갑습니다&#x3C;/div>
+
+      } */
+
+      &#x3C;div>
+        &#x3C;div>안녕하세요&#x3C;/div>
+        &#x3C;div>반갑습니다&#x3C;/div>
+      &#x3C;/div>
+    )
+  }
+}
+
+export default App
+</code></pre>
+<p><img src="/images/frontend/reactjs-fragment-1.png" alt="실행결과">
+JSX는 컴포넌트에 여러 요소가 있다면 부모 요소 하나로 꼭 감싸야 한다. Virtual DOM에서 컴포넌트 변화를 감지해 낼 때 효율적으로 비교할 수 있도록 컴포넌트 내부는 DOM 트리 구조 하나여야 한다는 규칙이 있기 때문이다.
+하지만 이렇게 요소들을 감싸기 위한 용도로 DOM 요소들을 추가하다보면 쓸모없는 요소들이 늘어나게 된다.</p>
+<h2>Fragment</h2>
+<pre><code class="language-jsx">import React, { Component, Fragment } from "react"
+
+class App extends Component {
+  render() {
+    return (
+      &#x3C;Fragment>
+        &#x3C;div>안녕하세요&#x3C;/div>
+        &#x3C;div>반갑습니다&#x3C;/div>
+      &#x3C;/Fragment>
+    )
+  }
+}
+
+export default App
+</code></pre>
+<p><img src="/images/frontend/reactjs-fragment-2.png" alt="실행결과"></p>
+<p>Fragment는 React v16 이상의 버전에서 도입되었다. Fragment로 부모 DOM 요소를 추가하지 않고도 자식 요소들을 그룹화 할 수 있다.
+Fragment를 사용하면 단지 부모 요소로만 쓰이는 불필요한 DOM을 줄일 수 있어 조금 더 빨라지고 메모리 사용량도 조금 더 적어진다. 개발자 도구로 DOM 요소를 확인 할 때도 조금 더 편리하게 확인할 수 있다.</p>
+<pre><code class="language-jsx">import React, { Component } from "react"
+
+class App extends Component {
+  render() {
+    return (
+      &#x3C;>
+        &#x3C;div>안녕하세요&#x3C;/div>
+        &#x3C;div>반갑습니다&#x3C;/div>
+      &#x3C;/>
+    )
+  }
+}
+
+export default App
+</code></pre>
+<p>fragments를 일일히 import 하지않고 &#x3C;>&#x3C;/>만으로도 fragments를 사용할 수 있다.</p>
+<h2>마무리</h2>
+<p>실무에서 React.js를 사용하면서 왜 JSX에 부모요소로 꼭 자식요소들을 감싸야 하는지 이유도 모른체 매번 써왔는데 이번에 처음부터 React.js를 공부하면서 드디어 그 이유를 알게 되었다 ㅠ...
+개인적으로 부모요소 규칙때문에 짜증난적이 한두번이 아니었는데 Fragment 덕분에 많이 편해졌다. 필요한걸 쏙쏙 골라서 업데이트 해주는 React.js가 너무 좋다 :).</p>
+<h2>Reference</h2>
+<p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&#x26;mallGb=KOR&#x26;barcode=9791160505238&#x26;orderClick=LAG&#x26;Kc=">리액트를 다루는 기술</a>
+<a href="https://reactjs.org/docs/fragments.html">Fragments</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/reactjs/fragment";window.webpackCompilationHash="36f39e3b50b61b19d339";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-0d5d2409b38cfdcf00cf.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-270c6b30b12b5491f622.js"]};/*]]>*/</script><script src="/webpack-runtime-b18de972a18959228b00.js" async=""></script><script src="/app-0d5d2409b38cfdcf00cf.js" async=""></script><script src="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js" async=""></script></body></html>

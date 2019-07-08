@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"/><link as="script" rel="preload" href="/app-0d5d2409b38cfdcf00cf.js"/><link as="script" rel="preload" href="/webpack-runtime-b18de972a18959228b00.js"/><link as="fetch" rel="preload" href="/page-data/front-end/etc/nextjs/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Next.js</h1><h2>May 14, 2019</h2><div class="blog-post-content"><h2>CSR</h2>
+<p>서버 측에서 HTML, JS, 리소스를 다운로드 한 후 브라우저에서 View를 렌더링하여 보여주는 방법.</p>
+<ul>
+<li>초기 로딩을 제외하면 서버에 view를 요청할 필요가 없으므로 화면 전환이 빠름.</li>
+<li>초기 로딩속도 느림.</li>
+<li>SEO 적용시 문제점이 있다.</li>
+</ul>
+<h2>SSR</h2>
+<p>서버 측에서 HTML &#x26; View를 생성하여 응답하는 방법.</p>
+<ul>
+<li>초기 로딩 속도 빠름.</li>
+<li>SEO 적용시에 어려움이 없다.</li>
+<li>서버에 계속 view를 요청해야 하므로 서버 부담 큼.</li>
+</ul>
+<h3>검색엔진 최적화(SEO)</h3>
+<p>웹 페이지 검색엔진이 자료를 수집하고 순위를 매기는 방식에 맞게 웹 페이지를 구성해서 검색 결과의 상위에 나올 수 있도록 하는 작업. 주로 meta tag를 이용해서 SEO 최적화 작업을 한다.</p>
+<p>SSR 방식은 서버측에서 html에 콘텐츠를 채워 응답하기 떄문에 웹크롤러가 내용을 수집할 수 있으나 CSR 방식은 클라이언트에서 javaScript를 실행하여 view를 그리기 때문에 javaScript 실행 완료 전 까지 html의 콘텐츠는 비워져 있어서 웹 크롤러는 CSR 페이지를 빈 페이지로 인식하게 된다.</p>
+<h2>Next.js</h2>
+<p>React App의 SSR을 도와주는 프레임워크.</p>
+<ul>
+<li>서버 사이드 렌더링 기능 제공.</li>
+<li>코드 스플릿 기능 제공.</li>
+<li>간단한 클라이언트 사이드 라우팅 기능 제공.</li>
+<li>HMR(Hot Module Replacement)을 지원하는 Webpack 기반의 개발 환경 제공.</li>
+<li>Node.js HTTP 서버 구현 가능.</li>
+<li>Babel, Webpack configuration 커스터마이징 기능 제공.</li>
+</ul>
+<h2>Reference</h2>
+<p><a href="https://nextjs.org/learn/basics/getting-started">Next.js - getting Started</a>
+<a href="https://velog.io/@rjs1197/SSR%EA%B3%BC-CSR%EC%9D%98-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90">SSR과 CSR의 차이를 알아보자</a>
+<a href="https://goodgid.github.io/Server-Side-Rendering-and-Client-Side-Rendering/2">서버 사이드 렌더링(SSR)과 클라이언트 사이드 렌더링(CSR)</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/etc/nextjs";window.webpackCompilationHash="36f39e3b50b61b19d339";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-0d5d2409b38cfdcf00cf.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-270c6b30b12b5491f622.js"]};/*]]>*/</script><script src="/webpack-runtime-b18de972a18959228b00.js" async=""></script><script src="/app-0d5d2409b38cfdcf00cf.js" async=""></script><script src="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js" async=""></script></body></html>

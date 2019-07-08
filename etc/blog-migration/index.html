@@ -1,0 +1,114 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"/><link as="script" rel="preload" href="/app-0d5d2409b38cfdcf00cf.js"/><link as="script" rel="preload" href="/webpack-runtime-b18de972a18959228b00.js"/><link as="fetch" rel="preload" href="/page-data/etc/blog-migration/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Hexo 에서 Gatsby로 블로그 마이그레이션 하기</h1><h2>July 04, 2019</h2><div class="blog-post-content"><pre><code>npm install -g gatsby-cli
+</code></pre>
+<pre><code>gatsby new gatsby-site
+</code></pre>
+<pre><code>gatsby develop
+</code></pre>
+<p>markdown 파일에 path 필요</p>
+<pre><code class="language-md">---
+title: Hexo 에서 Gatsby로 블로그 마이그레이션 하기
+date: 2019-07-04
+# tags:
+#   - etc
+# categories:
+#   - Etc
+path: /etc/blog-migration
+---
+</code></pre>
+<h2>blogTemplate</h2>
+<pre><code class="language-js">import React from "react"
+import { graphql } from "gatsby"
+
+export default function Template({
+  data, // this prop will be injected by the GraphQL query below.
+}) {
+  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { frontmatter, html } = markdownRemark
+  return (
+    &#x3C;div className="blog-post-container">
+      &#x3C;div className="blog-post">
+        &#x3C;h1>{frontmatter.title}&#x3C;/h1>
+        &#x3C;h2>{frontmatter.date}&#x3C;/h2>
+        &#x3C;div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      &#x3C;/div>
+    &#x3C;/div>
+  )
+}
+
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        path
+        title
+      }
+    }
+  }
+`
+</code></pre>
+<h2>gatsby-config.js</h2>
+<pre><code class="language-js">// 생략
+
+  plugins: [
+    // 생략
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`
+      },
+    },
+    `gatsby-transformer-remark`,
+
+    // 생략
+  ],
+
+// 생략
+</code></pre>
+<h2>gatsby-node.js</h2>
+<pre><code class="language-js">const path = require(`path`)
+
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+
+  return graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
+
+    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    })
+  })
+}
+</code></pre>
+<pre><code>yarn add typescript @types/react @types/react-dom gatsby-plugin-typescript @types/react-helmet
+</code></pre>
+<p><a href="https://medium.com/maxime-heckel/getting-started-with-typescript-on-gatsby-8544b47c1d27">https://medium.com/maxime-heckel/getting-started-with-typescript-on-gatsby-8544b47c1d27</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/etc/blog-migration";window.webpackCompilationHash="36f39e3b50b61b19d339";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-0d5d2409b38cfdcf00cf.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-270c6b30b12b5491f622.js"]};/*]]>*/</script><script src="/webpack-runtime-b18de972a18959228b00.js" async=""></script><script src="/app-0d5d2409b38cfdcf00cf.js" async=""></script><script src="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js" async=""></script></body></html>

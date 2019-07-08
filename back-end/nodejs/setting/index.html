@@ -1,0 +1,71 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"/><link as="script" rel="preload" href="/app-0d5d2409b38cfdcf00cf.js"/><link as="script" rel="preload" href="/webpack-runtime-b18de972a18959228b00.js"/><link as="fetch" rel="preload" href="/page-data/back-end/nodejs/setting/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Node.js 작업환경 설정하기</h1><h2>July 31, 2018</h2><div class="blog-post-content"><p>Node.js 프로젝트를 만들고 Webpack 설정까지 해보자.</p>
+<h2>시작하기 전에 필요한 것</h2>
+<h3>Node.js</h3>
+<p><a href="https://nodejs.org/ko/">Node.js 공식사이트</a>
+여기서 Node.js 를 설치할 수 있다.</p>
+<h3>NPM 또는 Yarn</h3>
+<p><a href="https://www.npmjs.com/">NPM</a>
+NPM은 Node.js Package Manger의 약자이다. Node.js에서 사용가능한 모듈들을 패키지화시켜 모아놓은 곳 이다. npm으로 원하는 모듈들을 설치하고 관리할 수 있다.</p>
+<p><a href="https://yarnpkg.com/lang/en/">Yarn</a>
+Yarn은 의존하는 라이브러리가 많아지면 느려지고 설치하는 시기에 따라 다른 버전을 설치할 가능성이 있는 NPM의 단점을 보완하기 위해 나왔다. npm을 대체할 수 있다.</p>
+<p>NPM의 이슈는 NPM 최신버전에서 해결됐고 속도 차이점은 솔직히 난 잘 못느끼겠다. 이번에 Node.js를 공부하면서 Yarn이 써보고 싶어서 Yarn을 썼는데 딱히 NPM이랑 다른건 없는거 같으니 원하는걸 쓰면 되겠다.</p>
+<h2>작업환경 설정</h2>
+<p>es6 개발환경을 구축하기 위해 webpack이랑 babel을 사용할 것이다.</p>
+<pre><code>yarn init -y
+yarn add --dev webpack webpack-cli babel-loader babel-core babel-preset-env
+</code></pre>
+<p>먼저 yarn init 또는 npm init 으로 package.json 파일을 생성해준 후 webpack과 babel 관련 모듈들을 깔아주자.</p>
+<h3>webpack.config.js</h3>
+<pre><code class="language-javascript">const webpack = require("webpack")
+const path = require("path")
+const nodeExternals = require("webpack-node-externals")
+
+module.exports = {
+  target: "node", // 기본은 web 이기 때문에 꼭 node로 맞춰줘야 한다.
+  externals: [nodeExternals()],
+  entry: {
+    server: "./src/server.js",
+  },
+  output: {
+    filename: "[name].js",
+    path: path.resolve(__dirname, "build"),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/, // babel-loader로 트랜스파일시 node_modules는 제외한다.
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["babel-preset-env"],
+          },
+        },
+      },
+    ],
+  },
+}
+</code></pre>
+<p>server-side에서도 webpack을 사용할 수 있도록 webpack.config.js를 작성했다. webpack-node-externals은 node_modules를 빌드과정에서 제외시키는 역할을 한다.</p>
+<h3>src/server.js</h3>
+<pre><code class="language-javascript">import http from "http"
+
+const server = http.createServer()
+const port = 3000
+
+server.listen(port, () => {
+  console.log("server start!", port)
+})
+</code></pre>
+<p>간단하게 서버쪽 소스를 작성했다.</p>
+<h3>package.json</h3>
+<pre><code class="language-javascript">"scripts": {
+  "build": "webpack --mode production &#x26;&#x26; node ./build/server.js"
+},
+</code></pre>
+<p>빌드와 실행을 동시에 하기 위해 script에 build 명령어도 넣어주면 설정은 끝났다.
+webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어야한다.</p>
+<h2>npm run build</h2>
+<p><img src="/images/backend/nodejs-setting-1.png" alt="실행 결과">
+빌드도 잘되고 실행도 잘된다. 작업환경을 끝냈으니 이제 본격적으로 Node.js 공부를 해보자.</p>
+<p><a href="https://github.com/partyKyoung/nodejs-study">해당 포스트에 작성된 모든 소스는 여기서 확인할 수 있다.</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/back-end/nodejs/setting";window.webpackCompilationHash="36f39e3b50b61b19d339";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-0d5d2409b38cfdcf00cf.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-270c6b30b12b5491f622.js"]};/*]]>*/</script><script src="/webpack-runtime-b18de972a18959228b00.js" async=""></script><script src="/app-0d5d2409b38cfdcf00cf.js" async=""></script><script src="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js" async=""></script></body></html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"/><link as="script" rel="preload" href="/app-0d5d2409b38cfdcf00cf.js"/><link as="script" rel="preload" href="/webpack-runtime-b18de972a18959228b00.js"/><link as="fetch" rel="preload" href="/page-data/base/algorithms/divide-and-conquer/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>분할정복 방법</h1><h2>March 11, 2019</h2><div class="blog-post-content"><h2>분할정복 방법</h2>
+<p>순환적으로 문제를 푸는 하향식 접근 방법.</p>
+<p>주어진 문제의 입력을 더 이상 나눌 수 없을 때까지 두 개 이상의 작은 문제들로 순환적으로 분할하고, 이렇게 분할된 작은 문제들을 각각 해결한 후 이들의 해를 결합하여 원래의 문제의 해를 구하는 방식.</p>
+<h2>분할정복 방법 처리 과정</h2>
+<h3>분할</h3>
+<p>주어진 문제를 여러 개의 작은 문제로 분할한다.</p>
+<h3>정복</h3>
+<p>작은 문제들을 순환적으로 분할한다. 만약 작은 문제가 더 이상 분할되지 않을 정도로 충분히 작다면 순환호출 없이 작은 문제의 해를 구한다. (정복)</p>
+<h3>결합</h3>
+<p>작은 문제에 대해 정복된 해를 결합하여 원래 문제의 해를 구한다.</p>
+<h2>분할정복 방법의 특징</h2>
+<ul>
+<li>분할된 작은 문제는 원래의 문제에 비해 입력 크기만 작아졌을 뿐 문제 자체는 원래 문제와 동일하다.</li>
+<li>분할된 문제는 서로 독립적이기 때문에 각각의 작은 문제를 다시 순환적으로 분할하고 그 결과를 통합하는 것이 가능하다.</li>
+</ul>
+<h2>분할정복 방법을 적용한 알고리즘</h2>
+<h3>이진 탐색</h3>
+<p><img src="/images/base/algorithms-divide-and-conquer-1.png" alt="이진 탐색">
+크기가 n인 문제를 크기가 n/2인 두 개의 작은 문제로 분할한다. 그 중 하나의 작은 문제는 처리 대상에서 제외한다.</p>
+<h3>합병 정렬</h3>
+<p><img src="/images/base/algorithms-divide-and-conquer-2.png" alt="합병 정렬">
+크기가 n인 문제를 크기가 n/2인 두 개의 작은 문제로 분할한다.</p>
+<h3>퀵 정렬</h3>
+<p><img src="/images/base/algorithms-divide-and-conquer-3.png" alt="퀵 정렬">
+크기가 n인 문제를 쿠기는 감소하지만 일정하지 않은 크기의 두 개의 작은 문제로 분할한다.</p>
+<h3>선택 문제</h3>
+<p><img src="/images/base/algorithms-divide-and-conquer-4.png" alt="선택 문제">
+크기가 n인 문제를 크기는 감소하지만 일정하지 않은 크기의 두 개의 작은 문제로 분할한다. 그중 하나의 작은 문제는 처리 대상에서 제외한다.</p>
+<h2>Reference</h2>
+<p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 알고리즘 3강</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/algorithms/divide-and-conquer";window.webpackCompilationHash="36f39e3b50b61b19d339";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-0d5d2409b38cfdcf00cf.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-270c6b30b12b5491f622.js"]};/*]]>*/</script><script src="/webpack-runtime-b18de972a18959228b00.js" async=""></script><script src="/app-0d5d2409b38cfdcf00cf.js" async=""></script><script src="/component---src-templates-blog-template-tsx-b66e07bd040af23b46a9.js" async=""></script></body></html>
