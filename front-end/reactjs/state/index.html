@@ -1,4 +1,71 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js"/><link as="script" rel="preload" href="/app-8ed2bcd8d918eca8e6e5.js"/><link as="script" rel="preload" href="/webpack-runtime-ee1f602fcca81f26856b.js"/><link as="fetch" rel="preload" href="/page-data/front-end/reactjs/state/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>state</h1><h2>January 27, 2019</h2><div class="blog-post-content"><h2>state</h2>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="GlobalStyle-955300486">
+  html, body, 
+  h1, h2, h3, h4, h5, h6,
+  div, p, span,
+  blockquote, applet, object, iframe,
+  pre, a, 
+  abbr, acronym, address,
+  big, cite, code,
+  del, dfn, em,
+  font, img, 
+  ins, kbd, q, s,
+  samp, small,
+  strike, strong,
+  sub, sup, tt, var,
+  dl, dt, dd,
+  ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  body,
+  input,
+  textarea,
+  select,
+  button,
+  table {
+    font-size: 0.875rem;
+    line-height: 1.25em;
+  }
+
+  html,
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #212121;
+    box-sizing: border-box;
+  }
+
+  header {
+    height: 50px
+  }
+
+  footer {
+    height: 50px
+  }
+
+  img,
+  fieldset {
+    border: 0;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  em,
+  address {
+    font-style: normal;
+  }
+  a,
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-1ab349c5de0fd1142102.js"/><link as="script" rel="preload" href="/webpack-runtime-481ffd67231f524cb647.js"/><link as="fetch" rel="preload" href="/page-data/front-end/reactjs/state/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>state</h1><h2>January 27, 2019</h2><div class="blog-post-content"><h2>state</h2>
 <p>Component 내부에서 읽고 업데이트도 가능한 값을 사용하려면 state를 써야 한다. state는 기본 값이 미리 설정되어 있어야 하고 this.setState 메소드로 값을 업데이트 할 수 있다.</p>
 <pre><code class="language-javascript">import React, { Component } from "react"
 
@@ -118,4 +185,4 @@ export default class MyComponent extends Component&#x3C;Props, State> {
 <p>타입스크립트를 공부하고 있어서 타입스크립로 함수를 작성해봤다. render 함수는 JSX 객체를 리턴하기 때문에 리턴 타입에 JSX.Element를 적어주었고 나머지 이벤트 함수는 state 값만 바꿀 뿐 리턴 값이 없어서 리턴 타입으로 any를 적어 주었다.</p>
 <h2>Reference</h2>
 <p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&#x26;mallGb=KOR&#x26;barcode=9791160505238&#x26;orderClick=LAG&#x26;Kc=">리액트를 다루는 기술</a>
-<a href="https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9">React ES6 — Class constructor에서의 super()</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/reactjs/state";window.webpackCompilationHash="306c1024de87b0321d7d";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-8ed2bcd8d918eca8e6e5.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4ac013acf8f3c9b6e0b4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-8bc8aae9081b91f67895.js"]};/*]]>*/</script><script src="/webpack-runtime-ee1f602fcca81f26856b.js" async=""></script><script src="/app-8ed2bcd8d918eca8e6e5.js" async=""></script><script src="/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js" async=""></script></body></html>
+<a href="https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9">React ES6 — Class constructor에서의 super()</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/reactjs/state";window.webpackCompilationHash="04b35bb1e7e18e473c98";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-1ab349c5de0fd1142102.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c51ac192ef3e8136e036.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3d1d0b2c52beb17cb7e9.js"]};/*]]>*/</script><script src="/webpack-runtime-481ffd67231f524cb647.js" async=""></script><script src="/app-1ab349c5de0fd1142102.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>

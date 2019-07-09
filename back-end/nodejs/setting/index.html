@@ -1,4 +1,71 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js"/><link as="script" rel="preload" href="/app-8ed2bcd8d918eca8e6e5.js"/><link as="script" rel="preload" href="/webpack-runtime-ee1f602fcca81f26856b.js"/><link as="fetch" rel="preload" href="/page-data/back-end/nodejs/setting/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Node.js 작업환경 설정하기</h1><h2>July 31, 2018</h2><div class="blog-post-content"><p>Node.js 프로젝트를 만들고 Webpack 설정까지 해보자.</p>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="GlobalStyle-955300486">
+  html, body, 
+  h1, h2, h3, h4, h5, h6,
+  div, p, span,
+  blockquote, applet, object, iframe,
+  pre, a, 
+  abbr, acronym, address,
+  big, cite, code,
+  del, dfn, em,
+  font, img, 
+  ins, kbd, q, s,
+  samp, small,
+  strike, strong,
+  sub, sup, tt, var,
+  dl, dt, dd,
+  ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  body,
+  input,
+  textarea,
+  select,
+  button,
+  table {
+    font-size: 0.875rem;
+    line-height: 1.25em;
+  }
+
+  html,
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #212121;
+    box-sizing: border-box;
+  }
+
+  header {
+    height: 50px
+  }
+
+  footer {
+    height: 50px
+  }
+
+  img,
+  fieldset {
+    border: 0;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  em,
+  address {
+    font-style: normal;
+  }
+  a,
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-1ab349c5de0fd1142102.js"/><link as="script" rel="preload" href="/webpack-runtime-481ffd67231f524cb647.js"/><link as="fetch" rel="preload" href="/page-data/back-end/nodejs/setting/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Node.js 작업환경 설정하기</h1><h2>July 31, 2018</h2><div class="blog-post-content"><p>Node.js 프로젝트를 만들고 Webpack 설정까지 해보자.</p>
 <h2>시작하기 전에 필요한 것</h2>
 <h3>Node.js</h3>
 <p><a href="https://nodejs.org/ko/">Node.js 공식사이트</a>
@@ -68,4 +135,4 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
 <h2>npm run build</h2>
 <p><img src="/images/backend/nodejs-setting-1.png" alt="실행 결과">
 빌드도 잘되고 실행도 잘된다. 작업환경을 끝냈으니 이제 본격적으로 Node.js 공부를 해보자.</p>
-<p><a href="https://github.com/partyKyoung/nodejs-study">해당 포스트에 작성된 모든 소스는 여기서 확인할 수 있다.</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/back-end/nodejs/setting";window.webpackCompilationHash="306c1024de87b0321d7d";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-8ed2bcd8d918eca8e6e5.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4ac013acf8f3c9b6e0b4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-8bc8aae9081b91f67895.js"]};/*]]>*/</script><script src="/webpack-runtime-ee1f602fcca81f26856b.js" async=""></script><script src="/app-8ed2bcd8d918eca8e6e5.js" async=""></script><script src="/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js" async=""></script></body></html>
+<p><a href="https://github.com/partyKyoung/nodejs-study">해당 포스트에 작성된 모든 소스는 여기서 확인할 수 있다.</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/back-end/nodejs/setting";window.webpackCompilationHash="04b35bb1e7e18e473c98";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-1ab349c5de0fd1142102.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c51ac192ef3e8136e036.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3d1d0b2c52beb17cb7e9.js"]};/*]]>*/</script><script src="/webpack-runtime-481ffd67231f524cb647.js" async=""></script><script src="/app-1ab349c5de0fd1142102.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>

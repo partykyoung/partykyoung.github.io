@@ -1,4 +1,71 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js"/><link as="script" rel="preload" href="/app-8ed2bcd8d918eca8e6e5.js"/><link as="script" rel="preload" href="/webpack-runtime-ee1f602fcca81f26856b.js"/><link as="fetch" rel="preload" href="/page-data/base/algorithms/selection/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>선택 문제</h1><h2>May 10, 2019</h2><div class="blog-post-content"><h2>선택 문제</h2>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="GlobalStyle-955300486">
+  html, body, 
+  h1, h2, h3, h4, h5, h6,
+  div, p, span,
+  blockquote, applet, object, iframe,
+  pre, a, 
+  abbr, acronym, address,
+  big, cite, code,
+  del, dfn, em,
+  font, img, 
+  ins, kbd, q, s,
+  samp, small,
+  strike, strong,
+  sub, sup, tt, var,
+  dl, dt, dd,
+  ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  body,
+  input,
+  textarea,
+  select,
+  button,
+  table {
+    font-size: 0.875rem;
+    line-height: 1.25em;
+  }
+
+  html,
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #212121;
+    box-sizing: border-box;
+  }
+
+  header {
+    height: 50px
+  }
+
+  footer {
+    height: 50px
+  }
+
+  img,
+  fieldset {
+    border: 0;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  em,
+  address {
+    font-style: normal;
+  }
+  a,
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-1ab349c5de0fd1142102.js"/><link as="script" rel="preload" href="/webpack-runtime-481ffd67231f524cb647.js"/><link as="fetch" rel="preload" href="/page-data/base/algorithms/selection/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>선택 문제</h1><h2>May 10, 2019</h2><div class="blog-post-content"><h2>선택 문제</h2>
 <p>n개의 원소가 임의의 순서로 저장된 배열에서 i번째로 작은 원소를 찾는 문제.</p>
 <ul>
 <li>i = 1 이면 최솟값.</li>
@@ -223,4 +290,4 @@ int selection (int arr[], int leftIndex, int rightIndex, int findIndex) {
 </code></pre>
 <h2>Reference</h2>
 <p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 알고리즘 4강</a>
-<a href="https://ronniej.sfuh.tk/kth-largest-element-array/">프로그래밍 면접 문제 10 : Kth Largest Element in Array</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/algorithms/selection";window.webpackCompilationHash="306c1024de87b0321d7d";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-8ed2bcd8d918eca8e6e5.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4ac013acf8f3c9b6e0b4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-8bc8aae9081b91f67895.js"]};/*]]>*/</script><script src="/webpack-runtime-ee1f602fcca81f26856b.js" async=""></script><script src="/app-8ed2bcd8d918eca8e6e5.js" async=""></script><script src="/component---src-templates-blog-template-tsx-e07aa2a173d2d60ceec3.js" async=""></script></body></html>
+<a href="https://ronniej.sfuh.tk/kth-largest-element-array/">프로그래밍 면접 문제 10 : Kth Largest Element in Array</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/algorithms/selection";window.webpackCompilationHash="04b35bb1e7e18e473c98";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-1ab349c5de0fd1142102.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c51ac192ef3e8136e036.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3d1d0b2c52beb17cb7e9.js"]};/*]]>*/</script><script src="/webpack-runtime-481ffd67231f524cb647.js" async=""></script><script src="/app-1ab349c5de0fd1142102.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
