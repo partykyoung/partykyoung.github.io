@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="GlobalStyle-955300486">
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="GlobalStyle-649010835">
   html, body, 
   h1, h2, h3, h4, h5, h6,
   div, p, span,
@@ -25,8 +25,11 @@
   select,
   button,
   table {
-    font-size: 0.875rem;
     line-height: 1.25em;
+  }
+
+  html {
+    font-size: 16px;
   }
 
   html,
@@ -37,35 +40,41 @@
     color: #212121;
     box-sizing: border-box;
   }
-
-  header {
-    height: 50px
-  }
-
-  footer {
-    height: 50px
+ 
+  body {
+    background-color: #adc2cb
   }
 
   img,
   fieldset {
     border: 0;
   }
+  
   ul,
   ol {
     list-style: none;
   }
+
   em,
   address {
     font-style: normal;
   }
+
   a,
   a:hover,
   a:active,
   a:focus {
+    color: #44b3f8;
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-1ab349c5de0fd1142102.js"/><link as="script" rel="preload" href="/webpack-runtime-481ffd67231f524cb647.js"/><link as="fetch" rel="preload" href="/page-data/base/algorithms/binary-search/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>이진 탐색</h1><h2>March 17, 2019</h2><div class="blog-post-content"><h2>이진탐색</h2>
+
+  
+  #___gatsby {
+    position: relative;
+    min-height: 100%;
+  }
+</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-8d7a0ef6b5a013ff390d.js"/><link as="script" rel="preload" href="/webpack-runtime-31bd00a1ff71f1cfd2f9.js"/><link as="fetch" rel="preload" href="/page-data/base/algorithms/binary-search/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>이진 탐색</h1><h2>March 17, 2019</h2><div class="blog-post-content"><h2>이진탐색</h2>
 <ul>
 <li><strong>탐색</strong>: 배열 형태로 주어진 데이터에서 원하는 값을 가진 데이터를 찾는 문제.</li>
 <li><strong>이진 탐색</strong>: 정렬된 상태의 데이텅에 대해 적용 가능한 효과적인 탐색 방법.</li>
@@ -144,4 +153,4 @@ T(n) = O($logn$)</p>
 </li>
 </ul>
 <h2>Reference</h2>
-<p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 알고리즘 3강</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/algorithms/binary-search";window.webpackCompilationHash="04b35bb1e7e18e473c98";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-1ab349c5de0fd1142102.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c51ac192ef3e8136e036.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3d1d0b2c52beb17cb7e9.js"]};/*]]>*/</script><script src="/webpack-runtime-481ffd67231f524cb647.js" async=""></script><script src="/app-1ab349c5de0fd1142102.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 알고리즘 3강</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/algorithms/binary-search";window.webpackCompilationHash="8785a6d9f464df12dbe0";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-8d7a0ef6b5a013ff390d.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-7c54ffd889e37f0717fa.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-a3e9b1ebb750c8ef67dc.js"]};/*]]>*/</script><script src="/webpack-runtime-31bd00a1ff71f1cfd2f9.js" async=""></script><script src="/app-8d7a0ef6b5a013ff390d.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>

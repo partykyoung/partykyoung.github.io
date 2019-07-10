@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="GlobalStyle-955300486">
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="GlobalStyle-649010835">
   html, body, 
   h1, h2, h3, h4, h5, h6,
   div, p, span,
@@ -25,8 +25,11 @@
   select,
   button,
   table {
-    font-size: 0.875rem;
     line-height: 1.25em;
+  }
+
+  html {
+    font-size: 16px;
   }
 
   html,
@@ -37,35 +40,41 @@
     color: #212121;
     box-sizing: border-box;
   }
-
-  header {
-    height: 50px
-  }
-
-  footer {
-    height: 50px
+ 
+  body {
+    background-color: #adc2cb
   }
 
   img,
   fieldset {
     border: 0;
   }
+  
   ul,
   ol {
     list-style: none;
   }
+
   em,
   address {
     font-style: normal;
   }
+
   a,
   a:hover,
   a:active,
   a:focus {
+    color: #44b3f8;
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-1ab349c5de0fd1142102.js"/><link as="script" rel="preload" href="/webpack-runtime-481ffd67231f524cb647.js"/><link as="fetch" rel="preload" href="/page-data/base/data-structure/data-structure/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>자료구조란 무엇인가</h1><h2>September 16, 2018</h2><div class="blog-post-content"><h2>자료와 정보의 관계</h2>
+
+  
+  #___gatsby {
+    position: relative;
+    min-height: 100%;
+  }
+</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-8d7a0ef6b5a013ff390d.js"/><link as="script" rel="preload" href="/webpack-runtime-31bd00a1ff71f1cfd2f9.js"/><link as="fetch" rel="preload" href="/page-data/base/data-structure/data-structure/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>자료구조란 무엇인가</h1><h2>September 16, 2018</h2><div class="blog-post-content"><h2>자료와 정보의 관계</h2>
 <ul>
 <li><strong>자료</strong>: 현실 세계에서 관찰이나 측정을 통해서 수집된 값이나 사실. 우리의 생활에서 실제로 만질 수 있거나 볼 수 있거나 하는 것(길이, 무게, 부피 등을 측정할 수 있는 대상)에 대해서 물리적인 단위로 표현하여 얻어 낼 수 있는 내용.</li>
 <li><strong>정보</strong>: 어떤 상황에 대해서 적절한 의사결정을 할 수 있게 하는 지식으로서 자료의 유효한 해설이나 자료 상호간의 관계를 표현하는 내용. 어떠한 상황에 적절한 결정이나 판단에 사용될 수 있는 형태로 가공되거나 분류되기 위해 '처리 과정'을 거쳐서 정리되고 정돈된 '자료의 2차 처리 결과물'.</li>
@@ -94,4 +103,4 @@ P: 처리</p>
 <p>자료구조의 형태는 프로그래밍 언어에서 제공되는 '미리 정의된 자료구조'와 개발자가 정의하여 사용하는 '사용자 정의 자료구조(스택, 큐, 트리, 그래프 등)'로 나누어 진다. 미리 정의된 자료구조는 정수, 실수, 문자와 같은 '기본 자료구조'와 배열, 구조체, 포인터 같은 '파생된 자료구조'로 나뉘어 진다.
 미리 정의된 자료구조는 프로그래밍 언어 개발자가 프로그램 개발을 위해 미리 정의하지만 사용자 정의 자료구조는 프로그램 개발자가 자신의 프로그램 개발 방향에 따라 프로그래밍 언어로 새롭게 정의하여 사용한다.</p>
 <h2>Reference</h2>
-<p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920025679&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 자료구조 1강</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/data-structure/data-structure";window.webpackCompilationHash="04b35bb1e7e18e473c98";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-1ab349c5de0fd1142102.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-c51ac192ef3e8136e036.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3d1d0b2c52beb17cb7e9.js"]};/*]]>*/</script><script src="/webpack-runtime-481ffd67231f524cb647.js" async=""></script><script src="/app-1ab349c5de0fd1142102.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920025679&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 자료구조 1강</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/data-structure/data-structure";window.webpackCompilationHash="8785a6d9f464df12dbe0";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-8d7a0ef6b5a013ff390d.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-7c54ffd889e37f0717fa.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-a3e9b1ebb750c8ef67dc.js"]};/*]]>*/</script><script src="/webpack-runtime-31bd00a1ff71f1cfd2f9.js" async=""></script><script src="/app-8d7a0ef6b5a013ff390d.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
