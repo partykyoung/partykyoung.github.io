@@ -68,41 +68,52 @@
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-83851e365a50b98c8121.js"/><link as="script" rel="preload" href="/webpack-runtime-23aa046ad5abb4ec8ecf.js"/><link as="fetch" rel="preload" href="/page-data/front-end/typescript/compiler-option/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>tsconfig.json</h1><h2>May 13, 2019</h2><div class="blog-post-content"><h2>tsconfig.json</h2>
+</style><style data-href="/styles.e2eaf4c9327a6411c9b4.css">code[class*=language-],pre[class*=language-]{color:#abb2bf;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#949dad}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#9aa2b1}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282c34}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#5c6370}.token.punctuation{color:#abb2bf}.token.selector,.token.tag{color:#e06c75}.token.attr-name,.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol{color:#d19a66}.token.attr-value,.token.builtin,.token.char,.token.inserted,.token.string{color:#98c379}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#56b6c2}.token.atrule,.token.keyword{color:#c678dd}.token.function{color:#61afef}.token.important,.token.regex,.token.variable{color:#c678dd}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="cCbEqp hFMjdm bEIUua jguRwm enePDy khZJHb bwbIzb" data-styled-version="4.3.2">
+/* sc-component-id: sc-bdVaJa */
+.cCbEqp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:50px;padding:0 1rem;min-width:320px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#FFFFFF;box-sizing:border-box;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+/* sc-component-id: sc-bwzfXH */
+.hFMjdm{width:146px;height:24px;margin-right:auto;}
+/* sc-component-id: sc-htpNat */
+.bEIUua{margin-left:auto;}
+/* sc-component-id: sc-bxivhb */
+.bwbIzb{width:100%;height:50px;font-size:0.875rem;background-color:#FFFFFF;line-height:50px;text-align:center;}
+/* sc-component-id: sc-ifAKCX */
+.jguRwm{width:100%;min-width:320px;min-height:calc(100vh - (50px + 50px));}
+/* sc-component-id: sc-EHOje */
+.enePDy{width:100%;padding:1rem;margin:0 auto;box-sizing:border-box;} @media (min-width:768px){.enePDy{width:750px;}} @media (min-width:992px){.enePDy{width:960px;}}
+/* sc-component-id: sc-bZQynM */
+.khZJHb{padding:1rem;margin:0 auto;background-color:#FFFFFF;box-shadow:0 2px 3px rgba(10,10,10,0.1),0 0 0 1px rgba(10,10,10,0.1);}</style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"/><link as="script" rel="preload" href="/0-c4daf16239150b1256a4.js"/><link as="script" rel="preload" href="/app-9005e74563fc0e18d3f8.js"/><link as="script" rel="preload" href="/styles-b769e1ce391dbb1246d3.js"/><link as="script" rel="preload" href="/webpack-runtime-3123575acf482560a2f5.js"/><link as="fetch" rel="preload" href="/page-data/front-end/typescript/compiler-option/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><header class="sc-bdVaJa cCbEqp"><h1 class="sc-bwzfXH hFMjdm"><a href="/"><img src="/static/3a27eab8b4b857be68fc27b80fe340e9/3bcf6/kyoungah.png" alt="경아 개발 블로그 "/></a></h1><nav class="sc-htpNat bEIUua"><a href="/about">about</a></nav></header><div class="sc-ifAKCX jguRwm"><div style="text-align:center;margin:16px 0">블로그 리뉴얼 중 입니다 :)</div><div class="sc-EHOje enePDy"><div class="sc-bZQynM khZJHb"><h2>tsconfig.json</h2><h2>May 13, 2019</h2><div class="blog-post-content"><h2>tsconfig.json</h2>
 <p><strong>tsconfig.json</strong> 파일은 프로젝트를 컴파일 하는데 필요한 루트 파일과 컴파일러 옵션을 지정한다.</p>
 <p><a href="http://json.schemastore.org/tsconfig">JSON schema for the TypeScript compiler's configuration file</a>에서 스펙을 확인할 수 있다.</p>
 <p>ex)</p>
-<pre><code class="language-json">{
-  "compilerOptions": {
-    "module": "system",
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "outFile": "../../built/local/tsc.js",
-    "sourceMap": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"module"</span><span class="token operator">:</span> <span class="token string">"system"</span><span class="token punctuation">,</span>
+    <span class="token property">"noImplicitAny"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"removeComments"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"preserveConstEnums"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"outFile"</span><span class="token operator">:</span> <span class="token string">"../../built/local/tsc.js"</span><span class="token punctuation">,</span>
+    <span class="token property">"sourceMap"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"include"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"src/**/*"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"exclude"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules"</span><span class="token punctuation">,</span> <span class="token string">"**/*.spec.ts"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre></div>
 <h3>compileOnSave</h3>
-<pre><code class="language-json">{
-  // ...
-  "compileOnSave": true
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"compileOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>ts 파일을 저장 시 자동 컴파일을 해준다.</li>
 <li>true / false (default: false)</li>
 </ul>
 <h3>extends</h3>
-<pre><code class="language-json">{
-  // ...
-  "extends": "./configs/base"
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token string">"./configs/base"</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>
 <p>extends 속성을 사용해 다른 파일의 설정을 상속할 수 있다.</p>
@@ -114,30 +125,28 @@
 <h3>files, include, exclude</h3>
 <p>셋다 설정이 없으면 모든 ts 파일들을 컴파일 해준다.</p>
 <h4>files</h4>
-<pre><code class="language-json">{
-  // ...
-  "files": [
-    "core.ts",
-    "sys.ts",
-    "types.ts",
-    "emitter.ts",
-    "tsc.ts",
-    "diagnosticInformationMap.generated.ts"
-  ]
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"files"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"core.ts"</span><span class="token punctuation">,</span>
+    <span class="token string">"sys.ts"</span><span class="token punctuation">,</span>
+    <span class="token string">"types.ts"</span><span class="token punctuation">,</span>
+    <span class="token string">"emitter.ts"</span><span class="token punctuation">,</span>
+    <span class="token string">"tsc.ts"</span><span class="token punctuation">,</span>
+    <span class="token string">"diagnosticInformationMap.generated.ts"</span>
+  <span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>상대 혹은 절대 경로의 리스트 배열이다.</li>
 <li>files에 지정되어 있는 파일은 exclude에 관계 없이 항상 컴파일 대상에 포함된다. -> exclude보다 순위가 더 높다.</li>
 </ul>
 <h4>include</h4>
-<pre><code class="language-json">{
-  // ...
-  "include": ["src/**/*"]
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"include"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"src/**/*"</span><span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>glob 패턴 (.gitignore 이랑 비슷함.).</li>
 <li>include에 포함된 패턴과 맞는 파일들을 컴파일 대상에 포함시킨다.</li>
@@ -150,12 +159,11 @@
 </li>
 </ul>
 <h4>exclude</h4>
-<pre><code class="language-json">{
-  // ...
-  "exclude": ["node_modules", "**/*.spec.ts"]
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"exclude"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules"</span><span class="token punctuation">,</span> <span class="token string">"**/*.spec.ts"</span><span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>glob 패턴 (.gitignore 이랑 비슷함.)</li>
 <li>exclude에 포함된 패턴과 맞는 파일들은 컴파일 대상에서 제외된다.</li>
@@ -163,52 +171,49 @@
 </ul>
 <h3>compileOptions</h3>
 <h4>types</h4>
-<pre><code class="language-json">{
-  // ...
-  "compilerOptions": {
-    // ...
-    "types": ["node", "lodash", "express"]
-    // ...
-  }
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token property">"types"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node"</span><span class="token punctuation">,</span> <span class="token string">"lodash"</span><span class="token punctuation">,</span> <span class="token string">"express"</span><span class="token punctuation">]</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>타입을 가져올 패키지 목록.</li>
 <li>기본적으로는 @types 모든 패키지가 컴파일에 포함된다. types를 지정할 경우 나열된 패키지만 컴파일 대상에 포함된다.</li>
 </ul>
 <h3>target</h3>
-<pre><code class="language-json">{
-  // ...
-  "compilerOptions": {
-    // ...
-    "target": "es3"
-    // ...
-  }
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token property">"target"</span><span class="token operator">:</span> <span class="token string">"es3"</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>컴파일 결과물을 js의 어떤 버전으로 할 것인지 지정한다. (default: es3)</li>
 </ul>
 <h3>lib</h3>
-<pre><code class="language-json">{
-  // ...
-{
-  "CompilerOptions": {
-    // ...
-    "lib": [
-      "dom",
-      "es5",
-      "es2015.promise"
-    ],
-    //...
-  }
-}
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">{</span>
+  <span class="token property">"CompilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token property">"lib"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"dom"</span><span class="token punctuation">,</span>
+      <span class="token string">"es5"</span><span class="token punctuation">,</span>
+      <span class="token string">"es2015.promise"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment">//...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-  // ...
-}
-</code></pre>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>컴파일에 포함될 라이브러리 파일 목록을 지정해준다. 지정해주지 않으면 아래의 기본 값이 저장된다.</li>
 <li>ES5의 기본 값: dom, es5, scripthost</li>
@@ -217,44 +222,41 @@
 <li><a href="https://stackoverflow.com/questions/41993811/understanding-target-and-module-in-tsconfig">Understanding “target” and “module” in tsconfig</a></li>
 </ul>
 <h3>outDir</h3>
-<pre><code class="language-json">{
-  // ...
-  "compilerOptions": {
-    // ...
-    "outDir": ""
-    // ...
-  }
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token property">"outDir"</span><span class="token operator">:</span> <span class="token string">""</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>컴파일된 파일들의 위치를 지정해준다.</li>
 </ul>
 <h3>outFile</h3>
-<pre><code class="language-json">{
-  // ...
-  "compilerOptions": {
-    // ...
-    "outFile": ""
-    // ...
-  }
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token property">"outFile"</span><span class="token operator">:</span> <span class="token string">""</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>컴파일 결과물을 단일 파일로 떨궈준다.</li>
 </ul>
 <h3>module</h3>
-<pre><code class="language-json">{
-  // ...
-  "compilerOptions": {
-    // ...
-    "module": "es3"
-    // ...
-  }
-  // ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token property">"module"</span><span class="token operator">:</span> <span class="token string">"es3"</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
 <ul>
 <li>
 <p>컴파일된 모듈의 결과물을 어떤 모듈 시스템으로 할 지 결정한다.</p>
@@ -270,4 +272,4 @@
 <a href="https://typescript-kr.github.io/pages/Compiler%20Options.html">TypeScript-Handbook 한글 문서 - 컴파일러 옵션</a>
 <a href="https://vomvoru.github.io/blog/tsconfig-compiler-options-kr/">tsconfig 컴파일 옵션 정리</a>
 <a href="https://norux.me/59">tsconfig.json의 lib</a>
-<a href="https://www.inflearn.com/course/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%A6%AC%EC%95%84-1705-%EA%B8%B0%EC%B4%88-%EC%84%B8%EB%AF%B8%EB%82%98/lecture/6803">타입스크립트 코리아 : 2017.05 기초 세미나 (4) - Compiler Options</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/typescript/compiler-option";window.webpackCompilationHash="99047778a664d1d4dbd5";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-83851e365a50b98c8121.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-8567800de6db6f245e88.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-de19c0e74e00784aae00.js"]};/*]]>*/</script><script src="/webpack-runtime-23aa046ad5abb4ec8ecf.js" async=""></script><script src="/app-83851e365a50b98c8121.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<a href="https://www.inflearn.com/course/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%94%EB%A6%AC%EC%95%84-1705-%EA%B8%B0%EC%B4%88-%EC%84%B8%EB%AF%B8%EB%82%98/lecture/6803">타입스크립트 코리아 : 2017.05 기초 세미나 (4) - Compiler Options</a></p></div></div></div></div><footer class="sc-bxivhb bwbIzb"><span>Built with <a href="href=https://www.gatsbyjs.org/" target="_blank">Gatsby</a> + <a>GitHub Pages.</a> ( <a href="https://github.com/partyKyoung/blog" target="_blank">source code</a> )</span></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/typescript/compiler-option";window.webpackCompilationHash="f2d86240cf0952cf51aa";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9005e74563fc0e18d3f8.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4d0e575d1d658cb7bdd4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-81b337411f11dbdac413.js"]};/*]]>*/</script><script src="/webpack-runtime-3123575acf482560a2f5.js" async=""></script><script src="/styles-b769e1ce391dbb1246d3.js" async=""></script><script src="/app-9005e74563fc0e18d3f8.js" async=""></script><script src="/0-c4daf16239150b1256a4.js" async=""></script><script src="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js" async=""></script></body></html>

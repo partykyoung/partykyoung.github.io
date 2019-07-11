@@ -68,158 +68,166 @@
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-83851e365a50b98c8121.js"/><link as="script" rel="preload" href="/webpack-runtime-23aa046ad5abb4ec8ecf.js"/><link as="fetch" rel="preload" href="/page-data/front-end/typescript/react-test/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>TypeScript로 생성한 React 프로젝트에서 테스트 환경 구축 및 테스트 실행하기</h1><h2>February 14, 2019</h2><div class="blog-post-content"><p>개인 프로젝트를 작업 하고 있던 도중 테스트 환경을 도입해보고 싶어서 열심히 끄적이다가 기록을 남기기로 했다.
+</style><style data-href="/styles.e2eaf4c9327a6411c9b4.css">code[class*=language-],pre[class*=language-]{color:#abb2bf;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#949dad}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#9aa2b1}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282c34}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#5c6370}.token.punctuation{color:#abb2bf}.token.selector,.token.tag{color:#e06c75}.token.attr-name,.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol{color:#d19a66}.token.attr-value,.token.builtin,.token.char,.token.inserted,.token.string{color:#98c379}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#56b6c2}.token.atrule,.token.keyword{color:#c678dd}.token.function{color:#61afef}.token.important,.token.regex,.token.variable{color:#c678dd}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="cCbEqp hFMjdm bEIUua jguRwm enePDy khZJHb bwbIzb" data-styled-version="4.3.2">
+/* sc-component-id: sc-bdVaJa */
+.cCbEqp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:50px;padding:0 1rem;min-width:320px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#FFFFFF;box-sizing:border-box;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+/* sc-component-id: sc-bwzfXH */
+.hFMjdm{width:146px;height:24px;margin-right:auto;}
+/* sc-component-id: sc-htpNat */
+.bEIUua{margin-left:auto;}
+/* sc-component-id: sc-bxivhb */
+.bwbIzb{width:100%;height:50px;font-size:0.875rem;background-color:#FFFFFF;line-height:50px;text-align:center;}
+/* sc-component-id: sc-ifAKCX */
+.jguRwm{width:100%;min-width:320px;min-height:calc(100vh - (50px + 50px));}
+/* sc-component-id: sc-EHOje */
+.enePDy{width:100%;padding:1rem;margin:0 auto;box-sizing:border-box;} @media (min-width:768px){.enePDy{width:750px;}} @media (min-width:992px){.enePDy{width:960px;}}
+/* sc-component-id: sc-bZQynM */
+.khZJHb{padding:1rem;margin:0 auto;background-color:#FFFFFF;box-shadow:0 2px 3px rgba(10,10,10,0.1),0 0 0 1px rgba(10,10,10,0.1);}</style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"/><link as="script" rel="preload" href="/0-c4daf16239150b1256a4.js"/><link as="script" rel="preload" href="/app-9005e74563fc0e18d3f8.js"/><link as="script" rel="preload" href="/styles-b769e1ce391dbb1246d3.js"/><link as="script" rel="preload" href="/webpack-runtime-3123575acf482560a2f5.js"/><link as="fetch" rel="preload" href="/page-data/front-end/typescript/react-test/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><header class="sc-bdVaJa cCbEqp"><h1 class="sc-bwzfXH hFMjdm"><a href="/"><img src="/static/3a27eab8b4b857be68fc27b80fe340e9/3bcf6/kyoungah.png" alt="경아 개발 블로그 "/></a></h1><nav class="sc-htpNat bEIUua"><a href="/about">about</a></nav></header><div class="sc-ifAKCX jguRwm"><div style="text-align:center;margin:16px 0">블로그 리뉴얼 중 입니다 :)</div><div class="sc-EHOje enePDy"><div class="sc-bZQynM khZJHb"><h2>TypeScript로 생성한 React 프로젝트에서 테스트 환경 구축 및 테스트 실행하기</h2><h2>February 14, 2019</h2><div class="blog-post-content"><p>개인 프로젝트를 작업 하고 있던 도중 테스트 환경을 도입해보고 싶어서 열심히 끄적이다가 기록을 남기기로 했다.
 TypeScript로 생성된 React 프로젝트에 테스트 환경 을 구축 해보고 테스트 까지 한번 해보자.</p>
 <p>해당 프로젝트는 create-react-app 으로 생성되었다.</p>
 <h2>테스트 환경 설정</h2>
-<pre><code>yarn add --dev jest @types/jest
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">yarn add --dev jest @types/jest
 yarn add --dev enzyme enzyme-adapter-react-16
-yarn add --dev @types/enzyme @types/enzyme-adapter-react-16
-</code></pre>
+yarn add --dev @types/enzyme @types/enzyme-adapter-react-16</code></pre></div>
 <p>먼저 테스트에 필요한 모듈들을 설치해주자. TypeScript 환경이기 때문에 각 모듈들의 @types도 설치해줘야 한다.</p>
-<pre><code>yarn add --dev enzyme-to-json @types/enzyme-to-json
-</code></pre>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">yarn add --dev enzyme-to-json @types/enzyme-to-json</code></pre></div>
 <p>스냅샷의 가독성을 위해 enzyme-to-json 모듈도 설치하였다.</p>
 <h3>setupTest.ts</h3>
-<pre><code class="language-javascript">import * as Enzyme from "enzyme"
-import ReactSixteenAdapter from "enzyme-adapter-react-16"
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Enzyme <span class="token keyword">from</span> <span class="token string">"enzyme"</span>
+<span class="token keyword">import</span> ReactSixteenAdapter <span class="token keyword">from</span> <span class="token string">"enzyme-adapter-react-16"</span>
 
-Enzyme.configure({ adapter: new ReactSixteenAdapter() })
-</code></pre>
+Enzyme<span class="token punctuation">.</span><span class="token function">configure</span><span class="token punctuation">(</span><span class="token punctuation">{</span> adapter<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">ReactSixteenAdapter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>CRA로 만든 프로젝트라면 위의 소스 파일 처럼 테스트 설정을 해줘야 한다.
 테스트 파일 작성 중 계속 오류가 발생하길래 리서치를 하던 도중 <a href="https://github.com/Microsoft/TypeScript-React-Starter/issues/76#issuecomment-340544510">여기에서</a> 제시했던 대로 파일을 작성하니 정상 작동 되었다.</p>
 <h3>package.json</h3>
-<pre><code class="language-json">{
-  // ... 생략
-  "jest": {
-    // ... 생략
-    "setupTestFrameworkScriptFile": "&#x3C;rootDir>/test/setupTest.ts",
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
-    // ... 생략
-  }
-  // ... 생략
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token comment">// ... 생략</span>
+  <span class="token property">"jest"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ... 생략</span>
+    <span class="token property">"setupTestFrameworkScriptFile"</span><span class="token operator">:</span> <span class="token string">"&lt;rootDir>/test/setupTest.ts"</span><span class="token punctuation">,</span>
+    <span class="token property">"snapshotSerializers"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"enzyme-to-json/serializer"</span><span class="token punctuation">]</span>
+    <span class="token comment">// ... 생략</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ... 생략</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>package.json 파일에 위에처럼 enzyme, enzyme-to-json을 위한 설정만 추가해주면 설정은 끝난다.</p>
 <h2>컴포넌트 작성</h2>
-<pre><code class="language-javascript">import * as React from "react";
-import classNames from "classnames";
-import Portal from "react-minimalist-portal";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> classNames <span class="token keyword">from</span> <span class="token string">"classnames"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Portal <span class="token keyword">from</span> <span class="token string">"react-minimalist-portal"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactCSSTransitionGroup <span class="token keyword">from</span> <span class="token string">"react-addons-css-transition-group"</span><span class="token punctuation">;</span>
 
-import "./Modal.scss";
+<span class="token keyword">import</span> <span class="token string">"./Modal.scss"</span><span class="token punctuation">;</span>
 
-interface ModalProps {
-  backdropClassName: string;
-  children: React.ReactNode;
-  modalClassName: string;
-  isOpen: boolean;
-  onClose: any;
-  size: string;
-}
+<span class="token keyword">interface</span> <span class="token class-name">ModalProps</span> <span class="token punctuation">{</span>
+  backdropClassName<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+  children<span class="token punctuation">:</span> React<span class="token punctuation">.</span>ReactNode<span class="token punctuation">;</span>
+  modalClassName<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+  isOpen<span class="token punctuation">:</span> boolean<span class="token punctuation">;</span>
+  onClose<span class="token punctuation">:</span> any<span class="token punctuation">;</span>
+  size<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-interface ModalStates {
-  isOpen: boolean;
-}
+<span class="token keyword">interface</span> <span class="token class-name">ModalStates</span> <span class="token punctuation">{</span>
+  isOpen<span class="token punctuation">:</span> boolean<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-export default class Modal extends React.Component&#x3C;ModalProps, ModalStates> {
-  public static defaultProps = {
-    backdropClassName: "",
-    children: null,
-    modalClassName: "",
-    isOpen: false,
-    onClose: () => {},
-    size: "sm"
-  };
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Modal</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token operator">&lt;</span>ModalProps<span class="token punctuation">,</span> ModalStates<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span>
+    backdropClassName<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    children<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    modalClassName<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onClose</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    size<span class="token punctuation">:</span> <span class="token string">"sm"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  handleIgnoreEvent: any = event => {
-    event.stopPropagation();
-  };
+  handleIgnoreEvent<span class="token punctuation">:</span> <span class="token function-variable function">any</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  handleClose: any = event => {
-    event.stopPropagation();
+  handleClose<span class="token punctuation">:</span> <span class="token function-variable function">any</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    this.props.onClose();
-  };
+    <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span><span class="token function">onClose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  render(): JSX.Element {
-    const {
-      backdropClassName,
-      children,
-      isOpen,
-      modalClassName,
-      onClose,
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token constant">JSX</span><span class="token punctuation">.</span>Element <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      backdropClassName<span class="token punctuation">,</span>
+      children<span class="token punctuation">,</span>
+      isOpen<span class="token punctuation">,</span>
+      modalClassName<span class="token punctuation">,</span>
+      onClose<span class="token punctuation">,</span>
       size
-    } = this.props;
+    <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
 
-    if (!isOpen) {
-      return null;
-    }
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isOpen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    return (
-      &#x3C;Portal>
-        &#x3C;div
-          className={classNames(
-            "modal-backdrop",
-            { open: isOpen },
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Portal<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div
+          className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">classNames</span><span class="token punctuation">(</span>
+            <span class="token string">"modal-backdrop"</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> open<span class="token punctuation">:</span> isOpen <span class="token punctuation">}</span><span class="token punctuation">,</span>
             backdropClassName
-          )}
-          onClick={onClose}
-        >
-          &#x3C;ReactCSSTransitionGroup
-            transitionName="example"
-            transitionAppear={true}
-            transitionAppearTimeout={300}
-            transitionLeave={true}
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={500}
-          >
-            &#x3C;div
-              className={classNames("modal", modalClassName, size)}
-              onClick={this.handleIgnoreEvent}
-            >
-              &#x3C;button type="button" onClick={onClose}>
+          <span class="token punctuation">)</span><span class="token punctuation">}</span>
+          onClick<span class="token operator">=</span><span class="token punctuation">{</span>onClose<span class="token punctuation">}</span>
+        <span class="token operator">></span>
+          <span class="token operator">&lt;</span>ReactCSSTransitionGroup
+            transitionName<span class="token operator">=</span><span class="token string">"example"</span>
+            transitionAppear<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+            transitionAppearTimeout<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">300</span><span class="token punctuation">}</span>
+            transitionLeave<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span>
+            transitionEnterTimeout<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">300</span><span class="token punctuation">}</span>
+            transitionLeaveTimeout<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">500</span><span class="token punctuation">}</span>
+          <span class="token operator">></span>
+            <span class="token operator">&lt;</span>div
+              className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">classNames</span><span class="token punctuation">(</span><span class="token string">"modal"</span><span class="token punctuation">,</span> modalClassName<span class="token punctuation">,</span> size<span class="token punctuation">)</span><span class="token punctuation">}</span>
+              onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleIgnoreEvent<span class="token punctuation">}</span>
+            <span class="token operator">></span>
+              <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"button"</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span>onClose<span class="token punctuation">}</span><span class="token operator">></span>
                 닫기
-              &#x3C;/button>
-              {children}
-            &#x3C;/div>
-          &#x3C;/ReactCSSTransitionGroup>
-        &#x3C;/div>
-      &#x3C;/Portal>
-    );
-  }
-}
-</code></pre>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+              <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>ReactCSSTransitionGroup<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Portal<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>간단하게 모달 컴포넌트를 작성했다. 이 모달 컴포넌트를 테스트 해 볼 것이다.</p>
 <h2>테스트코드 작성</h2>
-<pre><code class="language-javascript">import * as React from "react"
-import * as Enzyme from "enzyme"
-import Modal from "./Modal"
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Enzyme <span class="token keyword">from</span> <span class="token string">"enzyme"</span>
+<span class="token keyword">import</span> Modal <span class="token keyword">from</span> <span class="token string">"./Modal"</span>
 
-describe("&#x3C;Modal />", () => {
-  let component = null
-  let isOpen = true
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"&lt;Modal />"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> component <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token keyword">let</span> isOpen <span class="token operator">=</span> <span class="token boolean">true</span>
 
-  // 모달 컴포넌트 랜더링
-  it("Modal Render...", () => {
-    component = Enzyme.shallow(
-      &#x3C;Modal
-        backdropClassName="test-backdrop"
-        modalClassName="test-modal"
-        isOpen={isOpen}
-        size="sm"
-        onClose={() => {
-          isOpen = false
-        }}
-      >
-        &#x3C;div>Modal Test&#x3C;/div>
-      &#x3C;/Modal>
-    )
+  <span class="token comment">// 모달 컴포넌트 랜더링</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"Modal Render..."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    component <span class="token operator">=</span> Enzyme<span class="token punctuation">.</span><span class="token function">shallow</span><span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Modal
+        backdropClassName<span class="token operator">=</span><span class="token string">"test-backdrop"</span>
+        modalClassName<span class="token operator">=</span><span class="token string">"test-modal"</span>
+        isOpen<span class="token operator">=</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">}</span>
+        size<span class="token operator">=</span><span class="token string">"sm"</span>
+        onClose<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          isOpen <span class="token operator">=</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">></span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>Modal Test<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Modal<span class="token operator">></span>
+    <span class="token punctuation">)</span>
 
-    expect(component).toMatchSnapshot()
-  })
-})
-</code></pre>
+    <span class="token function">expect</span><span class="token punctuation">(</span>component<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toMatchSnapshot</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>맨 먼저 스냅샷 테스트코드를 작성했다.</p>
 <ul>
 <li>describe는 테스트 무리를 가지고 있는 함수이다. 두개의 parameter를 받는데 첫번째는 테스트에 붙이는 의미있는 이름이고 두번째는 여러개의 테스트를 포함한 함수이다. descirbe는 중첩해서 사용할 수도 있다.</li>
@@ -227,26 +235,25 @@ describe("&#x3C;Modal />", () => {
 <li>expect는 여러 가지 유효성 검사기에 대한 액세스를 제공하여 여러 가지를 검증한다.</li>
 <li>shallow는 Enzyme에서 제공하는 rendering API 이다. rednering API에는 mount, render가 더 있는데 각각 작동하는 방식이 다르므로 <a href="https://medium.com/@Yohanna/difference-between-enzymes-rendering-methods-f82108f49084">상황에 맞춰서 알맞은 것</a>을 골라서 사용하면 된다.</li>
 </ul>
-<pre><code class="language-javascript">describe("&#x3C;Modal />", () => {
-  // ... 생략
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"&lt;Modal />"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// ... 생략</span>
 
-  // 모달이 닫겨 있을 때
-  it("Modal close...", () => {
-    component.setProps({ isOpen: false })
+  <span class="token comment">// 모달이 닫겨 있을 때</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"Modal close..."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    component<span class="token punctuation">.</span><span class="token function">setProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    expect(component.find(".modal-backdrop").exists()).toBe(false)
-  })
+    <span class="token function">expect</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".modal-backdrop"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-  // 모달이 열려 있을 때
-  it("Modal open...", () => {
-    component.setProps({ isOpen: true })
+  <span class="token comment">// 모달이 열려 있을 때</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"Modal open..."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    component<span class="token punctuation">.</span><span class="token function">setProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isOpen<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    expect(component.find(".modal-backdrop").exists()).toBe(true)
-  })
+    <span class="token function">expect</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".modal-backdrop"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-  // ... 생략
-})
-</code></pre>
+  <span class="token comment">// ... 생략</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>isOpen props를 받아서 모달의 출력 여부를 판단하므로 isOpen의 값에 따라 모달이 존재 하는지 안하는지 확인하는 테스트 코드를 작성 했다.
 isOpen이 false 일 때는 컴포넌트의 render 함수가 null을 리턴하므로 false 값이 나와야 하고 isOpen이 true 일 때는 모달이 정상적으로 출력되므로 true 값이 나와야 한다.</p>
 <ul>
@@ -255,39 +262,38 @@ isOpen이 false 일 때는 컴포넌트의 render 함수가 null을 리턴하므
 <li>exists 메소드는 찾는 노드나 selector의 존재 유무를 판단해준다.</li>
 <li>setProps 메소드로 root 컴포넌트의 props를 설정하고 재랜더링 할 수 있다.</li>
 </ul>
-<pre><code class="language-javascript">describe("&#x3C;Modal />", () => {
-  // ... 생략
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">"&lt;Modal />"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// ... 생략</span>
 
-  // 모달이 열려 있을 때
-  it("Modal open...", () => {
-    component.setProps({ isOpen: true })
+  <span class="token comment">// 모달이 열려 있을 때</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"Modal open..."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    component<span class="token punctuation">.</span><span class="token function">setProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isOpen<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    expect(component.find(".modal-backdrop").exists()).toBe(true)
-  })
+    <span class="token function">expect</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".modal-backdrop"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-  // 모달 안을 클릭 했을 때
-  it("Modal click...", () => {
-    component.find(".modal").simulate("click", { stopPropagation() {} })
+  <span class="token comment">// 모달 안을 클릭 했을 때</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"Modal click..."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    component<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".modal"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">simulate</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    const lastChild = component
-      .find(".modal")
-      .children()
-      .last()
+    <span class="token keyword">const</span> lastChild <span class="token operator">=</span> component
+      <span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".modal"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">last</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    console.log(lastChild.debug())
-    lastChild.simulate("click", { stopPropagation() {} })
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lastChild<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    lastChild<span class="token punctuation">.</span><span class="token function">simulate</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    expect(component.find(".modal").exists()).toBe(true)
-  })
+    <span class="token function">expect</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".modal"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-  // 모달 닫기 버튼을 눌러 닫을 때
-  it("Modal is closing...", () => {
-    component.find("button").simulate("click")
+  <span class="token comment">// 모달 닫기 버튼을 눌러 닫을 때</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">"Modal is closing..."</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    component<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">simulate</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">)</span>
 
-    expect(component.find(".modal-backdrop").exists()).toBe(false)
-  })
-})
-</code></pre>
+    <span class="token function">expect</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">".modal-backdrop"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>이벤트가 발생했을 때 컴포넌트가 원하는 대로 작동하는지 확인하는 테스트 코드를 작성했다.
 모달이 출력되었을 때 모달 및 모달 안의 자식 DOM들을 클릭했을 때도 모달이 닫기면 안되기 때문에 모달 안의 DOM을 눌렀을 떄 모달이 닫기는지 안닫기는지 테스트 하고 있다.
 모달 안에서 닫기 버튼을 눌렀을 때는 모달이 닫겨야 하므로 버튼 테스트도 작성했다.
@@ -297,20 +303,19 @@ isOpen이 false 일 때는 컴포넌트의 render 함수가 null을 리턴하므
 <li>simulate 메소드는 이벤트를 시뮬레이션 한다. 첫번째 파라미터는 시뮬레이터 할 이벤트 이름을 넣고 두번째 파라미터에는 이벤트에 전달 되는 모의 이벤트 객체가 들어간다.</li>
 </ul>
 <h2>테스트</h2>
-<pre><code>yarn run test
-</code></pre>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">yarn run test</code></pre></div>
 <p>위의 명령어로 테스트를 실행할 수 있다.</p>
 <p><img src="/images/frontend/typescript-react-test-1.png" alt="스냅샷 생성">
 테스트를 실행하면 스냅샷 폴더가 생긴다.</p>
-<pre><code class="language-javascript">// Jest Snapshot v1, https://goo.gl/fbAQLP
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Jest Snapshot v1, https://goo.gl/fbAQLP</span>
 
-exports[`&#x3C;Modal /> Modal Render... 1`] = `
-&#x3C;Portal>
-  &#x3C;div
+exports<span class="token punctuation">[</span><span class="token template-string"><span class="token string">`&lt;Modal /> Modal Render... 1`</span></span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token template-string"><span class="token string">`
+&lt;Portal>
+  &lt;div
     className="modal-backdrop open test-backdrop"
     onClick={[Function]}
   >
-    &#x3C;CSSTransitionGroup
+    &lt;CSSTransitionGroup
       transitionAppear={true}
       transitionAppearTimeout={300}
       transitionEnter={true}
@@ -319,25 +324,24 @@ exports[`&#x3C;Modal /> Modal Render... 1`] = `
       transitionLeaveTimeout={500}
       transitionName="example"
     >
-      &#x3C;div
+      &lt;div
         className="modal test-modal sm"
         onClick={[Function]}
       >
-        &#x3C;button
+        &lt;button
           onClick={[Function]}
           type="button"
         >
           닫기
-        &#x3C;/button>
-        &#x3C;div>
+        &lt;/button>
+        &lt;div>
           Modal Test
-        &#x3C;/div>
-      &#x3C;/div>
-    &#x3C;/CSSTransitionGroup>
-  &#x3C;/div>
-&#x3C;/Portal>
-`
-</code></pre>
+        &lt;/div>
+      &lt;/div>
+    &lt;/CSSTransitionGroup>
+  &lt;/div>
+&lt;/Portal>
+`</span></span></code></pre></div>
 <p>이런식으로 스냅샷이 생성된다.</p>
 <p><img src="/images/frontend/typescript-react-test-2.png" alt="테스트 성공">
 테스트에 성공하면 위의 스샷 처럼 성공 메시지들이 출력된다.
@@ -351,4 +355,4 @@ debug로 child elements가 제대로 출력되는지 console.log를 찍었기 �
 <h2>Reference</h2>
 <p><a href="https://rjzaworski.com/2018/03/testing-with-typescript-react-and-enzyme">Testing with TypeScript, Enzyme, and React</a>
 <a href="https://airbnb.io/enzyme/">Enzyme</a>
-<a href="https://medium.com/@sangboaklee/react-%ED%85%8C%EC%8A%A4%ED%8C%85-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-1c3719cee5af">[React] 테스팅 코드 작성하기</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/typescript/react-test";window.webpackCompilationHash="99047778a664d1d4dbd5";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-83851e365a50b98c8121.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-8567800de6db6f245e88.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-de19c0e74e00784aae00.js"]};/*]]>*/</script><script src="/webpack-runtime-23aa046ad5abb4ec8ecf.js" async=""></script><script src="/app-83851e365a50b98c8121.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<a href="https://medium.com/@sangboaklee/react-%ED%85%8C%EC%8A%A4%ED%8C%85-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-1c3719cee5af">[React] 테스팅 코드 작성하기</a></p></div></div></div></div><footer class="sc-bxivhb bwbIzb"><span>Built with <a href="href=https://www.gatsbyjs.org/" target="_blank">Gatsby</a> + <a>GitHub Pages.</a> ( <a href="https://github.com/partyKyoung/blog" target="_blank">source code</a> )</span></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/typescript/react-test";window.webpackCompilationHash="f2d86240cf0952cf51aa";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9005e74563fc0e18d3f8.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4d0e575d1d658cb7bdd4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-81b337411f11dbdac413.js"]};/*]]>*/</script><script src="/webpack-runtime-3123575acf482560a2f5.js" async=""></script><script src="/styles-b769e1ce391dbb1246d3.js" async=""></script><script src="/app-9005e74563fc0e18d3f8.js" async=""></script><script src="/0-c4daf16239150b1256a4.js" async=""></script><script src="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js" async=""></script></body></html>

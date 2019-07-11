@@ -68,7 +68,21 @@
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-83851e365a50b98c8121.js"/><link as="script" rel="preload" href="/webpack-runtime-23aa046ad5abb4ec8ecf.js"/><link as="fetch" rel="preload" href="/page-data/front-end/reactjs/map/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>Component 반복</h1><h2>February 25, 2019</h2><div class="blog-post-content"><h2>arr.map(callback(currentValue[, index[, array]])[, thisArg])</h2>
+</style><style data-href="/styles.e2eaf4c9327a6411c9b4.css">code[class*=language-],pre[class*=language-]{color:#abb2bf;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#949dad}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#9aa2b1}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282c34}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#5c6370}.token.punctuation{color:#abb2bf}.token.selector,.token.tag{color:#e06c75}.token.attr-name,.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol{color:#d19a66}.token.attr-value,.token.builtin,.token.char,.token.inserted,.token.string{color:#98c379}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#56b6c2}.token.atrule,.token.keyword{color:#c678dd}.token.function{color:#61afef}.token.important,.token.regex,.token.variable{color:#c678dd}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="cCbEqp hFMjdm bEIUua jguRwm enePDy khZJHb bwbIzb" data-styled-version="4.3.2">
+/* sc-component-id: sc-bdVaJa */
+.cCbEqp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:50px;padding:0 1rem;min-width:320px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#FFFFFF;box-sizing:border-box;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+/* sc-component-id: sc-bwzfXH */
+.hFMjdm{width:146px;height:24px;margin-right:auto;}
+/* sc-component-id: sc-htpNat */
+.bEIUua{margin-left:auto;}
+/* sc-component-id: sc-bxivhb */
+.bwbIzb{width:100%;height:50px;font-size:0.875rem;background-color:#FFFFFF;line-height:50px;text-align:center;}
+/* sc-component-id: sc-ifAKCX */
+.jguRwm{width:100%;min-width:320px;min-height:calc(100vh - (50px + 50px));}
+/* sc-component-id: sc-EHOje */
+.enePDy{width:100%;padding:1rem;margin:0 auto;box-sizing:border-box;} @media (min-width:768px){.enePDy{width:750px;}} @media (min-width:992px){.enePDy{width:960px;}}
+/* sc-component-id: sc-bZQynM */
+.khZJHb{padding:1rem;margin:0 auto;background-color:#FFFFFF;box-shadow:0 2px 3px rgba(10,10,10,0.1),0 0 0 1px rgba(10,10,10,0.1);}</style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"/><link as="script" rel="preload" href="/0-c4daf16239150b1256a4.js"/><link as="script" rel="preload" href="/app-9005e74563fc0e18d3f8.js"/><link as="script" rel="preload" href="/styles-b769e1ce391dbb1246d3.js"/><link as="script" rel="preload" href="/webpack-runtime-3123575acf482560a2f5.js"/><link as="fetch" rel="preload" href="/page-data/front-end/reactjs/map/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><header class="sc-bdVaJa cCbEqp"><h1 class="sc-bwzfXH hFMjdm"><a href="/"><img src="/static/3a27eab8b4b857be68fc27b80fe340e9/3bcf6/kyoungah.png" alt="경아 개발 블로그 "/></a></h1><nav class="sc-htpNat bEIUua"><a href="/about">about</a></nav></header><div class="sc-ifAKCX jguRwm"><div style="text-align:center;margin:16px 0">블로그 리뉴얼 중 입니다 :)</div><div class="sc-EHOje enePDy"><div class="sc-bZQynM khZJHb"><h2>Component 반복</h2><h2>February 25, 2019</h2><div class="blog-post-content"><h2>arr.map(callback(currentValue[, index[, array]])[, thisArg])</h2>
 <p>JavaScript 배열 객체의 내장 함수 중 하나이다. 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환한다. 원본 배열은 건드리지 않고 그 값들만을 사용해서 혹은 약간 변형해서 새로운 배열을 만들어야 할 때 유용하다.</p>
 <ul>
 <li>
@@ -83,27 +97,26 @@
 <p><img src="/images/frontend/reactjs-map-1.png" alt="arr.map 실행 결과">;</p>
 <h2>Component map</h2>
 <p>array.map 메소드를 사용하여 기존 배열을 사용하여 컴포넌트로 구성된 배열을 생성할 수 있다.</p>
-<pre><code class="language-javascript">import React, { Component } from "react"
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span>
 
-export default class Map extends Component {
-  constructor() {
-    super()
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Map</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    this.fruitsList = ["사과", "바나나", "오렌지", "체리"]
-  }
+    <span class="token keyword">this</span><span class="token punctuation">.</span>fruitsList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"사과"</span><span class="token punctuation">,</span> <span class="token string">"바나나"</span><span class="token punctuation">,</span> <span class="token string">"오렌지"</span><span class="token punctuation">,</span> <span class="token string">"체리"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
 
-  render() {
-    return (
-      &#x3C;ul>
-        {this.fruitsList.map(fruits => {
-          // DOM을 사용해도 되고 컴포넌트를 사용해도 된다.
-          return &#x3C;li>{fruits}&#x3C;/li>
-        })}
-      &#x3C;/ul>
-    )
-  }
-}
-</code></pre>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>fruitsList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">fruits</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token comment">// DOM을 사용해도 되고 컴포넌트를 사용해도 된다.</span>
+          <span class="token keyword">return</span> <span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token punctuation">{</span>fruits<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 <iframe height="265" style="width: 100%;" scrolling="no" title="oVvvga" src="//codepen.io/partykyoung/embed/oVvvga/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/partykyoung/pen/oVvvga/'>oVvvga</a> by partyKyoung
   (<a href='https://codepen.io/partykyoung'>@partykyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -112,102 +125,100 @@ export default class Map extends Component {
 <p>리액트에서 key는 컴포넌트 배열을 렌더링 했을 때 어떤 원소에 변동이 있었는지 알아내려고 사용한다. key가 없으면 가상 DOM을 비교하는 과정에서 리스트를 순차적으로 비교하면서 변화를 감지하지만 key가 있으면 key 값을 사용하여 리스트에 어던 변화가 일어났는지 더욱 빠르게 알 수 있다.</p>
 <p><img src="/images/frontend/reactjs-map-2.png" alt="key를 정해주지 않으면 실행 시 경고 메시지가 뜬다.">;</p>
 <p>key 값을 설정할 때는 mpa 함수의 인자로 전달되는 함수 내부에서 컴포넌트 props를 설정하듯이 설정하면 된다. key 값은 언제나 유일해야 한다. key값이 중복된다면 렌더링 과정에서 오류가 발생한다.</p>
-<pre><code class="language-javascript">// ... 생략
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// ... 생략</span>
 
-  render() {
-    return (
-      &#x3C;ul>
-        {this.fruitsList.map((fruits, index) => {
-          return &#x3C;li key={index}>{fruits}&#x3C;/li>;
-        })}
-      &#x3C;/ul>
-    );
-  }
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>fruitsList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">fruits<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">{</span>fruits<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-// ... 생략
-</code></pre>
+<span class="token comment">// ... 생략</span></code></pre></div>
 <p>데이터가 가진 고윳값이 없으면 콜백함수의 인수인 index를 사용해도 괜찮으나 리액트 공식문서에서는 성능에 부정적인 영향을 줄 수 있으며 컴포넌트의 상태이슈를 유발하기 때문에 index를 key 값으로 쓰는것을 추천하지 않는다. 만약 key값을 명시하지 않은 경우에 리액트는 index값을 기본 값으로 할당하게 된다고 한다.</p>
 <h3>state 활용</h3>
 <p>state를 활용하면 유동적인 데이터를 렌더링 할 수 있다.</p>
 <p>상태 안에서 배열을 변형할 때 배열을 직접 접근하여 수정하면 자동으로 리렌더링을 트리거 하지 않는다. 다라서 concat, slice 같이 새로운 배열을 반환하는 함수들을 사용하여 새로운 배열을 만든 후 setState 메서드로 적용해야 한다.</p>
-<pre><code class="language-javascript">import React, { Component } from "react"
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span>
 
-interface Props {}
-interface State {
-  fruitsList: string[];
-  value: string;
-}
+<span class="token keyword">interface</span> <span class="token class-name">Props</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">State</span> <span class="token punctuation">{</span>
+  fruitsList<span class="token punctuation">:</span> string<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  value<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-export default class MapState extends Component&#x3C;Props, State> {
-  constructor(props: Props) {
-    super(props)
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MapState</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span><span class="token operator">&lt;</span>Props<span class="token punctuation">,</span> State<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token punctuation">:</span> Props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
 
-    this.state = {
-      fruitsList: [],
-      value: "",
-    }
-  }
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      fruitsList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      value<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 
-  handleChange = (e: any): void => {
-    this.setState({
-      value: e.target.value,
-    })
-  }
+  handleChange <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">:</span> any<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      value<span class="token punctuation">:</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  handleInsert = (e: any): void => {
-    const { fruitsList, value } = this.state
+  handleInsert <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">:</span> any<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> fruitsList<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    if (e.keyCode !== 13) {
-      return
-    }
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>keyCode <span class="token operator">!==</span> <span class="token number">13</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
 
-    this.setState({
-      fruitsList: fruitsList.concat(value),
-      value: "",
-    })
-  }
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      fruitsList<span class="token punctuation">:</span> fruitsList<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      value<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  handleDelete = (index: number): void => {
-    const { fruitsList } = this.state
+  handleDelete <span class="token operator">=</span> <span class="token punctuation">(</span>index<span class="token punctuation">:</span> number<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> fruitsList <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    this.setState({
-      fruitsList: [
-        ...fruitsList.slice(0, index),
-        ...fruitsList.slice(index + 1, fruitsList.length),
-      ],
-    })
-  }
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      fruitsList<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token operator">...</span>fruitsList<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>fruitsList<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> fruitsList<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  render() {
-    const { fruitsList, value } = this.state
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> fruitsList<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    return (
-      &#x3C;div>
-        &#x3C;ul>
-          {fruitsList.map((fruits, index) => {
-            return (
-              &#x3C;li
-                key={index}
-                onClick={() => {
-                  this.handleDelete(index)
-                }}
-              >
-                {fruits}
-              &#x3C;/li>
-            )
-          })}
-        &#x3C;/ul>
-        &#x3C;input
-          type="text"
-          value={value}
-          onChange={this.handleChange}
-          onKeyDown={this.handleInsert}
-        />
-      &#x3C;/div>
-    )
-  }
-}
-</code></pre>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+          <span class="token punctuation">{</span>fruitsList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">fruits<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span>
+              <span class="token operator">&lt;</span>li
+                key<span class="token operator">=</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span>
+                onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+                  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleDelete</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">}</span>
+              <span class="token operator">></span>
+                <span class="token punctuation">{</span>fruits<span class="token punctuation">}</span>
+              <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+            <span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+        <span class="token operator">&lt;</span>input
+          type<span class="token operator">=</span><span class="token string">"text"</span>
+          value<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleChange<span class="token punctuation">}</span>
+          onKeyDown<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleInsert<span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 <iframe height="265" style="width: 100%;" scrolling="no" title="react typescript map" src="//codepen.io/partykyoung/embed/ZPzGdM/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/partykyoung/pen/ZPzGdM/'>react typescript map</a> by partyKyoung
   (<a href='https://codepen.io/partykyoung'>@partykyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -215,4 +226,4 @@ export default class MapState extends Component&#x3C;Props, State> {
 <h2>Reference</h2>
 <p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&#x26;mallGb=KOR&#x26;barcode=9791160505238&#x26;orderClick=LAG&#x26;Kc=">리액트를 다루는 기술</a>
 <a href="https://reactjs.org/docs/lists-and-keys.html">Lists and Keys</a>
-<a href="https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318">Index as a key is an anti-pattern</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/reactjs/map";window.webpackCompilationHash="99047778a664d1d4dbd5";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-83851e365a50b98c8121.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-8567800de6db6f245e88.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-de19c0e74e00784aae00.js"]};/*]]>*/</script><script src="/webpack-runtime-23aa046ad5abb4ec8ecf.js" async=""></script><script src="/app-83851e365a50b98c8121.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<a href="https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318">Index as a key is an anti-pattern</a></p></div></div></div></div><footer class="sc-bxivhb bwbIzb"><span>Built with <a href="href=https://www.gatsbyjs.org/" target="_blank">Gatsby</a> + <a>GitHub Pages.</a> ( <a href="https://github.com/partyKyoung/blog" target="_blank">source code</a> )</span></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/reactjs/map";window.webpackCompilationHash="f2d86240cf0952cf51aa";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9005e74563fc0e18d3f8.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4d0e575d1d658cb7bdd4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-81b337411f11dbdac413.js"]};/*]]>*/</script><script src="/webpack-runtime-3123575acf482560a2f5.js" async=""></script><script src="/styles-b769e1ce391dbb1246d3.js" async=""></script><script src="/app-9005e74563fc0e18d3f8.js" async=""></script><script src="/0-c4daf16239150b1256a4.js" async=""></script><script src="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js" async=""></script></body></html>

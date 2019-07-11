@@ -68,7 +68,21 @@
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-83851e365a50b98c8121.js"/><link as="script" rel="preload" href="/webpack-runtime-23aa046ad5abb4ec8ecf.js"/><link as="fetch" rel="preload" href="/page-data/base/algorithms/analysis/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>알고리즘 분석</h1><h2>March 11, 2019</h2><div class="blog-post-content"><p>설계한 알고리즘은 무엇보다 정확하고 효율적인 알고리즘이어야 한다.</p>
+</style><style data-href="/styles.e2eaf4c9327a6411c9b4.css">code[class*=language-],pre[class*=language-]{color:#abb2bf;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#949dad}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#9aa2b1}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282c34}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#5c6370}.token.punctuation{color:#abb2bf}.token.selector,.token.tag{color:#e06c75}.token.attr-name,.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol{color:#d19a66}.token.attr-value,.token.builtin,.token.char,.token.inserted,.token.string{color:#98c379}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#56b6c2}.token.atrule,.token.keyword{color:#c678dd}.token.function{color:#61afef}.token.important,.token.regex,.token.variable{color:#c678dd}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="cCbEqp hFMjdm bEIUua jguRwm enePDy khZJHb bwbIzb" data-styled-version="4.3.2">
+/* sc-component-id: sc-bdVaJa */
+.cCbEqp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:50px;padding:0 1rem;min-width:320px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#FFFFFF;box-sizing:border-box;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+/* sc-component-id: sc-bwzfXH */
+.hFMjdm{width:146px;height:24px;margin-right:auto;}
+/* sc-component-id: sc-htpNat */
+.bEIUua{margin-left:auto;}
+/* sc-component-id: sc-bxivhb */
+.bwbIzb{width:100%;height:50px;font-size:0.875rem;background-color:#FFFFFF;line-height:50px;text-align:center;}
+/* sc-component-id: sc-ifAKCX */
+.jguRwm{width:100%;min-width:320px;min-height:calc(100vh - (50px + 50px));}
+/* sc-component-id: sc-EHOje */
+.enePDy{width:100%;padding:1rem;margin:0 auto;box-sizing:border-box;} @media (min-width:768px){.enePDy{width:750px;}} @media (min-width:992px){.enePDy{width:960px;}}
+/* sc-component-id: sc-bZQynM */
+.khZJHb{padding:1rem;margin:0 auto;background-color:#FFFFFF;box-shadow:0 2px 3px rgba(10,10,10,0.1),0 0 0 1px rgba(10,10,10,0.1);}</style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"/><link as="script" rel="preload" href="/0-c4daf16239150b1256a4.js"/><link as="script" rel="preload" href="/app-9005e74563fc0e18d3f8.js"/><link as="script" rel="preload" href="/styles-b769e1ce391dbb1246d3.js"/><link as="script" rel="preload" href="/webpack-runtime-3123575acf482560a2f5.js"/><link as="fetch" rel="preload" href="/page-data/base/algorithms/analysis/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><header class="sc-bdVaJa cCbEqp"><h1 class="sc-bwzfXH hFMjdm"><a href="/"><img src="/static/3a27eab8b4b857be68fc27b80fe340e9/3bcf6/kyoungah.png" alt="경아 개발 블로그 "/></a></h1><nav class="sc-htpNat bEIUua"><a href="/about">about</a></nav></header><div class="sc-ifAKCX jguRwm"><div style="text-align:center;margin:16px 0">블로그 리뉴얼 중 입니다 :)</div><div class="sc-EHOje enePDy"><div class="sc-bZQynM khZJHb"><h2>알고리즘 분석</h2><h2>March 11, 2019</h2><div class="blog-post-content"><p>설계한 알고리즘은 무엇보다 정확하고 효율적인 알고리즘이어야 한다.</p>
 <h2>정확성 분석</h2>
 <p>정확한 알고리즘이라면 유효한 입력이 주어졌을 때 유한 시간 내에 정확한 결과를 생성해야 한다. 정확성 분석을 위해서는 다양한 수학적 기법을 사용하여 알고리즘이 예상한 대로 수행되는지에 대해 증명해야 한다.</p>
 <h2>효율성 분석</h2>
@@ -89,24 +103,22 @@
 </ol>
 <p>=> 실용적인 접근방법: 알고리즘에 나타난 루프의 반복 횟수를 조사한 후 시간 복잡도로 취합한다. 이때 g(n)은 최고 차수에 의존한다.</p>
 <p>ex)</p>
-<pre><code class="language-c">i = 1; // n
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c">i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// n</span>
 
-while (i &#x3C;= n) { // n + 1
-  x = x + 1; // n
-  i = i + 1; // n
-}
-</code></pre>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// n + 1</span>
+  x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// n</span>
+  i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// n</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>루프가 while문 하나 이므로 알고리즘의 시간 복잡도는 O(n)이다.</p>
-<pre><code class="language-c">int i, j;
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
 
-for (i=1; i &#x3C; n; i++) { //n
-  for(j = i; j &#x3C; n; j++) { // n x n
-    if (i > j) {
-      sum = i + j;
-    }
-  }
-}
-</code></pre>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//n</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> i<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// n x n</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">></span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      sum <span class="token operator">=</span> i <span class="token operator">+</span> j<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>for 문이 이중으로 중첩되어 있으므로 시간 복잡도는 O($n^2$)이다.</p>
 <h2>점근성능</h2>
 <p>입력크기 n이 무한대로 커짐에 따라 결정되는 성능.</p>
@@ -284,4 +296,4 @@ O(1) &#x3C; O($logn$) &#x3C; O(n) &#x3C; O($nlong$) &#x3C; O($n^2$) &#x3C; O($n^
 </tbody>
 </table>
 <h2>Reference</h2>
-<p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 알고리즘 2강</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/algorithms/analysis";window.webpackCompilationHash="99047778a664d1d4dbd5";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-83851e365a50b98c8121.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-8567800de6db6f245e88.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-de19c0e74e00784aae00.js"]};/*]]>*/</script><script src="/webpack-runtime-23aa046ad5abb4ec8ecf.js" async=""></script><script src="/app-83851e365a50b98c8121.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<p><a href="http://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920026935&#x26;condLscValue=001&#x26;condYr=&#x26;condSmst=">방송대 컴퓨터과학과 알고리즘 2강</a></p></div></div></div></div><footer class="sc-bxivhb bwbIzb"><span>Built with <a href="href=https://www.gatsbyjs.org/" target="_blank">Gatsby</a> + <a>GitHub Pages.</a> ( <a href="https://github.com/partyKyoung/blog" target="_blank">source code</a> )</span></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/base/algorithms/analysis";window.webpackCompilationHash="f2d86240cf0952cf51aa";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9005e74563fc0e18d3f8.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4d0e575d1d658cb7bdd4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-81b337411f11dbdac413.js"]};/*]]>*/</script><script src="/webpack-runtime-3123575acf482560a2f5.js" async=""></script><script src="/styles-b769e1ce391dbb1246d3.js" async=""></script><script src="/app-9005e74563fc0e18d3f8.js" async=""></script><script src="/0-c4daf16239150b1256a4.js" async=""></script><script src="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js" async=""></script></body></html>

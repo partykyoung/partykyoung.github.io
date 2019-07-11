@@ -68,74 +68,86 @@
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-83851e365a50b98c8121.js"/><link as="script" rel="preload" href="/webpack-runtime-23aa046ad5abb4ec8ecf.js"/><link as="fetch" rel="preload" href="/page-data/front-end/reactjs/event/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>이벤트 핸들링</h1><h2>February 09, 2019</h2><div class="blog-post-content"><h2>이벤트</h2>
+</style><style data-href="/styles.e2eaf4c9327a6411c9b4.css">code[class*=language-],pre[class*=language-]{color:#abb2bf;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#949dad}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#9aa2b1}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282c34}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#5c6370}.token.punctuation{color:#abb2bf}.token.selector,.token.tag{color:#e06c75}.token.attr-name,.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol{color:#d19a66}.token.attr-value,.token.builtin,.token.char,.token.inserted,.token.string{color:#98c379}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#56b6c2}.token.atrule,.token.keyword{color:#c678dd}.token.function{color:#61afef}.token.important,.token.regex,.token.variable{color:#c678dd}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="cCbEqp hFMjdm bEIUua jguRwm enePDy khZJHb bwbIzb" data-styled-version="4.3.2">
+/* sc-component-id: sc-bdVaJa */
+.cCbEqp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:50px;padding:0 1rem;min-width:320px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#FFFFFF;box-sizing:border-box;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+/* sc-component-id: sc-bwzfXH */
+.hFMjdm{width:146px;height:24px;margin-right:auto;}
+/* sc-component-id: sc-htpNat */
+.bEIUua{margin-left:auto;}
+/* sc-component-id: sc-bxivhb */
+.bwbIzb{width:100%;height:50px;font-size:0.875rem;background-color:#FFFFFF;line-height:50px;text-align:center;}
+/* sc-component-id: sc-ifAKCX */
+.jguRwm{width:100%;min-width:320px;min-height:calc(100vh - (50px + 50px));}
+/* sc-component-id: sc-EHOje */
+.enePDy{width:100%;padding:1rem;margin:0 auto;box-sizing:border-box;} @media (min-width:768px){.enePDy{width:750px;}} @media (min-width:992px){.enePDy{width:960px;}}
+/* sc-component-id: sc-bZQynM */
+.khZJHb{padding:1rem;margin:0 auto;background-color:#FFFFFF;box-shadow:0 2px 3px rgba(10,10,10,0.1),0 0 0 1px rgba(10,10,10,0.1);}</style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"/><link as="script" rel="preload" href="/0-c4daf16239150b1256a4.js"/><link as="script" rel="preload" href="/app-9005e74563fc0e18d3f8.js"/><link as="script" rel="preload" href="/styles-b769e1ce391dbb1246d3.js"/><link as="script" rel="preload" href="/webpack-runtime-3123575acf482560a2f5.js"/><link as="fetch" rel="preload" href="/page-data/front-end/reactjs/event/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><header class="sc-bdVaJa cCbEqp"><h1 class="sc-bwzfXH hFMjdm"><a href="/"><img src="/static/3a27eab8b4b857be68fc27b80fe340e9/3bcf6/kyoungah.png" alt="경아 개발 블로그 "/></a></h1><nav class="sc-htpNat bEIUua"><a href="/about">about</a></nav></header><div class="sc-ifAKCX jguRwm"><div style="text-align:center;margin:16px 0">블로그 리뉴얼 중 입니다 :)</div><div class="sc-EHOje enePDy"><div class="sc-bZQynM khZJHb"><h2>이벤트 핸들링</h2><h2>February 09, 2019</h2><div class="blog-post-content"><h2>이벤트</h2>
 <p>유저가 웹 브라우저에서 DOM 요소들과 상호 작용하는 것을 이벤트(event)라고 한다.</p>
 <h3>javascript</h3>
-<pre><code class="language-html">&#x3C;!DOCTYPE html>
-&#x3C;html>
-  &#x3C;head>
-    &#x3C;meta charset="utf-8" />
-    &#x3C;title>이벤트&#x3C;/title>
-  &#x3C;/head>
-  &#x3C;body>
-    &#x3C;div id="number">1&#x3C;/div>
-    &#x3C;button type="button" onclick="changeNumber()">클릭&#x3C;/button>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>이벤트<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>changeNumber()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>클릭<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
 
-    &#x3C;script>
-      function changeNumber() {
-        const div = document.getElementById("number")
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+      <span class="token keyword">function</span> <span class="token function">changeNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"number"</span><span class="token punctuation">)</span>
 
-        let number = parseInt(div.innerText)
+        <span class="token keyword">let</span> number <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>div<span class="token punctuation">.</span>innerText<span class="token punctuation">)</span>
 
-        number += 1
+        number <span class="token operator">+=</span> <span class="token number">1</span>
 
-        div.innerHTML = number
-      }
-    &#x3C;/script>
-  &#x3C;/body>
-&#x3C;/html>
-</code></pre>
+        div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> number
+      <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre></div>
 <iframe height="265" style="width: 100%;" scrolling="no" title="javascript event" src="//codepen.io/partykyoung/embed/bzwKgJ/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/partykyoung/pen/bzwKgJ/'>javascript event</a> by partyKyoung
   (<a href='https://codepen.io/partykyoung'>@partykyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 <h3>react</h3>
 <p>React의 이벤트 시스템은 웹 브라우저의 HTML 이벤트와 인터페이스가 동일하기 때문에 사용법이 꽤 비슷하다.</p>
-<pre><code class="language-javascript">import React, { Component } from "react"
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span>
 
-export default class MyComponent extends Component {
-  constructor(props) {
-    super(props)
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
 
-    // state 초기값 설정
-    this.state = {
-      number: 0,
-    }
-  }
+    <span class="token comment">// state 초기값 설정</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      number<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 
-  handleUpdate = () => {
-    const { number } = this.state
+  <span class="token function-variable function">handleUpdate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    // state 업데이트
-    this.setState({
-      number: number + 1,
-    })
-  }
+    <span class="token comment">// state 업데이트</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      number<span class="token punctuation">:</span> number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  render() {
-    const { number } = this.state
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    return (
-      &#x3C;div>
-        {`Number: ${number}`}
-        &#x3C;button type="button" onClick={this.handleUpdate}>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token punctuation">{</span><span class="token template-string"><span class="token string">`Number: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>number<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"button"</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleUpdate<span class="token punctuation">}</span><span class="token operator">></span>
           업데이트
-        &#x3C;/button>
-      &#x3C;/div>
-    )
-  }
-}
-</code></pre>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 <iframe height="265" style="width: 100%;" scrolling="no" title="react state" src="//codepen.io/partykyoung/embed/PVNOjm/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/partykyoung/pen/PVNOjm/'>react state</a> by partyKyoung
   (<a href='https://codepen.io/partykyoung'>@partykyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -152,103 +164,99 @@ DOM 요소에는 이벤트를 설정할 수 있지만 직접 만든 컴포넌트
 <h3>이벤트 바인딩</h3>
 <p><img src="/images/frontend/reactjs-event-1.png" alt="함수가 가리키는 this">
 JavaScript 에서 함수를 선언하면 함수는 자기 자신을 가리키는 this 를 생성하며, 함수 호출 시, this 는 전역 객체를 바인딩 하게 된다.</p>
-<pre><code class="language-javascript">export default class MyComponent extends Component {
-  state = {
-    number: 0,
-  }
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    number<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
 
-  handleUpdate() {
-    const { number } = this.state
+  <span class="token function">handleUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    // state 업데이트
-    this.setState({
-      number: number + 1,
-    })
-  }
+    <span class="token comment">// state 업데이트</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      number<span class="token punctuation">:</span> number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  // ... 생략
-}
-</code></pre>
+  <span class="token comment">// ... 생략</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p><img src="/images/frontend/reactjs-event-2.png" alt="함수 바인딩이 되어있지 않기 때문에 함수 실행 시 오류가 발생한다.">
 리액트도 JavaScript이기 때문에 위의 코드 처럼 컴포넌트에 임의 메서드를 만들면 기본적으로 this에 접근할 수 없다.</p>
-<pre><code class="language-javascript">export default class MyComponent extends Component {
-  // ... 생략
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ... 생략</span>
 
-  constructor() {
-    super()
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-    this.handleUpdate = this.handleUpdate.bind(this)
-  }
+    <span class="token keyword">this</span><span class="token punctuation">.</span>handleUpdate <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleUpdate</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  handleUpdate() {
-    const { number } = this.state
+  <span class="token function">handleUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    // state 업데이트
-    this.setState({
-      number: number + 1,
-    })
-  }
+    <span class="token comment">// state 업데이트</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      number<span class="token punctuation">:</span> number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  // ... 생략
-}
-</code></pre>
+  <span class="token comment">// ... 생략</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>컴포넌트의 생성자 메서드인 constructor에서 각 메서드를 this와 바인딩 해주어야 한다. 메서드에서 this를 사용할 수 있도록 메서드에 this를 묶어주는 것이다.</p>
-<pre><code class="language-javascript">export default class MyComponent extends Component {
-  state = {
-    number: 0,
-  }
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    number<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
 
-  handleUpdate = () => {
-    const { number } = this.state
+  <span class="token function-variable function">handleUpdate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    // state 업데이트
-    this.setState({
-      number: number + 1,
-    })
-  }
+    <span class="token comment">// state 업데이트</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      number<span class="token punctuation">:</span> number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  // ... 생략
-}
-</code></pre>
+  <span class="token comment">// ... 생략</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>바벨의 transform-class-properties 문법을 사용하여 화살표 함수 형태로 메서드를 정의할 수 있다.
 화살표 함수는 함수를 둘러싸고 있는 영역의 this를 함수 내부에서 this로 그대로 사용한다.</p>
 <h3>typescript</h3>
-<pre><code class="language-javascript">import React, { Component } from "react"
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span>
 
-interface Props {}
-interface State {
-  number: number;
-}
+<span class="token keyword">interface</span> <span class="token class-name">Props</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">State</span> <span class="token punctuation">{</span>
+  number<span class="token punctuation">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-export default class MyComponent extends Component&#x3C;Props, State> {
-  state = {
-    number: 0,
-  }
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span><span class="token operator">&lt;</span>Props<span class="token punctuation">,</span> State<span class="token operator">></span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    number<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
 
-  handleUpdate: any = () => {
-    const { number } = this.state
+  handleUpdate<span class="token punctuation">:</span> <span class="token function-variable function">any</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    // state 업데이트
-    this.setState({
-      number: number + 1,
-    })
-  }
+    <span class="token comment">// state 업데이트</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      number<span class="token punctuation">:</span> number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  render(): JSX.Element {
-    const { number } = this.state
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token constant">JSX</span><span class="token punctuation">.</span>Element <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> number <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
 
-    return (
-      &#x3C;div>
-        {`Number: ${number}`}
-        &#x3C;button type="button" onClick={this.handleUpdate}>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token punctuation">{</span><span class="token template-string"><span class="token string">`Number: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>number<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"button"</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleUpdate<span class="token punctuation">}</span><span class="token operator">></span>
           업데이트
-        &#x3C;/button>
-      &#x3C;/div>
-    )
-  }
-}
-</code></pre>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 <h2>Reference</h2>
 <p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&#x26;mallGb=KOR&#x26;barcode=9791160505238&#x26;orderClick=LAG&#x26;Kc=">리액트를 다루는 기술</a>
 <a href="https://2dubbing.tistory.com/66">react 컴포넌트에서 constructor 내부에 이벤트 함수를 바인딩 해줘야 하는 이유</a>
-<a href="https://www.zerocho.com/category/React/post/578232e7a479306028f43393">컴포넌트 이벤트 연결(바인딩)</a></p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/reactjs/event";window.webpackCompilationHash="99047778a664d1d4dbd5";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-83851e365a50b98c8121.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-8567800de6db6f245e88.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-de19c0e74e00784aae00.js"]};/*]]>*/</script><script src="/webpack-runtime-23aa046ad5abb4ec8ecf.js" async=""></script><script src="/app-83851e365a50b98c8121.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<a href="https://www.zerocho.com/category/React/post/578232e7a479306028f43393">컴포넌트 이벤트 연결(바인딩)</a></p></div></div></div></div><footer class="sc-bxivhb bwbIzb"><span>Built with <a href="href=https://www.gatsbyjs.org/" target="_blank">Gatsby</a> + <a>GitHub Pages.</a> ( <a href="https://github.com/partyKyoung/blog" target="_blank">source code</a> )</span></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/reactjs/event";window.webpackCompilationHash="f2d86240cf0952cf51aa";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9005e74563fc0e18d3f8.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4d0e575d1d658cb7bdd4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-81b337411f11dbdac413.js"]};/*]]>*/</script><script src="/webpack-runtime-3123575acf482560a2f5.js" async=""></script><script src="/styles-b769e1ce391dbb1246d3.js" async=""></script><script src="/app-9005e74563fc0e18d3f8.js" async=""></script><script src="/0-c4daf16239150b1256a4.js" async=""></script><script src="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js" async=""></script></body></html>

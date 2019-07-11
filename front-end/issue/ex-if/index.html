@@ -68,7 +68,21 @@
     text-decoration: none;
     box-sizing: border-box;
   }
-</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="" data-styled-version="4.3.2"></style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"/><link as="script" rel="preload" href="/app-83851e365a50b98c8121.js"/><link as="script" rel="preload" href="/webpack-runtime-23aa046ad5abb4ec8ecf.js"/><link as="fetch" rel="preload" href="/page-data/front-end/issue/ex-if/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>javascript로 사진 똑바로 만들기</h1><h2>July 11, 2018</h2><div class="blog-post-content"><p>회사에서 열심히 일을 하던 도중 이슈가 하나 생겼다. 폰으로 사진 파일을 업로드 하면 어떤 사진들은 이미지 방향이 자꾸 돌아가서 업로드 되는 것이었다.</p>
+</style><style data-href="/styles.e2eaf4c9327a6411c9b4.css">code[class*=language-],pre[class*=language-]{color:#abb2bf;background:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#949dad}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#9aa2b1}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282c34}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#5c6370}.token.punctuation{color:#abb2bf}.token.selector,.token.tag{color:#e06c75}.token.attr-name,.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol{color:#d19a66}.token.attr-value,.token.builtin,.token.char,.token.inserted,.token.string{color:#98c379}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#56b6c2}.token.atrule,.token.keyword{color:#c678dd}.token.function{color:#61afef}.token.important,.token.regex,.token.variable{color:#c678dd}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.13.8"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><style data-styled="cCbEqp hFMjdm bEIUua jguRwm enePDy khZJHb bwbIzb" data-styled-version="4.3.2">
+/* sc-component-id: sc-bdVaJa */
+.cCbEqp{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:50px;padding:0 1rem;min-width:320px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#FFFFFF;box-sizing:border-box;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+/* sc-component-id: sc-bwzfXH */
+.hFMjdm{width:146px;height:24px;margin-right:auto;}
+/* sc-component-id: sc-htpNat */
+.bEIUua{margin-left:auto;}
+/* sc-component-id: sc-bxivhb */
+.bwbIzb{width:100%;height:50px;font-size:0.875rem;background-color:#FFFFFF;line-height:50px;text-align:center;}
+/* sc-component-id: sc-ifAKCX */
+.jguRwm{width:100%;min-width:320px;min-height:calc(100vh - (50px + 50px));}
+/* sc-component-id: sc-EHOje */
+.enePDy{width:100%;padding:1rem;margin:0 auto;box-sizing:border-box;} @media (min-width:768px){.enePDy{width:750px;}} @media (min-width:992px){.enePDy{width:960px;}}
+/* sc-component-id: sc-bZQynM */
+.khZJHb{padding:1rem;margin:0 auto;background-color:#FFFFFF;box-shadow:0 2px 3px rgba(10,10,10,0.1),0 0 0 1px rgba(10,10,10,0.1);}</style><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"/><link as="script" rel="preload" href="/0-c4daf16239150b1256a4.js"/><link as="script" rel="preload" href="/app-9005e74563fc0e18d3f8.js"/><link as="script" rel="preload" href="/styles-b769e1ce391dbb1246d3.js"/><link as="script" rel="preload" href="/webpack-runtime-3123575acf482560a2f5.js"/><link as="fetch" rel="preload" href="/page-data/front-end/issue/ex-if/page-data.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><header class="sc-bdVaJa cCbEqp"><h1 class="sc-bwzfXH hFMjdm"><a href="/"><img src="/static/3a27eab8b4b857be68fc27b80fe340e9/3bcf6/kyoungah.png" alt="경아 개발 블로그 "/></a></h1><nav class="sc-htpNat bEIUua"><a href="/about">about</a></nav></header><div class="sc-ifAKCX jguRwm"><div style="text-align:center;margin:16px 0">블로그 리뉴얼 중 입니다 :)</div><div class="sc-EHOje enePDy"><div class="sc-bZQynM khZJHb"><h2>javascript로 사진 똑바로 만들기</h2><h2>July 11, 2018</h2><div class="blog-post-content"><p>회사에서 열심히 일을 하던 도중 이슈가 하나 생겼다. 폰으로 사진 파일을 업로드 하면 어떤 사진들은 이미지 방향이 자꾸 돌아가서 업로드 되는 것이었다.</p>
 <p><img src="/images/frontend/javascript-memo-exif-1.png" alt="이렇게 이미지 뷰어나 앨범에서 보면 제대로 출력되는 사진들이">
 <img src="/images/frontend/javascript-memo-exif-2.png" alt="이런식으로 이미지가 돌아가서 나온다"></p>
 <p>사실 좀 귀찮기도 하고 어떻게 고칠지 막막하기도 해서 그냥 냅두고 싶었지만 그러면 절대 안되기 때문에 우여곡절 어떻게든 방법을 찾아서 해결 했는데 그 과정을 공유해보고자 한다.</p>
@@ -76,26 +90,25 @@
 <p>카메라로 사진을 찍으면 메타데이터로 exif 값이 저장된다. 이 exif 는 디지털 카메라에서 이용되는 이미지 파일 포맷인데 여기에 orientation 이라고 사진의 방향 값이 저장되어 있다.</p>
 <p><img src="/images/frontend/javascript-memo-exif-4.gif" alt="exif orientation"></p>
 <p><a href="https://github.com/exif-js/exif-js">exif-js</a> 오픈소스를 사용하면 exif 데이터를 읽어올 수 있길래 한번 써보았다.</p>
-<pre><code class="language-javascript">function getExif(file) {
-  const reader = new FileReader()
-  const imageViewer = document.getElementById("imageViewer")
-  const image = file.files[0]
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getExif</span><span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> imageViewer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"imageViewer"</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> image <span class="token operator">=</span> file<span class="token punctuation">.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 
-  reader.onload = e => {
-    EXIF.getData(image, () => {
-      const tags = EXIF.getAllTags(image)
+  reader<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token parameter">e</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token constant">EXIF</span><span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> tags <span class="token operator">=</span> <span class="token constant">EXIF</span><span class="token punctuation">.</span><span class="token function">getAllTags</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span>
 
-      // metadata 출력
-      console.log(tags)
+      <span class="token comment">// metadata 출력</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tags<span class="token punctuation">)</span>
 
-      // 이미지 미리보기
-      imageViewer.style.backgroundImage = `url(${e.target.result})`
-    })
-  }
+      <span class="token comment">// 이미지 미리보기</span>
+      imageViewer<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundImage <span class="token operator">=</span> <span class="token template-string"><span class="token string">`url(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>result<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
 
-  reader.readAsDataURL(image)
-}
-</code></pre>
+  reader<span class="token punctuation">.</span><span class="token function">readAsDataURL</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p><img src="/images/frontend/javascript-memo-exif-3.png" alt="확인해보면 orientation값이 6으로 되어있다."></p>
 <h2>해결 방법</h2>
 <p>대표님이 세가지 솔루션을 제시해주셨다.</p>
@@ -105,44 +118,42 @@
 <li>보여줄때 그때마다 rotation 처리해 주는 방식</li>
 </ol>
 <p>여기서 <a href="https://github.com/blueimp/JavaScript-Load-Image">JavaScript-Load-Image</a> 오픈소스를 사용하면 첫번째 방법으로 해결이 될것 같아서 첫번째 방법으로 문제를 해결하기로 했다.</p>
-<pre><code class="language-javascript">function fixRotationOfFile(file) {
-  const image = file.files[0]
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">fixRotationOfFile</span><span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> image <span class="token operator">=</span> file<span class="token punctuation">.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 
-  loadImage(
-    image,
-    img => {
-      const imageViewer = document.getElementById("imageViewer")
+  <span class="token function">loadImage</span><span class="token punctuation">(</span>
+    image<span class="token punctuation">,</span>
+    <span class="token parameter">img</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> imageViewer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"imageViewer"</span><span class="token punctuation">)</span>
 
-      imageViewer.appendChild(img)
-    },
-    { maxWidth: 400, orientation: true }
-  )
-}
-</code></pre>
+      imageViewer<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> maxWidth<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span> orientation<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p><img src="/images/frontend/javascript-memo-exif-4.png" alt="정방향으로 출력되는 이미지">
 이렇게 하면 이미지가 정뱡향으로 출력된다!</p>
-<pre><code class="language-javascript">return new Promise((resolve, reject) => {
-  const image = file.files[0]
-  const fileType = image.type
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> image <span class="token operator">=</span> file<span class="token punctuation">.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token keyword">const</span> fileType <span class="token operator">=</span> image<span class="token punctuation">.</span>type
 
-  loadImage(
-    file,
-    img => {
-      if (img.type === "error") {
-        reject(img)
-      }
+  <span class="token function">loadImage</span><span class="token punctuation">(</span>
+    file<span class="token punctuation">,</span>
+    <span class="token parameter">img</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>img<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">"error"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
 
-      //
-      img.toBlob(blob => {
-        const createdFile = new File([blob], image.name)
+      <span class="token comment">//</span>
+      img<span class="token punctuation">.</span><span class="token function">toBlob</span><span class="token punctuation">(</span><span class="token parameter">blob</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> createdFile <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token punctuation">[</span>blob<span class="token punctuation">]</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
 
-        // 이미지 업로드 실행은 여기서
-      }, fileType)
-    },
-    { orientation: true }
-  )
-})
-</code></pre>
+        <span class="token comment">// 이미지 업로드 실행은 여기서</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> fileType<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> orientation<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>위의 코드와 같은 식으로 정방향으로 출력된 blob 이미지를 file 로 바꾸어 이미지를 업로드 하는 식으로 해결했다.</p>
 <h2>마무리</h2>
-<p>AWS S3 및 몇몇 서비스에서는 원본을 그대로 두고 이미지가 출력될 때마다 rotation 처리를 해주는 방식을 사용한 것 같던데 나중에 기회가 된다면 이미지가 출력될 때마다 rotation 처리를 해주는 방식 으로도 한번 해결해보고 싶다.</p></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/issue/ex-if";window.webpackCompilationHash="99047778a664d1d4dbd5";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-83851e365a50b98c8121.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-8567800de6db6f245e88.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-de19c0e74e00784aae00.js"]};/*]]>*/</script><script src="/webpack-runtime-23aa046ad5abb4ec8ecf.js" async=""></script><script src="/app-83851e365a50b98c8121.js" async=""></script><script src="/component---src-templates-blog-template-tsx-062bd6b3a19c060efb50.js" async=""></script></body></html>
+<p>AWS S3 및 몇몇 서비스에서는 원본을 그대로 두고 이미지가 출력될 때마다 rotation 처리를 해주는 방식을 사용한 것 같던데 나중에 기회가 된다면 이미지가 출력될 때마다 rotation 처리를 해주는 방식 으로도 한번 해결해보고 싶다.</p></div></div></div></div><footer class="sc-bxivhb bwbIzb"><span>Built with <a href="href=https://www.gatsbyjs.org/" target="_blank">Gatsby</a> + <a>GitHub Pages.</a> ( <a href="https://github.com/partyKyoung/blog" target="_blank">source code</a> )</span></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/front-end/issue/ex-if";window.webpackCompilationHash="f2d86240cf0952cf51aa";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9005e74563fc0e18d3f8.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-4d0e575d1d658cb7bdd4.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-81b337411f11dbdac413.js"]};/*]]>*/</script><script src="/webpack-runtime-3123575acf482560a2f5.js" async=""></script><script src="/styles-b769e1ce391dbb1246d3.js" async=""></script><script src="/app-9005e74563fc0e18d3f8.js" async=""></script><script src="/0-c4daf16239150b1256a4.js" async=""></script><script src="/component---src-templates-blog-template-tsx-79e4e5c5e6e3657e8278.js" async=""></script></body></html>
