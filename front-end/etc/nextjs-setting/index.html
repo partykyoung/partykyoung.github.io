@@ -141,27 +141,26 @@ yarn add @zeit/next-typescript</code></pre></div>
 <h2>실행</h2>
 <p>아래의 명령어로 실행하면 방금 작성한 첫 페이지가 뜨는게 보일 것이다.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm run dev</code></pre></div>
-<h3>next 8.1에서 9버전대로 업그레이드 하면서 났던 오류들.</h3>
-<h4>error TS2349: Cannot invoke an expression whose type lacks a call signature.</h4>
+<h2>next 8.1에서 9버전대로 업그레이드 하면서 났던 오류들.</h2>
+<h3>error TS2349: Cannot invoke an expression whose type lacks a call signature.</h3>
 <p>tsconfig.json에서 esModuleInterop를 true로 줬기 때문에 나는 오류인것 같다. 아래처럼 import 문을 고쳐주면 된다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// import * as next from 'next'</span>
 
  <span class="token keyword">import</span> next <span class="token keyword">from</span> <span class="token string">'next'</span></code></pre></div>
-<h4>Cannot re-export a type when the '--isolatedModules' flag is provided.</h4>
+<h3>Cannot re-export a type when the '--isolatedModules' flag is provided.</h3>
 <p>이것 역시 tsconfig.json에서 isolatedModules 옵션을 true로 해줬기 때문에 나는 것 같다. 아래 처럼 export 문을 고쳐주면 된다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// export { SomeType };</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> SomeType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./types"</span><span class="token punctuation">;</span>
 <span class="token keyword">export</span> type SomeType <span class="token operator">=</span> SomeType<span class="token punctuation">;</span></code></pre></div>
-<h4>Module '"node_modules/next/router"' has no exported member 'WithRouterProps'.</h4>
+<h3>Module '"node_modules/next/router"' has no exported member 'WithRouterProps'.</h3>
 <p>WithRouterProps를 import 할 때 나는 오류 인데 아래처럼 고쳐주면 된다. import 문을 고쳐주면 된다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// import { WithRouterProps } from 'next/router'; </span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> WithRouterProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'next/dist/client/with-router'</span><span class="token punctuation">;</span></code></pre></div>
-<h4>Argument of type 'ConnectedComponentClass&#x3C;FunctionComponent<PageTemplateProps>, Pick&#x3C;PageTemplateProps, "children" | "gaId">>'</h4>
+<h3>Argument of type 'ConnectedComponentClass&#x3C;FunctionComponent<PageTemplateProps>, Pick&#x3C;PageTemplateProps, "children" | "gaId">>'</h3>
 <p>이건 정확히 원인을 모르겠는데 withRouter랑 connect 함수를 compose로 묶어주면 해결된다. </p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// withRouter(connnect()()) => .. 생략</span>
-
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">compose</span><span class="token punctuation">(</span>
   withRouter<span class="token punctuation">,</span>
