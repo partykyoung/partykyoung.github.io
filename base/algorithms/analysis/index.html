@@ -177,14 +177,14 @@
 <p>시간 복잡도는 입력크기 n에 대한 함수로 표현되는데 n이 무한대로 커짐에 따라 알고리즘에 가장 큰 영향을 끼치는 것은 최고차항이다. 결국 점근성능은 수행 시간의 다항식 함수에서 최고차항만을 계수 없이 취해서 단순화시킨 형태가 된다.</p>
 <p>점근성능의 표기법으로는 Big-O, Big-Ω, Big-⍬ 표기법이 있다. 표기법에서 f(n)은 알고리즘의 수행시간을 나타낸다.</p>
 <h3>Big-O 표기법</h3>
-<p>어떤 양의 상수 c와 $n<em>0$이 존재하여 모든 n >= $n</em>0$에 대하여 f(n) &#x3C;= cg(n)이면 f(n) = O(g(n))이다. 이때 O(n)은 최악의 수행시간이다.</p>
+<p>어떤 양의 상수 c와 $n_0$이 존재하여 모든 n >= $n_0$에 대하여 f(n) &#x3C;= cg(n)이면 f(n) = O(g(n))이다. 이때 O(n)은 최악의 수행시간이다.</p>
 <p>f(n)이 O(g(n))이라는 것은 입력크기 n이 $n_0$ 이상으로 무한히 증가하더라도 f(n)의 값은 cg(n)보다 절대로 커질 수 없다는 의미로 G(n)을 상한으로 간주하기 때문에 함수의 점근적 상한을 나타낸다.</p>
 <p>알고리즘의 시간 복잡도는 일반적으로 O- 표기를 사용해서 나타낸다. 아래와 같은 O- 표기법을 주로 사용한다. 맨 왼쪽의 상수 시간이 효율성이 제일 좋으며 오른쪽으로 갈 수록 비효율적이다.
 O(1) &#x3C; O($logn$) &#x3C; O(n) &#x3C; O($nlong$) &#x3C; O($n^2$) &#x3C; O($n^3$) &#x3C; O($2^n$)</p>
 <h3>Big-Ω 표기법</h3>
-<p>어떤 양의 상수 c와 $n<em>0$이 존재하여 모든 n >= $n</em>0$에 대하여 f(n) >= cg(n)이면 f(n) = Ω(g(n))이다. 이때 Ω(g(n))은 최상의 수행시간이다.</p>
+<p>어떤 양의 상수 c와 $n_0$이 존재하여 모든 n >= $n_0$에 대하여 f(n) >= cg(n)이면 f(n) = Ω(g(n))이다. 이때 Ω(g(n))은 최상의 수행시간이다.</p>
 <h3>Big-⍬ 표기법</h3>
-<p>어떤 양의 상수 c와 $n<em>0$이 존재하여 모든 n >= $n</em>0$에 대하여 $c<em>1$g(n) &#x3C;= f(n) &#x3C;= $c</em>2$g(n)이면 f(n) = ⍬(g(n))이다. 이때 ⍬(g(n))은 상한과 하한의 평균시간 이다.</p>
+<p>어떤 양의 상수 c와 $n_0$이 존재하여 모든 n >= $n_0$에 대하여 $c_1$g(n) &#x3C;= f(n) &#x3C;= $c_2$g(n)이면 f(n) = ⍬(g(n))이다. 이때 ⍬(g(n))은 상한과 하한의 평균시간 이다.</p>
 <p>점근적 상한과 하한을 동시에 갖는 경우로서 다른 표기법보다 성능을 정밀하게 나타낼 수 있다.</p>
 <h2>효율적인 알고리즘의 중요성</h2>
 <p>동일한 문제를 해결하는 알고리즘이 여러 개 존재한다면 입력 크기 n이 증가하더라도 알고리즘의 수행 시간이 상대적으로 적게 증가하는 알고리즘을 선택해야 한다. 입력크기가 작으면 어느 알고리즘을 사용해도 수행 시간의 차이가 별로 없지만, 입력 크기가 크면 클 수록 수행 시간의 차이가 확연하게 나타나므로 효율적인 알고리즘을 설계하거나 선택하는 것이 중요하다.</p>
@@ -270,32 +270,32 @@ O(1) &#x3C; O($logn$) &#x3C; O(n) &#x3C; O($nlong$) &#x3C; O($n^2$) &#x3C; O($n^
 </thead>
 <tbody>
 <tr>
-<td align="center">T(n) = $\begin{cases} ⍬(1), &#x26; n = 1 \\ T(n - 1) + ⍬(1), &#x26; n >= 2 \end{cases}$</td>
+<td align="center">T(n) = $\begin{cases} ⍬(1), & n = 1 \\\ T(n - 1) + ⍬(1), & n >= 2 \end{cases}$</td>
 <td align="center">T(n) = ⍬(n)</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">T(n) = $\begin{cases} ⍬(1), &#x26; n = 1 \\ T(n - 1) + ⍬(n), &#x26; n >= 2 \end{cases}$</td>
+<td align="center">T(n) = $\begin{cases} ⍬(1), & n = 1 \\\ T(n - 1) + ⍬(n), & n >= 2 \end{cases}$</td>
 <td align="center">T(n) = ⍬($n^2$)</td>
 <td align="center">퀵 정렬의 최악의 수행 시간</td>
 </tr>
 <tr>
-<td align="center">T(n) = $\begin{cases} ⍬(1), &#x26; n = 1 \\ T(\frac{n}{2}) + ⍬(1), &#x26; n >= 2 \end{cases}$</td>
+<td align="center">T(n) = $\begin{cases} ⍬(1), & n = 1 \\\ T(\frac{n}{2}) + ⍬(1), & n >= 2 \end{cases}$</td>
 <td align="center">T(n) = ⍬($logn$)</td>
 <td align="center">이진 탐색의 수행 시간</td>
 </tr>
 <tr>
-<td align="center">T(n) = $\begin{cases} ⍬(1), &#x26; n = 1 \\ T(\frac{n}{2}) + ⍬(n), &#x26; n >= 2 \end{cases}$</td>
+<td align="center">T(n) = $\begin{cases} ⍬(1), & n = 1 \\\ T(\frac{n}{2}) + ⍬(n), & n >= 2 \end{cases}$</td>
 <td align="center">T(n) = ⍬($n$)</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">T(n) = $\begin{cases} ⍬(1), &#x26; n = 1 \\ 2T(\frac{n}{2}) + ⍬(1), &#x26; n >= 2 \end{cases}$</td>
+<td align="center">T(n) = $\begin{cases} ⍬(1), & n = 1 \\\ 2T(\frac{n}{2}) + ⍬(1), & n >= 2 \end{cases}$</td>
 <td align="center">T(n) = ⍬($n$)</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">T(n) = $\begin{cases} ⍬(1), &#x26; n = 1 \\ 2T(\frac{n}{2}) + ⍬(n), &#x26; n >= 2 \end{cases}$</td>
+<td align="center">T(n) = $\begin{cases} ⍬(1), & n = 1 \\\ 2T(\frac{n}{2}) + ⍬(n), & n >= 2 \end{cases}$</td>
 <td align="center">T(n) = ⍬($nlogn$)</td>
 <td align="center">합병 정렬의 수행 시간, <br/> 퀵 정렬의 최선의 수행 시간</td>
 </tr>
