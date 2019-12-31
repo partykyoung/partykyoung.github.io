@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kyoungah's dev blog.]]></title><description><![CDATA[Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.]]></description><link>https://dev.kyoungah.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 Dec 2019 03:28:32 GMT</lastBuildDate><item><title><![CDATA[빅데이터 기술]]></title><description><![CDATA[분산 시스템 여러대의 서버가 네트워크를 통해 통신하며 공통의 계산문제를 푸는 시스템. 문제를 여러 개의 작업(task…]]></description><link>https://dev.kyoungah.com/2019-10-03-bigdata-technology/</link><guid isPermaLink="false">https://dev.kyoungah.com/2019-10-03-bigdata-technology/</guid><pubDate>Thu, 03 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;분산 시스템&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kyoungah's dev blog.]]></title><description><![CDATA[Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.]]></description><link>https://dev.kyoungah.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 31 Dec 2019 08:24:16 GMT</lastBuildDate><item><title><![CDATA[2019년 회고록]]></title><description><![CDATA[또 한해가 끝나간다. 특히 12월은 더 빠르게 지나가는 것 같다. 2020년을 맞이하기 전 201…]]></description><link>https://dev.kyoungah.com/2019-12-30-etc-2019-memoir/</link><guid isPermaLink="false">https://dev.kyoungah.com/2019-12-30-etc-2019-memoir/</guid><pubDate>Mon, 30 Dec 2019 23:36:42 GMT</pubDate><content:encoded>&lt;p&gt;또 한해가 끝나간다. 특히 12월은 더 빠르게 지나가는 것 같다. 2020년을 맞이하기 전 2019년을 한번 돌아보자.&lt;/p&gt;
+&lt;h2&gt;이직&lt;/h2&gt;
+&lt;p&gt;올해의 가장 큰 변화는 이직이다. 번아웃이 너무 심하게 찾아와 잠시 방황을 하다가 결국 그만두는게 맞다는 결론을 내리고 회사를 그만 두었는데 이때의 방황이 같이 일했던 팀원들에게 폐가 된 것 같아서 너무 죄송스럽다. 다음번에 번아웃이 찾아왔을 때는 좀 더 현명하게 극복할 수 있기를 빌어본다.&lt;/p&gt;
+&lt;p&gt;전회사를 그만두고 약 3주를 쉰 뒤 &lt;code class=&quot;language-text&quot;&gt;번개장터&lt;/code&gt;에 입사하게 되었다. 워라벨 보장, 탄력근무제, 눈치 없이 연차 사용 가능 이란 점만 보고 별 기대 없이 입사했는데 같이 일하시는 개발자분들이 새로운 기술을 도입하거나 코드 리뷰, 토론 등에 되게 적극적이셔서 나도 좋은 자극을 받을 수 있었다. 내년에도 이 분들이랑 열심히, 그리고 즐겁게 일하고 싶다.&lt;/p&gt;
+&lt;h2&gt;올해 잘한 일&lt;/h2&gt;
+&lt;h3&gt;토이 프로젝트 삽을 뜨다&lt;/h3&gt;
+&lt;p&gt;토이 프로젝트를 진행해야겠다는 생각은 본격적으로 프론트엔드 개발을 시작한 2016년도 부터 하고 있었는데 항상 프로젝트 생성 및 초기 설정까지만 해놓고 흐지부지 되었었다. 하지만 이번에는 예전과 다르게 적어도 하루에 30분 이상은 꼭 토이 프로젝트에 시간을 투자하고 있다. 현재 2개의 토이프로젝트를 진행하고 있는데 하나는 회원가입, 인증 메일 발송 까지 진행한 상태이고 하나는 레이아웃 까지 잡아놓은 상태이다. 이대로 포기하지 않고 끝까지 완성하는 것이 목표이다.&lt;/p&gt;
+&lt;h3&gt;블로그 리뉴얼&lt;/h3&gt;
+&lt;p&gt;Hexo에서 Gatsby로 블로그를 리뉴얼했다. Hexo도 블로깅에는 좋은 도구이긴 하나 확실히 익숙한 React로 만들어진 Gatsby가 손에 좀 더 잘 맞는 느낌이다. &lt;/p&gt;
+&lt;h3&gt;TDD 쬐끔 맛보기&lt;/h3&gt;
+&lt;p&gt;맨날 이론으로만 배우던 TDD를 실무에 도입해보았다. 확실히 테스트 코드가 있으니 급하게 어느 한곳을 수정하거나 리팩토링 했을 때 기존의 컴포넌트들과 맞지 않으면 오류를 보여줘서 뭔가 든든함이 생긴건 좋았으나 내가 작성한 테스트 코드가 과연 옳은 테스트 코드일까, 내가 진행하는 테스트가 과연 제대로 된 테스트일까 싶은 의문점이 생겼다. 게다가 요즘은 또 너무 바쁘다는 이유로 테스트 코드 작성을 미루고 있는데 내년부터는 아무리 바빠도 꼭 테스트 코드 작성은 빼먹지 않도록 해야겠다.&lt;/p&gt;
+&lt;h2&gt;올해 잘못한 일&lt;/h2&gt;
+&lt;h3&gt;개인 공부 미숙&lt;/h3&gt;
+&lt;p&gt;회사를 이직하면서 TypeScript, Mobx 같은 새로운 기술들을 익힐 수 있었으나 따로 시간을 내서 공부를 하지 않았다. 때문에 수박겉핡기 식으로 조금만 알고 깊게 알지는 못한채로 계속 업무를 진행하고 있었는데 가끔씩 다른 개발자분들이랑 업무 얘기를 하다보면 내 지식의 한계가 느껴져서 부끄러운 적이 종종 있었다.&lt;/p&gt;
+&lt;h3&gt;학교 공부&lt;/h3&gt;
+&lt;p&gt;작년 회고록을 작성할 때 분명 학교 공부도 열심히 하자고 적었는데 왜 그렇게 학교 공부가 하기 싫던지... 덕분에 원하는 성적을 받지 못하는 과목이 두 세개 쯤 된다 ㅠ... &lt;/p&gt;
+&lt;h3&gt;독서&lt;/h3&gt;
+&lt;p&gt;올해 초까지만 해도 한달에 한권씩 책을 다 읽겠다고 다짐했는데 아직 한권도 다 제대로 읽지 못했다.&lt;/p&gt;
+&lt;h2&gt;내년 목표&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;개인공부 미루지 말기.&lt;/li&gt;
+&lt;li&gt;학교 공부 복습 미루지 않기.&lt;/li&gt;
+&lt;li&gt;토이 프로젝트 끝까지 진행하기.&lt;/li&gt;
+&lt;li&gt;다이어트.&lt;/li&gt;
+&lt;li&gt;독서.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[빅데이터 기술]]></title><description><![CDATA[분산 시스템 여러대의 서버가 네트워크를 통해 통신하며 공통의 계산문제를 푸는 시스템. 문제를 여러 개의 작업(task…]]></description><link>https://dev.kyoungah.com/2019-10-03-bigdata-technology/</link><guid isPermaLink="false">https://dev.kyoungah.com/2019-10-03-bigdata-technology/</guid><pubDate>Thu, 03 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;분산 시스템&lt;/h2&gt;
 &lt;p&gt;여러대의 서버가 네트워크를 통해 통신하며 공통의 계산문제를 푸는 시스템. 문제를 여러 개의 작업(task)로 나누어 하나의 작업을 한 대 이상의 서버에 할당하여, 이들 컴퓨터로 하여금 각각의 작업을 동시에 병렬로 해결하는 방식이다.
 분산 시스템은 저비용으로 고성능을 얻을 수 있으며 신뢰성과 확장성을 쉽게 높일 수 있다. &lt;/p&gt;
 &lt;ul&gt;
@@ -124,7 +149,7 @@ summary&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;temp.big&lt
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c44f86bee7a41b88929f444717fc1ee1/28736/linear-algebra-linear-equation-01.png&quot;
+    href=&quot;/static/c44f86bee7a41b88929f444717fc1ee1/022b8/linear-algebra-linear-equation-01.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -137,10 +162,11 @@ summary&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;temp.big&lt
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;일차 방정식&quot;
         title=&quot;일차 방정식&quot;
-        src=&quot;/static/c44f86bee7a41b88929f444717fc1ee1/28736/linear-algebra-linear-equation-01.png&quot;
-        srcset=&quot;/static/c44f86bee7a41b88929f444717fc1ee1/cf440/linear-algebra-linear-equation-01.png 148w,
-/static/c44f86bee7a41b88929f444717fc1ee1/28736/linear-algebra-linear-equation-01.png 152w&quot;
+        src=&quot;/static/c44f86bee7a41b88929f444717fc1ee1/022b8/linear-algebra-linear-equation-01.png&quot;
+        srcset=&quot;/static/c44f86bee7a41b88929f444717fc1ee1/00d96/linear-algebra-linear-equation-01.png 148w,
+/static/c44f86bee7a41b88929f444717fc1ee1/022b8/linear-algebra-linear-equation-01.png 152w&quot;
         sizes=&quot;(max-width: 152px) 100vw, 152px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -262,6 +288,8 @@ summary&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;temp.big&lt
   (&lt;a href=&apos;https://codepen.io/partykyoung&apos;&gt;@partykyoung&lt;/a&gt;) on &lt;a href=&apos;https://codepen.io&apos;&gt;CodePen&lt;/a&gt;.
 &lt;/iframe&gt;
 &lt;p&gt;자손 컴포넌트에서 오류가 발생했을 경우 호출된다. 자식 컴포넌트에서 발생하는 에러만 잡아낼 수 있고, 자신의 에러는 잡아낼수 없다.&lt;/p&gt;
+&lt;h2&gt;마무리&lt;/h2&gt;
+&lt;p&gt;React v16.8 부터 hooks가 도입되면서 class 컴포넌트 보다는 functional 컴포넌트가 대세가 되어가고 있지만 아직까지는 hooks로 모든 React lifecycle을 대체할 수는 없기 때문에 알고 있는게 좋다고 생각한다. &lt;/p&gt;
 &lt;h2&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;#x26;mallGb=KOR&amp;#x26;barcode=9791160505238&amp;#x26;orderClick=LAG&amp;#x26;Kc=&quot;&gt;리액트를 다루는 기술&lt;/a&gt;&lt;/li&gt;
@@ -2305,7 +2333,7 @@ ex) 하나의 프로세스 안에 계산용 쓰레드, 입력용 쓰레드, 백�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0b2b8146ede280b36377aad2a897af65/d19c0/compouter-security-secret-code-1.png&quot;
+    href=&quot;/static/0b2b8146ede280b36377aad2a897af65/7217d/compouter-security-secret-code-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2318,11 +2346,12 @@ ex) 하나의 프로세스 안에 계산용 쓰레드, 입력용 쓰레드, 백�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;스파르타의 봉 암호 (출처: 위키백과)&quot;
         title=&quot;스파르타의 봉 암호 (출처: 위키백과)&quot;
-        src=&quot;/static/0b2b8146ede280b36377aad2a897af65/d19c0/compouter-security-secret-code-1.png&quot;
-        srcset=&quot;/static/0b2b8146ede280b36377aad2a897af65/cf440/compouter-security-secret-code-1.png 148w,
-/static/0b2b8146ede280b36377aad2a897af65/d2d38/compouter-security-secret-code-1.png 295w,
-/static/0b2b8146ede280b36377aad2a897af65/d19c0/compouter-security-secret-code-1.png 500w&quot;
+        src=&quot;/static/0b2b8146ede280b36377aad2a897af65/7217d/compouter-security-secret-code-1.png&quot;
+        srcset=&quot;/static/0b2b8146ede280b36377aad2a897af65/00d96/compouter-security-secret-code-1.png 148w,
+/static/0b2b8146ede280b36377aad2a897af65/0b23c/compouter-security-secret-code-1.png 295w,
+/static/0b2b8146ede280b36377aad2a897af65/7217d/compouter-security-secret-code-1.png 500w&quot;
         sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -2338,7 +2367,7 @@ ex) 하나의 프로세스 안에 계산용 쓰레드, 입력용 쓰레드, 백�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/af511c4056652d022410b969a06c4622/34e8a/compouter-security-secret-code-2.png&quot;
+    href=&quot;/static/af511c4056652d022410b969a06c4622/3f01f/compouter-security-secret-code-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2351,12 +2380,13 @@ ex) 하나의 프로세스 안에 계산용 쓰레드, 입력용 쓰레드, 백�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;치환법 (출처: 위키백과)&quot;
         title=&quot;치환법 (출처: 위키백과)&quot;
-        src=&quot;/static/af511c4056652d022410b969a06c4622/b9e4f/compouter-security-secret-code-2.png&quot;
-        srcset=&quot;/static/af511c4056652d022410b969a06c4622/cf440/compouter-security-secret-code-2.png 148w,
-/static/af511c4056652d022410b969a06c4622/d2d38/compouter-security-secret-code-2.png 295w,
-/static/af511c4056652d022410b969a06c4622/b9e4f/compouter-security-secret-code-2.png 590w,
-/static/af511c4056652d022410b969a06c4622/34e8a/compouter-security-secret-code-2.png 600w&quot;
+        src=&quot;/static/af511c4056652d022410b969a06c4622/799d3/compouter-security-secret-code-2.png&quot;
+        srcset=&quot;/static/af511c4056652d022410b969a06c4622/00d96/compouter-security-secret-code-2.png 148w,
+/static/af511c4056652d022410b969a06c4622/0b23c/compouter-security-secret-code-2.png 295w,
+/static/af511c4056652d022410b969a06c4622/799d3/compouter-security-secret-code-2.png 590w,
+/static/af511c4056652d022410b969a06c4622/3f01f/compouter-security-secret-code-2.png 600w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -2376,7 +2406,7 @@ ex) 하나의 프로세스 안에 계산용 쓰레드, 입력용 쓰레드, 백�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b4566fc52f1b2edd25ad72ae771ec8ac/e49a9/compouter-security-secret-code-3.png&quot;
+    href=&quot;/static/b4566fc52f1b2edd25ad72ae771ec8ac/70d1f/compouter-security-secret-code-3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2389,12 +2419,13 @@ ex) 하나의 프로세스 안에 계산용 쓰레드, 입력용 쓰레드, 백�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;시저암호 (출처: 위키백과)&quot;
         title=&quot;시저암호 (출처: 위키백과)&quot;
-        src=&quot;/static/b4566fc52f1b2edd25ad72ae771ec8ac/b9e4f/compouter-security-secret-code-3.png&quot;
-        srcset=&quot;/static/b4566fc52f1b2edd25ad72ae771ec8ac/cf440/compouter-security-secret-code-3.png 148w,
-/static/b4566fc52f1b2edd25ad72ae771ec8ac/d2d38/compouter-security-secret-code-3.png 295w,
-/static/b4566fc52f1b2edd25ad72ae771ec8ac/b9e4f/compouter-security-secret-code-3.png 590w,
-/static/b4566fc52f1b2edd25ad72ae771ec8ac/e49a9/compouter-security-secret-code-3.png 640w&quot;
+        src=&quot;/static/b4566fc52f1b2edd25ad72ae771ec8ac/799d3/compouter-security-secret-code-3.png&quot;
+        srcset=&quot;/static/b4566fc52f1b2edd25ad72ae771ec8ac/00d96/compouter-security-secret-code-3.png 148w,
+/static/b4566fc52f1b2edd25ad72ae771ec8ac/0b23c/compouter-security-secret-code-3.png 295w,
+/static/b4566fc52f1b2edd25ad72ae771ec8ac/799d3/compouter-security-secret-code-3.png 590w,
+/static/b4566fc52f1b2edd25ad72ae771ec8ac/70d1f/compouter-security-secret-code-3.png 640w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -2520,7 +2551,7 @@ DES는 대표적인 대칭키 알고리즘으로 2001년 새로운 표준 알고
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/adfa1b7486575be5581735f0912503a8/84566/algorithms-merge-sort-1.png&quot;
+    href=&quot;/static/adfa1b7486575be5581735f0912503a8/fe80b/algorithms-merge-sort-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2533,13 +2564,14 @@ DES는 대표적인 대칭키 알고리즘으로 2001년 새로운 표준 알고
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;합병정렬&quot;
         title=&quot;합병정렬&quot;
-        src=&quot;/static/adfa1b7486575be5581735f0912503a8/b9e4f/algorithms-merge-sort-1.png&quot;
-        srcset=&quot;/static/adfa1b7486575be5581735f0912503a8/cf440/algorithms-merge-sort-1.png 148w,
-/static/adfa1b7486575be5581735f0912503a8/d2d38/algorithms-merge-sort-1.png 295w,
-/static/adfa1b7486575be5581735f0912503a8/b9e4f/algorithms-merge-sort-1.png 590w,
-/static/adfa1b7486575be5581735f0912503a8/f9b6a/algorithms-merge-sort-1.png 885w,
-/static/adfa1b7486575be5581735f0912503a8/84566/algorithms-merge-sort-1.png 958w&quot;
+        src=&quot;/static/adfa1b7486575be5581735f0912503a8/799d3/algorithms-merge-sort-1.png&quot;
+        srcset=&quot;/static/adfa1b7486575be5581735f0912503a8/00d96/algorithms-merge-sort-1.png 148w,
+/static/adfa1b7486575be5581735f0912503a8/0b23c/algorithms-merge-sort-1.png 295w,
+/static/adfa1b7486575be5581735f0912503a8/799d3/algorithms-merge-sort-1.png 590w,
+/static/adfa1b7486575be5581735f0912503a8/2a3d6/algorithms-merge-sort-1.png 885w,
+/static/adfa1b7486575be5581735f0912503a8/fe80b/algorithms-merge-sort-1.png 958w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -2664,7 +2696,7 @@ T(n) = T(&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-html&quo
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/70bfe38297b52a2b85b16160d89d90ca/9b1de/algorithms-quick-sort-1.png&quot;
+    href=&quot;/static/70bfe38297b52a2b85b16160d89d90ca/9be56/algorithms-quick-sort-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2677,12 +2709,13 @@ T(n) = T(&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-html&quo
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;퀵정렬&quot;
         title=&quot;퀵정렬&quot;
-        src=&quot;/static/70bfe38297b52a2b85b16160d89d90ca/b9e4f/algorithms-quick-sort-1.png&quot;
-        srcset=&quot;/static/70bfe38297b52a2b85b16160d89d90ca/cf440/algorithms-quick-sort-1.png 148w,
-/static/70bfe38297b52a2b85b16160d89d90ca/d2d38/algorithms-quick-sort-1.png 295w,
-/static/70bfe38297b52a2b85b16160d89d90ca/b9e4f/algorithms-quick-sort-1.png 590w,
-/static/70bfe38297b52a2b85b16160d89d90ca/9b1de/algorithms-quick-sort-1.png 670w&quot;
+        src=&quot;/static/70bfe38297b52a2b85b16160d89d90ca/799d3/algorithms-quick-sort-1.png&quot;
+        srcset=&quot;/static/70bfe38297b52a2b85b16160d89d90ca/00d96/algorithms-quick-sort-1.png 148w,
+/static/70bfe38297b52a2b85b16160d89d90ca/0b23c/algorithms-quick-sort-1.png 295w,
+/static/70bfe38297b52a2b85b16160d89d90ca/799d3/algorithms-quick-sort-1.png 590w,
+/static/70bfe38297b52a2b85b16160d89d90ca/9be56/algorithms-quick-sort-1.png 670w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -2799,7 +2832,7 @@ T(n) = &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-html&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ab6532b31509f990903819f5b193b798/72ec8/algorithms-binary-search-1.png&quot;
+    href=&quot;/static/ab6532b31509f990903819f5b193b798/e8e0c/algorithms-binary-search-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2812,11 +2845,12 @@ T(n) = &lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-html&quot;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;이진 탐색 분할&quot;
         title=&quot;이진 탐색 분할&quot;
-        src=&quot;/static/ab6532b31509f990903819f5b193b798/72ec8/algorithms-binary-search-1.png&quot;
-        srcset=&quot;/static/ab6532b31509f990903819f5b193b798/cf440/algorithms-binary-search-1.png 148w,
-/static/ab6532b31509f990903819f5b193b798/d2d38/algorithms-binary-search-1.png 295w,
-/static/ab6532b31509f990903819f5b193b798/72ec8/algorithms-binary-search-1.png 532w&quot;
+        src=&quot;/static/ab6532b31509f990903819f5b193b798/e8e0c/algorithms-binary-search-1.png&quot;
+        srcset=&quot;/static/ab6532b31509f990903819f5b193b798/00d96/algorithms-binary-search-1.png 148w,
+/static/ab6532b31509f990903819f5b193b798/0b23c/algorithms-binary-search-1.png 295w,
+/static/ab6532b31509f990903819f5b193b798/e8e0c/algorithms-binary-search-1.png 532w&quot;
         sizes=&quot;(max-width: 532px) 100vw, 532px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -2931,7 +2965,7 @@ T(n) = O(&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-html&quo
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/cad57d820e24f62d037d668f2c60b9ba/1da0e/operating-systems-process-1.png&quot;
+    href=&quot;/static/cad57d820e24f62d037d668f2c60b9ba/ccb2c/operating-systems-process-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2944,14 +2978,15 @@ T(n) = O(&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-html&quo
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;프로세스의 상태 변화&quot;
         title=&quot;프로세스의 상태 변화&quot;
-        src=&quot;/static/cad57d820e24f62d037d668f2c60b9ba/b9e4f/operating-systems-process-1.png&quot;
-        srcset=&quot;/static/cad57d820e24f62d037d668f2c60b9ba/cf440/operating-systems-process-1.png 148w,
-/static/cad57d820e24f62d037d668f2c60b9ba/d2d38/operating-systems-process-1.png 295w,
-/static/cad57d820e24f62d037d668f2c60b9ba/b9e4f/operating-systems-process-1.png 590w,
-/static/cad57d820e24f62d037d668f2c60b9ba/f9b6a/operating-systems-process-1.png 885w,
-/static/cad57d820e24f62d037d668f2c60b9ba/2d849/operating-systems-process-1.png 1180w,
-/static/cad57d820e24f62d037d668f2c60b9ba/1da0e/operating-systems-process-1.png 1252w&quot;
+        src=&quot;/static/cad57d820e24f62d037d668f2c60b9ba/799d3/operating-systems-process-1.png&quot;
+        srcset=&quot;/static/cad57d820e24f62d037d668f2c60b9ba/00d96/operating-systems-process-1.png 148w,
+/static/cad57d820e24f62d037d668f2c60b9ba/0b23c/operating-systems-process-1.png 295w,
+/static/cad57d820e24f62d037d668f2c60b9ba/799d3/operating-systems-process-1.png 590w,
+/static/cad57d820e24f62d037d668f2c60b9ba/2a3d6/operating-systems-process-1.png 885w,
+/static/cad57d820e24f62d037d668f2c60b9ba/ae92f/operating-systems-process-1.png 1180w,
+/static/cad57d820e24f62d037d668f2c60b9ba/ccb2c/operating-systems-process-1.png 1252w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -3162,7 +3197,7 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8aa0bfeea4455c2234ec1d5151901c04/22403/algorithms-divide-and-conquer-1.png&quot;
+    href=&quot;/static/8aa0bfeea4455c2234ec1d5151901c04/50e5b/algorithms-divide-and-conquer-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3175,11 +3210,12 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;이진 탐색&quot;
         title=&quot;이진 탐색&quot;
-        src=&quot;/static/8aa0bfeea4455c2234ec1d5151901c04/22403/algorithms-divide-and-conquer-1.png&quot;
-        srcset=&quot;/static/8aa0bfeea4455c2234ec1d5151901c04/cf440/algorithms-divide-and-conquer-1.png 148w,
-/static/8aa0bfeea4455c2234ec1d5151901c04/d2d38/algorithms-divide-and-conquer-1.png 295w,
-/static/8aa0bfeea4455c2234ec1d5151901c04/22403/algorithms-divide-and-conquer-1.png 428w&quot;
+        src=&quot;/static/8aa0bfeea4455c2234ec1d5151901c04/50e5b/algorithms-divide-and-conquer-1.png&quot;
+        srcset=&quot;/static/8aa0bfeea4455c2234ec1d5151901c04/00d96/algorithms-divide-and-conquer-1.png 148w,
+/static/8aa0bfeea4455c2234ec1d5151901c04/0b23c/algorithms-divide-and-conquer-1.png 295w,
+/static/8aa0bfeea4455c2234ec1d5151901c04/50e5b/algorithms-divide-and-conquer-1.png 428w&quot;
         sizes=&quot;(max-width: 428px) 100vw, 428px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -3195,7 +3231,7 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0a967c44659cd19ebba84c209178c0a6/22403/algorithms-divide-and-conquer-2.png&quot;
+    href=&quot;/static/0a967c44659cd19ebba84c209178c0a6/50e5b/algorithms-divide-and-conquer-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3208,11 +3244,12 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;합병 정렬&quot;
         title=&quot;합병 정렬&quot;
-        src=&quot;/static/0a967c44659cd19ebba84c209178c0a6/22403/algorithms-divide-and-conquer-2.png&quot;
-        srcset=&quot;/static/0a967c44659cd19ebba84c209178c0a6/cf440/algorithms-divide-and-conquer-2.png 148w,
-/static/0a967c44659cd19ebba84c209178c0a6/d2d38/algorithms-divide-and-conquer-2.png 295w,
-/static/0a967c44659cd19ebba84c209178c0a6/22403/algorithms-divide-and-conquer-2.png 428w&quot;
+        src=&quot;/static/0a967c44659cd19ebba84c209178c0a6/50e5b/algorithms-divide-and-conquer-2.png&quot;
+        srcset=&quot;/static/0a967c44659cd19ebba84c209178c0a6/00d96/algorithms-divide-and-conquer-2.png 148w,
+/static/0a967c44659cd19ebba84c209178c0a6/0b23c/algorithms-divide-and-conquer-2.png 295w,
+/static/0a967c44659cd19ebba84c209178c0a6/50e5b/algorithms-divide-and-conquer-2.png 428w&quot;
         sizes=&quot;(max-width: 428px) 100vw, 428px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -3228,7 +3265,7 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/18a0e5abc6c877d193d860b59069a4ae/50f50/algorithms-divide-and-conquer-3.png&quot;
+    href=&quot;/static/18a0e5abc6c877d193d860b59069a4ae/1e225/algorithms-divide-and-conquer-3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3241,11 +3278,12 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;퀵 정렬&quot;
         title=&quot;퀵 정렬&quot;
-        src=&quot;/static/18a0e5abc6c877d193d860b59069a4ae/50f50/algorithms-divide-and-conquer-3.png&quot;
-        srcset=&quot;/static/18a0e5abc6c877d193d860b59069a4ae/cf440/algorithms-divide-and-conquer-3.png 148w,
-/static/18a0e5abc6c877d193d860b59069a4ae/d2d38/algorithms-divide-and-conquer-3.png 295w,
-/static/18a0e5abc6c877d193d860b59069a4ae/50f50/algorithms-divide-and-conquer-3.png 426w&quot;
+        src=&quot;/static/18a0e5abc6c877d193d860b59069a4ae/1e225/algorithms-divide-and-conquer-3.png&quot;
+        srcset=&quot;/static/18a0e5abc6c877d193d860b59069a4ae/00d96/algorithms-divide-and-conquer-3.png 148w,
+/static/18a0e5abc6c877d193d860b59069a4ae/0b23c/algorithms-divide-and-conquer-3.png 295w,
+/static/18a0e5abc6c877d193d860b59069a4ae/1e225/algorithms-divide-and-conquer-3.png 426w&quot;
         sizes=&quot;(max-width: 426px) 100vw, 426px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -3261,7 +3299,7 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e4a169e98645a91acf0a745aab4253eb/97718/algorithms-divide-and-conquer-4.png&quot;
+    href=&quot;/static/e4a169e98645a91acf0a745aab4253eb/0eb49/algorithms-divide-and-conquer-4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3274,11 +3312,12 @@ ex) 윈도우, 맥 OS, 리눅스 등..&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;선택 문제&quot;
         title=&quot;선택 문제&quot;
-        src=&quot;/static/e4a169e98645a91acf0a745aab4253eb/97718/algorithms-divide-and-conquer-4.png&quot;
-        srcset=&quot;/static/e4a169e98645a91acf0a745aab4253eb/cf440/algorithms-divide-and-conquer-4.png 148w,
-/static/e4a169e98645a91acf0a745aab4253eb/d2d38/algorithms-divide-and-conquer-4.png 295w,
-/static/e4a169e98645a91acf0a745aab4253eb/97718/algorithms-divide-and-conquer-4.png 424w&quot;
+        src=&quot;/static/e4a169e98645a91acf0a745aab4253eb/0eb49/algorithms-divide-and-conquer-4.png&quot;
+        srcset=&quot;/static/e4a169e98645a91acf0a745aab4253eb/00d96/algorithms-divide-and-conquer-4.png 148w,
+/static/e4a169e98645a91acf0a745aab4253eb/0b23c/algorithms-divide-and-conquer-4.png 295w,
+/static/e4a169e98645a91acf0a745aab4253eb/0eb49/algorithms-divide-and-conquer-4.png 424w&quot;
         sizes=&quot;(max-width: 424px) 100vw, 424px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -3595,13 +3634,14 @@ O(1) &amp;#x3C; O(&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;arr.map 실행 결과&quot;
         title=&quot;arr.map 실행 결과&quot;
-        src=&quot;/static/6f6b6715a9917eb1973306cd48c6e5ee/b9e4f/reactjs-map-1.png&quot;
-        srcset=&quot;/static/6f6b6715a9917eb1973306cd48c6e5ee/cf440/reactjs-map-1.png 148w,
-/static/6f6b6715a9917eb1973306cd48c6e5ee/d2d38/reactjs-map-1.png 295w,
-/static/6f6b6715a9917eb1973306cd48c6e5ee/b9e4f/reactjs-map-1.png 590w,
-/static/6f6b6715a9917eb1973306cd48c6e5ee/f9b6a/reactjs-map-1.png 885w,
-/static/6f6b6715a9917eb1973306cd48c6e5ee/8fcfd/reactjs-map-1.png 1074w&quot;
+        src=&quot;/static/6f6b6715a9917eb1973306cd48c6e5ee/799d3/reactjs-map-1.png&quot;
+        srcset=&quot;/static/6f6b6715a9917eb1973306cd48c6e5ee/00d96/reactjs-map-1.png 148w,
+/static/6f6b6715a9917eb1973306cd48c6e5ee/0b23c/reactjs-map-1.png 295w,
+/static/6f6b6715a9917eb1973306cd48c6e5ee/799d3/reactjs-map-1.png 590w,
+/static/6f6b6715a9917eb1973306cd48c6e5ee/2a3d6/reactjs-map-1.png 885w,
+/static/6f6b6715a9917eb1973306cd48c6e5ee/db2b5/reactjs-map-1.png 1074w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -3648,14 +3688,15 @@ O(1) &amp;#x3C; O(&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;key를 정해주지 않으면 실행 시 경고 메시지가 뜬다.&quot;
         title=&quot;key를 정해주지 않으면 실행 시 경고 메시지가 뜬다.&quot;
-        src=&quot;/static/859fdc0b7674662ba4f976c602ca493a/b9e4f/reactjs-map-2.png&quot;
-        srcset=&quot;/static/859fdc0b7674662ba4f976c602ca493a/cf440/reactjs-map-2.png 148w,
-/static/859fdc0b7674662ba4f976c602ca493a/d2d38/reactjs-map-2.png 295w,
-/static/859fdc0b7674662ba4f976c602ca493a/b9e4f/reactjs-map-2.png 590w,
-/static/859fdc0b7674662ba4f976c602ca493a/f9b6a/reactjs-map-2.png 885w,
-/static/859fdc0b7674662ba4f976c602ca493a/2d849/reactjs-map-2.png 1180w,
-/static/859fdc0b7674662ba4f976c602ca493a/72722/reactjs-map-2.png 1272w&quot;
+        src=&quot;/static/859fdc0b7674662ba4f976c602ca493a/799d3/reactjs-map-2.png&quot;
+        srcset=&quot;/static/859fdc0b7674662ba4f976c602ca493a/00d96/reactjs-map-2.png 148w,
+/static/859fdc0b7674662ba4f976c602ca493a/0b23c/reactjs-map-2.png 295w,
+/static/859fdc0b7674662ba4f976c602ca493a/799d3/reactjs-map-2.png 590w,
+/static/859fdc0b7674662ba4f976c602ca493a/2a3d6/reactjs-map-2.png 885w,
+/static/859fdc0b7674662ba4f976c602ca493a/ae92f/reactjs-map-2.png 1180w,
+/static/859fdc0b7674662ba4f976c602ca493a/4c6ed/reactjs-map-2.png 1272w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -4160,7 +4201,7 @@ isOpen이 false 일 때는 컴포넌트의 render 함수가 null을 리턴하므
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5bd552831851635ebd535602a375a452/548b5/typescript-react-test-1.png&quot;
+    href=&quot;/static/5bd552831851635ebd535602a375a452/ce6ed/typescript-react-test-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4173,10 +4214,11 @@ isOpen이 false 일 때는 컴포넌트의 render 함수가 null을 리턴하므
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;스냅샷 생성&quot;
         title=&quot;스냅샷 생성&quot;
-        src=&quot;/static/5bd552831851635ebd535602a375a452/548b5/typescript-react-test-1.png&quot;
-        srcset=&quot;/static/5bd552831851635ebd535602a375a452/cf440/typescript-react-test-1.png 148w,
-/static/5bd552831851635ebd535602a375a452/548b5/typescript-react-test-1.png 187w&quot;
+        src=&quot;/static/5bd552831851635ebd535602a375a452/ce6ed/typescript-react-test-1.png&quot;
+        srcset=&quot;/static/5bd552831851635ebd535602a375a452/00d96/typescript-react-test-1.png 148w,
+/static/5bd552831851635ebd535602a375a452/ce6ed/typescript-react-test-1.png 187w&quot;
         sizes=&quot;(max-width: 187px) 100vw, 187px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4227,7 +4269,7 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span cl
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/011abd617c9fd22b909594a7c6d10253/58aad/typescript-react-test-2.png&quot;
+    href=&quot;/static/011abd617c9fd22b909594a7c6d10253/fecec/typescript-react-test-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4240,12 +4282,13 @@ exports&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span cl
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;테스트 성공&quot;
         title=&quot;테스트 성공&quot;
-        src=&quot;/static/011abd617c9fd22b909594a7c6d10253/b9e4f/typescript-react-test-2.png&quot;
-        srcset=&quot;/static/011abd617c9fd22b909594a7c6d10253/cf440/typescript-react-test-2.png 148w,
-/static/011abd617c9fd22b909594a7c6d10253/d2d38/typescript-react-test-2.png 295w,
-/static/011abd617c9fd22b909594a7c6d10253/b9e4f/typescript-react-test-2.png 590w,
-/static/011abd617c9fd22b909594a7c6d10253/58aad/typescript-react-test-2.png 798w&quot;
+        src=&quot;/static/011abd617c9fd22b909594a7c6d10253/799d3/typescript-react-test-2.png&quot;
+        srcset=&quot;/static/011abd617c9fd22b909594a7c6d10253/00d96/typescript-react-test-2.png 148w,
+/static/011abd617c9fd22b909594a7c6d10253/0b23c/typescript-react-test-2.png 295w,
+/static/011abd617c9fd22b909594a7c6d10253/799d3/typescript-react-test-2.png 590w,
+/static/011abd617c9fd22b909594a7c6d10253/fecec/typescript-react-test-2.png 798w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4261,7 +4304,7 @@ debug로 child elements가 제대로 출력되는지 console.log를 찍었기 �
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b0dde27d725aaf2037be0893d214dda3/f33be/typescript-react-test-3.png&quot;
+    href=&quot;/static/b0dde27d725aaf2037be0893d214dda3/c7896/typescript-react-test-3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4274,13 +4317,14 @@ debug로 child elements가 제대로 출력되는지 console.log를 찍었기 �
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;테스트 실패&quot;
         title=&quot;테스트 실패&quot;
-        src=&quot;/static/b0dde27d725aaf2037be0893d214dda3/b9e4f/typescript-react-test-3.png&quot;
-        srcset=&quot;/static/b0dde27d725aaf2037be0893d214dda3/cf440/typescript-react-test-3.png 148w,
-/static/b0dde27d725aaf2037be0893d214dda3/d2d38/typescript-react-test-3.png 295w,
-/static/b0dde27d725aaf2037be0893d214dda3/b9e4f/typescript-react-test-3.png 590w,
-/static/b0dde27d725aaf2037be0893d214dda3/f9b6a/typescript-react-test-3.png 885w,
-/static/b0dde27d725aaf2037be0893d214dda3/f33be/typescript-react-test-3.png 1112w&quot;
+        src=&quot;/static/b0dde27d725aaf2037be0893d214dda3/799d3/typescript-react-test-3.png&quot;
+        srcset=&quot;/static/b0dde27d725aaf2037be0893d214dda3/00d96/typescript-react-test-3.png 148w,
+/static/b0dde27d725aaf2037be0893d214dda3/0b23c/typescript-react-test-3.png 295w,
+/static/b0dde27d725aaf2037be0893d214dda3/799d3/typescript-react-test-3.png 590w,
+/static/b0dde27d725aaf2037be0893d214dda3/2a3d6/typescript-react-test-3.png 885w,
+/static/b0dde27d725aaf2037be0893d214dda3/c7896/typescript-react-test-3.png 1112w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4390,13 +4434,14 @@ DOM 요소에는 이벤트를 설정할 수 있지만 직접 만든 컴포넌트
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;함수가 가리키는 this&quot;
         title=&quot;함수가 가리키는 this&quot;
-        src=&quot;/static/c54d45b7815cb9b80fab390c84c7d092/b9e4f/reactjs-event-1.png&quot;
-        srcset=&quot;/static/c54d45b7815cb9b80fab390c84c7d092/cf440/reactjs-event-1.png 148w,
-/static/c54d45b7815cb9b80fab390c84c7d092/d2d38/reactjs-event-1.png 295w,
-/static/c54d45b7815cb9b80fab390c84c7d092/b9e4f/reactjs-event-1.png 590w,
-/static/c54d45b7815cb9b80fab390c84c7d092/f9b6a/reactjs-event-1.png 885w,
-/static/c54d45b7815cb9b80fab390c84c7d092/39282/reactjs-event-1.png 980w&quot;
+        src=&quot;/static/c54d45b7815cb9b80fab390c84c7d092/799d3/reactjs-event-1.png&quot;
+        srcset=&quot;/static/c54d45b7815cb9b80fab390c84c7d092/00d96/reactjs-event-1.png 148w,
+/static/c54d45b7815cb9b80fab390c84c7d092/0b23c/reactjs-event-1.png 295w,
+/static/c54d45b7815cb9b80fab390c84c7d092/799d3/reactjs-event-1.png 590w,
+/static/c54d45b7815cb9b80fab390c84c7d092/2a3d6/reactjs-event-1.png 885w,
+/static/c54d45b7815cb9b80fab390c84c7d092/8c8d8/reactjs-event-1.png 980w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -4432,13 +4477,14 @@ JavaScript 에서 함수를 선언하면 함수는 자기 자신을 가리키는
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;함수 바인딩이 되어있지 않기 때문에 함수 실행 시 오류가 발생한다.&quot;
         title=&quot;함수 바인딩이 되어있지 않기 때문에 함수 실행 시 오류가 발생한다.&quot;
-        src=&quot;/static/a06a1a291be2fbe880be5fda578c9fc9/b9e4f/reactjs-event-2.png&quot;
-        srcset=&quot;/static/a06a1a291be2fbe880be5fda578c9fc9/cf440/reactjs-event-2.png 148w,
-/static/a06a1a291be2fbe880be5fda578c9fc9/d2d38/reactjs-event-2.png 295w,
-/static/a06a1a291be2fbe880be5fda578c9fc9/b9e4f/reactjs-event-2.png 590w,
-/static/a06a1a291be2fbe880be5fda578c9fc9/f9b6a/reactjs-event-2.png 885w,
-/static/a06a1a291be2fbe880be5fda578c9fc9/5e6b6/reactjs-event-2.png 990w&quot;
+        src=&quot;/static/a06a1a291be2fbe880be5fda578c9fc9/799d3/reactjs-event-2.png&quot;
+        srcset=&quot;/static/a06a1a291be2fbe880be5fda578c9fc9/00d96/reactjs-event-2.png 148w,
+/static/a06a1a291be2fbe880be5fda578c9fc9/0b23c/reactjs-event-2.png 295w,
+/static/a06a1a291be2fbe880be5fda578c9fc9/799d3/reactjs-event-2.png 590w,
+/static/a06a1a291be2fbe880be5fda578c9fc9/2a3d6/reactjs-event-2.png 885w,
+/static/a06a1a291be2fbe880be5fda578c9fc9/3e8d6/reactjs-event-2.png 990w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -4732,7 +4778,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/986c1f7d3c9cd1a101edd6438ade692e/87a1e/typescript-first-1.png&quot;
+    href=&quot;/static/986c1f7d3c9cd1a101edd6438ade692e/32b35/typescript-first-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4745,13 +4791,14 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;parameter에 타입을 지정해주면 타입이 맞지 않을 때 오류를 출력해준다.&quot;
         title=&quot;parameter에 타입을 지정해주면 타입이 맞지 않을 때 오류를 출력해준다.&quot;
-        src=&quot;/static/986c1f7d3c9cd1a101edd6438ade692e/b9e4f/typescript-first-1.png&quot;
-        srcset=&quot;/static/986c1f7d3c9cd1a101edd6438ade692e/cf440/typescript-first-1.png 148w,
-/static/986c1f7d3c9cd1a101edd6438ade692e/d2d38/typescript-first-1.png 295w,
-/static/986c1f7d3c9cd1a101edd6438ade692e/b9e4f/typescript-first-1.png 590w,
-/static/986c1f7d3c9cd1a101edd6438ade692e/f9b6a/typescript-first-1.png 885w,
-/static/986c1f7d3c9cd1a101edd6438ade692e/87a1e/typescript-first-1.png 1116w&quot;
+        src=&quot;/static/986c1f7d3c9cd1a101edd6438ade692e/799d3/typescript-first-1.png&quot;
+        srcset=&quot;/static/986c1f7d3c9cd1a101edd6438ade692e/00d96/typescript-first-1.png 148w,
+/static/986c1f7d3c9cd1a101edd6438ade692e/0b23c/typescript-first-1.png 295w,
+/static/986c1f7d3c9cd1a101edd6438ade692e/799d3/typescript-first-1.png 590w,
+/static/986c1f7d3c9cd1a101edd6438ade692e/2a3d6/typescript-first-1.png 885w,
+/static/986c1f7d3c9cd1a101edd6438ade692e/32b35/typescript-first-1.png 1116w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4765,7 +4812,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a07eabef10e4d9c8650b0df3cafff8f8/f1147/typescript-first-2.png&quot;
+    href=&quot;/static/a07eabef10e4d9c8650b0df3cafff8f8/13d1d/typescript-first-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4778,12 +4825,13 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;parameter에 타입을 생략하면 any로 타입이 설정된다.&quot;
         title=&quot;parameter에 타입을 생략하면 any로 타입이 설정된다.&quot;
-        src=&quot;/static/a07eabef10e4d9c8650b0df3cafff8f8/b9e4f/typescript-first-2.png&quot;
-        srcset=&quot;/static/a07eabef10e4d9c8650b0df3cafff8f8/cf440/typescript-first-2.png 148w,
-/static/a07eabef10e4d9c8650b0df3cafff8f8/d2d38/typescript-first-2.png 295w,
-/static/a07eabef10e4d9c8650b0df3cafff8f8/b9e4f/typescript-first-2.png 590w,
-/static/a07eabef10e4d9c8650b0df3cafff8f8/f1147/typescript-first-2.png 626w&quot;
+        src=&quot;/static/a07eabef10e4d9c8650b0df3cafff8f8/799d3/typescript-first-2.png&quot;
+        srcset=&quot;/static/a07eabef10e4d9c8650b0df3cafff8f8/00d96/typescript-first-2.png 148w,
+/static/a07eabef10e4d9c8650b0df3cafff8f8/0b23c/typescript-first-2.png 295w,
+/static/a07eabef10e4d9c8650b0df3cafff8f8/799d3/typescript-first-2.png 590w,
+/static/a07eabef10e4d9c8650b0df3cafff8f8/13d1d/typescript-first-2.png 626w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4799,7 +4847,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/00b5dd5a5acb78fad608a8a33eb100fc/b9ee5/typescript-first-3.png&quot;
+    href=&quot;/static/00b5dd5a5acb78fad608a8a33eb100fc/63974/typescript-first-3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4812,11 +4860,12 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;tsc 명령어로 ts파일을 컴파일 하면 js 파일이 생성된다.&quot;
         title=&quot;tsc 명령어로 ts파일을 컴파일 하면 js 파일이 생성된다.&quot;
-        src=&quot;/static/00b5dd5a5acb78fad608a8a33eb100fc/b9ee5/typescript-first-3.png&quot;
-        srcset=&quot;/static/00b5dd5a5acb78fad608a8a33eb100fc/cf440/typescript-first-3.png 148w,
-/static/00b5dd5a5acb78fad608a8a33eb100fc/d2d38/typescript-first-3.png 295w,
-/static/00b5dd5a5acb78fad608a8a33eb100fc/b9ee5/typescript-first-3.png 442w&quot;
+        src=&quot;/static/00b5dd5a5acb78fad608a8a33eb100fc/63974/typescript-first-3.png&quot;
+        srcset=&quot;/static/00b5dd5a5acb78fad608a8a33eb100fc/00d96/typescript-first-3.png 148w,
+/static/00b5dd5a5acb78fad608a8a33eb100fc/0b23c/typescript-first-3.png 295w,
+/static/00b5dd5a5acb78fad608a8a33eb100fc/63974/typescript-first-3.png 442w&quot;
         sizes=&quot;(max-width: 442px) 100vw, 442px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4830,7 +4879,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d7f138c1b127993498ad178c99b1d72e/6c7a0/typescript-first-4.png&quot;
+    href=&quot;/static/d7f138c1b127993498ad178c99b1d72e/6e43c/typescript-first-4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4843,12 +4892,13 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;컴파일된 js 파일에도 타입이 지정되어 있을까 확인해봤더니 타입이 지정되지는 않았다.&quot;
         title=&quot;컴파일된 js 파일에도 타입이 지정되어 있을까 확인해봤더니 타입이 지정되지는 않았다.&quot;
-        src=&quot;/static/d7f138c1b127993498ad178c99b1d72e/b9e4f/typescript-first-4.png&quot;
-        srcset=&quot;/static/d7f138c1b127993498ad178c99b1d72e/cf440/typescript-first-4.png 148w,
-/static/d7f138c1b127993498ad178c99b1d72e/d2d38/typescript-first-4.png 295w,
-/static/d7f138c1b127993498ad178c99b1d72e/b9e4f/typescript-first-4.png 590w,
-/static/d7f138c1b127993498ad178c99b1d72e/6c7a0/typescript-first-4.png 724w&quot;
+        src=&quot;/static/d7f138c1b127993498ad178c99b1d72e/799d3/typescript-first-4.png&quot;
+        srcset=&quot;/static/d7f138c1b127993498ad178c99b1d72e/00d96/typescript-first-4.png 148w,
+/static/d7f138c1b127993498ad178c99b1d72e/0b23c/typescript-first-4.png 295w,
+/static/d7f138c1b127993498ad178c99b1d72e/799d3/typescript-first-4.png 590w,
+/static/d7f138c1b127993498ad178c99b1d72e/6e43c/typescript-first-4.png 724w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4878,7 +4928,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1aa838a4bb9a0ee341fde71ee20ade83/6cdf8/node-global-01.png&quot;
+    href=&quot;/static/1aa838a4bb9a0ee341fde71ee20ade83/e8d74/node-global-01.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4891,11 +4941,12 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;console.time&quot;
         title=&quot;console.time&quot;
-        src=&quot;/static/1aa838a4bb9a0ee341fde71ee20ade83/6cdf8/node-global-01.png&quot;
-        srcset=&quot;/static/1aa838a4bb9a0ee341fde71ee20ade83/cf440/node-global-01.png 148w,
-/static/1aa838a4bb9a0ee341fde71ee20ade83/d2d38/node-global-01.png 295w,
-/static/1aa838a4bb9a0ee341fde71ee20ade83/6cdf8/node-global-01.png 404w&quot;
+        src=&quot;/static/1aa838a4bb9a0ee341fde71ee20ade83/e8d74/node-global-01.png&quot;
+        srcset=&quot;/static/1aa838a4bb9a0ee341fde71ee20ade83/00d96/node-global-01.png 148w,
+/static/1aa838a4bb9a0ee341fde71ee20ade83/0b23c/node-global-01.png 295w,
+/static/1aa838a4bb9a0ee341fde71ee20ade83/e8d74/node-global-01.png 404w&quot;
         sizes=&quot;(max-width: 404px) 100vw, 404px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4910,7 +4961,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/fd973fd1a9149d04c3fd1d28ba1ec554/51c61/node-global-02.png&quot;
+    href=&quot;/static/fd973fd1a9149d04c3fd1d28ba1ec554/0af8f/node-global-02.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4923,11 +4974,12 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;console.log&quot;
         title=&quot;console.log&quot;
-        src=&quot;/static/fd973fd1a9149d04c3fd1d28ba1ec554/51c61/node-global-02.png&quot;
-        srcset=&quot;/static/fd973fd1a9149d04c3fd1d28ba1ec554/cf440/node-global-02.png 148w,
-/static/fd973fd1a9149d04c3fd1d28ba1ec554/d2d38/node-global-02.png 295w,
-/static/fd973fd1a9149d04c3fd1d28ba1ec554/51c61/node-global-02.png 554w&quot;
+        src=&quot;/static/fd973fd1a9149d04c3fd1d28ba1ec554/0af8f/node-global-02.png&quot;
+        srcset=&quot;/static/fd973fd1a9149d04c3fd1d28ba1ec554/00d96/node-global-02.png 148w,
+/static/fd973fd1a9149d04c3fd1d28ba1ec554/0b23c/node-global-02.png 295w,
+/static/fd973fd1a9149d04c3fd1d28ba1ec554/0af8f/node-global-02.png 554w&quot;
         sizes=&quot;(max-width: 554px) 100vw, 554px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4942,7 +4994,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/e66b2/node-global-03.png&quot;
+    href=&quot;/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/5405d/node-global-03.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4955,12 +5007,13 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;console.error&quot;
         title=&quot;console.error&quot;
-        src=&quot;/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/b9e4f/node-global-03.png&quot;
-        srcset=&quot;/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/cf440/node-global-03.png 148w,
-/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/d2d38/node-global-03.png 295w,
-/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/b9e4f/node-global-03.png 590w,
-/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/e66b2/node-global-03.png 822w&quot;
+        src=&quot;/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/799d3/node-global-03.png&quot;
+        srcset=&quot;/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/00d96/node-global-03.png 148w,
+/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/0b23c/node-global-03.png 295w,
+/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/799d3/node-global-03.png 590w,
+/static/a5c23e3d9ee1a00f78574d27ef8c5cc9/5405d/node-global-03.png 822w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -4975,7 +5028,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/dda2eef2c3924d2eb877d150c2bb6e7b/d8c54/node-global-04.png&quot;
+    href=&quot;/static/dda2eef2c3924d2eb877d150c2bb6e7b/d7d56/node-global-04.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4988,12 +5041,13 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;console.dir&quot;
         title=&quot;console.dir&quot;
-        src=&quot;/static/dda2eef2c3924d2eb877d150c2bb6e7b/b9e4f/node-global-04.png&quot;
-        srcset=&quot;/static/dda2eef2c3924d2eb877d150c2bb6e7b/cf440/node-global-04.png 148w,
-/static/dda2eef2c3924d2eb877d150c2bb6e7b/d2d38/node-global-04.png 295w,
-/static/dda2eef2c3924d2eb877d150c2bb6e7b/b9e4f/node-global-04.png 590w,
-/static/dda2eef2c3924d2eb877d150c2bb6e7b/d8c54/node-global-04.png 794w&quot;
+        src=&quot;/static/dda2eef2c3924d2eb877d150c2bb6e7b/799d3/node-global-04.png&quot;
+        srcset=&quot;/static/dda2eef2c3924d2eb877d150c2bb6e7b/00d96/node-global-04.png 148w,
+/static/dda2eef2c3924d2eb877d150c2bb6e7b/0b23c/node-global-04.png 295w,
+/static/dda2eef2c3924d2eb877d150c2bb6e7b/799d3/node-global-04.png 590w,
+/static/dda2eef2c3924d2eb877d150c2bb6e7b/d7d56/node-global-04.png 794w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5008,7 +5062,7 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ac8156507439373072400893e280e88c/4fa70/node-global-05.png&quot;
+    href=&quot;/static/ac8156507439373072400893e280e88c/38b39/node-global-05.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5021,12 +5075,13 @@ create-react-app v2로 생성한 프로젝트면 간단하게 마이그레이션
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;console.trace&quot;
         title=&quot;console.trace&quot;
-        src=&quot;/static/ac8156507439373072400893e280e88c/b9e4f/node-global-05.png&quot;
-        srcset=&quot;/static/ac8156507439373072400893e280e88c/cf440/node-global-05.png 148w,
-/static/ac8156507439373072400893e280e88c/d2d38/node-global-05.png 295w,
-/static/ac8156507439373072400893e280e88c/b9e4f/node-global-05.png 590w,
-/static/ac8156507439373072400893e280e88c/4fa70/node-global-05.png 808w&quot;
+        src=&quot;/static/ac8156507439373072400893e280e88c/799d3/node-global-05.png&quot;
+        srcset=&quot;/static/ac8156507439373072400893e280e88c/00d96/node-global-05.png 148w,
+/static/ac8156507439373072400893e280e88c/0b23c/node-global-05.png 295w,
+/static/ac8156507439373072400893e280e88c/799d3/node-global-05.png 590w,
+/static/ac8156507439373072400893e280e88c/38b39/node-global-05.png 808w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5067,9 +5122,9 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;
 &lt;p&gt;module.exports와 exports가 동일하게 동작하는 이유는 module.exports와 exports가 같은 객체를 참조하기 때문이다.
 exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도록 주의해야 한다. module.exports에는 어떤 값이든 대입해도 되지만 exports에는 객체만 대입할 수 있다. 만약 exports에 다른 값을 대입하면 객체의 참조 관게가 끊겨 더 이상 모듈로 기능하지 않는다.&lt;/p&gt;
 &lt;p&gt;exports와 module.exports에는 참조 관계가 있으므로 한 모듈에 exports 객체와 module.exports를 동시에 사용하지 않는 것이 좋다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2018년 회고록]]></title><description><![CDATA[시간이 참 빨리간다. 눈 몇번 깜빡하고 나니까 벌써 2018년이 지나갔다 ㅠ.
-2019년을 맞이하는 마음으로 2018년을 한번 돌아보자. 올해 잘한 일 방송통신대에 3학년으로 편입해서 1학기,…]]></description><link>https://dev.kyoungah.com/2018-12-31-2018-memoir/</link><guid isPermaLink="false">https://dev.kyoungah.com/2018-12-31-2018-memoir/</guid><pubDate>Mon, 31 Dec 2018 20:38:24 GMT</pubDate><content:encoded>&lt;p&gt;시간이 참 빨리간다. 눈 몇번 깜빡하고 나니까 벌써 2018년이 지나갔다 ㅠ.
-2019년을 맞이하는 마음으로 2018년을 한번 돌아보자.&lt;/p&gt;
-&lt;h3&gt;올해 잘한 일&lt;/h3&gt;
+2019년을 맞이하기 전 2018년을 한번 돌아보자. 올해 잘한 일 방송통신대에 3학년으로 편입해서 1학기,…]]></description><link>https://dev.kyoungah.com/2018-12-31-2018-memoir/</link><guid isPermaLink="false">https://dev.kyoungah.com/2018-12-31-2018-memoir/</guid><pubDate>Mon, 31 Dec 2018 20:38:24 GMT</pubDate><content:encoded>&lt;p&gt;시간이 참 빨리간다. 눈 몇번 깜빡하고 나니까 벌써 2018년이 지나갔다 ㅠ.
+2019년을 맞이하기 전 2018년을 한번 돌아보자.&lt;/p&gt;
+&lt;h2&gt;올해 잘한 일&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;방송통신대에 3학년으로 편입해서 1학기, 2학기를 보냈다.
 전문학사가 아쉬워서 학사를 따야지, 따야지 하다가 더 미루면 안될것 같아 눈 딱 감고 편입을 했다. 회사일과 학교공부를 동시에 하는게 좀 힘들었지만 그래도 후회는 없다. 도중에 포기하지않고 학사까지 무사히 따는 것이 목표이다.&lt;/li&gt;
@@ -5078,7 +5133,7 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
 &lt;li&gt;오픈소스 활동에 기여했다.
 회사에서 프로젝트를 하며 react-lazy-load-image-component 라는 컴포넌트를 쓰고 있었는데 className prop를 추가하지 않으면 class명에 undefined 들어가는게 은근 거슬렸다. 해당 오픈소스를 fork 한 후 propTypes, defaultProps만 추가한 후 풀리퀘를 날릴까 말까 고민하고 있었는데 오픈소스 제작자가 먼저 나에게 괜찮으면 이거 풀리퀘를 날려달라고 코멘트를 달아서 우여곡절 끝에 별거 아닌 내 코드가 소스에 반영되었다. 이 외에도 다른 오픈소스 readMe 파일에 오타가 있어서 풀리퀘를 날린적이 있는데 제작자가 잠수(?)를 타서 아직도 컨펌을 못받은것도 있다 ㅠ.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;올해 못한 일&lt;/h3&gt;
+&lt;h2&gt;올해 못한 일&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;개인 공부를 제대로 하지 못했다.
 학교 공부 핑계로 공부해야할건 많은데 제대로 공부 하지 않앗다. 주말에도 짬이라도 내서 해야했는데 노느라 바빴던것 같다. 흑...&lt;/li&gt;
@@ -5089,7 +5144,7 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
 &lt;li&gt;독서를 멀리했다.
 올해는 제대로 읽은 책도 없다. 내년에는 서점, 책이랑 친해져야지 ㅠ...&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;내년 목표&lt;/h3&gt;
+&lt;h2&gt;내년 목표&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;개인 공부(특히 MobX, TypeScript) 하기&lt;/li&gt;
 &lt;li&gt;개인 공부한 것들로 토이 프로젝트 진행하기&lt;/li&gt;
@@ -5113,7 +5168,7 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/518e059c6e4ee12b352d19a553bad860/6da3e/data-structure-array-01.png&quot;
+    href=&quot;/static/518e059c6e4ee12b352d19a553bad860/91043/data-structure-array-01.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5126,12 +5181,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;메모리 할당과 메모리 주소&quot;
         title=&quot;메모리 할당과 메모리 주소&quot;
-        src=&quot;/static/518e059c6e4ee12b352d19a553bad860/b9e4f/data-structure-array-01.png&quot;
-        srcset=&quot;/static/518e059c6e4ee12b352d19a553bad860/cf440/data-structure-array-01.png 148w,
-/static/518e059c6e4ee12b352d19a553bad860/d2d38/data-structure-array-01.png 295w,
-/static/518e059c6e4ee12b352d19a553bad860/b9e4f/data-structure-array-01.png 590w,
-/static/518e059c6e4ee12b352d19a553bad860/6da3e/data-structure-array-01.png 720w&quot;
+        src=&quot;/static/518e059c6e4ee12b352d19a553bad860/799d3/data-structure-array-01.png&quot;
+        srcset=&quot;/static/518e059c6e4ee12b352d19a553bad860/00d96/data-structure-array-01.png 148w,
+/static/518e059c6e4ee12b352d19a553bad860/0b23c/data-structure-array-01.png 295w,
+/static/518e059c6e4ee12b352d19a553bad860/799d3/data-structure-array-01.png 590w,
+/static/518e059c6e4ee12b352d19a553bad860/91043/data-structure-array-01.png 720w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5149,7 +5205,7 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ccedd793149db809e7697d51a430a318/912da/data-structure-array-02.png&quot;
+    href=&quot;/static/ccedd793149db809e7697d51a430a318/080fe/data-structure-array-02.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5162,12 +5218,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;1차원 배열&quot;
         title=&quot;1차원 배열&quot;
-        src=&quot;/static/ccedd793149db809e7697d51a430a318/b9e4f/data-structure-array-02.png&quot;
-        srcset=&quot;/static/ccedd793149db809e7697d51a430a318/cf440/data-structure-array-02.png 148w,
-/static/ccedd793149db809e7697d51a430a318/d2d38/data-structure-array-02.png 295w,
-/static/ccedd793149db809e7697d51a430a318/b9e4f/data-structure-array-02.png 590w,
-/static/ccedd793149db809e7697d51a430a318/912da/data-structure-array-02.png 694w&quot;
+        src=&quot;/static/ccedd793149db809e7697d51a430a318/799d3/data-structure-array-02.png&quot;
+        srcset=&quot;/static/ccedd793149db809e7697d51a430a318/00d96/data-structure-array-02.png 148w,
+/static/ccedd793149db809e7697d51a430a318/0b23c/data-structure-array-02.png 295w,
+/static/ccedd793149db809e7697d51a430a318/799d3/data-structure-array-02.png 590w,
+/static/ccedd793149db809e7697d51a430a318/080fe/data-structure-array-02.png 694w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5182,7 +5239,7 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/dd1c78ba534e97cc6202aeee2c5d6cd7/04a72/data-structure-array-03.png&quot;
+    href=&quot;/static/dd1c78ba534e97cc6202aeee2c5d6cd7/641d0/data-structure-array-03.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5195,12 +5252,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;1차원 배열&quot;
         title=&quot;1차원 배열&quot;
-        src=&quot;/static/dd1c78ba534e97cc6202aeee2c5d6cd7/b9e4f/data-structure-array-03.png&quot;
-        srcset=&quot;/static/dd1c78ba534e97cc6202aeee2c5d6cd7/cf440/data-structure-array-03.png 148w,
-/static/dd1c78ba534e97cc6202aeee2c5d6cd7/d2d38/data-structure-array-03.png 295w,
-/static/dd1c78ba534e97cc6202aeee2c5d6cd7/b9e4f/data-structure-array-03.png 590w,
-/static/dd1c78ba534e97cc6202aeee2c5d6cd7/04a72/data-structure-array-03.png 840w&quot;
+        src=&quot;/static/dd1c78ba534e97cc6202aeee2c5d6cd7/799d3/data-structure-array-03.png&quot;
+        srcset=&quot;/static/dd1c78ba534e97cc6202aeee2c5d6cd7/00d96/data-structure-array-03.png 148w,
+/static/dd1c78ba534e97cc6202aeee2c5d6cd7/0b23c/data-structure-array-03.png 295w,
+/static/dd1c78ba534e97cc6202aeee2c5d6cd7/799d3/data-structure-array-03.png 590w,
+/static/dd1c78ba534e97cc6202aeee2c5d6cd7/641d0/data-structure-array-03.png 840w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5216,7 +5274,7 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/10483ce5c4be521ec3d4ce3c6e505776/57e09/data-structure-array-04.png&quot;
+    href=&quot;/static/10483ce5c4be521ec3d4ce3c6e505776/ea61f/data-structure-array-04.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5229,12 +5287,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;2차원 배열&quot;
         title=&quot;2차원 배열&quot;
-        src=&quot;/static/10483ce5c4be521ec3d4ce3c6e505776/b9e4f/data-structure-array-04.png&quot;
-        srcset=&quot;/static/10483ce5c4be521ec3d4ce3c6e505776/cf440/data-structure-array-04.png 148w,
-/static/10483ce5c4be521ec3d4ce3c6e505776/d2d38/data-structure-array-04.png 295w,
-/static/10483ce5c4be521ec3d4ce3c6e505776/b9e4f/data-structure-array-04.png 590w,
-/static/10483ce5c4be521ec3d4ce3c6e505776/57e09/data-structure-array-04.png 772w&quot;
+        src=&quot;/static/10483ce5c4be521ec3d4ce3c6e505776/799d3/data-structure-array-04.png&quot;
+        srcset=&quot;/static/10483ce5c4be521ec3d4ce3c6e505776/00d96/data-structure-array-04.png 148w,
+/static/10483ce5c4be521ec3d4ce3c6e505776/0b23c/data-structure-array-04.png 295w,
+/static/10483ce5c4be521ec3d4ce3c6e505776/799d3/data-structure-array-04.png 590w,
+/static/10483ce5c4be521ec3d4ce3c6e505776/ea61f/data-structure-array-04.png 772w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5250,7 +5309,7 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0a0a9a406227395d8909a9364bd6e507/1b9ac/data-structure-array-05.png&quot;
+    href=&quot;/static/0a0a9a406227395d8909a9364bd6e507/7c820/data-structure-array-05.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5263,12 +5322,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;2차원 배열&quot;
         title=&quot;2차원 배열&quot;
-        src=&quot;/static/0a0a9a406227395d8909a9364bd6e507/b9e4f/data-structure-array-05.png&quot;
-        srcset=&quot;/static/0a0a9a406227395d8909a9364bd6e507/cf440/data-structure-array-05.png 148w,
-/static/0a0a9a406227395d8909a9364bd6e507/d2d38/data-structure-array-05.png 295w,
-/static/0a0a9a406227395d8909a9364bd6e507/b9e4f/data-structure-array-05.png 590w,
-/static/0a0a9a406227395d8909a9364bd6e507/1b9ac/data-structure-array-05.png 648w&quot;
+        src=&quot;/static/0a0a9a406227395d8909a9364bd6e507/799d3/data-structure-array-05.png&quot;
+        srcset=&quot;/static/0a0a9a406227395d8909a9364bd6e507/00d96/data-structure-array-05.png 148w,
+/static/0a0a9a406227395d8909a9364bd6e507/0b23c/data-structure-array-05.png 295w,
+/static/0a0a9a406227395d8909a9364bd6e507/799d3/data-structure-array-05.png 590w,
+/static/0a0a9a406227395d8909a9364bd6e507/7c820/data-structure-array-05.png 648w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5296,12 +5356,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;출처: 치킨쿤 유튜브 썸네일&quot;
         title=&quot;출처: 치킨쿤 유튜브 썸네일&quot;
-        src=&quot;/static/28a4093b7748f5beb3961f82813a9592/b9e4f/css-drawing-tutorial-01.png&quot;
-        srcset=&quot;/static/28a4093b7748f5beb3961f82813a9592/cf440/css-drawing-tutorial-01.png 148w,
-/static/28a4093b7748f5beb3961f82813a9592/d2d38/css-drawing-tutorial-01.png 295w,
-/static/28a4093b7748f5beb3961f82813a9592/b9e4f/css-drawing-tutorial-01.png 590w,
-/static/28a4093b7748f5beb3961f82813a9592/ad9ce/css-drawing-tutorial-01.png 704w&quot;
+        src=&quot;/static/28a4093b7748f5beb3961f82813a9592/799d3/css-drawing-tutorial-01.png&quot;
+        srcset=&quot;/static/28a4093b7748f5beb3961f82813a9592/00d96/css-drawing-tutorial-01.png 148w,
+/static/28a4093b7748f5beb3961f82813a9592/0b23c/css-drawing-tutorial-01.png 295w,
+/static/28a4093b7748f5beb3961f82813a9592/799d3/css-drawing-tutorial-01.png 590w,
+/static/28a4093b7748f5beb3961f82813a9592/573ad/css-drawing-tutorial-01.png 704w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -5320,12 +5381,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;css drawing tutorial 02&quot;
         title=&quot;css drawing tutorial 02&quot;
-        src=&quot;/static/40fdeb21e57721a6a693d0fc37d455e6/b9e4f/css-drawing-tutorial-02.png&quot;
-        srcset=&quot;/static/40fdeb21e57721a6a693d0fc37d455e6/cf440/css-drawing-tutorial-02.png 148w,
-/static/40fdeb21e57721a6a693d0fc37d455e6/d2d38/css-drawing-tutorial-02.png 295w,
-/static/40fdeb21e57721a6a693d0fc37d455e6/b9e4f/css-drawing-tutorial-02.png 590w,
-/static/40fdeb21e57721a6a693d0fc37d455e6/a82ee/css-drawing-tutorial-02.png 696w&quot;
+        src=&quot;/static/40fdeb21e57721a6a693d0fc37d455e6/799d3/css-drawing-tutorial-02.png&quot;
+        srcset=&quot;/static/40fdeb21e57721a6a693d0fc37d455e6/00d96/css-drawing-tutorial-02.png 148w,
+/static/40fdeb21e57721a6a693d0fc37d455e6/0b23c/css-drawing-tutorial-02.png 295w,
+/static/40fdeb21e57721a6a693d0fc37d455e6/799d3/css-drawing-tutorial-02.png 590w,
+/static/40fdeb21e57721a6a693d0fc37d455e6/9dd9c/css-drawing-tutorial-02.png 696w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -5361,12 +5423,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;호무새 얼굴&quot;
         title=&quot;호무새 얼굴&quot;
-        src=&quot;/static/d9a16dbeadb816cfe2cabb7d81b44e1a/b9e4f/css-drawing-tutorial-03.png&quot;
-        srcset=&quot;/static/d9a16dbeadb816cfe2cabb7d81b44e1a/cf440/css-drawing-tutorial-03.png 148w,
-/static/d9a16dbeadb816cfe2cabb7d81b44e1a/d2d38/css-drawing-tutorial-03.png 295w,
-/static/d9a16dbeadb816cfe2cabb7d81b44e1a/b9e4f/css-drawing-tutorial-03.png 590w,
-/static/d9a16dbeadb816cfe2cabb7d81b44e1a/331ea/css-drawing-tutorial-03.png 864w&quot;
+        src=&quot;/static/d9a16dbeadb816cfe2cabb7d81b44e1a/799d3/css-drawing-tutorial-03.png&quot;
+        srcset=&quot;/static/d9a16dbeadb816cfe2cabb7d81b44e1a/00d96/css-drawing-tutorial-03.png 148w,
+/static/d9a16dbeadb816cfe2cabb7d81b44e1a/0b23c/css-drawing-tutorial-03.png 295w,
+/static/d9a16dbeadb816cfe2cabb7d81b44e1a/799d3/css-drawing-tutorial-03.png 590w,
+/static/d9a16dbeadb816cfe2cabb7d81b44e1a/407ec/css-drawing-tutorial-03.png 864w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -5423,12 +5486,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;호무새 눈&quot;
         title=&quot;호무새 눈&quot;
-        src=&quot;/static/b04cefbc4daaa1d0337b037dc3023d19/b9e4f/css-drawing-tutorial-04.png&quot;
-        srcset=&quot;/static/b04cefbc4daaa1d0337b037dc3023d19/cf440/css-drawing-tutorial-04.png 148w,
-/static/b04cefbc4daaa1d0337b037dc3023d19/d2d38/css-drawing-tutorial-04.png 295w,
-/static/b04cefbc4daaa1d0337b037dc3023d19/b9e4f/css-drawing-tutorial-04.png 590w,
-/static/b04cefbc4daaa1d0337b037dc3023d19/1d25d/css-drawing-tutorial-04.png 834w&quot;
+        src=&quot;/static/b04cefbc4daaa1d0337b037dc3023d19/799d3/css-drawing-tutorial-04.png&quot;
+        srcset=&quot;/static/b04cefbc4daaa1d0337b037dc3023d19/00d96/css-drawing-tutorial-04.png 148w,
+/static/b04cefbc4daaa1d0337b037dc3023d19/0b23c/css-drawing-tutorial-04.png 295w,
+/static/b04cefbc4daaa1d0337b037dc3023d19/799d3/css-drawing-tutorial-04.png 590w,
+/static/b04cefbc4daaa1d0337b037dc3023d19/8bffd/css-drawing-tutorial-04.png 834w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -5504,12 +5568,13 @@ exports 객체 사용 시 module.exports와의 참조 관계가 깨지지 않도
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;호무새 부리&quot;
         title=&quot;호무새 부리&quot;
-        src=&quot;/static/29f284fa67868c49c4e982d2a8f6eec5/b9e4f/css-drawing-tutorial-05.png&quot;
-        srcset=&quot;/static/29f284fa67868c49c4e982d2a8f6eec5/cf440/css-drawing-tutorial-05.png 148w,
-/static/29f284fa67868c49c4e982d2a8f6eec5/d2d38/css-drawing-tutorial-05.png 295w,
-/static/29f284fa67868c49c4e982d2a8f6eec5/b9e4f/css-drawing-tutorial-05.png 590w,
-/static/29f284fa67868c49c4e982d2a8f6eec5/922ae/css-drawing-tutorial-05.png 874w&quot;
+        src=&quot;/static/29f284fa67868c49c4e982d2a8f6eec5/799d3/css-drawing-tutorial-05.png&quot;
+        srcset=&quot;/static/29f284fa67868c49c4e982d2a8f6eec5/00d96/css-drawing-tutorial-05.png 148w,
+/static/29f284fa67868c49c4e982d2a8f6eec5/0b23c/css-drawing-tutorial-05.png 295w,
+/static/29f284fa67868c49c4e982d2a8f6eec5/799d3/css-drawing-tutorial-05.png 590w,
+/static/29f284fa67868c49c4e982d2a8f6eec5/46592/css-drawing-tutorial-05.png 874w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;
@@ -5630,7 +5695,7 @@ PropTypes 속성의 종류는 &lt;a href=&quot;https://reactjs.org/docs/typechec
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/aac61c711f19f0089f313afb32716f9e/5b815/reactjs-props-1.png&quot;
+    href=&quot;/static/aac61c711f19f0089f313afb32716f9e/2c0d9/reactjs-props-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5643,12 +5708,13 @@ PropTypes 속성의 종류는 &lt;a href=&quot;https://reactjs.org/docs/typechec
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;실행결과&quot;
         title=&quot;실행결과&quot;
-        src=&quot;/static/aac61c711f19f0089f313afb32716f9e/b9e4f/reactjs-props-1.png&quot;
-        srcset=&quot;/static/aac61c711f19f0089f313afb32716f9e/cf440/reactjs-props-1.png 148w,
-/static/aac61c711f19f0089f313afb32716f9e/d2d38/reactjs-props-1.png 295w,
-/static/aac61c711f19f0089f313afb32716f9e/b9e4f/reactjs-props-1.png 590w,
-/static/aac61c711f19f0089f313afb32716f9e/5b815/reactjs-props-1.png 644w&quot;
+        src=&quot;/static/aac61c711f19f0089f313afb32716f9e/799d3/reactjs-props-1.png&quot;
+        srcset=&quot;/static/aac61c711f19f0089f313afb32716f9e/00d96/reactjs-props-1.png 148w,
+/static/aac61c711f19f0089f313afb32716f9e/0b23c/reactjs-props-1.png 295w,
+/static/aac61c711f19f0089f313afb32716f9e/799d3/reactjs-props-1.png 590w,
+/static/aac61c711f19f0089f313afb32716f9e/2c0d9/reactjs-props-1.png 644w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5663,7 +5729,7 @@ PropTypes 속성의 종류는 &lt;a href=&quot;https://reactjs.org/docs/typechec
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/dfc8143c996bb1e275f3f93282e0224c/84739/reactjs-props-2.png&quot;
+    href=&quot;/static/dfc8143c996bb1e275f3f93282e0224c/aa600/reactjs-props-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5676,14 +5742,15 @@ PropTypes 속성의 종류는 &lt;a href=&quot;https://reactjs.org/docs/typechec
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Object.isFrozen 메소드로 동결되어 있는것을 확인할 수 있다. props값을 바꾸려고 하면 에러가 난다.&quot;
         title=&quot;Object.isFrozen 메소드로 동결되어 있는것을 확인할 수 있다. props값을 바꾸려고 하면 에러가 난다.&quot;
-        src=&quot;/static/dfc8143c996bb1e275f3f93282e0224c/b9e4f/reactjs-props-2.png&quot;
-        srcset=&quot;/static/dfc8143c996bb1e275f3f93282e0224c/cf440/reactjs-props-2.png 148w,
-/static/dfc8143c996bb1e275f3f93282e0224c/d2d38/reactjs-props-2.png 295w,
-/static/dfc8143c996bb1e275f3f93282e0224c/b9e4f/reactjs-props-2.png 590w,
-/static/dfc8143c996bb1e275f3f93282e0224c/f9b6a/reactjs-props-2.png 885w,
-/static/dfc8143c996bb1e275f3f93282e0224c/2d849/reactjs-props-2.png 1180w,
-/static/dfc8143c996bb1e275f3f93282e0224c/84739/reactjs-props-2.png 1222w&quot;
+        src=&quot;/static/dfc8143c996bb1e275f3f93282e0224c/799d3/reactjs-props-2.png&quot;
+        srcset=&quot;/static/dfc8143c996bb1e275f3f93282e0224c/00d96/reactjs-props-2.png 148w,
+/static/dfc8143c996bb1e275f3f93282e0224c/0b23c/reactjs-props-2.png 295w,
+/static/dfc8143c996bb1e275f3f93282e0224c/799d3/reactjs-props-2.png 590w,
+/static/dfc8143c996bb1e275f3f93282e0224c/2a3d6/reactjs-props-2.png 885w,
+/static/dfc8143c996bb1e275f3f93282e0224c/ae92f/reactjs-props-2.png 1180w,
+/static/dfc8143c996bb1e275f3f93282e0224c/aa600/reactjs-props-2.png 1222w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5718,7 +5785,7 @@ Child&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;propTypes &lt
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0038c59bf0cca497c24b8ac8d656344c/8013a/reactjs-props-3.png&quot;
+    href=&quot;/static/0038c59bf0cca497c24b8ac8d656344c/899f3/reactjs-props-3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5731,14 +5798,15 @@ Child&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;propTypes &lt
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;잘못된 타입으로 props를 넘겨줘 보았다.&quot;
         title=&quot;잘못된 타입으로 props를 넘겨줘 보았다.&quot;
-        src=&quot;/static/0038c59bf0cca497c24b8ac8d656344c/b9e4f/reactjs-props-3.png&quot;
-        srcset=&quot;/static/0038c59bf0cca497c24b8ac8d656344c/cf440/reactjs-props-3.png 148w,
-/static/0038c59bf0cca497c24b8ac8d656344c/d2d38/reactjs-props-3.png 295w,
-/static/0038c59bf0cca497c24b8ac8d656344c/b9e4f/reactjs-props-3.png 590w,
-/static/0038c59bf0cca497c24b8ac8d656344c/f9b6a/reactjs-props-3.png 885w,
-/static/0038c59bf0cca497c24b8ac8d656344c/2d849/reactjs-props-3.png 1180w,
-/static/0038c59bf0cca497c24b8ac8d656344c/8013a/reactjs-props-3.png 1350w&quot;
+        src=&quot;/static/0038c59bf0cca497c24b8ac8d656344c/799d3/reactjs-props-3.png&quot;
+        srcset=&quot;/static/0038c59bf0cca497c24b8ac8d656344c/00d96/reactjs-props-3.png 148w,
+/static/0038c59bf0cca497c24b8ac8d656344c/0b23c/reactjs-props-3.png 295w,
+/static/0038c59bf0cca497c24b8ac8d656344c/799d3/reactjs-props-3.png 590w,
+/static/0038c59bf0cca497c24b8ac8d656344c/2a3d6/reactjs-props-3.png 885w,
+/static/0038c59bf0cca497c24b8ac8d656344c/ae92f/reactjs-props-3.png 1180w,
+/static/0038c59bf0cca497c24b8ac8d656344c/899f3/reactjs-props-3.png 1350w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5785,7 +5853,7 @@ Child&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;defaultProps 
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4a7afb87d70142b7e07fc950fff814e9/0bd10/reactjs-props-5.png&quot;
+    href=&quot;/static/4a7afb87d70142b7e07fc950fff814e9/51405/reactjs-props-5.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5798,12 +5866,13 @@ Child&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;defaultProps 
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;defaultProps 적용&quot;
         title=&quot;defaultProps 적용&quot;
-        src=&quot;/static/4a7afb87d70142b7e07fc950fff814e9/b9e4f/reactjs-props-5.png&quot;
-        srcset=&quot;/static/4a7afb87d70142b7e07fc950fff814e9/cf440/reactjs-props-5.png 148w,
-/static/4a7afb87d70142b7e07fc950fff814e9/d2d38/reactjs-props-5.png 295w,
-/static/4a7afb87d70142b7e07fc950fff814e9/b9e4f/reactjs-props-5.png 590w,
-/static/4a7afb87d70142b7e07fc950fff814e9/0bd10/reactjs-props-5.png 830w&quot;
+        src=&quot;/static/4a7afb87d70142b7e07fc950fff814e9/799d3/reactjs-props-5.png&quot;
+        srcset=&quot;/static/4a7afb87d70142b7e07fc950fff814e9/00d96/reactjs-props-5.png 148w,
+/static/4a7afb87d70142b7e07fc950fff814e9/0b23c/reactjs-props-5.png 295w,
+/static/4a7afb87d70142b7e07fc950fff814e9/799d3/reactjs-props-5.png 590w,
+/static/4a7afb87d70142b7e07fc950fff814e9/51405/reactjs-props-5.png 830w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5875,7 +5944,7 @@ props를 지정해주지 않으면 defaultProps에 있는 기본 값이 적용�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/628c86b439d32a0ab3c34342f1dbe961/05a72/reactjs-props-6.png&quot;
+    href=&quot;/static/628c86b439d32a0ab3c34342f1dbe961/ce919/reactjs-props-6.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5888,14 +5957,15 @@ props를 지정해주지 않으면 defaultProps에 있는 기본 값이 적용�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;잘못된 타입을 지정했더니 렌더링 조차 되지 않고 오류를 출력한다.&quot;
         title=&quot;잘못된 타입을 지정했더니 렌더링 조차 되지 않고 오류를 출력한다.&quot;
-        src=&quot;/static/628c86b439d32a0ab3c34342f1dbe961/b9e4f/reactjs-props-6.png&quot;
-        srcset=&quot;/static/628c86b439d32a0ab3c34342f1dbe961/cf440/reactjs-props-6.png 148w,
-/static/628c86b439d32a0ab3c34342f1dbe961/d2d38/reactjs-props-6.png 295w,
-/static/628c86b439d32a0ab3c34342f1dbe961/b9e4f/reactjs-props-6.png 590w,
-/static/628c86b439d32a0ab3c34342f1dbe961/f9b6a/reactjs-props-6.png 885w,
-/static/628c86b439d32a0ab3c34342f1dbe961/2d849/reactjs-props-6.png 1180w,
-/static/628c86b439d32a0ab3c34342f1dbe961/05a72/reactjs-props-6.png 1286w&quot;
+        src=&quot;/static/628c86b439d32a0ab3c34342f1dbe961/799d3/reactjs-props-6.png&quot;
+        srcset=&quot;/static/628c86b439d32a0ab3c34342f1dbe961/00d96/reactjs-props-6.png 148w,
+/static/628c86b439d32a0ab3c34342f1dbe961/0b23c/reactjs-props-6.png 295w,
+/static/628c86b439d32a0ab3c34342f1dbe961/799d3/reactjs-props-6.png 590w,
+/static/628c86b439d32a0ab3c34342f1dbe961/2a3d6/reactjs-props-6.png 885w,
+/static/628c86b439d32a0ab3c34342f1dbe961/ae92f/reactjs-props-6.png 1180w,
+/static/628c86b439d32a0ab3c34342f1dbe961/ce919/reactjs-props-6.png 1286w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -5976,7 +6046,7 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4721d0aa34175c04191ff88f5c80ce5a/0f5ab/html-email-template-03.png&quot;
+    href=&quot;/static/4721d0aa34175c04191ff88f5c80ce5a/e0dbf/html-email-template-03.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5989,14 +6059,15 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;aws 메일&quot;
         title=&quot;aws 메일&quot;
-        src=&quot;/static/4721d0aa34175c04191ff88f5c80ce5a/b9e4f/html-email-template-03.png&quot;
-        srcset=&quot;/static/4721d0aa34175c04191ff88f5c80ce5a/cf440/html-email-template-03.png 148w,
-/static/4721d0aa34175c04191ff88f5c80ce5a/d2d38/html-email-template-03.png 295w,
-/static/4721d0aa34175c04191ff88f5c80ce5a/b9e4f/html-email-template-03.png 590w,
-/static/4721d0aa34175c04191ff88f5c80ce5a/f9b6a/html-email-template-03.png 885w,
-/static/4721d0aa34175c04191ff88f5c80ce5a/2d849/html-email-template-03.png 1180w,
-/static/4721d0aa34175c04191ff88f5c80ce5a/0f5ab/html-email-template-03.png 1388w&quot;
+        src=&quot;/static/4721d0aa34175c04191ff88f5c80ce5a/799d3/html-email-template-03.png&quot;
+        srcset=&quot;/static/4721d0aa34175c04191ff88f5c80ce5a/00d96/html-email-template-03.png 148w,
+/static/4721d0aa34175c04191ff88f5c80ce5a/0b23c/html-email-template-03.png 295w,
+/static/4721d0aa34175c04191ff88f5c80ce5a/799d3/html-email-template-03.png 590w,
+/static/4721d0aa34175c04191ff88f5c80ce5a/2a3d6/html-email-template-03.png 885w,
+/static/4721d0aa34175c04191ff88f5c80ce5a/ae92f/html-email-template-03.png 1180w,
+/static/4721d0aa34175c04191ff88f5c80ce5a/e0dbf/html-email-template-03.png 1388w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6010,7 +6081,7 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5eccf9f0333ff800e3bad3aaef67720a/f5ca1/html-email-template-04.png&quot;
+    href=&quot;/static/5eccf9f0333ff800e3bad3aaef67720a/709ce/html-email-template-04.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6023,14 +6094,15 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;구글 애널리틱스 메일&quot;
         title=&quot;구글 애널리틱스 메일&quot;
-        src=&quot;/static/5eccf9f0333ff800e3bad3aaef67720a/b9e4f/html-email-template-04.png&quot;
-        srcset=&quot;/static/5eccf9f0333ff800e3bad3aaef67720a/cf440/html-email-template-04.png 148w,
-/static/5eccf9f0333ff800e3bad3aaef67720a/d2d38/html-email-template-04.png 295w,
-/static/5eccf9f0333ff800e3bad3aaef67720a/b9e4f/html-email-template-04.png 590w,
-/static/5eccf9f0333ff800e3bad3aaef67720a/f9b6a/html-email-template-04.png 885w,
-/static/5eccf9f0333ff800e3bad3aaef67720a/2d849/html-email-template-04.png 1180w,
-/static/5eccf9f0333ff800e3bad3aaef67720a/f5ca1/html-email-template-04.png 1382w&quot;
+        src=&quot;/static/5eccf9f0333ff800e3bad3aaef67720a/799d3/html-email-template-04.png&quot;
+        srcset=&quot;/static/5eccf9f0333ff800e3bad3aaef67720a/00d96/html-email-template-04.png 148w,
+/static/5eccf9f0333ff800e3bad3aaef67720a/0b23c/html-email-template-04.png 295w,
+/static/5eccf9f0333ff800e3bad3aaef67720a/799d3/html-email-template-04.png 590w,
+/static/5eccf9f0333ff800e3bad3aaef67720a/2a3d6/html-email-template-04.png 885w,
+/static/5eccf9f0333ff800e3bad3aaef67720a/ae92f/html-email-template-04.png 1180w,
+/static/5eccf9f0333ff800e3bad3aaef67720a/709ce/html-email-template-04.png 1382w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6045,7 +6117,7 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d8a6372b7d642f53980f4053734a83f2/8013a/html-email-template-01.png&quot;
+    href=&quot;/static/d8a6372b7d642f53980f4053734a83f2/899f3/html-email-template-01.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6058,14 +6130,15 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;구글 드라이브 알림 메일&quot;
         title=&quot;구글 드라이브 알림 메일&quot;
-        src=&quot;/static/d8a6372b7d642f53980f4053734a83f2/b9e4f/html-email-template-01.png&quot;
-        srcset=&quot;/static/d8a6372b7d642f53980f4053734a83f2/cf440/html-email-template-01.png 148w,
-/static/d8a6372b7d642f53980f4053734a83f2/d2d38/html-email-template-01.png 295w,
-/static/d8a6372b7d642f53980f4053734a83f2/b9e4f/html-email-template-01.png 590w,
-/static/d8a6372b7d642f53980f4053734a83f2/f9b6a/html-email-template-01.png 885w,
-/static/d8a6372b7d642f53980f4053734a83f2/2d849/html-email-template-01.png 1180w,
-/static/d8a6372b7d642f53980f4053734a83f2/8013a/html-email-template-01.png 1350w&quot;
+        src=&quot;/static/d8a6372b7d642f53980f4053734a83f2/799d3/html-email-template-01.png&quot;
+        srcset=&quot;/static/d8a6372b7d642f53980f4053734a83f2/00d96/html-email-template-01.png 148w,
+/static/d8a6372b7d642f53980f4053734a83f2/0b23c/html-email-template-01.png 295w,
+/static/d8a6372b7d642f53980f4053734a83f2/799d3/html-email-template-01.png 590w,
+/static/d8a6372b7d642f53980f4053734a83f2/2a3d6/html-email-template-01.png 885w,
+/static/d8a6372b7d642f53980f4053734a83f2/ae92f/html-email-template-01.png 1180w,
+/static/d8a6372b7d642f53980f4053734a83f2/899f3/html-email-template-01.png 1350w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6079,7 +6152,7 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1e06079978c0480626f8ecff8097edd5/2d178/html-email-template-02.png&quot;
+    href=&quot;/static/1e06079978c0480626f8ecff8097edd5/6fc9e/html-email-template-02.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6092,14 +6165,15 @@ Component는 데이터가 주어졌을 때 이에 맞추어 UI를 만들어 주�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;티스토리 메일&quot;
         title=&quot;티스토리 메일&quot;
-        src=&quot;/static/1e06079978c0480626f8ecff8097edd5/b9e4f/html-email-template-02.png&quot;
-        srcset=&quot;/static/1e06079978c0480626f8ecff8097edd5/cf440/html-email-template-02.png 148w,
-/static/1e06079978c0480626f8ecff8097edd5/d2d38/html-email-template-02.png 295w,
-/static/1e06079978c0480626f8ecff8097edd5/b9e4f/html-email-template-02.png 590w,
-/static/1e06079978c0480626f8ecff8097edd5/f9b6a/html-email-template-02.png 885w,
-/static/1e06079978c0480626f8ecff8097edd5/2d849/html-email-template-02.png 1180w,
-/static/1e06079978c0480626f8ecff8097edd5/2d178/html-email-template-02.png 1776w&quot;
+        src=&quot;/static/1e06079978c0480626f8ecff8097edd5/799d3/html-email-template-02.png&quot;
+        srcset=&quot;/static/1e06079978c0480626f8ecff8097edd5/00d96/html-email-template-02.png 148w,
+/static/1e06079978c0480626f8ecff8097edd5/0b23c/html-email-template-02.png 295w,
+/static/1e06079978c0480626f8ecff8097edd5/799d3/html-email-template-02.png 590w,
+/static/1e06079978c0480626f8ecff8097edd5/2a3d6/html-email-template-02.png 885w,
+/static/1e06079978c0480626f8ecff8097edd5/ae92f/html-email-template-02.png 1180w,
+/static/1e06079978c0480626f8ecff8097edd5/6fc9e/html-email-template-02.png 1776w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6176,7 +6250,7 @@ html이랑 style을 합쳐서 인라인 스타일 html을 만들어주는 웹사
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ffbf64977e22ac5e010d8b09c36834af/fa223/reactjs-fragment-1.png&quot;
+    href=&quot;/static/ffbf64977e22ac5e010d8b09c36834af/4cb19/reactjs-fragment-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6189,11 +6263,12 @@ html이랑 style을 합쳐서 인라인 스타일 html을 만들어주는 웹사
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;실행결과&quot;
         title=&quot;실행결과&quot;
-        src=&quot;/static/ffbf64977e22ac5e010d8b09c36834af/fa223/reactjs-fragment-1.png&quot;
-        srcset=&quot;/static/ffbf64977e22ac5e010d8b09c36834af/cf440/reactjs-fragment-1.png 148w,
-/static/ffbf64977e22ac5e010d8b09c36834af/d2d38/reactjs-fragment-1.png 295w,
-/static/ffbf64977e22ac5e010d8b09c36834af/fa223/reactjs-fragment-1.png 310w&quot;
+        src=&quot;/static/ffbf64977e22ac5e010d8b09c36834af/4cb19/reactjs-fragment-1.png&quot;
+        srcset=&quot;/static/ffbf64977e22ac5e010d8b09c36834af/00d96/reactjs-fragment-1.png 148w,
+/static/ffbf64977e22ac5e010d8b09c36834af/0b23c/reactjs-fragment-1.png 295w,
+/static/ffbf64977e22ac5e010d8b09c36834af/4cb19/reactjs-fragment-1.png 310w&quot;
         sizes=&quot;(max-width: 310px) 100vw, 310px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6224,7 +6299,7 @@ JSX는 컴포넌트에 여러 요소가 있다면 부모 요소 하나로 꼭 �
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0ccba38b5632f1670fe29a6a7e1f5e52/308c1/reactjs-fragment-2.png&quot;
+    href=&quot;/static/0ccba38b5632f1670fe29a6a7e1f5e52/17add/reactjs-fragment-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6237,11 +6312,12 @@ JSX는 컴포넌트에 여러 요소가 있다면 부모 요소 하나로 꼭 �
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;실행결과&quot;
         title=&quot;실행결과&quot;
-        src=&quot;/static/0ccba38b5632f1670fe29a6a7e1f5e52/308c1/reactjs-fragment-2.png&quot;
-        srcset=&quot;/static/0ccba38b5632f1670fe29a6a7e1f5e52/cf440/reactjs-fragment-2.png 148w,
-/static/0ccba38b5632f1670fe29a6a7e1f5e52/d2d38/reactjs-fragment-2.png 295w,
-/static/0ccba38b5632f1670fe29a6a7e1f5e52/308c1/reactjs-fragment-2.png 338w&quot;
+        src=&quot;/static/0ccba38b5632f1670fe29a6a7e1f5e52/17add/reactjs-fragment-2.png&quot;
+        srcset=&quot;/static/0ccba38b5632f1670fe29a6a7e1f5e52/00d96/reactjs-fragment-2.png 148w,
+/static/0ccba38b5632f1670fe29a6a7e1f5e52/0b23c/reactjs-fragment-2.png 295w,
+/static/0ccba38b5632f1670fe29a6a7e1f5e52/17add/reactjs-fragment-2.png 338w&quot;
         sizes=&quot;(max-width: 338px) 100vw, 338px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6378,7 +6454,7 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5c1cf4102f723a2a587696146e34f1e6/08ba8/nodejs-setting-1.png&quot;
+    href=&quot;/static/5c1cf4102f723a2a587696146e34f1e6/5b692/nodejs-setting-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6391,13 +6467,14 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;실행 결과&quot;
         title=&quot;실행 결과&quot;
-        src=&quot;/static/5c1cf4102f723a2a587696146e34f1e6/b9e4f/nodejs-setting-1.png&quot;
-        srcset=&quot;/static/5c1cf4102f723a2a587696146e34f1e6/cf440/nodejs-setting-1.png 148w,
-/static/5c1cf4102f723a2a587696146e34f1e6/d2d38/nodejs-setting-1.png 295w,
-/static/5c1cf4102f723a2a587696146e34f1e6/b9e4f/nodejs-setting-1.png 590w,
-/static/5c1cf4102f723a2a587696146e34f1e6/f9b6a/nodejs-setting-1.png 885w,
-/static/5c1cf4102f723a2a587696146e34f1e6/08ba8/nodejs-setting-1.png 968w&quot;
+        src=&quot;/static/5c1cf4102f723a2a587696146e34f1e6/799d3/nodejs-setting-1.png&quot;
+        srcset=&quot;/static/5c1cf4102f723a2a587696146e34f1e6/00d96/nodejs-setting-1.png 148w,
+/static/5c1cf4102f723a2a587696146e34f1e6/0b23c/nodejs-setting-1.png 295w,
+/static/5c1cf4102f723a2a587696146e34f1e6/799d3/nodejs-setting-1.png 590w,
+/static/5c1cf4102f723a2a587696146e34f1e6/2a3d6/nodejs-setting-1.png 885w,
+/static/5c1cf4102f723a2a587696146e34f1e6/5b692/nodejs-setting-1.png 968w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6498,7 +6575,7 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1b67f28f09b6660943c4efef9631f004/f2cb1/javascript-memo-exif-1.png&quot;
+    href=&quot;/static/1b67f28f09b6660943c4efef9631f004/f4288/javascript-memo-exif-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6511,13 +6588,14 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;이렇게 이미지 뷰어나 앨범에서 보면 제대로 출력되는 사진들이&quot;
         title=&quot;이렇게 이미지 뷰어나 앨범에서 보면 제대로 출력되는 사진들이&quot;
-        src=&quot;/static/1b67f28f09b6660943c4efef9631f004/b9e4f/javascript-memo-exif-1.png&quot;
-        srcset=&quot;/static/1b67f28f09b6660943c4efef9631f004/cf440/javascript-memo-exif-1.png 148w,
-/static/1b67f28f09b6660943c4efef9631f004/d2d38/javascript-memo-exif-1.png 295w,
-/static/1b67f28f09b6660943c4efef9631f004/b9e4f/javascript-memo-exif-1.png 590w,
-/static/1b67f28f09b6660943c4efef9631f004/f9b6a/javascript-memo-exif-1.png 885w,
-/static/1b67f28f09b6660943c4efef9631f004/f2cb1/javascript-memo-exif-1.png 1122w&quot;
+        src=&quot;/static/1b67f28f09b6660943c4efef9631f004/799d3/javascript-memo-exif-1.png&quot;
+        srcset=&quot;/static/1b67f28f09b6660943c4efef9631f004/00d96/javascript-memo-exif-1.png 148w,
+/static/1b67f28f09b6660943c4efef9631f004/0b23c/javascript-memo-exif-1.png 295w,
+/static/1b67f28f09b6660943c4efef9631f004/799d3/javascript-memo-exif-1.png 590w,
+/static/1b67f28f09b6660943c4efef9631f004/2a3d6/javascript-memo-exif-1.png 885w,
+/static/1b67f28f09b6660943c4efef9631f004/f4288/javascript-memo-exif-1.png 1122w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6531,7 +6609,7 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/625719c62fa92f2a941b08f9a8efa550/e198c/javascript-memo-exif-2.png&quot;
+    href=&quot;/static/625719c62fa92f2a941b08f9a8efa550/3fbe0/javascript-memo-exif-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6544,12 +6622,13 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;이런식으로 이미지가 돌아가서 나온다&quot;
         title=&quot;이런식으로 이미지가 돌아가서 나온다&quot;
-        src=&quot;/static/625719c62fa92f2a941b08f9a8efa550/b9e4f/javascript-memo-exif-2.png&quot;
-        srcset=&quot;/static/625719c62fa92f2a941b08f9a8efa550/cf440/javascript-memo-exif-2.png 148w,
-/static/625719c62fa92f2a941b08f9a8efa550/d2d38/javascript-memo-exif-2.png 295w,
-/static/625719c62fa92f2a941b08f9a8efa550/b9e4f/javascript-memo-exif-2.png 590w,
-/static/625719c62fa92f2a941b08f9a8efa550/e198c/javascript-memo-exif-2.png 818w&quot;
+        src=&quot;/static/625719c62fa92f2a941b08f9a8efa550/799d3/javascript-memo-exif-2.png&quot;
+        srcset=&quot;/static/625719c62fa92f2a941b08f9a8efa550/00d96/javascript-memo-exif-2.png 148w,
+/static/625719c62fa92f2a941b08f9a8efa550/0b23c/javascript-memo-exif-2.png 295w,
+/static/625719c62fa92f2a941b08f9a8efa550/799d3/javascript-memo-exif-2.png 590w,
+/static/625719c62fa92f2a941b08f9a8efa550/3fbe0/javascript-memo-exif-2.png 818w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6587,7 +6666,7 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3c61a08cff036eddd4fe273380f44a71/2e6ac/javascript-memo-exif-3.png&quot;
+    href=&quot;/static/3c61a08cff036eddd4fe273380f44a71/6f636/javascript-memo-exif-3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6600,14 +6679,15 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;확인해보면 orientation값이 6으로 되어있다.&quot;
         title=&quot;확인해보면 orientation값이 6으로 되어있다.&quot;
-        src=&quot;/static/3c61a08cff036eddd4fe273380f44a71/b9e4f/javascript-memo-exif-3.png&quot;
-        srcset=&quot;/static/3c61a08cff036eddd4fe273380f44a71/cf440/javascript-memo-exif-3.png 148w,
-/static/3c61a08cff036eddd4fe273380f44a71/d2d38/javascript-memo-exif-3.png 295w,
-/static/3c61a08cff036eddd4fe273380f44a71/b9e4f/javascript-memo-exif-3.png 590w,
-/static/3c61a08cff036eddd4fe273380f44a71/f9b6a/javascript-memo-exif-3.png 885w,
-/static/3c61a08cff036eddd4fe273380f44a71/2d849/javascript-memo-exif-3.png 1180w,
-/static/3c61a08cff036eddd4fe273380f44a71/2e6ac/javascript-memo-exif-3.png 1564w&quot;
+        src=&quot;/static/3c61a08cff036eddd4fe273380f44a71/799d3/javascript-memo-exif-3.png&quot;
+        srcset=&quot;/static/3c61a08cff036eddd4fe273380f44a71/00d96/javascript-memo-exif-3.png 148w,
+/static/3c61a08cff036eddd4fe273380f44a71/0b23c/javascript-memo-exif-3.png 295w,
+/static/3c61a08cff036eddd4fe273380f44a71/799d3/javascript-memo-exif-3.png 590w,
+/static/3c61a08cff036eddd4fe273380f44a71/2a3d6/javascript-memo-exif-3.png 885w,
+/static/3c61a08cff036eddd4fe273380f44a71/ae92f/javascript-memo-exif-3.png 1180w,
+/static/3c61a08cff036eddd4fe273380f44a71/6f636/javascript-memo-exif-3.png 1564w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -6642,7 +6722,7 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8fde46600b719ca3dfea65658ca83088/7e0ae/javascript-memo-exif-4.png&quot;
+    href=&quot;/static/8fde46600b719ca3dfea65658ca83088/5d65e/javascript-memo-exif-4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6655,12 +6735,13 @@ webpack 4 버전 부터는 꼭 --mode (develop or production)를 설정해주어
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;정방향으로 출력되는 이미지&quot;
         title=&quot;정방향으로 출력되는 이미지&quot;
-        src=&quot;/static/8fde46600b719ca3dfea65658ca83088/b9e4f/javascript-memo-exif-4.png&quot;
-        srcset=&quot;/static/8fde46600b719ca3dfea65658ca83088/cf440/javascript-memo-exif-4.png 148w,
-/static/8fde46600b719ca3dfea65658ca83088/d2d38/javascript-memo-exif-4.png 295w,
-/static/8fde46600b719ca3dfea65658ca83088/b9e4f/javascript-memo-exif-4.png 590w,
-/static/8fde46600b719ca3dfea65658ca83088/7e0ae/javascript-memo-exif-4.png 828w&quot;
+        src=&quot;/static/8fde46600b719ca3dfea65658ca83088/799d3/javascript-memo-exif-4.png&quot;
+        srcset=&quot;/static/8fde46600b719ca3dfea65658ca83088/00d96/javascript-memo-exif-4.png 148w,
+/static/8fde46600b719ca3dfea65658ca83088/0b23c/javascript-memo-exif-4.png 295w,
+/static/8fde46600b719ca3dfea65658ca83088/799d3/javascript-memo-exif-4.png 590w,
+/static/8fde46600b719ca3dfea65658ca83088/5d65e/javascript-memo-exif-4.png 828w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
