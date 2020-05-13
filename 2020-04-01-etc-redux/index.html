@@ -50,9 +50,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   </figure></p>
 <p>예를 들어서 A 컴포넌트에 상태 변화가 일어났을 때 B 컴포넌트에도 바뀐 상태가 변경이 되어야 한다. Redux를 사용하지 않고 A 컴포넌트에서 App 컴포넌트까지 바뀐 상태를 전달해 준 후 App 컴포넌트에서 B 컴포넌트 까지 바뀐 상태를 props로 전달해줄 수는 있으나 엄청 번거롭고 귀찮은 작업이다.</p>
 <p>Redux는 애플리케이션의 최상위에 글로벌 Store를 생성하여 다른 모든 컴포넌트로 상태를 공급한다. 애플리케이션의 상태와 상태 변화 로직이 들어있는 Store를 통하여 우리가 원하는 컴포넌트에 원하는 상태값과 함수를 직접 전달할 수 있다.</p>
-<h3>Actions</h3>
+<h2>Actions</h2>
 <p>Action은 Application에서 Store로 데이터를 보내는 데이터 묶음이다. JavaScript 객체로 표현된다.
-Action은 일어난 일만 명세할 뿐 state가 어떻게 변하는지는 명세하지 않는다.</p>
+Action은 일어난 일만 명세할 뿐 상태가 어떻게 변하는지는 명세하지 않는다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// type</span>
 <span class="token keyword">const</span> <span class="token constant">ADD_TODO</span> <span class="token operator">=</span> <span class="token string">'ADD_TODO'</span>
 
@@ -70,8 +70,8 @@ Action은 일어난 일만 명세할 뿐 state가 어떻게 변하는지는 명�
     text<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
-<h3>Reducers</h3>
-<p>Reducer는 Store로 보낸 Action에 응답하여 state가 어떻게 변하는지를 정의한다.</p>
+<h2>Reducers</h2>
+<p>Reducer는 Store로 보낸 Action에 응답하여 상태가 어떻게 변하는지를 정의한다.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">reducer</span><span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">case</span> <span class="token constant">ADD_TODO</span><span class="token operator">:</span>
@@ -83,7 +83,7 @@ Action은 일어난 일만 명세할 뿐 state가 어떻게 변하는지는 명�
       <span class="token keyword">return</span> state<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>Reducer는 이전 state와 action을 받아 새로운 state를 반환하는 <code class="language-text">순수한 함수</code> 이다. Reducer를 순수하게 유지하는 것은 매우 중요하기 때문에 다음 사항들은 절대로 Reducer 안에서 하면 안된다.</p>
+<p>Reducer는 이전 상태와 Action을 받아 새로운 상태를 반환하는 <code class="language-text">순수한 함수</code> 이다. Reducer를 순수하게 유지하는 것은 매우 중요하기 때문에 다음 사항들은 절대로 Reducer 안에서 하면 안된다.</p>
 <ul>
 <li>argument의 변경이 일어나서는 안된다.</li>
 <li>API 호출이나 라우팅 변환 같은 사이드 이펙트를 일으키면 안된다.</li>
@@ -94,7 +94,7 @@ Action은 일어난 일만 명세할 뿐 state가 어떻게 변하는지는 명�
 </ul>
 </li>
 </ul>
-<h3>Store</h3>
+<h2>Store</h2>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"redux"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> reducer <span class="token keyword">from</span> <span class="token string">"./reducer"</span><span class="token punctuation">;</span>
 
@@ -103,8 +103,8 @@ Action은 일어난 일만 명세할 뿐 state가 어떻게 변하는지는 명�
 <p>Store는 다음과 같은 일들을 한다.</p>
 <ul>
 <li>애플리케이션의 상태를 저장한다.</li>
-<li>getState() 메소드로 state에 접근할 수 있다.</li>
-<li>dispatch(action) 메소드로 state를 업데이트 할 수 있다.</li>
+<li>getState() 메소드로 상태에 접근할 수 있다.</li>
+<li>dispatch(action) 메소드로 상태를 업데이트 할 수 있다.</li>
 <li>
 <p>subscribe(listner) 메소드로 listener를 등록할 수 있다.</p>
 <ul>
@@ -112,7 +112,7 @@ Action은 일어난 일만 명세할 뿐 state가 어떻게 변하는지는 명�
 </ul>
 </li>
 </ul>
-<p>Redux에서는 단 하나만의 store를 가질 수 있다.</p>
+<p>Redux에서는 단 하나만의 Store를 가질 수 있다.</p>
 <h2>Redux를 꼭 써야할까?</h2>
 <p>옛날의 React 였다면 글로벌 상태 관리를 할 땐 Redux를 쓰는게 훨 나았을 수도 있지만 요즘은 프로젝트 규모가 작거나 단순히 글로벌 상태 관리만 하려면 굳이 Redux를 도입할 필요는 없는 것 같다. Context API도 있고 hooks도 있기 때문에 이들을 잘 조합하여 사용하면 Redux를 사용하지 않고도 글로벌 상태 관리를 할 수 있다. 이 개발 블로그 역시 Context API + hooks useReducer을 사용하여 글로벌 상태 관리를 하고 있다.
 무작정 상태관리를 위해 Redux를 도입하기 보다는 정말로 Redux가 필요한지 잘 생각해보고 프로젝트에 도입하면 좋을 것 같다.</p>
