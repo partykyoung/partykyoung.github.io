@@ -21,8 +21,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .jjEflF h2,.jjEflF h3,.jjEflF h4,.jjEflF h5,.jjEflF h6{line-height:1.5;margin-bottom:1rem;font-weight:500;} .jjEflF h2{font-size:1.75rem;} .jjEflF h3{font-size:1.5rem;} .jjEflF h4{font-size:1.25rem;} .jjEflF h5,.jjEflF h6{font-size:1rem;} .jjEflF p{margin-bottom:1rem;font-size:1rem;line-height:1.85;word-break:keep-all;overflow-wrap:break-word;} .jjEflF p + h2,.jjEflF p + h3,.jjEflF p + h4,.jjEflF p + h6,.jjEflF ul + h2,.jjEflF ul + h3,.jjEflF ul + h4,.jjEflF ul + h5,.jjEflF ul + h6,.jjEflF ol + h2,.jjEflF ol + h3,.jjEflF ol + h4,.jjEflF ol + h5,.jjEflF ol + h6{margin-top:3.5rem;} .jjEflF ol,.jjEflF ul{margin-bottom:1rem;padding-left:2.5rem;} .jjEflF ul{list-style-type:disc;} .jjEflF ul ul{margin-bottom:0;} .jjEflF ul ul:nth-of-type(2n - 1){list-style-type:circle;} .jjEflF ul ul:nth-of-type(2n){list-style-type:disc;} .jjEflF ol{list-style-type:decimal;} .jjEflF li{font-size:1rem;line-height:2;word-break:keep-all;overflow-wrap:break-word;} .jjEflF li p{margin-bottom:0;} .jjEflF blockquote{background-color:#f9f9f9;border-left:4px solid #009dff;padding-top:0.5rem;padding-right:1rem;padding-bottom:0.5rem;padding-left:0.5rem;} .jjEflF blockquote ul{margin-bottom:0;} .jjEflF pre[class*="language-"]{overflow:auto;margin-top:1.25rem;margin-bottom:1.5rem;padding:1rem;border-radius:8px;} .jjEflF .gatsby-resp-image-figure{margin-top:1rem;margin-bottom:1rem;padding-top:1rem;padding-bottom:1rem;} .jjEflF .gatsby-resp-image-figcaption{margin-top:1rem;font-size:0.875rem;color:#b2b2b2;text-align:center;}
 /* sc-component-id: blogTemplate__PostComment-sc-6k3xwj-2 */
 .liTKnc #disqus_thread{width:100%;margin:3rem auto 0;}</style><title data-react-helmet="true">Redux</title><meta data-react-helmet="true" name="viewport" content="width=device-width,initial-scale=1"/><meta data-react-helmet="true" name="description" content=""/><meta data-react-helmet="true" name="twitter:title" content="Redux"/><meta data-react-helmet="true" name="twitter:description" content=""/><meta data-react-helmet="true" name="twitter:creator" content="kyoungah"/><meta data-react-helmet="true" name="twitter:site" content="@kyoungah8D"/><meta data-react-helmet="true" name="twitter:url" content="https://dev.kyoungah.com/2020-04-01-etc-redux/"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:locale" content="ko_kR"/><meta data-react-helmet="true" property="og:site_name" content="경아 개발 블로그"/><meta data-react-helmet="true" property="og:title" title="Redux"/><meta data-react-helmet="true" property="og:description" content=""/><meta data-react-helmet="true" property="og:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:image:type" content="image/png"/><meta data-react-helmet="true" property="og:image:width" content="376"/><meta data-react-helmet="true" property="og:image:height" content="63"/><meta data-react-helmet="true" property="og:url" content="https://dev.kyoungah.com/2020-04-01-etc-redux/"/><link as="script" rel="preload" href="/app-3d1327ae85ef0ae92a93.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-61304cd0edf664c09da4.js"/><link as="script" rel="preload" href="/styles-552725e9a042e5d8cf63.js"/><link as="script" rel="preload" href="/commons-d7aa02b2e542d273fdf5.js"/><link as="script" rel="preload" href="/webpack-runtime-30f7b26fb82b087cfeb9.js"/><link as="fetch" rel="preload" href="/page-data/2020-04-01-etc-redux/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="PageTemplate__PageTemplateWrapper-qt51cy-0 inDFLE"><header class="Header__Wrapper-u43e2l-0 hFzbsa"><a class="Header__StyledLink-u43e2l-1 eUxkQY" href="/"><img src="/static/0f9b478bf195cce79b5209d689e88357/630fb/kyoungah.png" alt="경아 개발 블로그 "/></a><nav class="Header__Nav-u43e2l-2 kbmONi"><a href="/about">about</a></nav></header><div class="PageTemplate__Container-qt51cy-1 fxzDaN"><section class="PageTemplate__Content-qt51cy-2 hRzWRv"><article class="blogTemplate__PostArticle-sc-6k3xwj-1 jjEflF"><header class="blogTemplate__PostHeader-sc-6k3xwj-0 bBlSrX"><h1>Redux</h1><span>2020년 04월 01일</span></header><div class="blog-post-content"><h2>Redux란?</h2>
-<p>Redux는 JavaScript App을 위한 상태관리 라이브러리 이다. 주로 React에서 글로벌 상태 관리를 위해 많이 사용하나 React가 아닌 다른 JavaScript 라이브러리에서도 사용 가능하다.</p>
-<p>Redux는 JavaScript App을 위한 상태관리 라이브러리 이다. Redux는 글로벌 상태 관리를 할 때 굉장히 효과적이다.</p>
+<p>Redux는 JavaScript App을 위한 상태관리 라이브러리 이다. 글로벌 상태 관리를 할 때 굉장히 효과적이다.
+주로 React에서 글로벌 상태 관리를 위해 많이 사용하나 React가 아닌 다른 JavaScript 라이브러리에서도 사용 가능하다.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
     <span
       class="gatsby-resp-image-wrapper"
@@ -106,16 +106,17 @@ Action은 일어난 일만 명세할 뿐 상태가 어떻게 변하는지는 명
 <li>getState() 메소드로 상태에 접근할 수 있다.</li>
 <li>dispatch(action) 메소드로 상태를 업데이트 할 수 있다.</li>
 <li>
-<p>subscribe(listner) 메소드로 listener를 등록할 수 있다.</p>
+<p>subscribe(listener를) 메소드로 listener를 등록할 수 있다.</p>
 <ul>
-<li>subscribe(listner) 메소드에서 반환된 메소드로 listner 해제를 핸들링 할 수 있다.</li>
+<li>subscribe(listener를) 메소드에서 반환된 메소드로 listener를 해제를 핸들링 할 수 있다.</li>
 </ul>
 </li>
 </ul>
 <p>Redux에서는 단 하나만의 Store를 가질 수 있다.</p>
 <h2>Redux를 꼭 써야할까?</h2>
-<p>옛날의 React 였다면 글로벌 상태 관리를 할 땐 Redux를 쓰는게 훨 나았을 수도 있지만 요즘은 프로젝트 규모가 작거나 단순히 글로벌 상태 관리만 하려면 굳이 Redux를 도입할 필요는 없는 것 같다. Context API도 있고 hooks도 있기 때문에 이들을 잘 조합하여 사용하면 Redux를 사용하지 않고도 글로벌 상태 관리를 할 수 있다. 이 개발 블로그 역시 Context API + hooks useReducer을 사용하여 글로벌 상태 관리를 하고 있다.
-무작정 상태관리를 위해 Redux를 도입하기 보다는 정말로 Redux가 필요한지 잘 생각해보고 프로젝트에 도입하면 좋을 것 같다.</p>
+<p>옛날의 React 였다면 글로벌 상태 관리를 위해 Redux를 쓰는게 효과적이었지만 요즘은 프로젝트 규모가 작거나 단순히 글로벌 상태 관리만 하려면 굳이 Redux를 도입할 필요는 없는 것 같다.</p>
+<p>Context API도 있고 hooks도 있기 때문에 이들을 잘 조합하여 사용하면 Redux를 사용하지 않고도 글로벌 상태 관리를 할 수 있다. 이 블로그도 Context API + hooks를 사용하여 글로벌 상태 관리를 하고 있다.</p>
+<p>무작정 상태관리를 위해 Redux를 도입하기 보다는 정말로 Redux가 필요한지 잘 생각해보고 프로젝트에 도입하면 좋을 것 같다.</p>
 <h2>Reference</h2>
 <blockquote>
 <ul>
