@@ -36,8 +36,8 @@ data-styled.g16[id="blogTemplate__PostHeader-sc-6k3xwj-0"]{content:"jGZQea,"}/*!
 .jOiDnZ blockquote{background-color:#f9f9f9;border-left:4px solid #009dff;padding-top:0.5rem;padding-right:1rem;padding-bottom:0.5rem;padding-left:0.5rem;}/*!sc*/
 .jOiDnZ blockquote ul{margin-bottom:0;}/*!sc*/
 .jOiDnZ pre[class*="language-"]{overflow:auto;margin-top:1.25rem;margin-bottom:1.5rem;padding:1rem;border-radius:8px;}/*!sc*/
-.jOiDnZ .gatsby-resp-image-figure{margin-top:3rem;margin-bottom:1.75rem;padding-top:1rem;padding-bottom:1rem;}/*!sc*/
-.jOiDnZ .gatsby-resp-image-figcaption{margin-top:1rem;font-size:0.875rem;color:#b2b2b2;text-align:center;}/*!sc*/
+.jOiDnZ .gatsby-resp-image-figure{margin-top:3rem;margin-bottom:3rem;padding-top:1rem;padding-bottom:1rem;}/*!sc*/
+.jOiDnZ .gatsby-resp-image-figcaption{margin-top:1rem;font-size:0.875rem;color:#757575;text-align:center;}/*!sc*/
 data-styled.g17[id="blogTemplate__PostArticle-sc-6k3xwj-1"]{content:"jOiDnZ,"}/*!sc*/
 .bOsvwu #disqus_thread{width:100%;margin:3rem auto 0;}/*!sc*/
 data-styled.g18[id="blogTemplate__PostComment-sc-6k3xwj-2"]{content:"bOsvwu,"}/*!sc*/
@@ -55,7 +55,7 @@ table{border-collapse:collapse;border-spacing:0;}/*!sc*/
 a{-webkit-text-decoration:none;text-decoration:none;cursor:pointer;color:#009dff;}/*!sc*/
 input{outline:0;}/*!sc*/
 data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
-</style><title data-react-helmet="true">AWS IAM 및 IAM 사용자 추가하기</title><meta data-react-helmet="true" name="viewport" content="width=device-width,initial-scale=1"/><meta data-react-helmet="true" name="description" content="AWS IAM AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스. AWS 계정 안에 IAM 그룹과 사용자를 생성하여 접근제어 및 권한관리를 세분화 할 수 있다. 일부 EC2 인스턴스를 관리할 수 있는 권한을 주거나, 일부 S…"/><meta data-react-helmet="true" name="twitter:title" content="AWS IAM 및 IAM 사용자 추가하기"/><meta data-react-helmet="true" name="twitter:description" content="AWS IAM AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스. AWS 계정 안에 IAM 그룹과 사용자를 생성하여 접근제어 및 권한관리를 세분화 할 수 있다. 일부 EC2 인스턴스를 관리할 수 있는 권한을 주거나, 일부 S…"/><meta data-react-helmet="true" name="twitter:creator" content="kyoungah"/><meta data-react-helmet="true" name="twitter:site" content="@kyoungah8D"/><meta data-react-helmet="true" name="twitter:url" content="https://dev.kyoungah.com/2020-07-19-etc-aws-iam/"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:locale" content="ko_kR"/><meta data-react-helmet="true" property="og:site_name" content="경아 개발 블로그"/><meta data-react-helmet="true" property="og:title" title="AWS IAM 및 IAM 사용자 추가하기"/><meta data-react-helmet="true" property="og:description" content="AWS IAM AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스. AWS 계정 안에 IAM 그룹과 사용자를 생성하여 접근제어 및 권한관리를 세분화 할 수 있다. 일부 EC2 인스턴스를 관리할 수 있는 권한을 주거나, 일부 S…"/><meta data-react-helmet="true" property="og:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:image:type" content="image/png"/><meta data-react-helmet="true" property="og:image:width" content="376"/><meta data-react-helmet="true" property="og:image:height" content="63"/><meta data-react-helmet="true" property="og:url" content="https://dev.kyoungah.com/2020-07-19-etc-aws-iam/"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-4d465f2492ddb5d3380d.js"/><link as="script" rel="preload" href="/716b8cdbed9f9e7e97e14507ca1f158f27845471-7a901e1be3a0a0981df6.js"/><link as="script" rel="preload" href="/commons-832f1bff8a497ee0ea77.js"/><link as="script" rel="preload" href="/styles-2d82ac8e3afc0c213061.js"/><link as="script" rel="preload" href="/app-bf3717e2cc78f267b158.js"/><link as="script" rel="preload" href="/framework-b5b229d58c3c710d5429.js"/><link as="script" rel="preload" href="/webpack-runtime-c7f0f0660b368b1faa6e.js"/><link as="fetch" rel="preload" href="/page-data/2020-07-19-etc-aws-iam/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/static/d/1447968848.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="PageTemplate__PageTemplateWrapper-qt51cy-0 ebIKT"><header class="Header__Wrapper-u43e2l-0 iVryOq"><a class="Header__StyledLink-u43e2l-1 buwmwz" href="/"><img src="/static/0f9b478bf195cce79b5209d689e88357/630fb/kyoungah.png" alt="경아 개발 블로그 "/></a><nav class="Header__Nav-u43e2l-2 btDvFC"><a href="/about">about</a></nav></header><div class="PageTemplate__Container-qt51cy-1 cbFHAZ"><section class="PageTemplate__Content-qt51cy-2 dARFhk"><article class="blogTemplate__PostArticle-sc-6k3xwj-1 jOiDnZ"><header class="blogTemplate__PostHeader-sc-6k3xwj-0 jGZQea"><h1>AWS IAM 및 IAM 사용자 추가하기</h1><span>2020년 07월 19일</span></header><div class="blog-post-content"><h2>AWS IAM</h2>
+</style><title data-react-helmet="true">AWS IAM 및 IAM 사용자 추가하기</title><meta data-react-helmet="true" name="viewport" content="width=device-width,initial-scale=1"/><meta data-react-helmet="true" name="description" content="AWS IAM AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스. AWS 계정 안에 IAM 그룹과 사용자를 생성하여 접근제어 및 권한관리를 세분화 할 수 있다. 일부 EC2 인스턴스를 관리할 수 있는 권한을 주거나, 일부 S…"/><meta data-react-helmet="true" name="twitter:title" content="AWS IAM 및 IAM 사용자 추가하기"/><meta data-react-helmet="true" name="twitter:description" content="AWS IAM AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스. AWS 계정 안에 IAM 그룹과 사용자를 생성하여 접근제어 및 권한관리를 세분화 할 수 있다. 일부 EC2 인스턴스를 관리할 수 있는 권한을 주거나, 일부 S…"/><meta data-react-helmet="true" name="twitter:creator" content="kyoungah"/><meta data-react-helmet="true" name="twitter:site" content="@kyoungah8D"/><meta data-react-helmet="true" name="twitter:url" content="https://dev.kyoungah.com/2020-07-19-etc-aws-iam/"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:locale" content="ko_kR"/><meta data-react-helmet="true" property="og:site_name" content="경아 개발 블로그"/><meta data-react-helmet="true" property="og:title" title="AWS IAM 및 IAM 사용자 추가하기"/><meta data-react-helmet="true" property="og:description" content="AWS IAM AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스. AWS 계정 안에 IAM 그룹과 사용자를 생성하여 접근제어 및 권한관리를 세분화 할 수 있다. 일부 EC2 인스턴스를 관리할 수 있는 권한을 주거나, 일부 S…"/><meta data-react-helmet="true" property="og:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:image:type" content="image/png"/><meta data-react-helmet="true" property="og:image:width" content="376"/><meta data-react-helmet="true" property="og:image:height" content="63"/><meta data-react-helmet="true" property="og:url" content="https://dev.kyoungah.com/2020-07-19-etc-aws-iam/"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-6a7167e861966f7bdb0f.js"/><link as="script" rel="preload" href="/716b8cdbed9f9e7e97e14507ca1f158f27845471-7a901e1be3a0a0981df6.js"/><link as="script" rel="preload" href="/commons-832f1bff8a497ee0ea77.js"/><link as="script" rel="preload" href="/styles-2d82ac8e3afc0c213061.js"/><link as="script" rel="preload" href="/app-bf3717e2cc78f267b158.js"/><link as="script" rel="preload" href="/framework-b5b229d58c3c710d5429.js"/><link as="script" rel="preload" href="/webpack-runtime-9e74f664f07a1520b386.js"/><link as="fetch" rel="preload" href="/page-data/2020-07-19-etc-aws-iam/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/static/d/1447968848.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="PageTemplate__PageTemplateWrapper-qt51cy-0 ebIKT"><header class="Header__Wrapper-u43e2l-0 iVryOq"><a class="Header__StyledLink-u43e2l-1 buwmwz" href="/"><img src="/static/0f9b478bf195cce79b5209d689e88357/630fb/kyoungah.png" alt="경아 개발 블로그 "/></a><nav class="Header__Nav-u43e2l-2 btDvFC"><a href="/about">about</a></nav></header><div class="PageTemplate__Container-qt51cy-1 cbFHAZ"><section class="PageTemplate__Content-qt51cy-2 dARFhk"><article class="blogTemplate__PostArticle-sc-6k3xwj-1 jOiDnZ"><header class="blogTemplate__PostHeader-sc-6k3xwj-0 jGZQea"><h1>AWS IAM 및 IAM 사용자 추가하기</h1><span>2020년 07월 19일</span></header><div class="blog-post-content"><h2>AWS IAM</h2>
 <ul>
 <li>AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스.</li>
 <li>
@@ -72,7 +72,7 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
 AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a href="https://docs.aws.amazon.com/ko_kr/general/latest/gr/aws_tasks-that-require-root.html">Root 사용자로만 가능한 작업</a>을 할 때를 제외하고는 Root 사용자 보다는 IAM 사용자를 사용하기를 권장하고 있다.</p>
 <ul>
 <li>
-<p>Root 사용자를 여려명이 공유해서 사용하는 경우 누가 어떤 작업을 했는지 구분하는 것이 불가능하다.</p>
+<p>Root 사용자를 여러명이 공유해서 사용하는 경우 누가 어떤 작업을 했는지 구분하는 것이 불가능하다.</p>
 <ul>
 <li>이럴 경우 여러명의 작업자가 각각 다른 API 호출을 해도 <a href="https://docs.aws.amazon.com/ko_kr/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail</a>에는 Root 사용자의 기록으로 남기 때문에 추후에 로그 확인이나 추적이 힘들어진다.</li>
 </ul>
@@ -81,7 +81,7 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
 <p>Root 사용자 계정이 해킹당하면 모든 AWS 액세스 권한이 해킹되는 것이나 마찬가지 이다. </p>
 <ul>
 <li>만약 IAM 사용자가 해킹당하면 해당 IAM 사용자만 차단하고 AWS CloudTrail 로그를 확인하여 피해를 최소화 할 수 있다.</li>
-<li>실제로 AWS 계정이 해킹당해 요금이 엄청나게 나왔다는 사례가 왕왕 있다.</li>
+<li>실제로 AWS 계정이 해킹당해 요금 폭탄을 맞았다는 사례가 많다.</li>
 </ul>
 </li>
 <li>
@@ -89,6 +89,7 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
 <ul>
 <li>이 액세스 키가 현재 실제 운영되고 있는 서비스에서 사용하고 있는 키라면 무작정 삭제했을 때 서비스에 장애가 생길 수도 있다.</li>
 <li>IAM 사용자에게 발급된 액세스 키는 권한을 제어하는 것이 가능하며, 삭제나 재발급에 대한 부담이 적다.</li>
+<li>Github에 Root 사용자의 액세스키를 포함한 소스코드를 그대로 올렸다가 해커에게 공격당해 요금폭탄을 맞았다는 사례 역시 많다.</li>
 </ul>
 </li>
 </ul>
@@ -105,8 +106,8 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 1"
-        title="AWS IAM 사용자 생성 1"
+        alt="AWS 서비스메뉴"
+        title="AWS 서비스메뉴"
         src="/static/1eae29deeb2589d085814aeee7485816/5a190/aws-iam-1.png"
         srcset="/static/1eae29deeb2589d085814aeee7485816/772e8/aws-iam-1.png 200w,
 /static/1eae29deeb2589d085814aeee7485816/e17e5/aws-iam-1.png 400w,
@@ -119,7 +120,7 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 1</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">AWS 서비스메뉴</figcaption>
   </figure></p>
 <p>Root 사용자로 로그인 한 후 검색창에서 IAM을 입력하거나 서비스 메뉴 목록에서 IAM을 클릭하여 IAM 대시보드 창으로 이동한다.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
@@ -133,8 +134,8 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 2"
-        title="AWS IAM 사용자 생성 2"
+        alt="IAM 대시보드"
+        title="IAM 대시보드"
         src="/static/5678ad90158d4fb443bde902e711e417/5a190/aws-iam-2.png"
         srcset="/static/5678ad90158d4fb443bde902e711e417/772e8/aws-iam-2.png 200w,
 /static/5678ad90158d4fb443bde902e711e417/e17e5/aws-iam-2.png 400w,
@@ -147,7 +148,7 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 2</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 대시보드</figcaption>
   </figure></p>
 <p>사용자 항목을 클릭하여 IAM 사용자 페이지에 접속한다.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
@@ -161,8 +162,8 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 3"
-        title="AWS IAM 사용자 생성 3"
+        alt="IAM 사용자 목록"
+        title="IAM 사용자 목록"
         src="/static/0ade8dc278d51c6eca3de8a64bfc1511/5a190/aws-iam-3.png"
         srcset="/static/0ade8dc278d51c6eca3de8a64bfc1511/772e8/aws-iam-3.png 200w,
 /static/0ade8dc278d51c6eca3de8a64bfc1511/e17e5/aws-iam-3.png 400w,
@@ -175,7 +176,7 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 3</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 사용자 목록</figcaption>
   </figure></p>
 <p>사용자 추가 버튼을 클릭한다.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
@@ -189,8 +190,8 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 4"
-        title="AWS IAM 사용자 생성 4"
+        alt="IAM 사용자 추가 - 사용자 정보 설정"
+        title="IAM 사용자 추가 - 사용자 정보 설정"
         src="/static/c0a86c5ce2be41602dcc4baf09ce436d/5a190/aws-iam-4.png"
         srcset="/static/c0a86c5ce2be41602dcc4baf09ce436d/772e8/aws-iam-4.png 200w,
 /static/c0a86c5ce2be41602dcc4baf09ce436d/e17e5/aws-iam-4.png 400w,
@@ -203,7 +204,7 @@ AWS에서는 Root 사용자는 무제한적인 액세스 권한이 있으니 <a 
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 4</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 사용자 추가 - 사용자 정보 설정</figcaption>
   </figure></p>
 <p>추가할 사용자의 이름과 액세스 유형을 설정한다. 액세스 유형은 프로그래밍 방식 액세스와 AWS Management Console 액세스가 있으며 나중에 변경이 가능하다. 프로그래밍 방식 액세스는
 AWS S3에 정적호스팅을 하거나 Serverless 프레임워크를 통해 AWS Lambda에 작업한 것을 배포하는 등 필요한 작업에 권한을 설정하기 위해 액세스 키를 생성하는 방식이고 AWS Managemet Console 액세스는 로그인 가능한 사용자를 생성하는 방식이다.
@@ -219,8 +220,8 @@ AWS S3에 정적호스팅을 하거나 Serverless 프레임워크를 통해 AWS 
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 5"
-        title="AWS IAM 사용자 생성 5"
+        alt="IAM 사용자 추가 - 사용자 권한 설정"
+        title="IAM 사용자 추가 - 사용자 권한 설정"
         src="/static/c19ddf3cdd8cff51cbe8aa10cddc550c/5a190/aws-iam-5.png"
         srcset="/static/c19ddf3cdd8cff51cbe8aa10cddc550c/772e8/aws-iam-5.png 200w,
 /static/c19ddf3cdd8cff51cbe8aa10cddc550c/e17e5/aws-iam-5.png 400w,
@@ -233,7 +234,7 @@ AWS S3에 정적호스팅을 하거나 Serverless 프레임워크를 통해 AWS 
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 5</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 사용자 추가 - 사용자 권한 설정</figcaption>
   </figure></p>
 <p>이제 사용자의 권한을 설정해야 한다. 권한 설정에는 그룹에 사용자 추가, 기존 사용자에서 권한 복사, 기존 정책 직접 연결이 있다.
 나는 기존에 생성해놨던 그룹도 있고 다른 방법들은 어떻게 설정하는지 잘 몰라서 무난하게 그룹에 사용자 추가 방법으로 권한을 설정했다.</p>
@@ -248,8 +249,8 @@ AWS S3에 정적호스팅을 하거나 Serverless 프레임워크를 통해 AWS 
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 그룹 생성"
-        title="AWS IAM 그룹 생성"
+        alt="IAM 그룹 생성"
+        title="IAM 그룹 생성"
         src="/static/aed190b5e1e1e2d31ccdf964e4a1cac3/5a190/aws-iam-6.png"
         srcset="/static/aed190b5e1e1e2d31ccdf964e4a1cac3/772e8/aws-iam-6.png 200w,
 /static/aed190b5e1e1e2d31ccdf964e4a1cac3/e17e5/aws-iam-6.png 400w,
@@ -262,7 +263,7 @@ AWS S3에 정적호스팅을 하거나 Serverless 프레임워크를 통해 AWS 
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 그룹 생성</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 그룹 생성</figcaption>
   </figure></p>
 <p>만약 그룹이 없거나 다른 권한의 그룹이 필요하다면 그룹생성 버튼을 눌러 생성할 수 있다.
 AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 엑세스 및 권한을 허용한다. 이 권한을 선택하면 Root 사용자와 같은 권한을 IAM 사용자에게 주는거나 마찬가지이기 때문에 주의가 필요하다. 왠만하면 최소한의 권한을 부여하도록 하자.</p>
@@ -277,8 +278,8 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 6"
-        title="AWS IAM 사용자 생성 6"
+        alt="IAM 사용자 추가 - 사용자 태그 추가"
+        title="IAM 사용자 추가 - 사용자 태그 추가"
         src="/static/f2de5b67e9380fde5c679b974206f226/5a190/aws-iam-7.png"
         srcset="/static/f2de5b67e9380fde5c679b974206f226/772e8/aws-iam-7.png 200w,
 /static/f2de5b67e9380fde5c679b974206f226/e17e5/aws-iam-7.png 400w,
@@ -291,7 +292,7 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 6</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 사용자 추가 - 사용자 태그 추가</figcaption>
   </figure></p>
 <p>태그를 사용하여 IAM 사용자 지정 속성을 추가할 수 있다. 요 부분은 나도 잘 모르는데다가 굳이 입력을 안해도 되기 때문에 그냥 패스했다.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
@@ -305,8 +306,8 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 8"
-        title="AWS IAM 사용자 생성 8"
+        alt="IAM 사용자 추가 - 검토"
+        title="IAM 사용자 추가 - 검토"
         src="/static/ce6a17ba5c53d011bfcf389eac2fde72/5a190/aws-iam-8.png"
         srcset="/static/ce6a17ba5c53d011bfcf389eac2fde72/772e8/aws-iam-8.png 200w,
 /static/ce6a17ba5c53d011bfcf389eac2fde72/e17e5/aws-iam-8.png 400w,
@@ -319,7 +320,7 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 8</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 사용자 추가 - 검토</figcaption>
   </figure></p>
 <p>마지막으로 잘못된 부분이 있는지 한번더 확인을 한 후 사용자 만들기 버튼을 누르면 IAM 사용자가 생성된다.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
@@ -333,8 +334,8 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 사용자 생성 9"
-        title="AWS IAM 사용자 생성 9"
+        alt="IAM 사용자 추가 완료"
+        title="IAM 사용자 추가 완료"
         src="/static/a2ae46f0ecd8678f74695ada20122217/5a190/aws-iam-9.png"
         srcset="/static/a2ae46f0ecd8678f74695ada20122217/772e8/aws-iam-9.png 200w,
 /static/a2ae46f0ecd8678f74695ada20122217/e17e5/aws-iam-9.png 400w,
@@ -347,7 +348,7 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 생성 9</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">IAM 사용자 추가 완료</figcaption>
   </figure></p>
 <p>비밀번호 항목에서 표시 버튼을 눌러 사용자의 비밀번호를 확인할 수 있다. 이 비밀번호로 로그인을 해야 하니 잘 기억해두자.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
@@ -361,8 +362,8 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 계정 별칭 설정 1"
-        title="AWS IAM 계정 별칭 설정 1"
+        alt="AWS IAM 사용자 로그인 링크 확인"
+        title="AWS IAM 사용자 로그인 링크 확인"
         src="/static/417899e2f7e1f891ac61783802fce7ac/5a190/aws-iam-10.png"
         srcset="/static/417899e2f7e1f891ac61783802fce7ac/772e8/aws-iam-10.png 200w,
 /static/417899e2f7e1f891ac61783802fce7ac/e17e5/aws-iam-10.png 400w,
@@ -375,7 +376,7 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 계정 별칭 설정 1</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 사용자 로그인 링크 확인</figcaption>
   </figure></p>
 <p>IAM 사용자가 로그인 하려면 계정 ID 또는 별칭을 알고 있어야 한다. 슛자로 된 ID 보다는 별칭이 좀 더 익히기 쉬우므로 사용자 지정 버튼을 눌러 계정 별칭을 생성해 주자. 필수가 아니기 때문에 안해도 된다.</p>
 <p><figure class="gatsby-resp-image-figure" style="">
@@ -389,8 +390,8 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
   ></span>
   <img
         class="gatsby-resp-image-image"
-        alt="AWS IAM 계정 별칭 설정 2"
-        title="AWS IAM 계정 별칭 설정 2"
+        alt="AWS IAM 계정 별칭 설정"
+        title="AWS IAM 계정 별칭 설정"
         src="/static/249f08d66a1026bf7b60256b46c10e54/0b533/aws-iam-11.png"
         srcset="/static/249f08d66a1026bf7b60256b46c10e54/772e8/aws-iam-11.png 200w,
 /static/249f08d66a1026bf7b60256b46c10e54/e17e5/aws-iam-11.png 400w,
@@ -400,7 +401,7 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
         loading="lazy"
       />
     </span>
-    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 계정 별칭 설정 2</figcaption>
+    <figcaption class="gatsby-resp-image-figcaption">AWS IAM 계정 별칭 설정</figcaption>
   </figure></p>
 <p>원하는 별칭을 입력하고 생성 버튼을 눌러주면 이제 계정 별칭을 이용해서 로그인도 가능해진다.</p>
 <h3>IAM 사용자 로그인</h3>
@@ -528,8 +529,8 @@ AdministratorAccess 권한은 AWS의 모든 서비스 및 리소스에 대한 �
     </span>
     <figcaption class="gatsby-resp-image-figcaption">IAM 보안 상태</figcaption>
   </figure></p>
-<p>IAM 대시보드 창에 접속하면 현재 IAM 보안 상태를 확인할 수 있다. 이 보안 상태 항목들은 필수로 조치해야 할 항목들은 아니나 AWS를 좀 더 안전하게 사용하려면 조치를 취해두는게 좋다.
-IAM 사용자 생성및 그룹 생성은 이미 해놨기 때문에 완료 표시가 뜨는건 알겠는데 루트 액세스 키 삭제는 뭘 딱히 안했는데 왜 뜨는지 모르겠다. 예전에 Serverless를 사용하려고 프로그래밍 액세스 방식으로 IAM 액세스 키를 발급받은 적이 있는데 이거 떄문인거 같기도 하고... 이 부분은 나중에 좀 더 공부를 한 후에 정리를 해봐야겠다.</p>
+<p>IAM 대시보드 창에 접속하면 현재 IAM 보안 상태를 확인할 수 있다. 이 보안 상태 항목들은 필수로 조치해야 할 항목들은 아니나 AWS를 좀 더 안전하게 사용하려면 조치를 취해두는게 좋다.</p>
+<p>IAM 사용자 생성및 그룹 생성은 이미 해놨기 때문에 완료 표시가 뜨는건 알겠는데 루트 액세스 키 삭제는 뭘 딱히 안했는데 왜 뜨는지 모르겠다. 예전에 Serverless를 사용하려고 프로그래밍 액세스 방식으로 IAM 액세스 키를 발급받은 적이 있는데 이거 떄문인거 같기도 하고... 이 부분은 나중에 좀 더 공부를 한 후에 정리를 해봐야겠다.</p>
 <h2>Reference</h2>
 <blockquote>
 <ul>
@@ -553,4 +554,4 @@ IAM 사용자 생성및 그룹 생성은 이미 해놨기 때문에 완료 표�
       
       
       
-      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020-07-19-etc-aws-iam/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-1bb330181573b3494350.js"],"app":["/app-bf3717e2cc78f267b158.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-797fcc0f9fedbdd0cad2.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-b195100fb923061ded87.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-1d1b3bbce18f206c7bda.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-4d465f2492ddb5d3380d.js"]};/*]]>*/</script><script src="/polyfill-1bb330181573b3494350.js" nomodule=""></script><script src="/webpack-runtime-c7f0f0660b368b1faa6e.js" async=""></script><script src="/framework-b5b229d58c3c710d5429.js" async=""></script><script src="/app-bf3717e2cc78f267b158.js" async=""></script><script src="/styles-2d82ac8e3afc0c213061.js" async=""></script><script src="/commons-832f1bff8a497ee0ea77.js" async=""></script><script src="/716b8cdbed9f9e7e97e14507ca1f158f27845471-7a901e1be3a0a0981df6.js" async=""></script><script src="/component---src-templates-blog-template-tsx-4d465f2492ddb5d3380d.js" async=""></script></body></html>
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020-07-19-etc-aws-iam/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-1bb330181573b3494350.js"],"app":["/app-bf3717e2cc78f267b158.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-797fcc0f9fedbdd0cad2.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-b195100fb923061ded87.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-1d1b3bbce18f206c7bda.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-6a7167e861966f7bdb0f.js"]};/*]]>*/</script><script src="/polyfill-1bb330181573b3494350.js" nomodule=""></script><script src="/webpack-runtime-9e74f664f07a1520b386.js" async=""></script><script src="/framework-b5b229d58c3c710d5429.js" async=""></script><script src="/app-bf3717e2cc78f267b158.js" async=""></script><script src="/styles-2d82ac8e3afc0c213061.js" async=""></script><script src="/commons-832f1bff8a497ee0ea77.js" async=""></script><script src="/716b8cdbed9f9e7e97e14507ca1f158f27845471-7a901e1be3a0a0981df6.js" async=""></script><script src="/component---src-templates-blog-template-tsx-6a7167e861966f7bdb0f.js" async=""></script></body></html>
