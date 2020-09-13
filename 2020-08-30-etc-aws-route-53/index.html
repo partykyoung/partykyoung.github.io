@@ -33,8 +33,9 @@ data-styled.g16[id="blogTemplate__PostHeader-sc-6k3xwj-0"]{content:"jGZQea,"}/*!
 .jOiDnZ ol{list-style-type:decimal;}/*!sc*/
 .jOiDnZ li{font-size:1rem;line-height:2;word-break:keep-all;overflow-wrap:break-word;}/*!sc*/
 .jOiDnZ li p{margin-bottom:0;}/*!sc*/
-.jOiDnZ blockquote{background-color:#f9f9f9;border-left:4px solid #009dff;padding-top:0.5rem;padding-right:1rem;padding-bottom:0.5rem;padding-left:0.5rem;}/*!sc*/
-.jOiDnZ blockquote ul{margin-bottom:0;}/*!sc*/
+.jOiDnZ blockquote{background-color:#f9f9f9;border-left:4px solid #009dff;margin-top:2rem;margin-bottom:2rem;padding:1rem;}/*!sc*/
+.jOiDnZ blockquote ul:first-of-type,.jOiDnZ blockquote ul:last-of-type{margin-top:0;margin-bottom:0;}/*!sc*/
+.jOiDnZ blockquote p:first-of-type,.jOiDnZ blockquote p:last-of-type{margin-top:0;margin-bottom:0;}/*!sc*/
 .jOiDnZ pre[class*="language-"]{overflow:auto;margin-top:1.25rem;margin-bottom:1.5rem;padding:1rem;border-radius:8px;}/*!sc*/
 .jOiDnZ .gatsby-resp-image-figure{margin-top:3rem;margin-bottom:3rem;padding-top:1rem;padding-bottom:1rem;}/*!sc*/
 .jOiDnZ .gatsby-resp-image-figcaption{margin-top:1rem;font-size:0.875rem;color:#757575;text-align:center;}/*!sc*/
@@ -55,10 +56,10 @@ table{border-collapse:collapse;border-spacing:0;}/*!sc*/
 a{-webkit-text-decoration:none;text-decoration:none;cursor:pointer;color:#009dff;}/*!sc*/
 input{outline:0;}/*!sc*/
 data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
-</style><title data-react-helmet="true">AWS 도메인 설정</title><meta data-react-helmet="true" name="viewport" content="width=device-width,initial-scale=1"/><meta data-react-helmet="true" name="description" content="AWS Route 53 높은 가용성과 확장성이 뛰어난 클라우드 Domain Name System (DNS) 웹 서비스. 일반적인 DNS 기능 + 모니터링 기능 + 서버 로드 밸런싱 기능 + 글로벌 서버 로드 밸런싱 기능을 제공한다. DNS (Domain Name System…"/><meta data-react-helmet="true" name="twitter:title" content="AWS 도메인 설정"/><meta data-react-helmet="true" name="twitter:description" content="AWS Route 53 높은 가용성과 확장성이 뛰어난 클라우드 Domain Name System (DNS) 웹 서비스. 일반적인 DNS 기능 + 모니터링 기능 + 서버 로드 밸런싱 기능 + 글로벌 서버 로드 밸런싱 기능을 제공한다. DNS (Domain Name System…"/><meta data-react-helmet="true" name="twitter:creator" content="kyoungah"/><meta data-react-helmet="true" name="twitter:site" content="@kyoungah8D"/><meta data-react-helmet="true" name="twitter:url" content="https://dev.kyoungah.com/2020-08-30-etc-aws-route-53/"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:locale" content="ko_kR"/><meta data-react-helmet="true" property="og:site_name" content="경아 개발 블로그"/><meta data-react-helmet="true" property="og:title" title="AWS 도메인 설정"/><meta data-react-helmet="true" property="og:description" content="AWS Route 53 높은 가용성과 확장성이 뛰어난 클라우드 Domain Name System (DNS) 웹 서비스. 일반적인 DNS 기능 + 모니터링 기능 + 서버 로드 밸런싱 기능 + 글로벌 서버 로드 밸런싱 기능을 제공한다. DNS (Domain Name System…"/><meta data-react-helmet="true" property="og:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:image:type" content="image/png"/><meta data-react-helmet="true" property="og:image:width" content="376"/><meta data-react-helmet="true" property="og:image:height" content="63"/><meta data-react-helmet="true" property="og:url" content="https://dev.kyoungah.com/2020-08-30-etc-aws-route-53/"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-7e2d2d91752096efacf7.js"/><link as="script" rel="preload" href="/716b8cdbed9f9e7e97e14507ca1f158f27845471-1179e0f042f824659fc7.js"/><link as="script" rel="preload" href="/commons-19cc43b7b93132645390.js"/><link as="script" rel="preload" href="/styles-2d82ac8e3afc0c213061.js"/><link as="script" rel="preload" href="/app-31689292082779f66abb.js"/><link as="script" rel="preload" href="/framework-8dcecaaefd71e2213eb2.js"/><link as="script" rel="preload" href="/webpack-runtime-4de5ef393944dbd15126.js"/><link as="fetch" rel="preload" href="/page-data/2020-08-30-etc-aws-route-53/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="PageTemplate__PageTemplateWrapper-qt51cy-0 ebIKT"><header class="Header__Wrapper-u43e2l-0 iVryOq"><a class="Header__StyledLink-u43e2l-1 buwmwz" href="/"><img src="/static/0f9b478bf195cce79b5209d689e88357/630fb/kyoungah.png" alt="경아 개발 블로그 "/></a><nav class="Header__Nav-u43e2l-2 btDvFC"><a href="/about">about</a></nav></header><div class="PageTemplate__Container-qt51cy-1 cbFHAZ"><section class="PageTemplate__Content-qt51cy-2 dARFhk"><article class="blogTemplate__PostArticle-sc-6k3xwj-1 jOiDnZ"><header class="blogTemplate__PostHeader-sc-6k3xwj-0 jGZQea"><h1>AWS 도메인 설정</h1><span>2020년 08월 30일</span></header><div class="blog-post-content"><h2>AWS Route 53</h2>
+</style><title data-react-helmet="true">AWS 도메인 설정</title><meta data-react-helmet="true" name="viewport" content="width=device-width,initial-scale=1"/><meta data-react-helmet="true" name="description" content="AWS Route 53 높은 가용성과 확장성이 뛰어난 클라우드 Domain Name System (DNS) 웹 서비스. 일반적인 DNS 기능 + 모니터링 기능 + 서버 로드 밸런싱 기능 + 글로벌 서버 로드 밸런싱 기능을 제공한다. DNS (Domain Name System…"/><meta data-react-helmet="true" name="twitter:title" content="AWS 도메인 설정"/><meta data-react-helmet="true" name="twitter:description" content="AWS Route 53 높은 가용성과 확장성이 뛰어난 클라우드 Domain Name System (DNS) 웹 서비스. 일반적인 DNS 기능 + 모니터링 기능 + 서버 로드 밸런싱 기능 + 글로벌 서버 로드 밸런싱 기능을 제공한다. DNS (Domain Name System…"/><meta data-react-helmet="true" name="twitter:creator" content="kyoungah"/><meta data-react-helmet="true" name="twitter:site" content="@kyoungah8D"/><meta data-react-helmet="true" name="twitter:url" content="https://dev.kyoungah.com/2020-08-30-etc-aws-route-53/"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:locale" content="ko_kR"/><meta data-react-helmet="true" property="og:site_name" content="경아 개발 블로그"/><meta data-react-helmet="true" property="og:title" title="AWS 도메인 설정"/><meta data-react-helmet="true" property="og:description" content="AWS Route 53 높은 가용성과 확장성이 뛰어난 클라우드 Domain Name System (DNS) 웹 서비스. 일반적인 DNS 기능 + 모니터링 기능 + 서버 로드 밸런싱 기능 + 글로벌 서버 로드 밸런싱 기능을 제공한다. DNS (Domain Name System…"/><meta data-react-helmet="true" property="og:image" content="https://dev.kyoungah.com/kyoungah.png"/><meta data-react-helmet="true" property="og:image:type" content="image/png"/><meta data-react-helmet="true" property="og:image:width" content="376"/><meta data-react-helmet="true" property="og:image:height" content="63"/><meta data-react-helmet="true" property="og:url" content="https://dev.kyoungah.com/2020-08-30-etc-aws-route-53/"/><link as="script" rel="preload" href="/component---src-templates-blog-template-tsx-c2d7ae2da7b592a0fda3.js"/><link as="script" rel="preload" href="/716b8cdbed9f9e7e97e14507ca1f158f27845471-1179e0f042f824659fc7.js"/><link as="script" rel="preload" href="/commons-19cc43b7b93132645390.js"/><link as="script" rel="preload" href="/styles-2d82ac8e3afc0c213061.js"/><link as="script" rel="preload" href="/app-31689292082779f66abb.js"/><link as="script" rel="preload" href="/framework-8dcecaaefd71e2213eb2.js"/><link as="script" rel="preload" href="/webpack-runtime-18120065756db3fdcd61.js"/><link as="fetch" rel="preload" href="/page-data/2020-08-30-etc-aws-route-53/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="PageTemplate__PageTemplateWrapper-qt51cy-0 ebIKT"><header class="Header__Wrapper-u43e2l-0 iVryOq"><a class="Header__StyledLink-u43e2l-1 buwmwz" href="/"><img src="/static/0f9b478bf195cce79b5209d689e88357/630fb/kyoungah.png" alt="경아 개발 블로그 "/></a><nav class="Header__Nav-u43e2l-2 btDvFC"><a href="/about">about</a></nav></header><div class="PageTemplate__Container-qt51cy-1 cbFHAZ"><section class="PageTemplate__Content-qt51cy-2 dARFhk"><article class="blogTemplate__PostArticle-sc-6k3xwj-1 jOiDnZ"><header class="blogTemplate__PostHeader-sc-6k3xwj-0 jGZQea"><h1>AWS 도메인 설정</h1><span>2020년 08월 30일</span></header><div class="blog-post-content"><h2>AWS Route 53</h2>
 <p>높은 가용성과 확장성이 뛰어난 클라우드 Domain Name System (DNS) 웹 서비스. 일반적인 DNS 기능 + 모니터링 기능 + 서버 로드 밸런싱 기능 + 글로벌 서버 로드 밸런싱 기능을 제공한다.</p>
 <blockquote>
-<p>DNS (Domain Name System): 네트워크에 연결된 호스트들은 각각 IP 주소들을 가지고 있다. 이 IP 주소는 사람이 이해하고 기억하기 어렵기 때문에 각 IP 주소마다 도메인 이름을 부여한다. DNS는 특정 도메인에 대한 요청이 들어오면 도메인에 대한 IP 주소를 반환해준다. 반대로 IP 주소에 대한 도메인 이름을 반환해 줄 수도 있다.</p>
+<p><strong>DNS (Domain Name System)</strong>: 네트워크에 연결된 호스트들은 각각 IP 주소들을 가지고 있다. 이 IP 주소는 사람이 이해하고 기억하기 어렵기 때문에 각 IP 주소마다 도메인 이름을 부여한다. DNS는 특정 도메인에 대한 요청이 들어오면 도메인에 대한 IP 주소를 반환해준다. 반대로 IP 주소에 대한 도메인 이름을 반환해 줄 수도 있다.</p>
 </blockquote>
 <p>Route 53은 프리티어 대상이 아니므로 매달 사용한 만큼 요금이 빠져나간다. 다행히 요금은 저렴한 편이다.</p>
 <h2>Route 53 도메인 등록</h2>
@@ -95,17 +96,17 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 24.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAAA6klEQVQY042Q246DMAxE8///1y5tRbhsoVCu4RZCgFnb1Ur7uA+W4tFxZmx1DQI8whCX6xei9BudGWGGAeM0YRg/79/6j6bctqHvexH9vmPzO47zQEfaPM84zxP7cWB1Dr0x8sFOHBfzXdfDWivcRLwyBMVxgpTSGTPA0WBRFEiSFFmWo207rKtDlucItYaO4j9cCa0jYTmdXVeoiIDb/YHgdsfrVYgzJ2a9LN9YyJ2TVHUtXETmy2KFe1eVzD2fmaTkUpv3qJsWTdtio/U99QetyBqfgddljd2ruqEko/RcfAbWpnkRAz7HD8aKfN3/aRWNAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    style="padding-bottom: 24.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAAA+ElEQVQY042Q246DIBRF/f8f60OTNplJrbYRLxXjrSqKikHc5TAz7/NwEthZsFeO5wcBnlGEm39HnL3QiwliHDFJiXH6Of/NfzJv2zYMw4DRXvS+Q+sd5jDobTbPM47jwG4MFHFCuA92y9EQ3/cD1nV1nLS8JyaJJM2Q5dw2SVBBWZZIbcZ5ga7rodQGXhSIGAOLEwgx/nIVGIsdS3arUvDY9Yr7+Qz/dAIPQ2dDxrF9WFU1FttOJk3bInw8EScplmV1hnXTIAgfyK0MWdJ4Kk1Qf3+hvlygeA5tDhgLt+/O7YYKtNauvWnf1mRydxpaA2VyXlwBreMDQcF7hxdTlj4AAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="DNS 관리"
         title="DNS 관리"
-        src="/static/87941b43b4d7588ccdc288b27ba0b44c/5a190/aws-route-53-2.png"
-        srcset="/static/87941b43b4d7588ccdc288b27ba0b44c/772e8/aws-route-53-2.png 200w,
-/static/87941b43b4d7588ccdc288b27ba0b44c/e17e5/aws-route-53-2.png 400w,
-/static/87941b43b4d7588ccdc288b27ba0b44c/5a190/aws-route-53-2.png 800w,
-/static/87941b43b4d7588ccdc288b27ba0b44c/25c1c/aws-route-53-2.png 1047w"
+        src="/static/45b7720eeee1aa063c57f2a2c3e32e21/5a190/aws-route-53-2.png"
+        srcset="/static/45b7720eeee1aa063c57f2a2c3e32e21/772e8/aws-route-53-2.png 200w,
+/static/45b7720eeee1aa063c57f2a2c3e32e21/e17e5/aws-route-53-2.png 400w,
+/static/45b7720eeee1aa063c57f2a2c3e32e21/5a190/aws-route-53-2.png 800w,
+/static/45b7720eeee1aa063c57f2a2c3e32e21/25c1c/aws-route-53-2.png 1047w"
         sizes="(max-width: 800px) 100vw, 800px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -171,7 +172,7 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
   </figure></p>
 <p>생성이 완료되면 NS(네임서버) 레코드와 SOA(권한시작) 레코드가 자동 생성된다. 이 네임서버가 등록한 도메인이 사용할 네임서버이기 때문에 등록한 도메인의 네임서버를 Route 53의 네임서버로 교체해주어야 한다.</p>
 <blockquote>
-<p>네임 서버: DNS를 운영하는 서버. 특정 도메인이 어떤 IP와 연결되었다는 것을 기록하고 이것을 다른 DNS들에게 전파하는 역할을 한다. 예를 들어 abc.com 이라는 도메인이 있으면 이 도메인을 192.168.0.1 이라는 아이피를 가진 서버와 연결을 해준다.</p>
+<p><strong>네임 서버</strong>: DNS를 운영하는 서버. 특정 도메인이 어떤 IP와 연결되었다는 것을 기록하고 이것을 다른 DNS들에게 전파하는 역할을 한다. 예를 들어 abc.com 이라는 도메인이 있으면 이 도메인을 192.168.0.1 이라는 아이피를 가진 서버와 연결을 해준다.</p>
 </blockquote>
 <p><figure class="gatsby-resp-image-figure" style="">
     <span
@@ -202,7 +203,7 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
 <h2>AWS Certificate Manager 설정</h2>
 <p>Route 53에 도메인을 등록하면 AWS Certificate Manageer을 사용하여 무료로 SSL 인증서를 발급받을 수 있다.</p>
 <blockquote>
-<p>SSL 인증서: 클라이언트와 서버간의 통신을 제3자가 보증해주는 전자화된 문서. 웹서버와 웹사이트에서 이루어지는 모든 정보전송을 https 암호화 프로토콜을 통해 안전하게 전송되도록 하는 인증서이다.</p>
+<p><strong>SSL 인증서</strong>: 클라이언트와 서버간의 통신을 제3자가 보증해주는 전자화된 문서. 웹서버와 웹사이트에서 이루어지는 모든 정보전송을 https 암호화 프로토콜을 통해 안전하게 전송되도록 하는 인증서이다.</p>
 </blockquote>
 <p><figure class="gatsby-resp-image-figure" style="">
     <span
@@ -237,17 +238,17 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 28.500000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABDUlEQVQY02VPQUvDMBjN7/YqCN5EYXevepBeByLCThtMZW5jNiuU2SJL06S0tW225tlEu7XzwZcveS/fSx5Bg6pSoK6L+WKJYCsMBa01NI6w578ymIzHWPsBqtqqB56YhUcRZu8L0PkU4s2Brncwetegu1dVhaubAdzRPeqvV/uwrvdWJ78/LPH49IzR8AH7l1ugVgeTbm9BqYvzi0tMnAEQzXoaieMYnPPmEsVq9QF/E4DHAlmW9czKsoQQAlJKRE0iz1vD8z+x5RKy4RmLUBQFSBiGSJLEDhRFiTzPkaap7d2YhmOM2YdMGd3M5HlmNeOhlAJpw8TZDmd3FMvwuxfhNG4LZ8pwPdz8438AREXJRbba+DAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    style="padding-bottom: 28.500000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABEUlEQVQY02WPS0vDQBSF52e7FwR3olBw6dqFZFsQEbpKoSoxFckkENoG7czk0WTaZGxyOhNNTfTAvM7HvXcOgVZVKVDPgzt/w2qdGAtN06DBr9r3zzKa2jb8cIWqbunRJ2YTnMN5nYO6MyQvFpr6C4b3G/TvqqpwcTWCN7lF/fHcDm7qfcvJ9w9L3D88YjK+w/7pBqjVsUn/7ESph9Ozc0ytEcCdASNxHEMIAer7ePcowmUEob2iKAbNyrJEkiRI0xRcJwoCH0G4xFqkSLXPGMdutwOJogjZZoNyK7HVoMgy5HkOKeUgpvEYY+0gsww3Q6QsWpbpOqUUSFfAF584ubbhOuEgwt+4nawZw+V48c8/ABqwyLgKB/FjAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="인증서 프로비저닝 선택"
         title="인증서 프로비저닝 선택"
-        src="/static/16275d95e628b0bad20297f2207c4627/5a190/aws-route-53-7.png"
-        srcset="/static/16275d95e628b0bad20297f2207c4627/772e8/aws-route-53-7.png 200w,
-/static/16275d95e628b0bad20297f2207c4627/e17e5/aws-route-53-7.png 400w,
-/static/16275d95e628b0bad20297f2207c4627/5a190/aws-route-53-7.png 800w,
-/static/16275d95e628b0bad20297f2207c4627/a9965/aws-route-53-7.png 1171w"
+        src="/static/1dcd60f83f55473859f407e778a24e04/5a190/aws-route-53-7.png"
+        srcset="/static/1dcd60f83f55473859f407e778a24e04/772e8/aws-route-53-7.png 200w,
+/static/1dcd60f83f55473859f407e778a24e04/e17e5/aws-route-53-7.png 400w,
+/static/1dcd60f83f55473859f407e778a24e04/5a190/aws-route-53-7.png 800w,
+/static/1dcd60f83f55473859f407e778a24e04/a9965/aws-route-53-7.png 1171w"
         sizes="(max-width: 800px) 100vw, 800px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -263,18 +264,18 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 32%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAAAj0lEQVQY052QWQ6DMAxEc/+j9RL8U4hoFpus0ziopVIplRh57J9o/ByltcY8T/DeI4SA/6qtaqtjKw4J43jHY1lgjHnbOg9jHYioL3PObZMj1lh68GFgaU0eC12MEcQMZoKltTki59ydUtpmLiil/uRX/YQLEprX6SIBk0WqnvzHmb/Cd8Lr+gwfphW3weEJtIDZ29CMP7oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    style="padding-bottom: 32%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAAAnklEQVQY052Qyw6CMBRE+f9Pw61QokGWGMJL+qBA2/HaSnQBmjDJyXQ1PblR2zSoqwqSD5jGEbD2N8ZQGzjnNolUeUd5itGmZ3REzxLqBH3G0DEGfsk8jywNfc0h8xuwN2jpRzEEu0lrKCkxSgEuFKFh5tmzzFPoZYEhaBFbiXAwfu5t9YqltpYM927xD7iPoft6HzZch9axotaIC4EnUyLWMQVeVboAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="공인 인증서 요청 선택"
         title="공인 인증서 요청 선택"
-        src="/static/a3d30192740ebf60b905a1f6666d6f35/5a190/aws-route-53-8.png"
-        srcset="/static/a3d30192740ebf60b905a1f6666d6f35/772e8/aws-route-53-8.png 200w,
-/static/a3d30192740ebf60b905a1f6666d6f35/e17e5/aws-route-53-8.png 400w,
-/static/a3d30192740ebf60b905a1f6666d6f35/5a190/aws-route-53-8.png 800w,
-/static/a3d30192740ebf60b905a1f6666d6f35/c1b63/aws-route-53-8.png 1200w,
-/static/a3d30192740ebf60b905a1f6666d6f35/46115/aws-route-53-8.png 1290w"
+        src="/static/575f9919cc8344bf7203d9ec0ac3b887/5a190/aws-route-53-8.png"
+        srcset="/static/575f9919cc8344bf7203d9ec0ac3b887/772e8/aws-route-53-8.png 200w,
+/static/575f9919cc8344bf7203d9ec0ac3b887/e17e5/aws-route-53-8.png 400w,
+/static/575f9919cc8344bf7203d9ec0ac3b887/5a190/aws-route-53-8.png 800w,
+/static/575f9919cc8344bf7203d9ec0ac3b887/c1b63/aws-route-53-8.png 1200w,
+/static/575f9919cc8344bf7203d9ec0ac3b887/46115/aws-route-53-8.png 1290w"
         sizes="(max-width: 800px) 100vw, 800px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -316,17 +317,17 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 37.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAAA6klEQVQoz51RW07EMAzM/a/AUfjgChyh28dWVQt9JNuSxMlQW3iJVssPlkZ2xqlnnJq6rtF1Hbz3ICLEGJ9Ce5pDCPINQ2vumfpywTAMaJoGVVWhbVsR4DOLKc8cZ+XHccS6rliWBdu2Sc1DzeEDnHOiypFzxmMwp/yzfhlm/6JT/XpXUpTq1lpB2Z/nGfZ24MMG7J5YSsQMUUTf93JJ30ah7/MnIsHHBEr5voXhh5ymSRypm9Jl6Y6z3nOnu/kWf9wVK+vklJL8Jc1aP6LkSc4J+czsdPfpd+B/Ip2rHiHBrZ94fb/i5a3DN1XHbZ3lsMJnAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    style="padding-bottom: 37.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABNUlEQVQoz5WRTW6EMAyFc/8r9Chd9ApdtKuOpkMgMDApkADhJz+vTgrTVuqmlj7Zfg7Wk2E8yyCKAsuywFkLe7Bt31Dvdu3I27pi3Tlq5xwYFwXqm0QuBC48R1GWEFWV+gT1UY/ahfOkcUK2LfQ4oh8GaGOglEpL2VQIaJ5hq6/wHxJO3lL+SdQO/cjou50WIA0hIAYbTmcUpzd0eY6+FFDkSFHuyUVHp4i9JneRNKvK9K7NOXTdQNYdxvM7wmwQVzIrG5SvL1DZBSu5XK4Vlj3PsSai/jW73meJpsFMS62UCN4nk8zRVtl2UMMIPU0YJkNMqVZ0o9GYuxbrqOmJ9GVDNwcYh1/B0mbCE/EvecLt+D9wv2oP6+L3Dqv1MKunheQz7Af9b3gfMG8eo2rx+Fzi4UngE3YUZsgfoBLTAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="검증 방법 선택"
         title="검증 방법 선택"
-        src="/static/d2430eacd27874283c573c2ed8b90b3f/5a190/aws-route-53-10.png"
-        srcset="/static/d2430eacd27874283c573c2ed8b90b3f/772e8/aws-route-53-10.png 200w,
-/static/d2430eacd27874283c573c2ed8b90b3f/e17e5/aws-route-53-10.png 400w,
-/static/d2430eacd27874283c573c2ed8b90b3f/5a190/aws-route-53-10.png 800w,
-/static/d2430eacd27874283c573c2ed8b90b3f/587b0/aws-route-53-10.png 970w"
+        src="/static/9dbe6cd9bc581924730c52f0ced0e94c/5a190/aws-route-53-10.png"
+        srcset="/static/9dbe6cd9bc581924730c52f0ced0e94c/772e8/aws-route-53-10.png 200w,
+/static/9dbe6cd9bc581924730c52f0ced0e94c/e17e5/aws-route-53-10.png 400w,
+/static/9dbe6cd9bc581924730c52f0ced0e94c/5a190/aws-route-53-10.png 800w,
+/static/9dbe6cd9bc581924730c52f0ced0e94c/587b0/aws-route-53-10.png 970w"
         sizes="(max-width: 800px) 100vw, 800px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -394,17 +395,17 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 43%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABTUlEQVQoz22Ry3LCMAxF/f+rfk53/YtuCoUSJontxCFv52HfSgow0OKZE11Z8lXGVodixE532JsOtp1gWi+wth3nN/y9zrEcVrjxmbJfoNJ6wldaYpc5nIsaJ1MJib3gXDaifxjtkFD9qEuKFzGofCTCxhQlV4OfEQGs9FnClT+aayv1hIe+iQp+DhsLxxW5KaC01sjSFNYaWGPAeWEtjNGkcxSFlX3O8zyDoTrjyhJd1xEt2rZFVTk0TQ2VZZmYWFvQIXPHiikNuJJrNsyF78MRzjn0fX817cR0HEeoc5JAU1NPk7z3mKbpH7zPzZ70QH022aOjvxmGQUy3OEhUth5R1AMu/YxlDTKpaRqBNU8PgW/vtugS42P+vNRMJgvdNEc+uCwL5nkWWDO8H2O8Ex70jYkepqeXVjJR4BBfTo0vDG6sYTvz8enw9n7CL88Gtnrt3L7DAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    style="padding-bottom: 43%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABXElEQVQoz22R0XKkIBBF+f+n/Zx9y19s1VaSzWScqIDgjKDCKNxtWk1NUqHqcLvt9kLR4q2b8SI9XpWHdhHKBabE2pf8IHzWi5pphZ2/YsYFor5FPNcGL43FpbvhrHqm0ldczMDxe0FaVFQ/SUN6ZYM+ZCJtxMy5mMIdGcBK25J2vsWltlJPeuiLVAj3tLEUXdGqDkLKFk1dQ2sFrRRK3mkNpeQWd5q/l7xtGygpGWsMvPeEg3MOfW8xDDeIpqUfyUBTg9IdVNex6qLlgJ1WFsOW+fd2grUW4zjupp5N53mGqJ7/Ql4qeGsQ3LDjEKk5xsiEELg5UDzRjXT1Ck+3maaJTTedWIU6VdDnD/QfLe5GY7i843o+4dbUcPvpKZXXOxY9Yn7Mvy6x0Mbk7dGXlImE+7piWRamGOacP0kP8UGkwYw0aUEZDvIR89wf7vSDwcGatt6nPxa/fp/xH8WPtWq9JEO7AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="검증 화면"
         title="검증 화면"
-        src="/static/45aba4b312a28e36f3104b88fe3cef97/5a190/aws-route-53-13.png"
-        srcset="/static/45aba4b312a28e36f3104b88fe3cef97/772e8/aws-route-53-13.png 200w,
-/static/45aba4b312a28e36f3104b88fe3cef97/e17e5/aws-route-53-13.png 400w,
-/static/45aba4b312a28e36f3104b88fe3cef97/5a190/aws-route-53-13.png 800w,
-/static/45aba4b312a28e36f3104b88fe3cef97/587b0/aws-route-53-13.png 970w"
+        src="/static/16929d066e5b133e7c267dc3a51a58fe/5a190/aws-route-53-13.png"
+        srcset="/static/16929d066e5b133e7c267dc3a51a58fe/772e8/aws-route-53-13.png 200w,
+/static/16929d066e5b133e7c267dc3a51a58fe/e17e5/aws-route-53-13.png 400w,
+/static/16929d066e5b133e7c267dc3a51a58fe/5a190/aws-route-53-13.png 800w,
+/static/16929d066e5b133e7c267dc3a51a58fe/587b0/aws-route-53-13.png 970w"
         sizes="(max-width: 800px) 100vw, 800px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -420,17 +421,17 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 58.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAABtElEQVQoz31Ty26cQBDk/++Rckw+IqcoB0uO5FOUW6ysnOyyCwQWmAGG4U25a/A4u5a1SKXueVBdXQ1B3/eY5xnTNF1hHEcXL8/8HuMwDFexqipkWYYgiiIcDgfEcYzT6YTj8fiaXyIMQweeR1GMsixhjEHTNFBKo65rLMuCgJfIrJSC1tqB1Qi/3qDkpQb/khiHv0+OzBMaI5BorUVwPp9RFIWT/rZ1rq/2JO/bGlafpc3/FgzjjHHa7gUk82qokq14tTxjQe4x5z5VVnXjcqVKl+d1D9ONWNlymmZIkkRezJFK62maIs9z5LLmS/SYrWnJd7sd9vs9ohdfeUa/CQ53XVcEvZWKqoDRBWpdOoO9j23bukhvSMpiVMs1z9rWwAoYu65z9gTff2V4+F3gx58SYVaj0lvbl6BSquYkWWBrV2yRvNDSfm3gP7/g47cTPt1F+PA1xP1jid4a5xOnR2xKWqfQR8LaFp2QNP2MblzAxxH2A6e0TRTr7NrxYBuc/u1n3SD+OQ/tIJ/CSCxCujgCgi34v2B9uXwLw7xiWoTwtQK2g3c13CCislmIPt8n+PKzwDMHhZnwQCKoUwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 58.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAABu0lEQVQoz31Tya7UMBDM/18RRw4gcePKhRMIxJPYBAekJw2I2ZKQye7YibMWXc74MYPQRCp1221XV3c7gbUW0zRhHMcrDMPg7GXM79H2fX9l67rG6XRCEIYhdrsdoijC8XjE4XB48C+x3+8dGA/DCEVRQGuNpmlQlhWUUpjnGQEPkbksS1RV5cBshF+vKOVSg99xhN2vn47ME2otENu2LYI0TZHnuZP+b+lcX+2Jb41CW6VS5t8W9MOEYVzPBSTzaqiSpXi1jDEh9+hznypr1Ti/LAvnZ8pCdwMWlpwkCeI4dheT5ASusyxDlmbuEnvM0irxN5sNttstwnNfGWO/CQ53WRYEfWdQV9LgukCjROVFH40xzrI3JGUyquWaMWM0WgFt13WuPcHb19/w/u4enz7cY/v9h5CvZV+CSqmak2SCtVxpi/h5JeUrDf/8gsfP7vDkxRc8ev4Rb159htUKSibWnLEqMU6ht0TbGnRC0tgJ3TCDnyO0PR/ngEkmBMyuHA+Wwenf/pYV0j/Xw7aXpyAZ7DhLhtkRECzB/wXL+fAt9NOCcRbChwxYA//VcIOIyiYhevouxsuvOf4A72eYZ7UBAw4AAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="검증 화면 2"
         title="검증 화면 2"
-        src="/static/24dc2e0bdc5b9b882a55297b3f96e4a7/5a190/aws-route-53-14.png"
-        srcset="/static/24dc2e0bdc5b9b882a55297b3f96e4a7/772e8/aws-route-53-14.png 200w,
-/static/24dc2e0bdc5b9b882a55297b3f96e4a7/e17e5/aws-route-53-14.png 400w,
-/static/24dc2e0bdc5b9b882a55297b3f96e4a7/5a190/aws-route-53-14.png 800w,
-/static/24dc2e0bdc5b9b882a55297b3f96e4a7/72aae/aws-route-53-14.png 964w"
+        src="/static/79bbc9df260f03bb9db8cff16f06f6ff/5a190/aws-route-53-14.png"
+        srcset="/static/79bbc9df260f03bb9db8cff16f06f6ff/772e8/aws-route-53-14.png 200w,
+/static/79bbc9df260f03bb9db8cff16f06f6ff/e17e5/aws-route-53-14.png 400w,
+/static/79bbc9df260f03bb9db8cff16f06f6ff/5a190/aws-route-53-14.png 800w,
+/static/79bbc9df260f03bb9db8cff16f06f6ff/72aae/aws-route-53-14.png 964w"
         sizes="(max-width: 800px) 100vw, 800px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -501,17 +502,17 @@ data-styled.g19[id="sc-global-cqjXFF1"]{content:"sc-global-cqjXFF1,"}/*!sc*/
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 51.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABMElEQVQoz42SiY6DMAxE+f/fq6oKAgSWI9zQAi2XmK1dBXW7sNpII1uJ9Dy2Y5imifP5jNPpBCEE/nPWdT18M4qiQJ7nqKoKvu+j73vW9Xrd1DQNxnHEMAyY5/lPqKETgtR1jdvthjAMUZblBqR7AnZdx1EDP7UBCUZOCZQkCTu+3++/qtOddng0CkPTp2liYJZl7C6OY4anacqRClLLj8eD46d0IUNbfbcdRRGklLBtG47jcFRKcSECU1ESdaJzMrS1zLAXFssziVQG35Pw5EthEPAcaTk007Ztf7gj1yQaifHe/+ZQpbiYNoTjwXZ9mMKF60oeAzmkxWnAu2gXu0CVN3D8BG6QQngKlozR9gO/6dYO/+EeMCkaWLaEsMzn3/QQBF+IngujVpdl2f0yWt/FLwRVQe7yEAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 51.5%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABZUlEQVQoz42RCY+CQAyF+f+/bhUROeQckPuWM8vbDgoaNm52kpd2CvnmtRUURYEkSRBFEZqm4T9nnueP34QkSRDHMbIsg23buN/vi8qy3FQUBYZhQN/3mKbpT6iwJhyS5zmqqgJjDGmabkBe58CmaZa4AvfagBzGnXJQcLshjiK0VNsfXlsdfhqFsNLHcVyAEbWfkiM/CBAQOKQ7j7w2EKyn//qR4pKv9xHT6nC1uoCfLzFVhSGdoB2P0MUjxQP86xWJ6yB2bISWSbIQkR65iaHIga57tPw+gykvwM4yLEmESSCD5MoSMgJlBMyZi8r30SUxupiLxsMVhWjC4LWUzWFZwPMCyKYDzWbQHQ8K5YbLcCNAQhuv2hYdtczVUrvv+g2sS3gXHZqo4HpSoR5kXL7OKP0AaGoM5AZ1vTz8UPlSVe6Az7YDP4J6vkCl+VmqAlfXwIwr6jTBRJue+w7fNK95J177AeH+/zavXI9zAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="클라우드 프론트 커스텀 도메인 설정"
         title="클라우드 프론트 커스텀 도메인 설정"
-        src="/static/340730d13f2ff6863683b8d297c2f56b/5a190/aws-route-53-17.png"
-        srcset="/static/340730d13f2ff6863683b8d297c2f56b/772e8/aws-route-53-17.png 200w,
-/static/340730d13f2ff6863683b8d297c2f56b/e17e5/aws-route-53-17.png 400w,
-/static/340730d13f2ff6863683b8d297c2f56b/5a190/aws-route-53-17.png 800w,
-/static/340730d13f2ff6863683b8d297c2f56b/97bfd/aws-route-53-17.png 1078w"
+        src="/static/fa3454864193f5a82947fb3d80feae6d/5a190/aws-route-53-17.png"
+        srcset="/static/fa3454864193f5a82947fb3d80feae6d/772e8/aws-route-53-17.png 200w,
+/static/fa3454864193f5a82947fb3d80feae6d/e17e5/aws-route-53-17.png 400w,
+/static/fa3454864193f5a82947fb3d80feae6d/5a190/aws-route-53-17.png 800w,
+/static/fa3454864193f5a82947fb3d80feae6d/97bfd/aws-route-53-17.png 1078w"
         sizes="(max-width: 800px) 100vw, 800px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
@@ -668,4 +669,4 @@ sls deploy</code></pre></div>
       
       
       
-      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020-08-30-etc-aws-route-53/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-31689292082779f66abb.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-5e6d216a631a3c456924.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-fc07ec7304ced4e00cd3.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-21edc7393cb914604664.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-7e2d2d91752096efacf7.js"]};/*]]>*/</script><script src="/webpack-runtime-4de5ef393944dbd15126.js" async=""></script><script src="/framework-8dcecaaefd71e2213eb2.js" async=""></script><script src="/app-31689292082779f66abb.js" async=""></script><script src="/styles-2d82ac8e3afc0c213061.js" async=""></script><script src="/commons-19cc43b7b93132645390.js" async=""></script><script src="/716b8cdbed9f9e7e97e14507ca1f158f27845471-1179e0f042f824659fc7.js" async=""></script><script src="/component---src-templates-blog-template-tsx-7e2d2d91752096efacf7.js" async=""></script></body></html>
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020-08-30-etc-aws-route-53/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-31689292082779f66abb.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-5e6d216a631a3c456924.js"],"component---src-pages-about-tsx":["/component---src-pages-about-tsx-fc07ec7304ced4e00cd3.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-21edc7393cb914604664.js"],"component---src-templates-blog-template-tsx":["/component---src-templates-blog-template-tsx-c2d7ae2da7b592a0fda3.js"]};/*]]>*/</script><script src="/webpack-runtime-18120065756db3fdcd61.js" async=""></script><script src="/framework-8dcecaaefd71e2213eb2.js" async=""></script><script src="/app-31689292082779f66abb.js" async=""></script><script src="/styles-2d82ac8e3afc0c213061.js" async=""></script><script src="/commons-19cc43b7b93132645390.js" async=""></script><script src="/716b8cdbed9f9e7e97e14507ca1f158f27845471-1179e0f042f824659fc7.js" async=""></script><script src="/component---src-templates-blog-template-tsx-c2d7ae2da7b592a0fda3.js" async=""></script></body></html>
