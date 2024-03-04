@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkkyoungah_dev_blog=self.webpackChunkkyoungah_dev_blog||[]).push([[561],{2148:function(e,n,u){u.r(n);var a=u(1883);n.default=function(){return(0,a.navigate)("/")}}}]);
-//# sourceMappingURL=component---src-pages-posts-index-tsx-b7ebbca0e422805f7912.js.map
