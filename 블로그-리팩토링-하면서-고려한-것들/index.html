@@ -8,8 +8,8 @@
 <p>직접 데이터베이스 및 인프라를 구축하여 기술 블로그를 운영해보는게 더 낫지 않겠냐는 의견도 들었었는데 언제 또 방치될지 모르는 개발 블로그에 많은 비용을 투자하는게 옳은 선택은 아닌 것 같다. 기술 블로그를 꾸준히 운영하고 해당 블로그가 커져서 좀 더 복잡한 기능들이 추가된다면 모르겠는데 지금 당장은 JAM Stack 및 정적 호스팅 만으로도 충분하다고 생각한다.</p>
 <h4>Gatsby</h4>
 <p>JAM Stack 프레임워크로는 Gatsby를 선택했다. 2버전대부터 잘 쓰고 있었는데 어느덧 5버전대까지 나왔길래 이번에 리팩토링을 진행하면서 Gatsby 5버전대로 마이그레이션도 같이 진행했다.</p>
-<p>사실 리팩토링을 한창 진행하던 도중에 왜 낡은 기술(?)인 Gatsby를 선택했냐는 얘기도 들었고 <a href="https://astro.build/">Astro</a>도 흥미롭게 다가와서 지금이라도 Astro로 마이그레이션 할까? 하고 고민을 하긴 했는데 이미 얼추 만들어진 블로그에 FSD 아키텍처를 도입해보고자 한번 다시 뒤엎은 상태였던지라 Astro로 또 마이그레이션을 진행하다간 영원히 블로그 리팩토링을 완료하지 못할 것 같았다. 게다가 Gatsby 역시 여전히 꾸준한 업데이트가 이루어지고 있고, 다양한 플러그인과 레퍼런스 등을 통해 풍부한 개발 생태계를 갖추고 있어 2024년 기준으로도 충분히 매력적인 선택지라 생각한다.</p>
-<p>추후에 Gatsby가 deprecated되거나 더 이상 업데이트가 이루어지지 않을 때 Astro나 다른 라이브러리로 갈아타도 좋을것 같다.</p>
+<p>사실 리팩토링을 한창 진행하던 도중에 왜 낡은 기술(?)인 Gatsby를 선택했냐는 얘기도 들었고 <a href="https://astro.build/">Astro</a>도 흥미롭게 다가와서 지금이라도 Astro로 마이그레이션 할까? 하고 고민을 하긴 했는데 이미 얼추 만들어진 블로그에 FSD 아키텍처를 도입해보고자 한번 다시 뒤엎은 상태였던지라 Astro로 또 마이그레이션을 진행하다간 영원히 블로그 리팩토링을 완료하지 못할 것 같았다.</p>
+<p>게다가 Gatsby 역시 여전히 꾸준한 업데이트가 이루어지고 있고, 다양한 플러그인과 레퍼런스 등을 통해 풍부한 개발 생태계를 갖추고 있어 2024년 기준으로도 충분히 매력적인 선택지라 생각한다. 추후에 Gatsby가 deprecated되거나 더 이상 업데이트가 이루어지지 않을 때 Astro나 다른 라이브러리로 갈아타도 좋을것 같다.</p>
 <h3>CSS</h3>
 <h4>PostCSS</h4>
 <p>컴포넌트 스타일링은 css-in-js에서 벗어나 css 후처리기인 PostCSS를 선택했다.</p>
@@ -42,6 +42,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-99da8af7fe2ded8569d4.js\"],\"component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md\":[\"/component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md-73e1c8ce482e6b10361b.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-2a4dbd6ba67bfa85cdf5.js\"],\"component---src-pages-about-about-page-ui-tsx\":[\"/component---src-pages-about-about-page-ui-tsx-6c1b7025fe9c68a398b2.js\"],\"component---src-pages-about-index-tsx\":[\"/component---src-pages-about-index-tsx-a204bf912f6f08dd5fe6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-1364d0dd0ecd80113785.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-99da8af7fe2ded8569d4.js\"],\"component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md\":[\"/component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md-187bc8192adb17fdb2f3.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-2a4dbd6ba67bfa85cdf5.js\"],\"component---src-pages-about-about-page-ui-tsx\":[\"/component---src-pages-about-about-page-ui-tsx-6c1b7025fe9c68a398b2.js\"],\"component---src-pages-about-index-tsx\":[\"/component---src-pages-about-index-tsx-a204bf912f6f08dd5fe6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-1364d0dd0ecd80113785.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="0427b5abc60be207a7bd";</script><script src="/webpack-runtime-2e001e19782ae4f45ea9.js" async></script><script src="/framework-9f21eec24e9aa07b8a0a.js" async></script><script src="/app-99da8af7fe2ded8569d4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="3f04e984ce2844361766";</script><script src="/webpack-runtime-71b46497a0c5282c8216.js" async></script><script src="/framework-9f21eec24e9aa07b8a0a.js" async></script><script src="/app-99da8af7fe2ded8569d4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
