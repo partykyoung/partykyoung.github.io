@@ -23,21 +23,22 @@
 해당 내용을 기억하고 있다가 이번 블로그 리팩토링때 같이 적용해봤는데 나쁘지 않은 선택이었다고 생각한다.</p>
 <p>다만 실무에서는 잘 사용할 수 있을지 모르겠다. 디자이너분들이 작성해주신 색상 팔레트 컬러값을 확인해보면 같은 파란색이라도 채도에 따라 베이스 컬러가 다른 경우가 많아서 지금 블로그에 적용한 것처럼 간편하게 변수합성으로 색상 팔레트를 정의하기엔 쉽지 않을 것 같다. 색상 팔레트의 각각 컬러들의 베이스컬러를 저장해놓고 필요한곳 마다 갖다 쓸 수는 있을 것 같은데 유지보수가 어려워지지 않을까 싶기도 하고... CSS변수합성을 실무에 어떻게 잘 녹여낼 수 있을지는 조금 더 고민해봐야겠다.</p>
 <h2>FSD 아키텍처</h2>
-<p><a href="https://emewjin.github.io/feature-sliced-design/">(번역) 기능 분할 설계 - 최고의 프런트엔드 아키텍처</a> 포스팅을 읽고 FSD 아키텍처도 한번 도입해보았다. 별 기능이 없는 개발 블로그라 그런지 해당 아키텍처의 장점에 대해서 잘 느낄 수는 없었고 features, entities 레이어를 어떻게 구분할지 너무 헷갈려서 난황이 있었다.
-나중에 다른 프로젝트로 한번더 FSD 아키텍처를 연습해봐야겠다.</p>
+<p><a href="https://emewjin.github.io/feature-sliced-design/">(번역) 기능 분할 설계 - 최고의 프런트엔드 아키텍처</a> 포스팅을 읽고 FSD 아키텍처도 한번 도입해보았다. 개발 블로그가 작은 사이즈의 프로젝트다 보니 아직까지는 FSD 아키텍처의 장점은 잘 느낄 수 없어서 아쉬웠다. 그리고 entities 레이어의 기준이 너무 헷갈린다. FSD 아키텍처 예제 레파지토리를 몇개 찾아봤는데 댓글 api 에서 댓글 목록을 가지고와서 화면에 출력해주는 컴포넌트가 entities 레이어에 포함되어 있었고 해당 댓글 api는 하드코딩으로 박혀있었다. 그런데 댓글 목록 api를 그 api만 쓸거라는 보장이 없지 않은가? 나같은 경우에는 포스트 목록 컴포넌트가 메인 페이지에서도 쓰이고 태그 검색 페이지에서도 쓰일건데 api는 각각 다른 api를 쓸 예정이다. 이렇게 하면 entities 레이어엔 포스트 목록 컴포넌트가 두개가 생기는건가? FSD 아키텍처에 대해서는 좀 더 공부해봐야겠다.</p>
 <h2>UI / UX</h2>
-<p>가독성이 중요하다 생각해서 이리저리 복잡한 UI는 최대한 다 뺐고 심플하게 만들었다.</p>
-<p>개인적으로 모바일이나 데스크톱으로 글을 읽을 땐 이상하게 글이 잘 안읽히는 편이 다. 그나마 폰트 사이즈가 크면 좀 잘 읽혔던 경험이 있어서 일부러 포스트 상세 페이지의 폰트 크기를 크게 잡았다.</p>
+<p>포스트 기준의 개발 블로그다 보니 가독성이 중요하다 생각해서 복잡한 UI는 다 뺐고 글에 집중할 수 있게 최대한 심플하게 만들었다.</p>
+<p>개인적으로 모바일이나 데스크톱으로 글을 읽을 땐 이상하게 글이 잘 안읽히는 편이다. 그나마 폰트 사이즈가 크면 수월하게 잘 읽혔던 경험이 있어서 일부러 게시글의 폰트 크기를 크게 잡았다.</p>
 <h2>남은 작업들</h2>
-<ul>
+<p>우선순위가 높은 순서대로 작성했다.</p>
+<ol>
+<li>SEO 최적화</li>
 <li>태그 페이지</li>
 <li>댓글 기능</li>
 <li>dark mode 적용</li>
 <li>CI / CD 설정</li>
-</ul>
+<li>이전 개발 블로그에 있는 포스팅들 마이그레이션</li>
+</ol>
 <h2>마무리</h2>
-<p>오랜만에 쓰는 글인데 역시 개발보다 글 쓰는게 더 어렵다.
-다시 시작한 블로그 활동이니 만큼 포스팅 및 블로그 업데이트 둘 다 꾸준히 해야겠다.</p>
+<p>오랜만에 쓰는 글인데 역시 개발보다 글 쓰는게 더 어렵다. 남은 작업들도 후딱 끝내고 양질의 글도 꾸준히 써서 남부끄럽지 않은 멋진 개발블로그를 만들고 싶다.</p>
 <h2>Reference</h2>
 <ul>
 <li><a href="https://emewjin.github.io/feature-sliced-design/">(번역) 기능 분할 설계 - 최고의 프런트엔드 아키텍처</a></li>
@@ -47,6 +48,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-99da8af7fe2ded8569d4.js\"],\"component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md\":[\"/component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md-bcd2df96e68f8507d39d.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-2a4dbd6ba67bfa85cdf5.js\"],\"component---src-pages-about-about-page-ui-tsx\":[\"/component---src-pages-about-about-page-ui-tsx-6c1b7025fe9c68a398b2.js\"],\"component---src-pages-about-index-tsx\":[\"/component---src-pages-about-index-tsx-a204bf912f6f08dd5fe6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-1f487855012881f0e85c.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-99da8af7fe2ded8569d4.js\"],\"component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md\":[\"/component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md-89281ce5c155972b7a2b.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-2a4dbd6ba67bfa85cdf5.js\"],\"component---src-pages-about-about-page-ui-tsx\":[\"/component---src-pages-about-about-page-ui-tsx-6c1b7025fe9c68a398b2.js\"],\"component---src-pages-about-index-tsx\":[\"/component---src-pages-about-index-tsx-a204bf912f6f08dd5fe6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-1f487855012881f0e85c.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="885c1146b79a2c41a696";</script><script src="/webpack-runtime-07f7e2d77af638706612.js" async></script><script src="/framework-9f21eec24e9aa07b8a0a.js" async></script><script src="/app-99da8af7fe2ded8569d4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="b92448df5f87d1e6d0ec";</script><script src="/webpack-runtime-b09bb922e9d65fea6c49.js" async></script><script src="/framework-9f21eec24e9aa07b8a0a.js" async></script><script src="/app-99da8af7fe2ded8569d4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
