@@ -18,11 +18,16 @@
 <p>Sass 대신 PostCSS를 선택한 이유는 Sass에 안쓰는 기능들까지 안고 가고 싶진 않았기 때문에 Sass에서 자주 쓰는 기능들만 뽑은 뒤에 PostCss로 얼추 흉내낼 수 있게끔 커스터마이징 했다.</p>
 <p>사실 개인적으로 테일윈드를 좋아하는 편이 아니라서 PostCSS를 선택한 이유도 있긴한데 블로그 리팩토링이 얼추 완료된 지금 다시 생각해보니 테일윈드를 선택했어도 좋았을것 같다. 테일윈드를 써 본 경험이 없음에도 불구하고 클래스명이 지저분해진다는 이유 하나 때문에 안쓰고 있었는데 이번 기회에 한번 써보면서 테일윈드의 장단점을 직접 판단하는게 더 좋았을 것 같다.
 다음에 또 다른 사이드 프로젝트를 진행할 일이 있을 땐 꼭 테일윈드를 써봐야겠다.</p>
-<h4>변수합성</h4>
-<p>예전에 primary 컬러를 정의하고 이 primary 컬러를 rgba로 바꿔 투명도를 조정하는 방법을 찾다가 <a href="https://ui.toast.com/posts/ko_20210402">CSS 변수 합성의 강력함</a>이라는 포스팅을 찾고 정말 흥미롭게 읽었던 경험이 있어서 이번 color token을 정의할 때 css 변수 합성을 도입해보았다.</p>
+<h4>CSS 변수합성</h4>
+<p>예전에 primary 컬러를 정의하고 이 primary 컬러를 rgba로 바꿔 투명도를 조정하는 방법을 찾다가 <a href="https://ui.toast.com/posts/ko_20210402">CSS 변수 합성의 강력함</a>이라는 포스팅을 발견했었는데 정말 흥미롭게 읽었던 경험이 있었다.
+해당 내용을 기억하고 있다가 이번 블로그 리팩토링때 같이 적용해봤는데 나쁘지 않은 선택이었다고 생각한다.</p>
+<p>다만 실무에서는 잘 사용할 수 있을지 모르겠다. 디자이너분들이 작성해주신 색상 팔레트 컬러값을 확인해보면 같은 파란색이라도 채도에 따라 베이스 컬러가 다른 경우가 많아서 지금 블로그에 적용한 것처럼 간편하게 변수합성으로 색상 팔레트를 정의하기엔 쉽지 않을 것 같다. 색상 팔레트의 각각 컬러들의 베이스컬러를 저장해놓고 필요한곳 마다 갖다 쓸 수는 있을 것 같은데 유지보수가 어려워지지 않을까 싶기도 하고... CSS변수합성을 실무에 어떻게 잘 녹여낼 수 있을지는 조금 더 고민해봐야겠다.</p>
+<h2>FSD 아키텍처</h2>
+<p><a href="https://emewjin.github.io/feature-sliced-design/">(번역) 기능 분할 설계 - 최고의 프런트엔드 아키텍처</a> 포스팅을 읽고 FSD 아키텍처도 한번 도입해보았다. 별 기능이 없는 개발 블로그라 그런지 해당 아키텍처의 장점에 대해서 잘 느낄 수는 없었고 features, entities 레이어를 어떻게 구분할지 너무 헷갈려서 난황이 있었다.
+나중에 다른 프로젝트로 한번더 FSD 아키텍처를 연습해봐야겠다.</p>
 <h2>UI / UX</h2>
 <p>가독성이 중요하다 생각해서 이리저리 복잡한 UI는 최대한 다 뺐고 심플하게 만들었다.</p>
-<p>개인적으로 모바일이나 데스크톱으로 글을 읽을 땐 이상하게 글이 잘 안읽히는 편이다. 그나마 폰트 사이즈가 크면 좀 잘 읽혔던 경험이 있어서 일부러 포스트 상세 페이지의 폰트 크기를 크게 잡았다.</p>
+<p>개인적으로 모바일이나 데스크톱으로 글을 읽을 땐 이상하게 글이 잘 안읽히는 편이 다. 그나마 폰트 사이즈가 크면 좀 잘 읽혔던 경험이 있어서 일부러 포스트 상세 페이지의 폰트 크기를 크게 잡았다.</p>
 <h2>남은 작업들</h2>
 <ul>
 <li>태그 페이지</li>
@@ -42,6 +47,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-99da8af7fe2ded8569d4.js\"],\"component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md\":[\"/component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md-187bc8192adb17fdb2f3.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-2a4dbd6ba67bfa85cdf5.js\"],\"component---src-pages-about-about-page-ui-tsx\":[\"/component---src-pages-about-about-page-ui-tsx-6c1b7025fe9c68a398b2.js\"],\"component---src-pages-about-index-tsx\":[\"/component---src-pages-about-index-tsx-a204bf912f6f08dd5fe6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-1364d0dd0ecd80113785.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-99da8af7fe2ded8569d4.js\"],\"component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md\":[\"/component---src-app-templates-post-template-post-layout-ui-tsx-content-file-path-posts-블로그-리팩토링-하면서-고려한-것들-md-16e2c8eb1f60d759434f.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-2a4dbd6ba67bfa85cdf5.js\"],\"component---src-pages-about-about-page-ui-tsx\":[\"/component---src-pages-about-about-page-ui-tsx-6c1b7025fe9c68a398b2.js\"],\"component---src-pages-about-index-tsx\":[\"/component---src-pages-about-index-tsx-a204bf912f6f08dd5fe6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-1f487855012881f0e85c.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="3f04e984ce2844361766";</script><script src="/webpack-runtime-71b46497a0c5282c8216.js" async></script><script src="/framework-9f21eec24e9aa07b8a0a.js" async></script><script src="/app-99da8af7fe2ded8569d4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="e6cf11b75df33c6f4259";</script><script src="/webpack-runtime-36d50295beebd48b2f05.js" async></script><script src="/framework-9f21eec24e9aa07b8a0a.js" async></script><script src="/app-99da8af7fe2ded8569d4.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
